@@ -1,0 +1,16 @@
+{
+ "id": "2026-10-12-macmini-agentic-final",
+ "date": "2026-10-12",
+ "env": "Mac mini",
+ "notes": "Mac mini 真实搭站版最终批次。替换此前 partial。Claude cost 为 CLI 自报，未核实。",
+ "format": "prompt-eval",
+ "models": [
+  "claude:default",
+  "codex:default"
+ ],
+ "n_records": 40,
+ "cost_usd_reported": 53.92,
+ "cost_records": 20,
+ "sum_latency_min": 321.8,
+ "wall_min": 235.0
+}
