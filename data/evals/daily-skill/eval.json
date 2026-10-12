@@ -1,0 +1,31 @@
+{
+ "id": "daily-skill",
+ "title": "daily-skill 冷启动（单次作答版）",
+ "kind": "matrix",
+ "order": 1,
+ "description": "给模型 daily-skill 和一个测试用户（Kenji），让它一次性写出 5 个文件；程序按验收清单的 6 项检查打分，分数 = 通过项 / 6。条件：不加 skill、完整 skill、逐段删除（leave-one-out）。单次作答，不调工具。",
+ "task_file": "task.md",
+ "checks": {
+  "A2": "profile.yaml：兴趣≥3、可信源≥5、必填字段齐、generated_from=fixture",
+  "A3": "sources.yaml：id 唯一、type/lane/topic/kind 合法",
+  "A7s": "state/agent-task.json：调度字段齐、next_run 带时区且未过期",
+  "A4": "llm.mode=agent 且有合法 agent-task",
+  "B3": "data.json：日期对、符合 digest schema",
+  "B5": "index.json：符合 index schema 且列出当天"
+ },
+ "cond_labels": {
+  "none": "不加 skill",
+  "full": "完整 skill",
+  "-0": "删 §0 构想",
+  "-1": "删 §1 目标",
+  "-2": "删 §2 闭环流程",
+  "-3": "删 §3 失败处理",
+  "-4": "删 §4 数据格式",
+  "-5": "删 §5 注册表",
+  "-6": "删 §6 设计取舍",
+  "-7": "删 §7 验收",
+  "-Appendix": "删 附录A"
+ },
+ "baseline": "full",
+ "null_cond": "none"
+}

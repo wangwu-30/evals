@@ -1,0 +1,17 @@
+{
+ "id": "2026-10-12-box-pilot",
+ "date": "2026-10-12",
+ "env": "共享电脑（box）· MiniMax API",
+ "notes": "MiniMax 三档模型 × 11 条件 × 5 次。前 99 次（每格 3 次，约 19 分钟）是首轮试跑，后补到每格 5 次；Mac mini 上 single_minimax_box 是同一批文件的副本，未重复收录。金额未核实。",
+ "format": "prompt-eval",
+ "models": [
+  "MiniMax-M2.5",
+  "MiniMax-Text-01",
+  "abab6.5s-chat"
+ ],
+ "n_records": 165,
+ "cost_usd_reported": null,
+ "cost_records": 0,
+ "sum_latency_min": 281.5,
+ "wall_min": null
+}

@@ -1,0 +1,9 @@
+{
+ "id": "company-codex-corrections",
+ "title": "Codex 纠正模式分析",
+ "kind": "summary",
+ "order": 11,
+ "badge": "公司侧，脱敏汇总",
+ "date": "2026-10-12",
+ "conclusion": "83 条纠正里指令模糊只占 6%，执行或判断偏差占 66%；纠正集中在 7 个长时间自主会话（约 60%）"
+}

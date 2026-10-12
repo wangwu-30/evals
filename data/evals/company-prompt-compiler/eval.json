@@ -1,0 +1,9 @@
+{
+ "id": "company-prompt-compiler",
+ "title": "prompt 编译器 v1（冷启动验证）",
+ "kind": "summary",
+ "order": 12,
+ "badge": "公司侧，脱敏汇总",
+ "date": "2026-10-12",
+ "conclusion": "未过“两边都不掉”门槛：私有侧 0.904→0.916，公开侧一个模型 0.44→0.50、另一个 0.67→0.44"
+}

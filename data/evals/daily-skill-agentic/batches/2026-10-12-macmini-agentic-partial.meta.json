@@ -1,0 +1,16 @@
+{
+ "id": "2026-10-12-macmini-agentic-partial",
+ "date": "2026-10-12",
+ "env": "Mac mini · Codex CLI / Claude CLI（GLM）",
+ "notes": "真实搭站版部分结果，快照于 11:59 PT，仍在补跑。cost 同上为 CLI 自报。",
+ "format": "prompt-eval",
+ "models": [
+  "claude:default",
+  "codex:default"
+ ],
+ "n_records": 24,
+ "cost_usd_reported": 33.08,
+ "cost_records": 12,
+ "sum_latency_min": 194.6,
+ "wall_min": null
+}

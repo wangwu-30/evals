@@ -1,0 +1,15 @@
+{
+ "id": "2026-10-12-vitest-live",
+ "date": "2026-10-12",
+ "env": "共享电脑（box）",
+ "notes": "vitest 仓库 2026-06-01..09-01 回放，50 条记忆全部已判。待第二人复核后才能对外引用。",
+ "format": "teamrecall-score",
+ "models": [
+  "teamrecall@0e86732"
+ ],
+ "n_records": 2,
+ "cost_usd_reported": null,
+ "cost_records": 0,
+ "sum_latency_min": null,
+ "wall_min": null
+}

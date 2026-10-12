@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-12-macmini-cli-partial",
+ "date": "2026-10-12",
+ "env": "Mac mini · Codex CLI / Claude CLI（实际调用智谱 GLM）",
+ "notes": "部分结果，快照于 11:59 PT，仍在补跑。Claude CLI 的 cost_usd 是 CLI 自报，计价依据为 unknown，未核实是否真实扣费。",
+ "format": "prompt-eval",
+ "models": [
+  "claude:default",
+  "claude:sonnet",
+  "codex:default",
+  "codex:gpt-5.6-luna"
+ ],
+ "n_records": 103,
+ "cost_usd_reported": 25.7,
+ "cost_records": 31,
+ "sum_latency_min": 408.1,
+ "wall_min": null
+}

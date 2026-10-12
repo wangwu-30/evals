@@ -1,0 +1,8 @@
+{
+ "id": "teamrecall-replay",
+ "title": "teamrecall 真实模型回放",
+ "kind": "metrics",
+ "order": 3,
+ "description": "用 vitest 仓库 2026-06-01..09-01 的评审事件做真实 LLM 回放，比较两种晋升模式：default 与 first（第一次出现就升级成规则）。核心指标是“首次即晋升”记忆的准确率（严格 = 人工判为非噪声的比例；宽松 = 含带标签的暂定记忆）。",
+ "primary": "首次即晋升·严格准确率"
+}
