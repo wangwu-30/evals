@@ -1,0 +1,24 @@
+{
+ "id": "daily-skill-val-triage",
+ "title": "daily-skill 验证集 v2：条目分拣（Lucía，skill 没规定的 CSV 格式）",
+ "kind": "matrix",
+ "order": 3,
+ "split": "validation",
+ "description": "验证集，测泛化而不是背格式：输出格式（CSV）在题面里给出，skill 里没有；考的是 skill 的规则——规范化 URL（§4.4）、事件 key 与去重（§2.3）、mute 整词匹配（§2.4）、抓取窗口、同仓库只留最新 release。答案键用独立实现的 canonical() 核对过（同时复现 SKILL 的 11 条非 IDNA 测试向量）。",
+ "task_file": "task.md",
+ "checks": {
+  "F": "CSV 14 行、取值合法（格式分，不加 skill 也该拿到）",
+  "CAN": "14 行规范化 URL 全对",
+  "KEY": "14 行事件 key 全对",
+  "MUTE": "crypto/NFT 整词屏蔽，Cryptography 不误伤",
+  "WIN": "窗口外的丢弃、窗口内的保留",
+  "DUP": "重复项丢弃、repo 与 release 不算重复",
+  "REL": "同仓库只留最新 release"
+ },
+ "cond_labels": {
+  "none": "不加 skill",
+  "full": "完整 skill"
+ },
+ "baseline": "full",
+ "null_cond": "none"
+}

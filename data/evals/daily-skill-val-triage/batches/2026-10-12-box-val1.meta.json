@@ -1,0 +1,17 @@
+{
+ "id": "2026-10-12-box-val1",
+ "date": "2026-10-12",
+ "env": "共享电脑（box）· MiniMax API",
+ "notes": "验证集首跑：3 档 MiniMax × 2 条件 × 5 次。答案键第 11 行 key 已按 §2.3 字符替换规则修正后统一重判（无人通过 KEY）。金额未核实。",
+ "format": "prompt-eval",
+ "models": [
+  "MiniMax-M2.5",
+  "MiniMax-Text-01",
+  "abab6.5s-chat"
+ ],
+ "n_records": 30,
+ "cost_usd_reported": null,
+ "cost_records": 0,
+ "sum_latency_min": 20.7,
+ "wall_min": null
+}

@@ -33,3 +33,19 @@ git add data && git commit -m "batch: ..." && git push
 - 不放保留题（holdout）、凭据、任何 hpo/公司材料。公司侧只放 summary 类脱敏汇总数字，`badge` 写“公司侧，脱敏汇总”。
 - 提交前扫一遍：`rg -i -e 'gh[op]_' -e 'sk-' -e 'Bearer ' -e byted data`。
 - 不编数字：花费只写记录自报的，并注明未核实。
+
+## 评测集划分（dev / validation / holdout）
+| 划分 | 用途 | 位置 |
+|---|---|---|
+| 开发集 dev | 随便调，看逐段删除、改 skill | 本仓库，`split: dev`（如 daily-skill 的 Kenji 题） |
+| 验证集 validation | 每次优化都要在这里过一遍 | 本仓库，`split: validation` |
+| 保留集 holdout | 每个大版本只用一次 | **不进本仓库**，只在共享电脑 `/workspace/prompt-eval/holdout/`；这里只显示题数 |
+
+划分清单在 `data/splits.json`，首页据此显示。
+
+## 优化规则（硬性）
+1. **一次优化只有同时满足两条才算数：dev 分数上升，且 validation 不下降。** 比较用截尾均值（每格 ≥5 次，去掉一个最高、一个最低），同模型、同条件。差值小于该格的单次波动范围时记为“持平”，不算上升。
+2. **holdout 每次使用都要记账**：在 `/workspace/prompt-eval/holdout/USAGE.log` 追加一行（时间、skill 版本或提交、模型、谁、为什么）。每个大版本最多用一次；看到 holdout 结果后改了 skill，就不能再拿同一份 holdout 验证，得出新题。
+3. **看过 validation 失败后再改的 skill，必须在新题上复验**：那批 validation 题对这次改动已经“泄题”，要么新增一道 validation 题，要么在 holdout 上（记账）确认，才算通过。
+4. 新题入库前要用一份已知合格的输出校准（检查全过），再用一份故意改坏的输出确认检查会失败。
+5. 打分程序改动后，旧批次一律重判分、起新批次（不改旧文件），并在批次备注写明原因。

@@ -121,6 +121,7 @@ def conclusion(ev, batches):
 def eval_page(ev, batches):
     eid, L = ev["id"], ev.get("cond_labels", {}); b = []
     badge = f'<span class="badge co">{esc(ev["badge"])}</span>' if ev.get("badge") else ""
+    if ev.get("split"): badge += f'<span class="badge">{esc(SPLIT_LABEL.get(ev["split"], ev["split"]))}</span>'
     b.append(f'<p class="lead">{esc(conclusion(ev, batches))}</p>{badge}')
     if ev["kind"] == "summary":
         b.append(f'<div class="card">{md(open(D/eid/"summary.md").read())}</div>')
@@ -179,6 +180,7 @@ def batch_page(ev, meta, recs):
         b.append(f'<details class="card"><summary>逐条记录（{len(recs)}）</summary><div class="scroll"><table><tr><th>模型</th><th>条件</th><th>次</th><th>分</th><th>秒</th><th style="text-align:left">未过检查</th></tr>{rows}</table></div></details>')
     return page(meta["id"], "".join(b), 2)
 
+SPLIT_LABEL = {"dev": "开发集", "validation": "验证集", "holdout": "保留集"}
 def main():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "e").mkdir(parents=True); shutil.copytree(ROOT / "data", OUT / "data")
@@ -193,9 +195,25 @@ def main():
     for ev, batches in evs:
         date = batches[-1][0]["date"] if batches else ev.get("date", "")
         badge = f'<span class="badge co">{esc(ev["badge"])}</span>' if ev.get("badge") else ""
+        if ev.get("split"): badge += f'<span class="badge">{esc(SPLIT_LABEL.get(ev["split"], ev["split"]))}</span>'
         nb = f" · {len(batches)} 批" if batches else ""
         rows.append(f'<div class="row"><a class="t" href="e/{ev["id"]}.html">{esc(ev["title"])}{badge}</a><span class="d">{date}{nb}</span><div class="c">{esc(conclusion(ev, batches))}</div></div>')
-    (OUT / "index.html").write_text(page("首页", f'<div class="card" style="padding:0">{"".join(rows)}</div>'))
+    extra = ""
+    sp = ROOT / "data" / "splits.json"
+    if sp.exists():
+        S = json.load(open(sp)); li = []
+        for sk in S["skills"]:
+            parts = [f'<b>{esc(sk["skill"])}</b>']
+            for k in ("dev", "validation", "holdout"):
+                v = sk.get(k, [])
+                parts.append(f'{SPLIT_LABEL[k]}：' + ("、".join(esc(x) for x in v) if k != "holdout" else f"{len(v)} 题（不公开）"))
+            li.append("<li>" + " · ".join(parts) + "</li>")
+        aud = "".join(f"<li>{esc(x)}</li>" for x in S.get("audit_summary", []))
+        rules = "".join(f"<li>{esc(x)}</li>" for x in S.get("rules", []))
+        extra = (f'<div class="card"><b>评测集划分</b><ul>{"".join(li)}</ul><b>优化规则</b><ul>{rules}</ul>'
+                 f'<b>公正性审计（{esc(S.get("audit_date",""))}）</b><ul>{aud}</ul>'
+                 f'<p class="mut">全文：<a href="{esc(S.get("audit_url",""))}">docs/fairness-audit</a></p></div>')
+    (OUT / "index.html").write_text(page("首页", f'<div class="card" style="padding:0">{"".join(rows)}</div>' + extra))
     (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /\n"); (OUT / ".nojekyll").write_text("")
     print("built", len(evs), "evals →", OUT)
 main()

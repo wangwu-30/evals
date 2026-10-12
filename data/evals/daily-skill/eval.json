@@ -27,5 +27,6 @@
   "-Appendix": "删 附录A"
  },
  "baseline": "full",
- "null_cond": "none"
+ "null_cond": "none",
+ "split": "dev"
 }

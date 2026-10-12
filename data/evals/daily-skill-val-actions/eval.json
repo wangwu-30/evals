@@ -1,0 +1,24 @@
+{
+ "id": "daily-skill-val-actions",
+ "title": "daily-skill 验证集 v1：新用户 Amara（GitHub Actions + API 模式）",
+ "kind": "matrix",
+ "order": 2,
+ "split": "validation",
+ "description": "验证集。换人设（拉各斯、英文、金融科技/气候/开源硬件）和来源组合（github_releases、hf_papers、json_api），走 dev 题没走过的分支：GitHub Actions 定时 + API 模式。条件：不加 skill、完整 skill、只给 JSON schema 不给 skill（公平性对照：看“不加 skill = 0”有多少只是缺格式）。单次作答。已用手写的合格输出校准：6/6。",
+ "task_file": "task.md",
+ "checks": {
+  "A2": "profile.yaml：同 dev 题",
+  "A3": "sources.yaml：同 dev 题",
+  "A7s-actions": ".github/workflows/daily.yml：name=daily、schedule 分钟≠0、workflow_dispatch",
+  "A4-api": "llm.mode=api 且 api_key_env=DEEPSEEK_API_KEY",
+  "B3": "data.json 符合 digest schema 且日期对",
+  "B5": "index.json 符合 index schema 且列出当天"
+ },
+ "cond_labels": {
+  "none": "不加 skill",
+  "full": "完整 skill",
+  "schema": "只给 schema"
+ },
+ "baseline": "full",
+ "null_cond": "none"
+}

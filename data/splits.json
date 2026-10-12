@@ -1,0 +1,33 @@
+{
+ "audit_date": "2026-10-12",
+ "audit_url": "https://github.com/wangwu-30/evals/blob/main/docs/fairness-audit-2026-10-12.md",
+ "skills": [
+  {
+   "skill": "daily-skill",
+   "dev": [
+    "daily-skill（Kenji，单次作答）",
+    "daily-skill-agentic（Kenji，真实搭站）"
+   ],
+   "validation": [
+    "daily-skill-val-actions（Amara）",
+    "daily-skill-val-triage（Lucía）"
+   ],
+   "holdout": [
+    "h1"
+   ]
+  }
+ ],
+ "rules": [
+  "优化只有在 dev 上升且 validation 不降时才算数",
+  "holdout 每次使用都记账，每个大版本只用一次",
+  "看过 validation 失败后改的 skill，要在新题上复验"
+ ],
+ "audit_summary": [
+  "打分 bug：09:41 起 schema 路径错误，61/165 条 B3/B5 被误判失败；已修复并重判（新批次 box-rescored，未重新调模型）",
+  "dev 题是 skill 自己的作业：检查照抄 ACCEPTANCE，校准输出和 Kenji 人设都来自 skill 自己的冷启动产物",
+  "“不加 skill = 0”主要因为题面没给格式；只给 schema 时 M2.5 能到 0.33",
+  "只有一个人设、一条分支（本地仓库 + agent 模式）；A7s/A4 重复计分、可凑字段过关；内容质量完全不计分",
+  "程序判分，没有模型裁判偏向；但只测了 MiniMax，长上下文模型占便宜，裁判与出题方不独立、无人复核",
+  "验证集首跑：换人设后 Text-01 完整 skill 0.61→0.28、abab6.5s 0.33→0.17；格式由题面给定的 v2 里，M2.5 不加 skill 0.62、加 skill 0.67，差距在波动内"
+ ]
+}
