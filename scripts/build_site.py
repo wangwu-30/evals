@@ -143,7 +143,7 @@ def eval_page(ev, batches):
         ab = ablation(ev, models, conds, cells)
         if ab:
             mx = max(abs(d) for _, d, _ in ab) or 1
-            ar = "".join(f'<tr><td>{esc(L.get(c,c))}</td><td>{"−" if d>=0 else "+"}{abs(d):.2f}</td><td style="text-align:left;width:40%"><span class="bar {"" if d>=0 else "pos"}" style="width:{abs(d)/mx*100:.0f}%"></span></td>'
+            ar = "".join(f'<tr><td>{esc(L.get(c,c))}</td><td>{"0.00" if abs(d)<0.005 else ("−" if d>0 else "+")+f"{abs(d):.2f}"}</td><td style="text-align:left;width:40%"><span class="bar {"" if d>=0 else "pos"}" style="width:{abs(d)/mx*100:.0f}%"></span></td>'
                          f'<td class="mut">{" / ".join(f"{x:+.2f}" for x in ds)}</td></tr>' for c, d, ds in ab)
             b.append(f'<h2>逐段删除：哪些段在起作用</h2><div class="card scroll"><table><tr><th>删掉的段</th><th>平均掉分</th><th></th><th>各模型（完整 − 删后）</th></tr>{ar}</table></div>')
         if ev.get("checks"):
