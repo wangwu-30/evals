@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """data/ → site/（纯静态，可随时重建；site/ 不进 git）。"""
+from zoneinfo import ZoneInfo
 import json, pathlib, shutil, html, re, statistics as st, datetime
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D, OUT = ROOT / "data" / "evals", ROOT / "site"
@@ -39,7 +40,7 @@ def page(title, body, depth=0):
     return f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>{esc(title)} · 评测看板</title><style>{CSS}</style></head>
 <body><main><header><h1><a href="{up}index.html">评测看板</a></h1><span class="mut">{esc(title) if depth else "评测集与结果 · 原始记录为唯一来源，页面可随时重建"}</span></header>{body}
-<p class="mut" style="margin-top:40px;font-size:12px">生成于 {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')} · <a href="{REPO}">源码与数据</a></p></main></body></html>"""
+<p class="mut" style="margin-top:40px;font-size:12px">生成于 {datetime.datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M PT')} · <a href="{REPO}">源码与数据</a></p></main></body></html>"""
 
 def md(s):
     out, tbl = [], []
