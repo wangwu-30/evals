@@ -6,6 +6,7 @@ import pathlib
 import statistics
 from run import ASSETS, ROOT, MODELS, JUDGES, load, conditions
 from checks import CHECKS
+from followup_report import render as render_followup, conclusion as followup_conclusion
 
 
 def interval(xs):return '['+', '.join(f'{x:.3f}' for x in xs)+']'
@@ -63,7 +64,7 @@ def diagnostic(root):
     return dict(counts),lengths
 
 
-def render(summary,run_dir,private_dir,pr,include_holdout):
+def render(summary,run_dir,private_dir,pr,include_holdout,followup=None,followup_private=None):
     labels=load(ASSETS/'eval.json')['cond_labels']
     source=load(ASSETS/'source/provenance.json')
     effects,findings=section_effects(summary,labels)
@@ -152,7 +153,7 @@ def render(summary,run_dir,private_dir,pr,include_holdout):
           'cd ~/code/evals',
           'python3 scripts/explain/test_explain.py',
           'python3 scripts/explain/replay.py --private-dir ~/codex-jobs/explain-eval/holdout --out-dir /tmp/explain-replay',
-          'python3 scripts/explain/write_report.py --summary /tmp/explain-replay/summary.json --run-dir data/evals/explain/artifacts --private-dir ~/codex-jobs/explain-eval/holdout --output /tmp/REPORT.md --include-holdout --pr '+pr,
+          'python3 scripts/explain/write_report.py --summary /tmp/explain-replay/summary.json --run-dir data/evals/explain/artifacts --private-dir ~/codex-jobs/explain-eval/holdout --output /tmp/REPORT.md'+(' --include-holdout' if include_holdout else '')+' --pr '+pr,
           'python3 scripts/build_site.py',
           '```','',
           '不带私有目录时只复现公开分数，写公开报告时去掉--include-holdout；匿名usage/费用收据仍可复现完整的自报费用账本。保留集题面/输出/判分结果始终不进入git。REPORT数字均从脚本和原始记录计算，不要求再调用模型。unit检查覆盖截尾统计量、配对重抽样、区间方向、固定种子、只删一个段、正文引句不可借用、传输恢复与规则误判。预定矩阵完整性、模型工具调用为零、源文件逐字相同、凭据扫描和保留题不泄漏也在交付前核验。',
@@ -163,6 +164,20 @@ def render(summary,run_dir,private_dir,pr,include_holdout):
     if include_holdout:
         idx=next(i for i,s in enumerate(out) if s.startswith('公开批次诊断：'))
         out.insert(idx+1,f"保留集诊断：{private_diag.get('batches',0)}批，{private_diag.get('missing_answers',0)}题漏答；冻结记账与原始结果仅在私有目录。")
+    if followup:
+        out.insert(4, followup_conclusion(followup)+' 分词器参考计数的相关分析见“跨模型分歧”；实际路由分词器版本仍未知。\n')
+        idx=out.index('## Token、费用与异常')
+        out.insert(idx,render_followup(followup,followup_private if include_holdout else None))
+        idx=out.index('python3 scripts/build_site.py')
+        out[idx:idx]=[
+            '# 分词器仅需首次联网下载；无模型调用。安装与下载命令见 scripts/explain/README.md。',
+            '/tmp/explain-followup-env/bin/python scripts/explain/followup.py --glm-tokenizer /tmp/explain-followup/tokenizer.json --output /tmp/explain-followup/public.json'+(' --private-dir ~/codex-jobs/explain-eval/holdout --private-output ~/codex-jobs/explain-eval/followup-holdout.json' if include_holdout else ''),
+            '/tmp/explain-followup-env/bin/python scripts/explain/test_followup.py']
+        idx=next(i for i,s in enumerate(out) if s.startswith('python3 scripts/explain/write_report.py'))
+        out[idx]+=' --followup /tmp/explain-followup/public.json'+(' --followup-private ~/codex-jobs/explain-eval/followup-holdout.json' if include_holdout else '')
+        # Follow-up must precede its report renderer in the reproduction recipe.
+        cmd=out.pop(idx)
+        out.insert(out.index('python3 scripts/build_site.py'),cmd)
     return '\n'.join(out)
 
 
@@ -174,8 +189,14 @@ def main():
     ap.add_argument('--output',type=pathlib.Path,required=True)
     ap.add_argument('--include-holdout',action='store_true')
     ap.add_argument('--pr',default='待创建')
+    ap.add_argument('--followup',type=pathlib.Path,default=ASSETS/'batches/2026-10-13-explain-followup-v1.json')
+    ap.add_argument('--followup-private',type=pathlib.Path)
     args=ap.parse_args()
-    text=render(load(args.summary),args.run_dir,args.private_dir,args.pr,args.include_holdout)
+    if args.include_holdout and args.output.resolve().is_relative_to(ROOT.resolve()):
+        ap.error('holdout report must stay outside repository')
+    text=render(load(args.summary),args.run_dir,args.private_dir,args.pr,args.include_holdout,
+                load(args.followup) if args.followup.exists() else None,
+                load(args.followup_private) if args.followup_private else None)
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(text)
     print(args.output)
 

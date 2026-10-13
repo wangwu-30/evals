@@ -28,6 +28,29 @@ python3 scripts/build_site.py
 
 私有调用仅导出不含题目/答案/分数的usage/费用数字收据；没有私有目录时仍可复现全批次的自报费用小计。统计使用Python标准库。可选效果图使用Matplotlib：安装后运行`python3 scripts/explain/plot.py --summary /tmp/explain-replay/summary.json --output /tmp/explain-effects.png`，图中只包含公开切分。
 
+## 补做交互与分词器分析（无模型调用）
+
+`followup.py` 从公开原始生成/裁判记录重算，不依赖已发布分数。模型内差值使用原配对题目/轮次重抽样；交互共享题目抽样、两模型独立抽轮次，同一模型的删除/full 配对。以零假设为中心的双侧 bootstrap 检验分别对公开 28 个模型内检验、14 个交互检验做 Holm 校正。dev/validation 分开报告；私有 holdout 只参考，不进入公开文件或相关分析。
+
+实际路由分词器版本未知。GPT 精确请求名无法被 `tiktoken 0.12.0` 解析，使用显式 `o200k_base` 探索代理；GLM 使用官方公开仓库的锁定分词器参考。两列均不证明路由实际编码。数值只计 skill 原始正文，不含聊天模板/系统提示。完整、各删段变体和各独立段落分别计数；相关分析使用 full−变体的有效减少量，另归一化到全文比例。7 段 × 2 切分、Pearson/Spearman、两个解释变量共 8 个探索检验做 Holm 校正，双侧精确排列 5,040 次；Spearman 对 12 位小数相等的效果视作并列，避免浮点误差制造次序。
+
+安装环境、下载锁定分词器并重算公开报告：
+
+```sh
+python3 -m venv /tmp/explain-followup-env
+/tmp/explain-followup-env/bin/python -m pip install -r scripts/explain/requirements-followup.txt
+mkdir -p /tmp/explain-followup
+curl -fL https://huggingface.co/zai-org/GLM-5.3-Flash/resolve/91b69215804f2d2036a8867f6ce44848e278dcda/tokenizer.json -o /tmp/explain-followup/tokenizer.json
+/tmp/explain-followup-env/bin/python scripts/explain/followup.py --glm-tokenizer /tmp/explain-followup/tokenizer.json --output /tmp/explain-followup/public.json
+/tmp/explain-followup-env/bin/python scripts/explain/test_followup.py
+python3 scripts/explain/replay.py --private-dir /tmp/explain-no-holdout --out-dir /tmp/explain-replay
+python3 scripts/explain/write_report.py --summary /tmp/explain-replay/summary.json --run-dir data/evals/explain/artifacts --private-dir /tmp/explain-no-holdout --followup /tmp/explain-followup/public.json --output /tmp/explain-followup/REPORT-public.md --pr https://github.com/wangwu-30/evals/pull/1
+```
+
+首次计数会下载 OpenAI 公开编码；GLM 文件及 OpenAI 合并表均由 `tokenizer-provenance.json` 的 SHA256 校验，后续可离线复算。此文件保留官方依据、精确版本和未知项。新公开统计追加在 `data/evals/explain/batches/2026-10-13-explain-followup-v1.json`，不覆盖原运行数据。重算输出到临时目录，勿覆盖归档批次。
+
+原执行机如需保留集参考，在 `followup.py` 追加 `--private-dir ~/codex-jobs/explain-eval/holdout --private-output ~/codex-jobs/explain-eval/followup-holdout.json`，在 `write_report.py` 追加 `--include-holdout --followup-private ~/codex-jobs/explain-eval/followup-holdout.json` 并将报告输出到仓库外。保留集输出路径若位于仓库内，脚本拒绝写入。本轮无新增生成/裁判调用，新增评测调用费用 $0；执行代理会话费用未获账单。
+
 ## 新鲜复跑（会调用模型且计费）
 
 不要对已经使用的保留集再执行。原批次的命令与冻结哈希见 protocol.json / 私有 freeze.json。
