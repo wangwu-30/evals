@@ -152,7 +152,7 @@ Claude CLI的haiku/sonnet别名探测实际返回`glm-5.3-flash[1m]`，被测GLM
 cd ~/code/evals
 python3 scripts/explain/test_explain.py
 python3 scripts/explain/replay.py --private-dir ~/codex-jobs/explain-eval/holdout --out-dir /tmp/explain-replay
-python3 scripts/explain/write_report.py --summary /tmp/explain-replay/summary.json --run-dir data/evals/explain/artifacts --private-dir ~/codex-jobs/explain-eval/holdout --output /tmp/REPORT.md --include-holdout --pr 待创建
+python3 scripts/explain/write_report.py --summary /tmp/explain-replay/summary.json --run-dir data/evals/explain/artifacts --private-dir ~/codex-jobs/explain-eval/holdout --output /tmp/REPORT.md --include-holdout --pr https://github.com/wangwu-30/evals/pull/1
 python3 scripts/build_site.py
 ```
 
@@ -160,6 +160,6 @@ python3 scripts/build_site.py
 
 ## PR与局限
 
-PR：待创建。只推explain-eval分支、只开PR；未推main、未合并、未发布release。
+PR：https://github.com/wangwu-30/evals/pull/1。只推explain-eval分支、只开PR；未推main、未合并、未发布release。
 
 本基准测讲解正文是否展示理解所需的关系，没有招募读者，也没有证明理解/学习增益。评测作者、参考答案作者和“人工式”标注者同为代理，非独立人工审核。跨领域真实输出的裁判一致率有限，bootstrap不覆盖判分错误。每轮多题共用上下文，题间可能互相影响；相同重复号题序配对，但模型随机种子/温度不能由CLI完全控制。英文题有中文作答，语言遵从不单独计分；A1/A2的英文N/A和A1表面代理会影响绝对分数。工具被要求禁用，Codex仍有自己的系统包装提示，无法把差异当纯模型能力。厂商分离仅为名义配置，OpenAI候选采用同厂商裁判；实际后端及总账单都缺独立核实。20题与5轮不足以支持广泛结论，没有按保留集改skill，没有宣称可以推广到所有领域。
