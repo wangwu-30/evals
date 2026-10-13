@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "bf5c9df94a62852ce28f8e2d7cfbb092fd29a9d498fa6fe2a3f4ca119457777c",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-09\",\"bits\":\"001001\",\"reasons\":[\"No concrete problem is connected to a decision.\",\"No confusable near-case or deciding feature is provided.\",\"Correct calculation, units, stability, and matching system quantities are present.\",\"No key condition is changed with other conditions held fixed.\",\"No surface-different situation applies the shared relationship.\",\"Definitions and arithmetic are correct; no material factual errors.\"],\"evidence\":[\"\",\"\",\"L = 10 × 0.5 = 5 customers\",\"\",\"\",\"The law applies in a stable system\"]}]}",
+  "usage": {
+    "input_tokens": 20139,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 339,
+    "reasoning_output_tokens": 217
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.983
+}

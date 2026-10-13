@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "2bfd811efb42ff884fb3fbf78463dd1efb53060d55755dd571b4852276c06fb3",
+  "rc": 0,
+  "cost_usd_reported": 0.066455,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "```json\n{\"judgments\":[{\"id\":\"cal-10\",\"bits\":\"111111\",\"reasons\":[\"States purpose: compare hypotheses' explanatory power for seen data\",\"Typical case HH plus near-case posterior with deciding feature prior\",\"Correct 0.25/0.64 via independence multiplication, states non-posterior distinction\",\"Changes p .8 to .2, HH fixed, 0.04 reverses ranking correctly\",\"Defect detection shares fixed-data comparison plus prior requirement\",\"Hypotheticals flagged, values match oracle, no material errors\"],\"evidence\":[\"似然用已经看到的数据比较不同假设对这批数据的解释能力\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验\",\"独立抛掷时两次概率相乘，似然为0.25和0.64\",\"保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04\",\"在缺陷检测中，也可固定同一批测试结果比较两种故障假设\",\"假设两枚硬币正面率分别为0.5和0.8\"]}]}\n```",
+  "usage": {
+    "input_tokens": 1281,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2402,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1281,
+      "outputTokens": 2402,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.066455,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 45.227
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "eac0ecf87a02d66c16292a462c56c41a56bdc219878d042613b4074e6d10e2f2",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-05\",\"bits\":\"101001\",\"reasons\":[\"将预测新成绩的问题连接到训练与验证表现的判断。\",\"有典型案例，但没有易混淆近例及区分特征。\",\"正确解释记住噪声如何导致训练好而新数据差。\",\"仅列改善方法，未固定条件改变原案例。\",\"没有新情境及共享判断关系的迁移。\",\"假设案例明确，机制和验证集要求正确，无实质错误。\"],\"evidence\":[\"判断它要比较训练集和未参与训练的验证集\",\"\",\"把训练数据里的规律和偶然噪声一起记住，导致训练题做得很好，没见过的新数据却表现差\",\"\",\"\",\"比如根据几次考试成绩，画一条曲线穿过每个学生的分数点\"]}]}",
+  "usage": {
+    "input_tokens": 20167,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 312,
+    "reasoning_output_tokens": 118
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 32.627
+}

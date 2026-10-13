@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "e51661c215832d824981010393641d4592707e86e81a8d62b805218849a35ff9",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-08\",\"bits\":\"111001\",\"reasons\":[\"Connects circular waiting to choosing lock acquisition fixes.\",\"Contrasts deadlock with ordinary waiting; mutual waiting decides.\",\"Correctly explains exclusive locks, circular waiting, and release dependency.\",\"No explicit modified original case with fixed conditions and outcome.\",\"No surface-different situation applying the same deciding relationship.\",\"Correct mechanism and remedies; limits failure to affected transactions.\"],\"evidence\":[\"acquire locks in a fixed global order (kills circular wait)\",\"here waiting is mutual, so time doesn't help\",\"they only release after finishing\",\"\",\"\",\"deadlock starves its victims, not necessarily the whole system\"]}]}",
+  "usage": {
+    "input_tokens": 20224,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 311,
+    "reasoning_output_tokens": 167
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 32.561
+}

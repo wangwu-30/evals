@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "c1ab29e5be7c2d3452e1b1073278a8d18a81c8b81017aeb4ca49553e4083017a",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"111111\",\"reasons\":[\"用偏硬币连接不确定性与预测正面的判断。\",\"区分概率分布的熵与单次结果的属性。\",\"解释惊奇度加权平均，给出正确比特计算。\",\"保持硬币两种结果，改变概率并说明熵下降。\",\"迁移到三面骰子，指出等可能选择数量关系。\",\"计算正确，明确熵属于分布而非单次结果。\"],\"evidence\":[\"你早猜到多半是正面\",\"熵是概率分布的属性，不是某次结果的属性\",\"公平硬币：概率 1/2、1/2，熵正好 1 比特\",\"偏硬币：正面 0.9、反面 0.1，熵约 0.47 比特\",\"等可能的选择越多，越难猜\",\"熵是概率分布的属性，不是某次结果的属性\"]}]}",
+  "usage": {
+    "input_tokens": 20292,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 386,
+    "reasoning_output_tokens": 157
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 36.752
+}

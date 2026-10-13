@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-6",
+  "rep": 1,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110000",
+      "reasons": [
+        "Connects fixed observations to comparing hypotheses.",
+        "Contrasts likelihood and posterior by conditioning direction.",
+        "No numerical likelihood or posterior calculation.",
+        "No explicit change to the original case.",
+        "No surface-different application.",
+        "Claims greater posterior credibility without specifying priors."
+      ],
+      "evidence": [
+        "似然是「固定数据、比较假设」",
+        "两者方向相反。",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "110001",
+      "reasons": [
+        "Explains why equal averages require a spread comparison.",
+        "Contrasts average and variance using differing spreads.",
+        "Missing numerical variance calculation and population versus sample distinction.",
+        "No explicit condition change in the original example.",
+        "No new situation applying the relationship.",
+        "Correctly explains squaring, squared units, and shape limitations."
+      ],
+      "evidence": [
+        "Variance is the number that tells them apart.",
+        "The average alone can hide spread",
+        "",
+        "",
+        "",
+        "The result is in squared units"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111111",
+      "reasons": [
+        "Connects amplification to evaluating beneficial and harmful outcomes.",
+        "Contrasts positive and negative feedback by response direction.",
+        "Explains recirculation, gain exceeding losses, and saturation.",
+        "Changes susceptible availability while retaining disease transmission.",
+        "Transfers reinforcing accumulation to interest on accumulated principal.",
+        "States amplification conditions and physical limits correctly."
+      ],
+      "evidence": [
+        "评价好坏要看被放大的是什么",
+        "偏离就往回拉",
+        "回路增益要超过损耗，且回路不能断",
+        "等多数人感染后，传染病能接触的人变少",
+        "利息并入本金，下一轮按更大的本金生息",
+        "啸叫会停在设备的物理极限"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choices to the value sacrificed.",
+        "Distinguishes best forgone alternative from summing skipped options.",
+        "Explains why mutually exclusive alternatives cannot be added.",
+        "Removes deadline while retaining hike choice and other alternatives.",
+        "Generic advice adds no surface-different application.",
+        "Accurately treats nonmonetary costs and best alternatives."
+      ],
+      "evidence": [
+        "You choose the hike.",
+        "not all the options you skipped",
+        "because you could never have done both anyway.",
+        "if the project deadline disappears",
+        "",
+        "no money changes hands"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Connects positive tests to estimating actual disease probability.",
+        "Distinguishes positive detection from disease and reversed conditioning.",
+        "Correct expected counts, normalization, and posterior calculation.",
+        "Changes prevalence while explicitly keeping the same test.",
+        "No surface-different application.",
+        "Hypothetical rates and both posterior calculations are correct."
+      ],
+      "evidence": [
+        "阳性之后，真患病的概率有多大",
+        "检测出阳性不等于得了病",
+        "9.9 ÷ 59.4 ≈ 17%",
+        "患病率升到 10% 时，同样的检测",
+        "",
+        "设患病率 1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "100000",
+      "reasons": [
+        "Connects changed prices to deciding when cached copies need removal.",
+        "Strategies contrast methods rather than a confusable conceptual near-case.",
+        "Unqualified write-invalidation accuracy overlooks concurrent stale repopulation.",
+        "No explicit change to the original case.",
+        "No surface-different application.",
+        "Claims write invalidation is accurate without race boundaries."
+      ],
+      "evidence": [
+        "If the price changes in the database",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110010",
+      "reasons": [
+        "Connects associations to investigating causal explanations.",
+        "Contrasts common-cause association with causal direction.",
+        "Control and randomization are presented as sufficient without assumptions.",
+        "Predicts correlation disappearance without establishing sufficient control.",
+        "Transfers common-cause reasoning to fire engines and fires.",
+        "Presents toy observations as facts and overstates causal certainty."
+      ],
+      "evidence": [
+        "先问：有没有共同原因？谁先谁后？",
+        "这种同时推动两个变量的隐藏因素叫混杂因素",
+        "",
+        "",
+        "不是消防车引来火灾",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111100",
+      "reasons": [
+        "Connects accumulated gains to assessing starting amount effects.",
+        "Contrasts compound growth with fixed simple increments.",
+        "Correct numerical compounding, rate, periods, and simple-growth distinction.",
+        "Changes principal while explicitly fixing rate and duration.",
+        "No surface-different situation applies the relationship.",
+        "Unconditionally claims starting early outweighs starting big."
+      ],
+      "evidence": [
+        "The starting amount matters because the same factor",
+        "Simple growth instead adds a flat 10 each year",
+        "100 becomes 110, then 121",
+        "Same rate, same waiting",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects memorized noise to failure on new data.",
+        "Contrasts memorized answers with transferable methods.",
+        "Explains spurious training features and unseen-data performance gaps.",
+        "Changes multiple conditions without fixing the original case.",
+        "Exam analogy lacks an explicit shared deciding condition beyond memorization.",
+        "Exam analogy maps components but supplies no limits."
+      ],
+      "evidence": [
+        "换新数据就不灵了",
+        "他记住的是具体答案，不是解法",
+        "在没见过的数据上明显下降",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111111",
+      "reasons": [
+        "Connects search errors to choosing evaluation priorities.",
+        "Distinguishes precision and recall by their denominators.",
+        "Correctly calculates precision and recall with meaningful counts.",
+        "Changes returned results while retaining the catalog.",
+        "Applies recall to legal searches through missed relevant precedents.",
+        "Calculations and stated endpoint examples are correct."
+      ],
+      "evidence": [
+        "depends on the cost of each mistake",
+        "of all the good material, how much was found?",
+        "6/40 = 15%",
+        "Return only the one certain hit",
+        "A lawyer hunting precedents can't afford to miss one",
+        "6/10 = 60%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111011",
+      "reasons": [
+        "Connects population change to interpreting selection rather than effort.",
+        "Contrasts inherited selection with purposeful individual stretching.",
+        "Explains variation, differential reproduction, inheritance, and generations.",
+        "No explicit environmental change applied to the original moth case.",
+        "Transfers inherited reproductive advantage from moths to giraffes.",
+        "Uses conditional proportions and correctly distinguishes survival from reproduction."
+      ],
+      "evidence": [
+        "变的是整个种群的概率构成",
+        "不是伸脖子够高处的叶子",
+        "存活者繁殖，把体色传给下一代",
+        "",
+        "留下更多后代，代代之后",
+        "比例可能从 2% 升到 90%"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111011",
+      "reasons": [
+        "Connects lost confirmations and retries to preventing duplicate charges.",
+        "Contrasts repeated assignment with repeated additive charging.",
+        "Explains repeated effects and atomic duplicate checks.",
+        "No explicit condition change to an original operation.",
+        "Transfers assignment versus increment to account balance updates.",
+        "Correctly defines effects and mentions atomic bookkeeping."
+      ],
+      "evidence": [
+        "server may process your request but lose the confirmation",
+        "The first is not idempotent; the second is.",
+        "storing IDs and checking them atomically",
+        "",
+        "'set balance = 100' over 'balance += 50'",
+        "has the same effect as running it once"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110110",
+      "reasons": [
+        "Connects probability distributions to uncertainty before observing outcomes.",
+        "Contrasts distribution uncertainty with outcome meaning.",
+        "Incorrectly describes rare events as receiving extremely high weighted contributions.",
+        "Changes binary probabilities while retaining the outcome count.",
+        "Transfers balanced versus skewed probabilities from sports to coins.",
+        "Rare-event weighting explanation materially misstates the entropy sum."
+      ],
+      "evidence": [
+        "结果揭晓前你有多不确定",
+        "不看结果的实际含义",
+        "",
+        "概率 0.99 对 0.01 时 H ≈ 0.08 比特",
+        "各结果难分主次时最难猜",
+        ""
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101100",
+      "reasons": [
+        "Connects reciprocal lock waiting to choosing prevention strategies.",
+        "Crash comparison supplies no reliable deciding feature.",
+        "Correctly derives circular waiting from held exclusive locks.",
+        "Changes lock acquisition order while retaining resource requirements.",
+        "No surface-different application.",
+        "Claims deadlocks never announce themselves, an unjustified absolute."
+      ],
+      "evidence": [
+        "which points to the standard fixes",
+        "",
+        "A waits for B, B waits for A",
+        "acquire locks in the same global order everywhere",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "101100",
+      "reasons": [
+        "Connects shared access incentives to funding shortages.",
+        "Examples omit a near-case distinguished using both defining features.",
+        "Explains individual savings and collective loss through shared benefits.",
+        "Changes exclusion while preserving access to the same service.",
+        "Cable television illustrates changed exclusion, not a separate shared relationship.",
+        "Overstates nonprovision and necessity of coercive funding."
+      ],
+      "evidence": [
+        "市场供给不足",
+        "",
+        "人人想省 50 元，结果各损失 100 元",
+        "一旦能排他",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "100110",
+      "reasons": [
+        "Connects measurable queue quantities to estimating difficult quantities.",
+        "No explicit waiting-time versus system-time near-case.",
+        "Multiplication explanation incorrectly gives person-minutes instead of people.",
+        "Changes stability through excess arrivals and explains unbounded waiting.",
+        "Transfers occupancy-rate-duration relation to server requests.",
+        "Incorrect units materially contradict the dimensional explanation."
+      ],
+      "evidence": [
+        "compute whichever quantity is hardest to measure",
+        "",
+        "",
+        "if the queue grows without bound, W climbs forever",
+        "an average latency of 0.2 seconds",
+        ""
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-6/1.call.json",
+  "prompt_sha256": "66322b9f1602be597a10f3a65bb3e37eb18d02b332d30b168e5bb2f14bdd6756",
+  "isolated_repair_calls": []
+}

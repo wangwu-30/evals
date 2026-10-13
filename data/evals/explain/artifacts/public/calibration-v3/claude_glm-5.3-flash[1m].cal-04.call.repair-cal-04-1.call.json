@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "8c01d71e4a738f81996a5e427e241c4a00b7cdcb33b3b8186fefb53dc85fd5ca",
+  "rc": 0,
+  "cost_usd_reported": 0.034997,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"cal-04\",\"bits\":\"111011\",\"reasons\":[\"Connects fixed data to deciding which hypothesis explains it better\",\"Contrasts likelihood (data prob) with posterior needing prior\",\"Correct HH calculation 0.25/0.64 with meaning and data-vs-posterior distinction\",\"No condition changed in original case to show altered result\",\"Same fixed-data comparison transferred to defect detection with prior requirement\",\"Factually correct, hypothetical examples marked, no invented causality\"],\"evidence\":[\"似然用已经看到的数据比较不同假设对这批数据的解释能力\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验\",\"独立抛掷时两次概率相乘，似然为0.25和0.64\",\"\",\"在缺陷检测中，也可固定同一批测试结果比较两种故障假设\",\"这是数据在各假设下的概率，不是硬币的后验\"]}]}",
+  "usage": {
+    "input_tokens": 212,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1024,
+    "output_tokens": 1337,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 212,
+      "outputTokens": 1337,
+      "cacheReadInputTokens": 1024,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.034997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 25.746
+}

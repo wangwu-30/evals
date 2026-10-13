@@ -1,0 +1,336 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-1",
+  "rep": 2,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111001",
+      "reasons": [
+        "Connects observed coin data to comparing hypotheses.",
+        "Distinguishes data likelihood from probability of a hypothesis.",
+        "Correct binomial calculations and posterior proportionality with normalization context.",
+        "No explicit condition change and resulting posterior comparison.",
+        "No surface-different application.",
+        "Calculations and probability directions are correct."
+      ],
+      "evidence": [
+        "哪个假设让这批数据最可能出现",
+        "似然 0.267，说明 p=0.7 有 26.7% 的可能",
+        "后验 ∝ 似然 × 先验",
+        "",
+        "",
+        "还要看先验和其他 p 值的似然"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100001",
+      "reasons": [
+        "Explains why equal averages cannot distinguish score spread.",
+        "Does not distinguish population variance from a confusable statistic.",
+        "Correct calculation, but missing population versus sample divisor distinction.",
+        "Extreme-score example leaves the modified dataset unspecified.",
+        "No surface-different application.",
+        "Arithmetic and squared-unit explanation are correct."
+      ],
+      "evidence": [
+        "The average can't tell them apart",
+        "",
+        "",
+        "",
+        "",
+        "the units become 'points squared'"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "110110",
+      "reasons": [
+        "Connects amplified changes to judging desirable effects and brakes.",
+        "Distinguishes reinforcing direction from beneficial outcomes.",
+        "Omits amplification condition when explaining the microphone loop.",
+        "Changes loop gain while retaining the feedback structure.",
+        "Bank runs instantiate fear reinforcing withdrawals and vice versa.",
+        "Snowball analogy lacks limits; directional reinforcement alone needn't amplify."
+      ],
+      "evidence": [
+        "看回路放大的是期望的变化还是不想要的变化",
+        "正反馈不判断好坏",
+        "微小扰动被滚成雪球",
+        "若回路增益小于1，放大变成衰减",
+        "一挤兑就更恐慌、更恐慌就更多人挤兑",
+        ""
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111100",
+      "reasons": [
+        "Connects afternoon choices to valuing the best forgone use.",
+        "Distinguishes best alternative from summing all forgone options.",
+        "Correctly derives cost from mutually exclusive afternoon uses.",
+        "Changes gig pay while keeping the movie choice fixed.",
+        "Wages and leisure repeat the original situation rather than transfer.",
+        "Treats monetary pay as establishing subjective ranking without qualification."
+      ],
+      "evidence": [
+        "what would I otherwise do with this resource?",
+        "your cost isn't the nap plus the gig",
+        "the single best option you gave up",
+        "if the gig pays $1000",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111100",
+      "reasons": [
+        "Connects a positive test to the desired disease probability.",
+        "Distinguishes sensitivity from disease probability given a positive.",
+        "Correct counts, normalization, formula meanings, and posterior calculation.",
+        "Changes prevalence while explicitly retaining the same test.",
+        "No surface-different application.",
+        "Invented disease statistics are not identified as a teaching hypothetical."
+      ],
+      "evidence": [
+        "测出阳性，患病概率是 99% 吗？",
+        "二者不是一回事",
+        "990/5940 ≈ 16.7%",
+        "同样的检测，阳性中真病人比例升到约 68%",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111100",
+      "reasons": [
+        "Connects stale prices to deciding when copies need refreshing.",
+        "Distinguishes timed expiry from deletion triggered by writes.",
+        "Explains origin mutation, stale copies, expiry, and deletion failure.",
+        "Changes content volatility and explains the appropriate timer choice.",
+        "Menu analogy maps copying, but lacks a different applied decision.",
+        "Menu analogy lacks stated limits; distributed freshness races remain unaddressed."
+      ],
+      "evidence": [
+        "deciding when a copy must be thrown away or refreshed",
+        "expire after a fixed time",
+        "until the copy expires or is deleted",
+        "Rarely-changing content suits a long timer",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111110",
+      "reasons": [
+        "Connects observed association to deciding whether causation is supported.",
+        "Contrasts common-cause association with supported smoking causation.",
+        "Explains confounding and need for additional intervention evidence.",
+        "Restricts comparison to equally hot days, reducing temperature variation.",
+        "Transfers causal evaluation to smoking through controls and intervention.",
+        "Presents seasonal toy association and shop intervention as established facts."
+      ],
+      "evidence": [
+        "才能把相关坐实为因果",
+        "背后有个共同原因：夏天高温",
+        "既让冰淇淋好卖，也让更多人下水",
+        "只比较同样炎热的日子",
+        "戒烟后肺癌率下降支持因果",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects starting capital to deciding how final amounts compare.",
+        "Contrasts compound multiplication with fixed additions, identifying the deciding feature.",
+        "Correct formula and numerical example explain interest on accumulated interest.",
+        "Halves the rate while keeping starting amount and duration fixed.",
+        "Lists applications without applying the relationship to a new situation.",
+        "Calculations are correct; stipulated rates frame examples without guaranteeing returns."
+      ],
+      "evidence": [
+        "double the start, double the result",
+        "multiplies the running total instead of adding a fixed amount",
+        "$1000 at 10%: after one year $1100, after two $1210",
+        "drop the rate to 5% and $1000 over 30 years yields only $4,322",
+        "",
+        "$1000 and $2000, same 10%, same 30 years"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111010",
+      "reasons": [
+        "Connects training success to assessing performance on unseen data.",
+        "Contrasts overfitting with underfitting using both error patterns.",
+        "Explains flexibility absorbing noise and limited-data coincidence.",
+        "Lists remedies without an explicit controlled case change.",
+        "Applies memorized noise to misleading historical trading performance.",
+        "Student analogy maps memorization but supplies no limits."
+      ],
+      "evidence": [
+        "Low error on training data but high error on new data",
+        "failing on both training and new data is underfitting",
+        "the more coincidence it can absorb",
+        "",
+        "a trading rule that 'explains' the past decade perfectly",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111010",
+      "reasons": [
+        "Connects retrieval quality and coverage to search decisions.",
+        "Distinguishes returned-result relevance from total relevant coverage.",
+        "Initial precision and recall calculations use correct denominators.",
+        "Precision rises to approximately ninety-one percent; it does not drop.",
+        "Applies coverage requirement to legal discovery with its deciding relation.",
+        "Explicitly misstates the direction of precision change."
+      ],
+      "evidence": [
+        "a quality check on the results shown",
+        "of everything relevant that exists",
+        "Precision = 8/10",
+        "precision drops to ~91%",
+        "legal discovery tolerates junk but must not miss documents",
+        ""
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "Explains how population trait frequencies change without purposeful effort.",
+        "Contrasts inherited differences with necks lengthened through effort.",
+        "Correctly links heritable variation, reproduction, and generational frequency.",
+        "Changes food availability while retaining the inherited neck differences.",
+        "Applies differential survival and reproduction to antibiotic resistance.",
+        "Individual necks grow during life; disappearance of advantage is oversimplified."
+      ],
+      "evidence": [
+        "种群中特征的频率",
+        "长颈鹿的脖子不是伸出来的",
+        "后代继承这些差异",
+        "若矮处食物同样充足，长脖优势消失",
+        "存活并繁殖，把它们的频率顶了上去",
+        ""
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111100",
+      "reasons": [
+        "Connects uncertain request completion to safe retry decisions.",
+        "Contrasts setting status with incrementing cart contents.",
+        "Explains duplicate effects and keyed result reuse.",
+        "Changes delivery guarantee while retaining retry-effect concerns.",
+        "Examples remain within distributed request handling.",
+        "Claims harmless keyed retries without atomicity, scope, or retention boundaries."
+      ],
+      "evidence": [
+        "the server may have processed it, and you can't tell",
+        "'Add one item to cart'",
+        "returns the stored result if the same key arrives again",
+        "if delivery were exactly-once you'd need none of this",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111101",
+      "reasons": [
+        "将猜测结果的问题连接到依据概率选择押注。",
+        "对比均匀与偏斜概率，以是否存在优势结果区分。",
+        "平均惊讶度、比特计算及分布属性区分均正确。",
+        "保持均匀分布，增加选项，正确计算熵的变化。",
+        "没有应用到表面不同的新情境并说明共同关系。",
+        "计算与事实正确，没有误将单次结果视为熵。"
+      ],
+      "evidence": [
+        "只要概率不均匀，你就能偏向大概率结果来降低猜测难度",
+        "两个结果各 50% 时 H = 1 比特；改成 99% 和 1%",
+        "熵就是平均惊讶度",
+        "均匀分布的选项从 2 个增到 8 个，H 从 1 升到 3 比特",
+        "",
+        "注意熵是整个概率分布的属性，不描述某一次具体结果。"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101111",
+      "reasons": [
+        "Connects circular waiting to choosing a preventive lock order.",
+        "No explicit confusable non-deadlock waiting case.",
+        "Correctly derives permanent waiting from exclusive held locks and cycles.",
+        "Changes B's release behavior and correctly breaks the original cycle.",
+        "Transfers opposite lock acquisition to database transactions.",
+        "Conditions and bounded two-process recovery explanation are correct."
+      ],
+      "evidence": [
+        "everyone acquires file 1 before file 2",
+        "",
+        "finishing requires the other's lock",
+        "if B gives up and releases file 2 after a timeout",
+        "two transactions lock rows in opposite orders",
+        "Four conditions must hold simultaneously"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "110110",
+      "reasons": [
+        "用楼栋案例说明集体收益与供给不足的判断。",
+        "对比路灯与电影院座位，给出两项区分特征。",
+        "把不出钱断言为人人最优，忽略关键贡献者情形。",
+        "保持享用需求，改变排除技术，解释私人供给变化。",
+        "迁移到加密电视，指出排除非付费者这一关系。",
+        "人人不出钱最划算的绝对断言存在实质错误。"
+      ],
+      "evidence": [
+        "这解释了为什么这类东西市场往往供给不足",
+        "电影院座位会被坐掉、能检票，就不算",
+        "每个人最划算的做法就是不出钱，等别人付",
+        "一旦技术能排除不付钱者（加密电视），搭便车被堵住，私人供给就变得可行",
+        "一旦技术能排除不付钱者（加密电视）",
+        "每个人最划算的做法就是不出钱，等别人付"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101010",
+      "reasons": [
+        "Connects request throughput and duration to required in-flight capacity.",
+        "No confusable near-case or deciding distinction is provided.",
+        "Correct calculation, units, system boundaries, and distribution independence.",
+        "Halving service time need not halve total system time.",
+        "Applies arrival-rate-times-duration relationship to server requests.",
+        "Incorrectly equates reduced service time with reduced system time."
+      ],
+      "evidence": [
+        "needs about 200 in flight",
+        "",
+        "so on average 30 people are inside.",
+        "cut service time to 0.1 s at the same arrival rate",
+        "a server handling 1000 requests/s with 0.2 s each",
+        "the crowd halves to 100"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-1/2.call.json",
+  "prompt_sha256": "0bbfdddd15805ccd520ece021692d14dfead93c8f52981d799b94f99c0109ce8",
+  "isolated_repair_calls": [
+    "2.call.repair-d08-0.call.json",
+    "2.call.repair-v05-0.call.json",
+    "2.call.repair-v07-0.call.json",
+    "2.call.repair-v08-0.call.json"
+  ]
+}

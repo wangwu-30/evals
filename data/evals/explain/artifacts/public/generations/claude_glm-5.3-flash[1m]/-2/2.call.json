@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "55af99991e933d2f2e87938f9a3e9489f0f561316a5bdffd72bc6670c51ea915",
+  "rc": 0,
+  "cost_usd_reported": 0.23967,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"d03\":\"正反馈是输出反过来喂回输入，让变化沿原方向越滚越大。话筒靠近音箱：声音被放大后又被话筒拾起再放大，啸叫越来越响；存款利息也一样，钱越多利息越多，利息又变成本钱。判断关键在回路方向：变化增强自身是正反馈，被压回趋稳的是负反馈。但放大本身没有好坏，它只是机制——流行病扩散、贫富差距扩大同样是正反馈，被放大的是什么决定评价。回路通常有上限（功率饱和、市场饱和），但在到达上限前，它能把小差异推成大后果。见到正反馈先问两件事：它放大什么？极限在哪？\",\"v02\":\"Search for 'jaguar' returns 10 results: 6 are about the animal (relevant), 4 about the car. Precision = 6/10 = 60%: of what the engine showed you, how much was actually relevant — it answers 'can I trust this list?'. Suppose the corpus holds 20 truly relevant pages and the engine found 6, so recall = 6/20 = 30%: of everything relevant out there, how much you got — it answers 'did I miss anything?'. The two can move opposite ways: fetching more results usually raises recall while precision drops. Which to prioritize depends on the task — a legal search fears missing documents, a quick lookup fears noise. Both need ground truth: someone must first label which results are relevant.\",\"d06\":\"A cache keeps a nearby copy of data so requests avoid a slow trip to the database. The copy goes stale when the real data changes, so the system must invalidate it — drop the copy or refresh it. Say a product's price rises from $9 to $10 in the database but the cache still serves $9; users see wrong prices at checkout. Common strategies: TTL (expire the copy after N seconds — simple, but with a window of staleness); delete-on-write (drop the key when data changes, next read repopulates it); write-through (update cache and database together). The hard part in distributed systems is knowing exactly which copies, on which servers, at which moment — and dodging races where a stale write lands after the invalidation. That coordination burden is why cache invalidation is called one of the hard problems in computer science.\",\"d02\":\"An average gives the center, not the spread. Class A scores 70,70,70,70,70; Class B scores 60,80,60,80,70 — both average 70, but B clearly varies more. Variance turns that impression into a number: for each value take its deviation from the mean, square it, then average the squares. Squaring matters because raw deviations cancel (−10 and +10 sum to 0), and it also punishes large deviations harder. For B: deviations ±10, squares 100 each, variance 100. Its unit is 'points squared', so take the square root — 10 points, the standard deviation — to get back to ordinary units. Population variance divides by N because all values are known; a sample estimate divides by N−1, which targets a different quantity. Bigger variance means values sit farther from the mean, in this squared sense.\",\"v05\":\"信息熵衡量结果揭晓之前你有多不确定，单位是比特，公式 H = −Σ p·log₂p。每个结果的概率越接近彼此，你越没法押注：均匀硬币（各0.5）的熵是1比特；偏心硬币（0.9/0.1）你大概率猜正面，剩余悬念小，熵约0.47比特。原因藏在 −p·log₂p 这个形状里：它在 p=1/2 附近最高，在 p 趋近 0 或 1 时趋近 0——几乎确定的结果几乎没有悬念。各项加总后，均匀分布正好让总和最大，所以「每个结果等可能」通常是最不确定的分布。注意条件：熵只看概率分布，不关心结果的内容；它衡量的是猜前缺口，不保证某一次真的难猜。\",\"d05\":\"先看具体数字。某病患病率1%，一万人体检：100人患病，9900人健康。检测能查出90%的病人（灵敏度90%），也会把5%的健康人误报成阳性。阳性人数 = 100×0.9 + 9900×0.05 = 90 + 495 = 585人，其中真患病的只有90人，所以测出阳性后真患病的概率是 90/585 ≈ 15%。贝叶斯公式把这步一般化：P(患病|阳性) = P(阳性|患病)×P(患病) ÷ P(阳性)。容易混的两件事在这里分开：P(阳性|患病) 是检测性能，P(患病|阳性) 才是你要的答案，两者方向相反。阳性只有约15%可信，是因为健康人基数大，小比例误报在人数上压过了病人。患病率（先验）越高，同一次阳性就越可信。\",\"v01\":\"一个学生把练习题答案全背下来了，模拟考次次满分，新题一换数字就错——这就是过拟合：模型把训练数据里的偶然细节当成了真规律。比如预测房价，模型发现训练集里「门牌号是偶数的房子更贵」并据此完美拟合，换一批房子立刻失灵。原因在于模型太灵活而数据有限，总有办法靠死记硬背把训练误差压得很低。判断信号：训练数据上表现极好，没见过的数据上明显变差。常用对策：留一部分数据不参与训练、专门用来检验；限制模型复杂度；增加数据量。目标是新情境上的准确，训练集上的满分本身不值钱。\",\"v08\":\"Little's law: L = λW. The average number of items in a system (L) equals the average arrival rate (λ) times the average time each item spends inside (W). Coffee shop: 10 customers arrive per minute and each stays 3 minutes (waiting plus service), so on average 30 people are inside. It is bookkeeping: sustaining 10 arrivals per minute for 3 minutes each requires 30 present at any time, on average. Useful because measuring any two gives the third: if your service must respond within 2 seconds at 100 requests per second, keep at most 200 requests in flight. Conditions: the system is stable (arrival stays below capacity, queues do not grow without bound) and the numbers are long-run steady-state averages; during rush-hour transients the equality fails. No assumption about arrival or service distributions is needed.\",\"v07\":\"公共物品有两个特征：没法把没付钱的人挡在外面（非排他），多一个人用也不减少别人的用量（非竞争），比如路灯、防洪堤。搭便车随之出现：既然挡不住，理性的住户会想「我不出钱，别人修了我照样亮」。举一个数：修一盏路灯花100元，10户人家每户受益30元，总受益300元大于成本，对社会划算；但任何一户单独不掏钱也拦不住他享受亮光，于是人人都等别人出钱，路灯修不起来。结果不是没人需要，而是供给低于社会最优。现实的补救办法：用税收强制筹资、把受益和可排斥的付费绑定，或在小圈子里靠声誉与反复交往约束偷懒。\",\"v03\":\"自然选择改变种群靠「差异繁殖」，个体不需要也不会主动努力。一个蛾群里浅色、深色个体都有，颜色是天生的随机变异；工业区烟尘把树皮熏黑后，深色蛾不容易被鸟发现，活得久、留下更多后代，下一代深色比例就升高——被改变的是种群，不是某只蛾。两个关键点防止误读：变异先随机产生，环境只做筛选，不负责定向改进；长颈鹿的脖子不是为够高处的叶子拉长的，而是天生长颈的个体在矮叶稀少时吃得多、繁殖多。选择直接作用于每个个体的生存繁殖，一代代积累成基因频率的改变。成立条件：变异可遗传、影响繁殖成功、环境压力持续；环境一变，被选中的方向也变。\",\"v04\":\"An operation is idempotent when doing it once or many times ends in the same state. It matters because networks fail silently: your client sends 'charge $10 for order 42', times out, and never learns whether the server got it. Retrying a non-idempotent charge bills the customer twice; retrying an idempotent one is safe. Examples: 'set balance = 100' is idempotent; 'balance = balance + 10' is not. The standard pattern is an idempotency key: the client generates a unique ID per logical operation and sends it with every retry, and the server records seen keys, returning the original result for duplicates instead of redoing the work. When designing distributed systems, classify each write this way — overwrites are naturally safe; increments and appends are not, so give them keys or make them conditional on the current state.\",\"d01\":\"似然回答的是：数据已经看到了，哪个假设让它最可能出现。抛硬币10次出7次正面，若硬币均匀（p=0.5），出现这批数据的概率 L ≈ 0.117；若 p=0.7，L ≈ 0.267。数据固定，假设变，似然随之变——所以它是「假设的函数」。它和后验由一个式子连接：后验 ∝ 似然 × 先验。三者回答不同问题：似然比较各假设对这批数据的解释力，它不是假设为真的概率，也不是数据出现前的概率；后验才是「看完数据后，这个假设有多大可能」，还要乘上你看数据之前的信念。p=0.7 的似然更大只说明它解释得更好，不等于硬币真是 0.7——样本有限，先验也在起作用。\",\"v06\":\"Deadlock: two or more parties each hold a resource and wait for the other's, forever. Example: Transaction T1 locks row A, then asks for row B; meanwhile T2 locks B and asks for A. Each blocks on a lock the other will never release while itself blocked — both hang. A deadlock needs four conditions at once: mutual exclusion, hold-and-wait, no preemption (locks cannot be forcibly taken back), and circular wait. Break any one and deadlock becomes impossible; in practice the common fixes are acquiring locks in a fixed global order (both take A before B — no cycle possible) or timing out and aborting with a retry. Databases also detect deadlocks by building a waits-for graph, looking for a cycle, and aborting one victim.\",\"d08\":\"Compound growth means growth on growth: each period's gain is added to the base, and the next gain is computed on the bigger base. With A = P(1+r)^t: $1,000 at 10% grows to $1,100, then $1,210 (gain $110), then $1,331 (gain $121) — the dollar gain keeps growing even though the rate never changes. This is why the starting amount P matters: $1,000 and $100 at the same 10% for the same years give results that stay exactly 10× apart forever — the ratio never closes, and the absolute gap widens each year. The same logic makes early contributions the most powerful: they simply get more compounding periods. Conditions: it assumes a constant rate and full reinvestment; real markets fluctuate, and higher rates usually come with higher risk.\",\"d04\":\"机会成本是你选了某件事之后，被放弃的选项里价值最高的那一个。一个空闲下午，可选：接一单200元的活、陪家人、看电影。选了陪家人，机会成本就是那200元——不是三项加起来，因为你本来也只能选一个，其余选项并未同时属于你。用这个视角判断值不值，比较对象是次优选择，而不是「什么都不做」：躺着刷手机也有成本，成本就是你放弃的那个最有价值的用途。两个提醒：选项集合变了，成本就变——如果那天没有活可接，陪家人的机会成本就低得多；已经花掉、拿不回的时间和钱不算机会成本，别让它们左右决定。\",\"d07\":\"某城市统计发现，冰淇淋销量越高的月份，溺水人数也越多，两者强相关。若据此得出「吃冰淇淋导致溺水」就错了：背后有个共同原因——夏天炎热，天热让人既多买冰淇淋也多去游泳。这个藏在两个变量背后的第三方叫混杂变量。区分相关与因果的常用办法有三种：一，控制混杂后再看相关是否仍在，比如只在气温相近的日子里比较，两者的大概率消失；二，做随机对照实验，随机分组决定谁吃冰淇淋，各组其他条件被拉平，剩下的差异才敢归因；三，核对时间顺序与机制，结果应发生在原因之后，并能说清如何发生。判断依据：只观察到一起变动，在排除混杂、做出随机对照之前，不下因果结论。\"}}",
+  "usage": {
+    "input_tokens": 2449,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 9097,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2449,
+      "outputTokens": 9097,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.23967,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 351.455
+}

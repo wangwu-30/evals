@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "fb6e1a7241f24bbb6a503c009de6a8a2899d8f54bd33f9d9372a4862671f4038",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111010\",\"reasons\":[\"Connects timeout retries to deciding whether deduplication is needed.\",\"Contrasts setting status with incrementing balance using repeated effects.\",\"Correctly explains unchanged status versus doubled balance after repetition.\",\"No explicit condition change with fixed context and changed result.\",\"Transfers repeated-effect reasoning to HTTP resource storage.\",\"POST can be idempotent; it need not create another resource.\"],\"evidence\":[\"If yes, add deduplication before going live.\",\"'add $10 to the balance' is not\",\"two runs give $20\",\"\",\"HTTP PUT is defined as idempotent (store this resource)\",\"POST is not (create another each time)\"]}]}",
+  "usage": {
+    "input_tokens": 23439,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 262,
+    "reasoning_output_tokens": 110
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.906
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "d04072b53a6b2692a2196138f8dfc8b3e178ad5ae6ade5e21f6499d69200293e",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-11\",\"bits\":\"110111\",\"reasons\":[\"用已知数据比较假设，说明决策用途。\",\"区分似然与后验，指出后验需要先验。\",\"似然计算正确，但未解释后验归一化。\",\"固定HH改变正面率，正确说明支持反转。\",\"迁移到故障检测，保留固定数据比较假设关系。\",\"计算和概念正确，无实质事实错误。\"],\"evidence\":[\"似然用已经看到的数据比较不同假设\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。\",\"独立抛掷时两次概率相乘，似然为0.25和0.64\",\"保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。\",\"固定同一批测试结果比较两种故障假设\",\"这是数据在各假设下的概率，不是后验概率\"]}]}",
+  "usage": {
+    "input_tokens": 20269,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 331,
+    "reasoning_output_tokens": 88
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 41.903
+}

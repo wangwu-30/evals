@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "4c5cc4d27662399bf314405a6ffb0519db5dd30e2627e071e17839707cfbf9ba",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"111101\",\"reasons\":[\"Connects investment growth to choosing earlier versus larger starting investments.\",\"Contrasts compounding with unchanged earnings; gains enlarge the earning base.\",\"Correctly calculates yearly earnings using annual percentages and enlarged principal.\",\"Changes principal while fixing rate and period; absolute earnings increase.\",\"No surface-different situation explicitly applies the shared relationship.\",\"Calculations and recovery claim are correct; returns are framed conditionally.\"],\"evidence\":[\"starting earlier can beat starting bigger\",\"year two earns 10% of 1100 — 110, not 100\",\"year one earns 100\",\"both at 10% gain 100 versus 10,000 in year one\",\"\",\"a 50% drop needs a 100% gain to recover\"]}]}",
+  "usage": {
+    "input_tokens": 20212,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 392,
+    "reasoning_output_tokens": 225
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 43.345
+}

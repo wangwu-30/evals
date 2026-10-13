@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "ec56c1a36b1d93d43ef67d5d3c381bff8ad1064494212e9ef2dc21c9ea88d45e",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v06\",\"bits\":\"101101\",\"reasons\":[\"Connects mutual blocking to deciding how to prevent deadlock.\",\"No confusable near-case with a deciding feature.\",\"Correctly derives circular waiting from mutually held unavailable resources.\",\"Changes request ordering while retaining processes and resources, breaking the cycle.\",\"No application to a surface-different situation.\",\"Mechanism and ordering remedy are correct; timeout distinction is sound.\"],\"evidence\":[\"A small change can prevent it\",\"\", \"each resource is unavailable\",\"request resources in the same global order\",\"\",\"it does not prevent the underlying condition\"]}]}",
+  "usage": {
+    "input_tokens": 20145,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 215,
+    "reasoning_output_tokens": 87
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 42.785
+}

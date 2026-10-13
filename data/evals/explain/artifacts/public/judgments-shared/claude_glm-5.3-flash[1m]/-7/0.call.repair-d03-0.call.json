@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "84490b95816777f59ce2dc3dba87978beacefc5fd56e02e25f4d94db5562be40",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d03\",\"bits\":\"111011\",\"reasons\":[\"用繁荣和挤兑说明不能凭正反馈判断好坏。\",\"麦克风与空调形成对照，区分加强和削弱原因。\",\"正确解释闭环增强及每圈增益大于1的放大条件。\",\"没有改变原案例的明确条件并比较结果。\",\"迁移到股价和挤兑，指出共同的自我加强机制。\",\"正确区分方向与好坏，并说明饱和边界。\"],\"evidence\":[\"正反馈不区分方向，它只是一种结构而非价值判断\",\"对照负反馈：空调到设定温度就停机，结果削弱原因\",\"放大的关键在每圈增益大于1：变化不减反增\",\"\", \"恐慌挤兑加速银行倒闭，放大崩坏——机制相同\",\"它也不能无限放大，资源总有上限\"]}]}",
+  "usage": {
+    "input_tokens": 20278,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 495,
+    "reasoning_output_tokens": 271
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 39.049
+}

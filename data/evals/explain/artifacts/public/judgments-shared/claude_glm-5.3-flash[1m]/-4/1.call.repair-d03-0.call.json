@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "e2345526f88140865b5cdc59b695124d4bb78c1caa7ff8624ae0042a38b88046",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d03\",\"bits\":\"110110\",\"reasons\":[\"用啸叫等具体问题说明，反馈方向不能决定结果好坏。\",\"以啸叫和空调对照，依据增强还是抵消偏差区分。\",\"无条件声称逐圈指数放大，遗漏环路增益等必要条件。\",\"保持原音响系统，挪开麦克风切断回路，停止放大。\",\"迁移到平台点赞，明确点赞与曝光相互增强的关系。\",\"真实系统必然先指数增长再压平或崩盘的断言错误。\"],\"evidence\":[\"「正负」说的是回路方向,不是好坏评价\",\"输出抵消偏差,系统稳在设定值\",\"每绕一圈都是乘上放大倍数,变化按指数累积\",\"切断回路任何一环(挪开麦克风)就停止放大\",\"社交平台「点赞多→推给更多人→获更多赞」,同一回路\",\"所以先指数增长,后被压平或崩盘\"]}]}",
+  "usage": {
+    "input_tokens": 20370,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 344,
+    "reasoning_output_tokens": 94
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.102
+}

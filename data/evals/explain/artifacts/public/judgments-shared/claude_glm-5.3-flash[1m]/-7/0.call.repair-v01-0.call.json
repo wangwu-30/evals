@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "389b02faa23b5302b471e15bc75b8e0a3546a2d11d2e33f56faade769a568cae",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"101110\",\"reasons\":[\"房价预测问题连接到用未见数据判断模型可靠性。\",\"未给出容易混淆的非过拟合模型案例。\",\"正确解释拟合噪音导致训练好而新数据预测差。\",\"增加房价数据，保持场景不变，解释噪音更易识别。\",\"迁移到学生背题，指出记巧合而非规律的共同关系。\",\"学生类比说明了映射，但未说明类比失效边界。\"],\"evidence\":[\"留一部分数据不让模型见，考它没背过的题\",\"\",\"连噪音都拟合了；看训练数据它近乎满分\",\"见过的房子越多，急售的便宜越像噪音而非规律\",\"这像学生把往年卷子逐题背下，模拟考满分，高考换个数字就懵。\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 20287,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 446,
+    "reasoning_output_tokens": 224
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.735
+}

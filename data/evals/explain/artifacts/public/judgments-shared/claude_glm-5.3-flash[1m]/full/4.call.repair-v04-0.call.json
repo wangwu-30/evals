@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "ca15e1c8e96c8de2a9fc6a42912b62e755eefffbfecaf25ea1b099342284dc1e",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111111\",\"reasons\":[\"Connects uncertain charge outcomes to preventing duplicate billing during retries.\",\"Contrasts setting with incrementing; repeated state effects decide idempotency.\",\"Explains retry duplication and key-based suppression of repeated work.\",\"Changes fixed assignment to time-dependent assignment while retaining repeated execution.\",\"Transfers duplicate-effect reasoning from billing to variable and list operations.\",\"Correctly defines effect equivalence without requiring identical responses.\"],\"evidence\":[\"without idempotency the customer is billed twice\",\"x = x+1 and list.append(item) are not\",\"returns the stored result instead of redoing the work\",\"SET x=now() is not, since each call yields a different value\",\"SET x=5 is idempotent (repeating changes nothing)\",\"has the same effect as performing it once\"]}]}",
+  "usage": {
+    "input_tokens": 20208,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 335,
+    "reasoning_output_tokens": 157
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.007
+}

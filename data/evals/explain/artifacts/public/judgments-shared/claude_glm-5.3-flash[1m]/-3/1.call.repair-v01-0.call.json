@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "38321649dd1c1b7e4f88d28165e78702d028d8a77a2aea4dda3c7174cda28899",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"101000\",\"reasons\":[\"用背题失效说明为何必须检查新数据表现。\",\"没有给出易混淆的近似情形及区分特征。\",\"正确解释记住细节和噪声导致泛化落差。\",\"增加数据不必然迫使模型抓规律或缩小落差。\",\"没有迁移到新的不同情境并指出共同关系。\",\"把增加数据必然改善泛化说成确定因果。\"],\"evidence\":[\"不能只看训练成绩\",\"\",\"记住了这批数据的细节和噪声，而不是掌握了普遍规律\",\"数据多了以后，细节记不过来，模型被迫抓规律，落差随之缩小。\",\"\",\"数据多了以后，细节记不过来，模型被迫抓规律，落差随之缩小。\"]}]}",
+  "usage": {
+    "input_tokens": 20257,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 357,
+    "reasoning_output_tokens": 153
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 36.587
+}

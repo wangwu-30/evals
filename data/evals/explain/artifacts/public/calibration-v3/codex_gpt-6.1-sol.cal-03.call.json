@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "9d2030d52473474798fc82493a0e811be3f11d4fc918d5fec87465a78f011bf7",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-03\",\"bits\":\"110111\",\"reasons\":[\"用硬币数据比较假设支持程度。\",\"区分似然与后验的条件方向。\",\"缺少简单数值计算及归一化推导。\",\"固定HH，改变参数并正确判断支持度。\",\"迁移到故障检测并指出共同条件。\",\"事实正确，无实质错误或误导。\"],\"evidence\":[\"似然用固定数据比较假设的解释能力。\",\"似然问数据在假设下的概率，后验问假设在数据后的概率且需要先验。\",\"\",\"保持数据HH固定，把H2的p改成.2，就比p=.8更不支持H2。\",\"缺陷检测也可固定测试结果比较故障假设，需要相同观测和合适概率模型。\",\"后验问假设在数据后的概率且需要先验。\"]}]}",
+  "usage": {
+    "input_tokens": 19896,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 275,
+    "reasoning_output_tokens": 68
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 45.167
+}

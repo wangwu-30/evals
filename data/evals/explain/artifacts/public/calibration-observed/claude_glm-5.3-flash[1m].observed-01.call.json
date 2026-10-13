@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "72601751f04579312aa0e3c5e829338af1628d6d2d9262a2a0aee5ab545f70e4",
+  "rc": 0,
+  "cost_usd_reported": 0.11519000000000001,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-01\",\"bits\":\"111101\",\"reasons\":[\"Ties positive-test problem to deciding P(disease|positive) via Bayes.\",\"Flags positive≠diseased misreading; contrasts 90% sensitivity with 15.4% posterior.\",\"Correct counts: 90 TP, 495 FP, 585 positives, 90/585≈15.4%.\",\"Lowers prevalence with FPR fixed, correctly derives posterior drop.\",\"Stays inside the original screening case; no new domain applied.\",\"Hypothetical example flagged with 例如; all arithmetic checks out.\"],\"evidence\":[\"贝叶斯公式把目标概率写成：P(患病|阳性)=P(阳性|患病)×P(患病)÷P(阳性)\",\"不等于一定患病\",\"阳性者共585人，真正患病的概率是90/585≈15.4%\",\"患病率变低时，假阳性仍可能很多，阳性后的患病概率也会下降\",\"\",\"例如患病率1%，检测灵敏度90%，未患病者假阳性率5%\"]}]}",
+  "usage": {
+    "input_tokens": 1233,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 4361,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1233,
+      "outputTokens": 4361,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.11519000000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 80.154
+}

@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-6",
+  "rep": 0,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "Connects observed heads to comparing competing coin hypotheses.",
+        "Distinguishes likelihood from posterior by conditioning direction.",
+        "No numerical likelihood or posterior calculation is supplied.",
+        "No explicit condition change and resulting comparison.",
+        "No surface-different application is supplied.",
+        "Correctly distinguishes likelihood, prior, and posterior."
+      ],
+      "evidence": [
+        "公平硬币与偏向正面的硬币谁更能产生这个结果？",
+        "P(数据|假设) 与 P(假设|数据) 方向相反",
+        "",
+        "",
+        "",
+        "后验∝似然×先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "101001",
+      "reasons": [
+        "Connects variance to assessing dispersion in a complete dataset.",
+        "Sample denominator distinction remains unspecified.",
+        "Correct calculation, squared units, and population denominator.",
+        "No changed condition with a changed result.",
+        "No surface-different application is supplied.",
+        "Correct arithmetic and appropriately qualified sample denominator statement."
+      ],
+      "evidence": [
+        "总体方差衡量一整组数据离平均值有多分散。",
+        "",
+        "方差=(4+0+4)/3=8/3",
+        "",
+        "",
+        "它的单位是原单位的平方"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "Connects microphone amplification to explaining escalating sound.",
+        "Distinguishes reinforcing direction from beneficial outcomes.",
+        "Explains reinforcing loop, sufficient gain, and saturation.",
+        "Limits are generic, without changing the microphone case.",
+        "Applies reinforcing loop to price expectations and purchasing.",
+        "Correctly bounds amplification by gain and saturation."
+      ],
+      "evidence": [
+        "微小声音被放大，音箱再播出更大的声音",
+        "它放大的不是“好坏”，只是原有方向",
+        "麦克风又收到更强信号，于是不断增大",
+        "",
+        "预期推动行为，行为又强化预期",
+        "达到饱和、资源耗尽或系统受损后，增长会停止甚至崩溃"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111001",
+      "reasons": [
+        "Connects afternoon choices to the value sacrificed.",
+        "Distinguishes best alternative from summed alternatives and spent money.",
+        "Correctly derives cost from the best forgone opportunity.",
+        "Changed benefits lack a specified opportunity-cost result.",
+        "No surface-different application is supplied.",
+        "Correctly excludes sunk money and summed alternatives."
+      ],
+      "evidence": [
+        "免费下午如果你选择学习，机会成本可能是",
+        "它不是所有放弃选项的总和，也不是已经花掉的钱",
+        "而是最有价值的那个替代机会",
+        "",
+        "",
+        "即使没有直接花钱，时间仍然有机会成本。"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Connects positive tests to determining disease probability.",
+        "Distinguishes sensitivity from disease probability among positive results.",
+        "Correct formula and acceptable approximate numerical calculation.",
+        "Higher prevalence increases posterior with test characteristics implicitly fixed.",
+        "No surface-different application is supplied.",
+        "Hypothetical example and approximate arithmetic are appropriately marked."
+      ],
+      "evidence": [
+        "已经检测阳性的人，真正患病的概率是多少？",
+        "阳性者患病概率约1/51≈2%，远低于99%",
+        "约有1个真阳性、约50个假阳性",
+        "患病率变高，阳性者患病概率也会变高",
+        "",
+        "例如千人中1人患病"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111100",
+      "reasons": [
+        "Connects stale avatars to choosing cache-refresh mechanisms.",
+        "Contrasts explicit deletion with expiration using freshness delay.",
+        "Explains deletion, reload, expiration, and distributed propagation limits.",
+        "Switching to expiration retains stale data until expiry.",
+        "No surface-different application is supplied.",
+        "Defines invalidation as staleness rather than making entries invalid."
+      ],
+      "evidence": [
+        "比如用户改了头像，网页缓存还显示旧头像。",
+        "删除缓存通常更及时",
+        "下一次读取时重新加载",
+        "只靠过期时间简单，却会在期限内返回旧数据",
+        "",
+        "缓存失效就是：原数据已更新，但缓存仍保存旧副本。"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects co-movement to deciding whether one variable causes another.",
+        "Contrasts association with intervention while identifying common causes.",
+        "Explains common causes and controlled intervention logic.",
+        "Cooling changes both variables without fixing other causal conditions.",
+        "No surface-different application is supplied.",
+        "Presents seasonal illustration and causal conclusion as established observations."
+      ],
+      "evidence": [
+        "区分时可问：改变一个变量",
+        "尽量保持其他条件不变，结果是否随之改变？",
+        "若只是观察到相关，仍可能有共同原因、反向因果或巧合。",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects starting amounts to calculating future totals.",
+        "Distinguishes compound growth from adding fixed initial-base increments.",
+        "Correct formula, monetary calculation, and period-dependent rate explanation.",
+        "Doubles starting amount with rate and duration explicitly fixed.",
+        "Changed principal remains within the same monetary setting.",
+        "Correct hypothetical arithmetic without promising actual returns."
+      ],
+      "evidence": [
+        "起始金额重要，因为每期增长额与当前金额成正比",
+        "不是120元，因为第二年的10%是按110元计算",
+        "两年后是100×1.1²=121元",
+        "200元按同样条件两年后是242元",
+        "",
+        "若100元每年增长10%"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects training success to evaluating performance on unseen data.",
+        "Contrasts possible overfitting with underfitting through model complexity.",
+        "Explains learning noise and checking unseen validation performance.",
+        "Remedies lack an explicit changed case with fixed conditions.",
+        "Student analogy lacks an explicit shared deciding relationship.",
+        "Student analogy supplies mapping but no stated limitation."
+      ],
+      "evidence": [
+        "判断它要比较训练集与未见过的验证集",
+        "若规律本身很复杂，简单模型也可能欠拟合。",
+        "都可能把偶然波动当成规律",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111011",
+      "reasons": [
+        "Connects search quality metrics to error-cost tradeoffs.",
+        "Distinguishes returned-result accuracy from coverage of relevant pages.",
+        "Correct denominators, percentages, and interpretations.",
+        "Range changes lack fixed quantities and a determined result.",
+        "Maps false positives and false negatives to spam filtering.",
+        "Correct calculations and qualified performance tradeoffs."
+      ],
+      "evidence": [
+        "所以取舍取决于代价",
+        "搜出来的有多准",
+        "召回率=相关结果/全部相关结果=6/20=30%",
+        "",
+        "误把正常邮件当垃圾会伤害精确率，漏掉垃圾会伤害召回率",
+        "扩大搜索范围可能提高召回率"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "Connects camouflage to explaining population changes across generations.",
+        "Distinguishes inherited population change from purposeful individual change.",
+        "Explains heritable variation and differential reproductive success.",
+        "Changes habitat while retaining colors and reverses relative advantage.",
+        "No surface-different application is supplied.",
+        "Correct hypothetical mechanism and inheritance boundary."
+      ],
+      "evidence": [
+        "经过多代，种群中保护色比例上升",
+        "不是某只甲虫因为“想活”就变色",
+        "若颜色差异能遗传",
+        "若环境换成深色土壤，原先显眼的颜色可能反而更有利",
+        "",
+        "环境让不同个体留下后代的数量不同"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111111",
+      "reasons": [
+        "Connects ambiguous timeout outcomes to safe retry design.",
+        "Contrasts setting state with repeated monetary deductions.",
+        "Explains unchanged final effects and request-ID deduplication.",
+        "Changing the key changes operation identity under the same scheme.",
+        "Applies repeated-effect criterion from order status to payment retries.",
+        "Correctly separates final effect from response identity."
+      ],
+      "evidence": [
+        "网络请求可能超时但服务器已成功",
+        "重复执行仍是已取消",
+        "后续相同ID直接返回原结果",
+        "若请求参数或幂等键不同，应视为不同操作。",
+        "支付“扣款100元”若重试可能扣两次",
+        "它不等于每次请求都返回完全相同的响应"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110100",
+      "reasons": [
+        "Connects coin probabilities to assessing prediction difficulty.",
+        "Distinguishes uncertainty from negative outcome quality.",
+        "No numerical entropy calculation, logarithm base, or entropy units.",
+        "Making the same coin deterministic correctly reduces entropy to zero.",
+        "No surface-different application is supplied.",
+        "Claims entropy is positive despite subsequently allowing zero."
+      ],
+      "evidence": [
+        "概率越平均，你越难提前猜中",
+        "这里的“不确定”不等于“结果更糟”",
+        "",
+        "若已知硬币必为正面，熵就是0。",
+        "",
+        "公式中的负号使熵为正"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101101",
+      "reasons": [
+        "Connects blocked resource allocation to preventing deadlock.",
+        "No concrete contention near-case is distinguished.",
+        "Correctly explains exclusive resources and circular hold-and-wait.",
+        "Changes acquisition ordering while retaining tasks and resources.",
+        "No surface-different application is supplied.",
+        "Correct conditions and cycle-breaking remedies."
+      ],
+      "evidence": [
+        "就能破坏其中一个条件，避免死锁",
+        "",
+        "进程A拿着打印机，等待扫描仪；进程B拿着扫描仪，等待打印机。",
+        "规定所有任务先申请打印机再申请扫描仪",
+        "",
+        "资源互斥、任务持有资源时继续等待、资源不能被强行收回、等待形成环"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111001",
+      "reasons": [
+        "Connects streetlight funding incentives to provision choices.",
+        "Contrasts streetlights with congested parks through rivalry.",
+        "Explains nonexclusion, free-riding incentives, and possible undersupply.",
+        "Congestion caveat changes examples rather than the original case.",
+        "No new application explains both defining conditions.",
+        "Correctly avoids equating public goods with free government provision."
+      ],
+      "evidence": [
+        "公共物品可能供给不足，所以常由政府征税、共同筹资或制定规则提供。",
+        "拥挤的公园可能变得有竞争性",
+        "人们希望别人付钱，自己也享受好处",
+        "",
+        "",
+        "公共物品不等于“免费”或“政府提供”"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101101",
+      "reasons": [
+        "Connects arrival rate and duration to estimating store occupancy.",
+        "No waiting-time versus system-time near-case is distinguished.",
+        "Correct calculation, units, matched store boundaries, and stability condition.",
+        "Doubles arrivals while explicitly fixing duration, correctly doubling occupancy.",
+        "No surface-different application is supplied.",
+        "Correct long-run assumptions without imposing a Poisson requirement."
+      ],
+      "evidence": [
+        "店内平均人数就是10×0.5=5人",
+        "",
+        "平均每位在店里30分钟（0.5小时）",
+        "若到达率翻倍而停留时间不变，平均人数也翻倍。",
+        "",
+        "长期流入率与流出率相等，且平均值存在"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/-6/0.call.json",
+  "prompt_sha256": "fa793b200d624c2d5416f22173f0ce39e4a63d70eb3bf6060145ea0f46c9669f",
+  "isolated_repair_calls": []
+}

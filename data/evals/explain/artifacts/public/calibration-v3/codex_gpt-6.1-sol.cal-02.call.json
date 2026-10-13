@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "4f7c15d33bdac4313de13ad3aaff26f21be9e27da147fbc4757dccd93e4e3c4c",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-02\",\"bits\":\"100111\",\"reasons\":[\"用硬币数据说明似然用于比较假设。\",\"未给出后验概率这一易混近例及区别。\",\"计算正确，但缺少后验的先验与归一化推导。\",\"固定HH改变H2参数，正确说明支持次序反转。\",\"迁移到缺陷检测，指出固定结果比较假设的关系。\",\"数值与独立概率相乘正确，无实质事实错误。\"],\"evidence\":[\"似然用固定数据比较假设的解释能力。\",\"\",\"\",\"保持HH固定，把H2的p改成.2，似然为.04，支持次序反转。\",\"缺陷检测也可固定结果比较故障假设，需要独立性和合适概率模型。\",\"指定顺序HH的概率分别为.25和.64，因为独立概率相乘。\"]}]}",
+  "usage": {
+    "input_tokens": 20182,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 309,
+    "reasoning_output_tokens": 99
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 38.658
+}

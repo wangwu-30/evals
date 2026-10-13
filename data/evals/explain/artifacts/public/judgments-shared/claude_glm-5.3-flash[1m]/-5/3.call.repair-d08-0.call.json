@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "bba601d22f18a8bd6d52bd7eeef74fed261a75a57c8bb356c6668291a7601c06",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"111101\",\"reasons\":[\"Connects invested starting amount to deciding future balance size.\",\"Contrasts compound and simple interest through gains earning gains.\",\"Correct annual calculation, units, and compound versus simple distinction.\",\"Changing return negative makes the same invested base compound downward.\",\"No surface-different situation applies the shared relationship.\",\"Arithmetic is correct; projected rates are explicitly conditional.\"],\"evidence\":[\"100,000 at the same 10% ends ten times larger\",\"not the 20,000 simple interest gives\",\"year two earns 1,100\",\"a negative return compounds downward the same way\",\"\",\"compounding guarantees arithmetic, not returns\"]}]}",
+  "usage": {
+    "input_tokens": 20213,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 268,
+    "reasoning_output_tokens": 124
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.043
+}

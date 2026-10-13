@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "c778cf6bd114a00e40506c512a077dfdd2c58459fd508b28828233332b95f3c0",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v07\",\"bits\":\"110010\",\"reasons\":[\"将照明供给不足连接到税收分摊决策。\",\"路灯与收费公路对照，明确排他性差异。\",\"将搭便车错误推导为必然无人建设。\",\"未改变原路灯案例的条件并说明其余固定。\",\"将排他性关系迁移到广播电视加密收费。\",\"断言无人建设，混淆供给不足与零供给。\"],\"evidence\":[\"这解释了为什么路灯、国防常由税收统一提供\",\"收费公路能设闸拦人，就不是公共物品\",\"人人都这么算，结果路灯没人建\",\"\",\"广播电视加上加密收费后，就从公共物品变成了可以收费的商品\",\"人人都这么算，结果路灯没人建\"]}]}",
+  "usage": {
+    "input_tokens": 20234,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 297,
+    "reasoning_output_tokens": 97
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 30.087
+}

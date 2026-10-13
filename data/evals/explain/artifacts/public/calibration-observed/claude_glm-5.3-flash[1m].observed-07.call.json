@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "44d98b2643c85f4f478a1055ccca50611ea90dfc78482be089e6e9aa8d2b1eb2",
+  "rc": 0,
+  "cost_usd_reported": 0.05532000000000001,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-07\",\"bits\":\"111101\",\"reasons\":[\"Connects entropy to how guessable an outcome is before observing.\",\"Fair coin typical, near-always-heads near case, uniformity is deciding feature.\",\"Formula, bits unit, correct fair-coin 1-bit calculation, distribution-level meaning.\",\"Biased coin keeps two outcomes fixed; entropy drops since guess becomes easy.\",\"Stays within coin/distribution case; no surface-different transferred situation.\",\"No factual errors; correctly notes average-uncertainty boundary.\"],\"evidence\":[\"信息熵衡量一次结果的不确定程度\",\"均匀分布通常更不确定，因为可能结果都同样合理\",\"两面公平硬币的结果各为1/2，熵为1比特\",\"若硬币几乎总是正面，观察结果前就容易猜中，熵较低\",\"\",\"注意这是“平均不确定性”\"]}]}",
+  "usage": {
+    "input_tokens": 1194,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1974,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1194,
+      "outputTokens": 1974,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.05532000000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 30.696
+}

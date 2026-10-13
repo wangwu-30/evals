@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "042c173ab751e1e00371c8bea5fca64a8ebce9c5b4ef3a972d89d3b103c07c56",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"101100\",\"reasons\":[\"Connects starting amounts to differences in accumulated money.\",\"No confusable near-case with a deciding feature.\",\"Correct yearly calculation shows gains growing with the expanding base.\",\"Changes starting amount, fixes rate, correctly predicts widening absolute gap.\",\"No surface-different situation applies the same relationship.\",\"Ten-year annual-gain claim is incorrect for the stated amounts.\"],\"evidence\":[\"Same percentage, different base, different money\",\"\", \"year 2 gives 110×1.1 = ¥121\",\"at the same 10%, ¥100 and ¥10,000 both multiply by 1.1\",\"\",\"¥1,000 extra per year after ten\"]}]}",
+  "usage": {
+    "input_tokens": 20199,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 348,
+    "reasoning_output_tokens": 195
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.214
+}

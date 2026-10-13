@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-5",
+  "rep": 4,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110101",
+      "reasons": [
+        "Uses coin data to compare competing hypotheses.",
+        "Distinguishes likelihood from posterior by conditioning direction.",
+        "Does not explain posterior normalization.",
+        "Changes prior while holding the coin likelihood fixed.",
+        "No surface-different application is provided.",
+        "Binomial calculations and probability direction are correct."
+      ],
+      "evidence": [
+        "数据固定不动，假设在变",
+        "它不是'这个假设为真的概率'",
+        "",
+        "若你事先几乎不可能遇到这种硬币",
+        "",
+        "C(10,9)×0.5¹⁰ ≈ 0.0098"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "101000",
+      "reasons": [
+        "Equal class averages motivate assessing dispersion.",
+        "Does not distinguish population variance from sample variance.",
+        "Correct calculation explains squared deviations and squared units.",
+        "No explicit condition change traces a changed variance.",
+        "No surface-different application identifies the same relationship.",
+        "Claims extreme effects cannot be diluted by averaging."
+      ],
+      "evidence": [
+        "平均一样，稳定程度天差地别",
+        "",
+        "方差 (4+0+4)/3 = 8/3",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111110",
+      "reasons": [
+        "Connects microphone runaway to evaluating loop gain and limits.",
+        "Separates reinforcing feedback from corrective feedback and favorable outcomes.",
+        "Explains recirculation, sufficient gain, and saturation.",
+        "Removing microphone coupling breaks the otherwise unchanged loop.",
+        "Thermostat control illustrates the shared feedback-direction criterion.",
+        "Unqualified acceleration claim and unexplained snowball analogy weaken boundaries."
+      ],
+      "evidence": [
+        "这决定它会不会失控",
+        "正反馈加剧偏离，负反馈拉回原位",
+        "回路是否闭合、增益是否够大",
+        "麦克风拿开、回路断开，增长立刻停止",
+        "负反馈拉回原位（空调恒温）",
+        ""
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111111",
+      "reasons": [
+        "Connects afternoon choices to valuing the forgone best option.",
+        "Distinguishes best alternative from summed alternatives.",
+        "Correctly derives cost from feasible alternatives and subjective ranking.",
+        "Removing the best tutoring option reduces gaming's opportunity cost.",
+        "Outsourcing errands applies the same forgone-value comparison.",
+        "Examples are qualified and contain no material factual errors."
+      ],
+      "evidence": [
+        "choosing among gaming",
+        "it's the single best one you forfeited",
+        "lower-ranked alternatives add nothing",
+        "if the tutoring slot fills up",
+        "their time's opportunity cost exceeds the helper's fee",
+        "say the $60 shift"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Uses positive testing to decide updated disease probability.",
+        "Distinguishes sensitivity from disease probability after a positive.",
+        "Correct counts, normalization, and conditional directions derive one-sixth.",
+        "Changes prevalence while explicitly preserving the same test.",
+        "No surface-different application is provided.",
+        "Hypothetical test parameters and arithmetic are correct."
+      ],
+      "evidence": [
+        "检测呈阳性，就真得病了吗？",
+        "方向与你要问的'检出后有多大可能患病'正好相反",
+        "概率约 99/594 ≈ 1/6",
+        "同样的检测给出的阳性可信度就大幅上升",
+        "",
+        "设患病率 1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111111",
+      "reasons": [
+        "Stale avatars motivate deciding when cached copies should expire.",
+        "Contrasts TTL and write-triggered deletion by freshness timing.",
+        "Explains origin mutation, stale copies, refresh, and ordering risks.",
+        "Changes freshness requirements while retaining cached web data.",
+        "Product and balance cases apply freshness requirements to cache policy.",
+        "Acknowledges TTL staleness and distributed ordering limitations."
+      ],
+      "evidence": [
+        "用户改了头像，缓存里还是旧图",
+        "到期自动作废",
+        "下次读取被迫回源",
+        "商品页允许几分钟延迟，TTL 就够用",
+        "账户余额要求实时，就只能少缓存或写后立即失效",
+        "分布式环境下'先改库还是先删缓存'的顺序还要小心处理"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110010",
+      "reasons": [
+        "Connects associated changes to deciding whether intervention changes outcomes.",
+        "Contrasts common-cause association with causation using intervention effects.",
+        "Randomization alone does not guarantee differences come only from treatment.",
+        "Temperature control eliminating association is asserted without supporting assumptions.",
+        "Age explains another association through the same common-cause relationship.",
+        "Presents toy associations and causal exclusions as established facts."
+      ],
+      "evidence": [
+        "因果还要求改变一个真的会改变另一个",
+        "背后有共同原因：天热",
+        "",
+        "",
+        "鞋码和阅读能力相关，背后是年龄",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "101101",
+      "reasons": [
+        "Explains how initial savings affect eventual absolute gains.",
+        "Does not explicitly contrast compound growth with a confusable near-case.",
+        "Correct annual calculation explains rate, periods, and initial scaling.",
+        "Changes duration while keeping starting amount and rate fixed.",
+        "No surface-different application identifies the shared relationship.",
+        "Fixed-rate illustrative calculations are materially correct."
+      ],
+      "evidence": [
+        "the same rate and time yield ten times the dollars",
+        "",
+        "$1,000 becomes $1,100, then $1,210",
+        "stretch 50 years to 60",
+        "",
+        "At 10% a year"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111110",
+      "reasons": [
+        "Training success versus new-data failure motivates assessing generalization.",
+        "Contrasts fitting noise with capturing the underlying height-weight trend.",
+        "Explains memorized noise causing training-test performance differences.",
+        "Increasing data with the model implicitly fixed can reduce overfitting.",
+        "Student memorization maps to fitting answers rather than transferable patterns.",
+        "Does not explain where the student analogy fails."
+      ],
+      "evidence": [
+        "遇到新数据反而很差",
+        "一条直线已能反映大致趋势",
+        "连数据里的噪声和巧合也当成规律记住",
+        "数据变多时",
+        "他记住的是题面与答案的对应，不是解题规律",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111010",
+      "reasons": [
+        "Connects search quality to junk avoidance and missed relevant pages.",
+        "Distinguishes precision and recall by their denominators.",
+        "Correct numerical calculations explain both proportions.",
+        "Returning more results does not necessarily lower precision.",
+        "Medical review applies the same missed-case versus false-result priorities.",
+        "Asserts a guaranteed precision-recall tradeoff without result composition."
+      ],
+      "evidence": [
+        "how much junk must I skip?",
+        "precision divides by returned items",
+        "Recall = 8/12 ≈ 0.67",
+        "",
+        "missing a case is costly",
+        ""
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "Explains population change to distinguish selection from individual effort.",
+        "Contrasts purposeful stretching with inherited variation and reproductive differences.",
+        "Correctly links heritable variation to differential reproduction across generations.",
+        "Changes food availability while preserving inherited neck variation.",
+        "Bacterial resistance applies differential survival and inherited reproduction.",
+        "Invents giraffe causal history and overstates complete bacterial replacement."
+      ],
+      "evidence": [
+        "变化发生在种群的构成上",
+        "不是'够不着树叶所以越伸越长'",
+        "长短能遗传",
+        "若气候变湿、低处食物充足",
+        "抗药个体的后代于是占据整个种群",
+        ""
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111110",
+      "reasons": [
+        "Lost payment confirmation motivates making retries avoid duplicate charges.",
+        "Contrasts duplicate charging with repeated requests preserving final state.",
+        "Explains key-based result replay and state-versus-response distinction.",
+        "Contrasts keyed and unkeyed retries for the same payment problem.",
+        "Queue deduplication applies the same repeated-operation identity criterion.",
+        "Claims retries require keys and omits atomicity and retention boundaries."
+      ],
+      "evidence": [
+        "the server must not charge twice",
+        "A naive POST charges twice",
+        "returns the stored result without re-executing",
+        "Without keys, retries are unsafe; with them",
+        "the consumer checks a key before applying each message",
+        ""
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111101",
+      "reasons": [
+        "Connects coin predictability to quantifying average uncertainty.",
+        "Contrasts distribution entropy with a single outcome's probability.",
+        "Correct entropy values, bit units, and weighted surprise explain calculation.",
+        "Changes coin probabilities while preserving the binary outcome space.",
+        "No surface-different application is provided.",
+        "Binary entropy calculations and distribution boundary are correct."
+      ],
+      "evidence": [
+        "结果越难猜，熵越大",
+        "不是某个具体结果的概率",
+        "九成正面时约 0.47 比特",
+        "从 0.5/0.5 改为 0.9/0.1",
+        "",
+        "熵是整个概率分布的性质"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101110",
+      "reasons": [
+        "Stalled threads motivate choosing a lock-ordering remedy.",
+        "Does not clearly distinguish deadlock from ordinary resource contention.",
+        "Explains exclusive holding, circular waiting, and why ordering breaks cycles.",
+        "Changes acquisition order while preserving threads and resources.",
+        "Database transaction abortion applies the same cycle-breaking relationship.",
+        "Global ordering does not guarantee only brief waits."
+      ],
+      "evidence": [
+        "so both stall permanently",
+        "",
+        "each simply waits for a release that never comes",
+        "always 1 before 2",
+        "detect a cycle and abort one transaction",
+        ""
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111110",
+      "reasons": [
+        "Shared lighting benefits motivate understanding funding incentives.",
+        "Contrasts public goods with ticket-excludable cinema access.",
+        "Links nonexcludability to incentives to enjoy without paying.",
+        "Introduces enforceable charging while preserving shared consumption benefits.",
+        "Shared project outputs apply the same contribution-benefit incentive problem.",
+        "Treats free-riding incentives as guaranteeing no provision."
+      ],
+      "evidence": [
+        "尽管它对大家的总价值很高",
+        "电影院能查票，排他性强",
+        "人人都盼着别人出钱、自己白享福",
+        "一旦技术上可以收费",
+        "成果共享时，总有人想少干多得",
+        ""
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111101",
+      "reasons": [
+        "Restaurant crowding motivates deciding which flow or duration to reduce.",
+        "Contrasts stable averages with an overloaded growing queue.",
+        "Correct multiplication defines rate, system time, and matching units.",
+        "Reduces service capacity while explicitly preserving arrival rate.",
+        "No surface-different application beyond the restaurant example is provided.",
+        "Stable-system example, units, and distribution independence are correct."
+      ],
+      "evidence": [
+        "To shrink the crowd inside, cut W or λ",
+        "the steady-state premise fails",
+        "30 × 0.5 = 15",
+        "serves only 20 per hour while 30 arrive",
+        "",
+        "not an assumption about distributions"
+      ]
+    }
+  ],
+  "call_file": "judgments/claude_glm-5.3-flash[1m]/-5/4.call.json",
+  "prompt_sha256": "dcbb82bbbc59734713851d7963bdda9c2662c19638755b88317e38bb963b1e4f",
+  "isolated_repair_calls": []
+}

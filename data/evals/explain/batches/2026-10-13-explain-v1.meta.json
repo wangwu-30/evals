@@ -1,0 +1,16 @@
+{
+ "id": "2026-10-13-explain-v1",
+ "date": "2026-10-13",
+ "env": "Mac · local CLI single-shot",
+ "notes": "8 dev题/轮×10项；每格5轮，费用字段只记共享public生成，完整token/成本账本见explain/statistics.json。共同gpt-6.1-sol请求裁判；未知费用不记零。",
+ "format": "jsonl",
+ "models": [
+  "claude:glm-5.3-flash[1m]",
+  "codex:gpt-5.6-luna"
+ ],
+ "n_records": 90,
+ "cost_usd_reported": 10.97,
+ "cost_records": 45,
+ "sum_latency_min": 222.1,
+ "wall_min": null
+}

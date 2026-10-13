@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "db7aa319ea0956015f139b4f4e07f3c6ab126951578d1f80e017ba040fe8aa12",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111101\",\"reasons\":[\"Connects uncertain timeout outcomes to deciding how to handle retries.\",\"Contrasts setting status with incrementing balance; repeated effects decide.\",\"Explains retries, unchanged state, duplicate increments, and key-based deduplication.\",\"Changes retry frequency while retaining the distributed-request setting.\",\"Lists HTTP applications without explaining their shared deciding relationship.\",\"Examples and retry reasoning contain no material factual errors.\"],\"evidence\":[\"so clients and frameworks retry\",\"\\\"Add 100 to the balance\\\" is not: a retry pays twice.\",\"\\\"Set order status to paid\\\" is idempotent\",\"on a zero-retry network you'd need none of this\",\"\",\"the request may have succeeded after the sender gave up\"]}]}",
+  "usage": {
+    "input_tokens": 20197,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 489,
+    "reasoning_output_tokens": 330
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 42.307
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "5e13f48fcd2cef2e02ebdd690e14182e6bc76fc0fafb200ebb1a32f5abb6cf35",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-02\",\"bits\":\"101001\",\"reasons\":[\"Connects stale profiles to choosing cache maintenance strategies.\",\"No confusable near-case with a deciding feature.\",\"Correctly explains expiration, eviction, refetching, and distributed races.\",\"No explicit condition change with a fixed baseline and result.\",\"No surface-different situation applying the same relationship.\",\"Acknowledges temporary staleness and races without claiming perfect consistency.\"],\"evidence\":[\"you must choose the right granularity\",\"\",\"so the next read refetches fresh data\",\"\",\"\",\"updates race with reads, failures leave copies inconsistent\"]}]}",
+  "usage": {
+    "input_tokens": 20191,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 252,
+    "reasoning_output_tokens": 122
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.356
+}

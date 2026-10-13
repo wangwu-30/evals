@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "ba191b9c69ee42734d8c1cd81ebba48f118a146fb0d5c932e720c6704889eba9",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v02\",\"bits\":\"110010\",\"reasons\":[\"Connects search errors to choosing precision or recall priorities.\",\"Contrasts returned-result relevance with coverage, distinguished by denominators.\",\"Correct calculations, but incorrectly guarantees the precision–recall tradeoff.\",\"Returning fewer results does not necessarily raise precision or lower recall.\",\"Transfers error-cost priorities to spam filtering and cancer screening.\",\"Guaranteed tradeoff and terrible precision claims contradict the oracle.\"],\"evidence\":[\"Which one matters depends on the cost of each error\",\"of what you returned, how much was right\",\"Returning fewer, safer results raises precision\",\"raises precision but drops recall\",\"cancer screening needs high recall\",\"returning everything gives 100% recall with terrible precision\"]}]}",
+  "usage": {
+    "input_tokens": 20198,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 372,
+    "reasoning_output_tokens": 216
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 38.258
+}

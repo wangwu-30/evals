@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "009e4da7a2c902ea24cf56fc23817b6c22be49cdabdb12e7bbbdcd7035c6e612",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"111010\",\"reasons\":[\"联系旧题满分、新题失败的问题，帮助判断学习故障。\",\"对比过拟合与欠拟合，以训练和新数据表现区分。\",\"正确解释拟合偶然波动导致泛化变差的因果链。\",\"断言简化模型或增加数据必然缩小落差，不成立。\",\"从学生考试迁移到模型，明确共享记细节的机制。\",\"补救效果被绝对化，且未说明学生类比的局限。\"],\"evidence\":[\"两种病药方不同\",\"两边都差则是根本没学会（欠拟合）\",\"把训练数据里的偶然波动、甚至标注错误都拟合进去\",\"背不住就只能学规律，落差随之缩小\",\"模型同理\",\"处处贴合 training 材料的「完美」，恰恰牺牲了在新情境下的可靠\"]}]}",
+  "usage": {
+    "input_tokens": 20272,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 381,
+    "reasoning_output_tokens": 152
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 40.227
+}

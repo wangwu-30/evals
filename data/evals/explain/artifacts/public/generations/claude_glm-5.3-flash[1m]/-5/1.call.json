@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "531557c57bf5d63901b67295c1990f57297c1ae8a60923fab34b20168bf768d5",
+  "rc": 0,
+  "cost_usd_reported": 0.243265,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"d01\":\"似然回答：假设某个参数为真时，看到手头这批数据的概率有多大。它和平时学的概率方向相反：概率是已知参数去预测数据，似然是已知数据反过来评估参数。例：扔硬币10次出8次正面。若正面概率p=0.5，似然=C(10,8)×0.5¹⁰≈0.044；若p=0.8，似然≈0.302。数据固定，只比较假设：p=0.8对这批数据的解释更好。但似然不是「p=0.8为真的概率」。后验概率才回答这个问题：后验∝似然×先验，再归一化。它把「看到数据前你对p的判断」（先验）用数据（经似然）更新成「看到数据后的判断」。一句话：似然是「这个假设下数据多可能出现」，后验是「看到数据后这个假设多可能为真」。有限数据只能让你更偏爱某个假设，不能证实它。\",\"d04\":\"Opportunity cost is the value of the best option you give up when you choose one thing. Suppose your free afternoon has three uses: nap, study for Friday's exam, or tutor for $50. If you pick studying, the opportunity cost isn't all rejected options — only the best one you passed up, say the $50 tutoring. That hidden price is the real comparison: choose studying only if its value to you beats $50. Two common mistakes: counting money spent as the whole cost (time counts too, even for free activities), and adding up every rejected option instead of just the top alternative. Change one condition and the cost changes: if the tutoring gig is canceled, napping or studying suddenly costs less, so the choice gets easier. The same logic scales from afternoons to careers: every yes is also a no to your next-best alternative.\",\"d02\":\"Variance answers: how spread out is data around its average? The mean alone hides spread — {2,4,6} and {0,4,8} both average 4, but the second varies far more. Variance is the average of squared distances from the mean. For {2,4,6}: deviations −2, 0, 2; squares 4, 0, 4; variance = 8/3 ≈ 2.67. For {0,4,8}: variance = 32/3 ≈ 10.7 — same mean, bigger variance. Why square? Deviations sum to zero, since positive and negative cancel, so every distance must be made positive; squaring also punishes large deviations harder than small ones. That choice isn't forced — absolute values would also work — but squares are mathematically nicer and emphasize outliers. Because squaring changes units (points²), taking the square root gives the standard deviation, back in original units and usually easier to interpret.\",\"d07\":\"相关是「两个量一起变动」，因果是「改变A会带动B改变」，两者不能画等号。例：某城市冰激凌销量与溺水人数同涨同跌，相关很强，但吃冰激凌并不会让人溺水——真正的原因是高温：天热了，买冰激凌的人多，下河游泳的人也多。高温叫混杂因素，它同时推动两者。判断办法：控制住温度，只比较同样炎热的那些天，若相关消失，说明原相关是混杂造成的。注意两点：相关也可能真是因果，需要机制解释或随机实验来确认，不能一概否定；方向还可能反过来，比如「压力导致失眠」还是「失眠导致压力」，单看相关分不清。再迁移一个：鞋码大的孩子词汇量更大，共同原因是年龄。凡看到「研究表明A与B相关」，先问一句：有没有第三个因素同时推着A和B？\",\"d05\":\"设某病患病率千分之一，试剂很准：病人99%显阳性，健康人也有5%误显阳性。你检测阳性，患病概率是多少？直觉说99%，实际约2%。贝叶斯公式：P(病|阳性)=P(阳性|病)×P(病)÷P(阳性)。看一万人：病人约10人，其中约9.9人阳性；健康人约9990人，5%误报约500人阳性。阳性总人数约509，真病人只占9.9/509≈1.9%。直觉错在混淆了两个方向的问题：「患病的人里多少显阳性」（99%）和「显阳性的人里多少患病」（2%）。健康人基数太大，少量误报就淹没了真阳性。改变条件：若你本来就有症状，患病率十分之一，同样的阳性结果下患病概率升到约69%——同一检测，先验不同，结论差很远。贝叶斯公式就是用新证据更新原有判断的规则。\",\"v06\":\"Deadlock: two or more processes each hold a resource and wait for one another's, so all freeze forever. Example: Thread A locks file 1, then needs file 2 to finish; Thread B locks file 2, then needs file 1. Neither releases what it holds while waiting, so both block indefinitely — no crash, just a permanent stall. Four conditions must all hold: resources are exclusive, holders keep them while waiting, resources can't be forcibly taken, and a circular wait exists. Break any one and deadlock disappears. Simplest fix: all threads acquire locks in the same global order (both take file 1 first) — the circle can't form. Alternatives: grab all locks atomically at the start, or use timeouts to back off and retry. Change the example: if A also requests file 1 then file 2, no deadlock — ordering removed the circular wait.\",\"v07\":\"公共物品是同时满足两个条件的东西：没法把不付钱的人排除在外（非排他），一个人用也不减少别人能用（非竞争）。路灯、国防、烟花表演都是。这带来搭便车问题：不付钱照样享受，那何必掏钱？例：小区十户想集资5000元装路灯，每户受益约800元，总共8000元，划算。但每户都想「别人出钱我白享」，结果集资失败，对大家都好的东西没建成。对照：收费视频有排他性，不付钱看不了，就不算公共物品，市场能正常供给。判断一件东西是否公共物品，就看能不能把不付钱的人挡住。解决办法通常是税收或业委会强制分摊，由大家共同出钱。迁移：开源软件、清洁空气、碳减排都是同样的逻辑——人人受益，人人观望，供给不足。\",\"v08\":\"Little's law: in a stable system, L = λW. L is the average number of items in the system, λ the arrival rate, W the average time each item spends inside. It follows from simple bookkeeping: if 10 customers arrive per minute and each stays 4 minutes, the store holds about 10 × 4 = 40 customers at any moment — those inside are roughly the arrivals of the last 4 minutes. It's not a deep physical law but a counting identity that holds in steady state, regardless of arrival pattern or service discipline. Its power: measure any two, compute the third. A help desk receives 20 tickets per hour averaging 5 hours to resolve → about 100 open tickets. Watch what the variables include: if W counts wait plus service, L counts everyone in line and being served. Change one condition: cut resolution time to 2.5 hours and the backlog halves to 50.\",\"v01\":\"过拟合是模型把训练数据里的巧合当成了规律，记住了题面，没学到解题方法。类比：一个学生刷题时把每道题的答案都背下来，原题全对，考试换个数字就错——他记住的是表面特征，不是规律。机器学习里，模型越复杂，越有能力把训练数据中的噪声和偶然细节也拟合进去，于是训练数据上错误越来越低，遇到没见过的新数据错误反而上升。怎么辨认：训练集表现很好、新数据明显变差，就是过拟合的信号。怎么缓解：用更多数据（数据越多，巧合越难被当成规律）、换更简单的模型、或留出一部分数据做检验，只以新数据上的表现为准。对照：训练和新数据上都差叫欠拟合，那是学得不够，不是记太多。凡是「预测没见过的数据」的任务，考的都是新表现，不是背题能力。\",\"v02\":\"Precision and recall measure a search engine from two angles. Suppose a query returns 20 results, 15 relevant — and the corpus actually contains 50 relevant documents in total. Precision: of what was returned, how much is relevant? 15/20 = 75%. It guards the user's attention: low precision means wading through junk. Recall: of everything relevant, how much was found? 15/50 = 30%. It guards completeness: low recall means missing important material. The two pull against each other. Return only the safest top hit: precision near 100%, recall 2%. Return the entire corpus: recall 100%, precision tiny. Which to prioritize depends on the task — legal discovery tolerates junk but must not miss documents (recall); a quick lookup tolerates misses but hates junk (precision). The F1 score, the harmonic mean of the two, compresses them into one number when both matter.\",\"d08\":\"Compound growth means growth on top of past growth: each period's gain is a percentage of an already-larger amount. Put $1,000 at 10% per year: $1,100, then $1,210, then $1,331. Each year adds 10% of a bigger base, so the dollar gains themselves grow. Formula: A = P(1+r)^t, where P is the starting amount, r the rate, t the number of periods. Why the start matters: P is the base the whole multiplier (1+r)^t applies to. Same rate and time, ten times the starting money ends ten times larger — the gap widens instead of closing. At 7% for 30 years, $1,000 becomes about $7,600; $10,000 becomes about $76,000. The other lever is time: at 7%, money doubles roughly every 10 years, so starting a decade earlier roughly doubles the result. Conditions: the rate must hold, and losses compound symmetrically — a 50% drop needs a 100% gain to recover.\",\"d03\":\"正反馈是「变化自己喂养自己」：输出沿回路回到输入，且方向相同，小小的变动被一圈圈放大。例：话筒对音箱——声音被拾音、放大、播出，又被拾音，越来越响，直到刺耳的啸叫。金融挤兑同理：银行有危险的传闻→大家排队取钱→银行真的缺钱→传闻「应验」→更多人取钱，直到崩溃。为什么放大：每绕一圈，变化都被乘上一个大于1的系数，效果指数增长，直到某个上限（设备烧了、银行倒了、雪崩落完）。正反馈的「正」指同向加强，不是价值判断；负反馈方向相反：温度高了就降温、低了就加热，变化被压回去，系统稳定，恒温器就是典型。多数系统靠负反馈稳住，正反馈只在受控时有用，比如产品推广：更多人用→口碑传播→更多人用。看到「正反馈」，先问：它放大的是什么，放大到哪儿停？\",\"v05\":\"信息熵衡量「平均而言，一个随机结果带来多少意外」，也等于描述它需要的平均信息量。公式：H=−Σp·log₂p，对每个可能结果，把「它出现的概率的对数」取负，再按概率加权平均。单位是比特。对比两个硬币：均匀硬币p=0.5，熵=1比特；偏向硬币正面p=0.9，熵≈0.47比特——结果更可预测，不确定度更小。为什么均匀分布最不确定：若某个结果概率高，你猜它常对，惊喜有限；均匀时你无从偏袒，每次结果都最难猜，平均意外最大。数学上可以证明，固定结果个数，均匀分布使熵取最大值；确定性事件p=1，熵为0。对数的底决定单位，log₂对应比特。迁移：数据压缩里，熵是平均最短编码长度的下限——概率越偏，常见符号可以编得越短，压缩空间越大。\",\"v03\":\"自然选择改变种群，靠三件事：个体间存在可遗传的差异（随机变异）、差异影响繁殖成功率、环境使留下后代的多少不同。全程没有目的，没有个体努力。例：一群甲虫有浅色和深色两种，颜色由基因决定，变异是随机产生的。工业区烟尘把树干熏黑后，鸟更容易发现停在深色树干上的浅色甲虫，浅色个体被吃掉得多，留下的后代少；深色个体繁殖得多。下一代里深色基因的比例升高，几代后种群整体变深。注意三点：变异先随机产生，环境只做筛选，不「指挥」生物变出需要的样子；个体不会「想变深色」，是浅色个体死得多；适应是事后看的结果，不是目标。对照人工选择：育种者挑种畜带有人的目的，自然选择里没有谁在挑，只是谁能留下后代谁多。\",\"d06\":\"Caching means keeping a copy of expensive data close at hand — say, a product page's price fetched from the database once and held in memory, so the next 10,000 visitors skip the query. Cache invalidation is deciding when that copy is stale and must be dropped or refreshed. The problem: the cache is a copy, and copies drift from the source. The price changes, but visitors keep seeing the old one. Two common strategies: a TTL — expire the copy after, say, 60 seconds — simple, but there's always a window where users see outdated prices; or active purging — when the price updates, the code also deletes the cache key, so the next request refetches. Active purging is fresher but couples the write path to every cache holding that data. The real difficulty: one piece of data lives in many caches — page cache, CDN, search index — and missing one leaves users with inconsistent data.\"}}",
+  "usage": {
+    "input_tokens": 2693,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 9192,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2693,
+      "outputTokens": 9192,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.243265,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 678.374
+}
