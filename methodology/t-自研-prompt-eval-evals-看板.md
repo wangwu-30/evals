@@ -1,0 +1,15 @@
+# 自研 prompt-eval / evals 看板
+
+| 字段 | 内容 |
+|---|---|
+| 名称 | 自研 prompt-eval / evals 看板 |
+| 类型 | 工具 |
+| 评什么 | 案例登记、汇总、历史对比 |
+| 适用场景 | 团队现有入口 |
+| 短板 | 代码、当前 schema 和性能未检查；现状仅来自输入 |
+| 规模与许可 | 内部规模/许可未核实 |
+| 是否采用及理由 | 保留；补统计和访问账本，不以未知集成成本承诺全面迁移 |
+| 来源链接 | 现有协议（共享电脑 `/workspace/research/2026-10-13-prompt评测协议.md`）、简报（共享电脑 `/workspace/research/briefs/2026-10-14-评测方法论-简报.md`） |
+| 我们实际用下来的结果 | 已用于 daily-skill 消融、benefit-49：见 [retros/2026-10-12-daily-skill-消融.md](../retros/2026-10-12-daily-skill-消融.md)、[retros/2026-10-13-benefit-49.md](../retros/2026-10-13-benefit-49.md)。暴露的问题：截尾均值藏失败、判分 bug、单题样本。 |
+
+出处：调研报告 §3（共享电脑 `/workspace/research/2026-10-14-评测方法论.md`）（2026-10-14，共享电脑）。
