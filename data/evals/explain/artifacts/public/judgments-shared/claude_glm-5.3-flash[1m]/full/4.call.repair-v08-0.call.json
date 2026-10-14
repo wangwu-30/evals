@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "75f7c918633bdaf385a66ce0e05eee0264fd62f172979b99d042efe49f292587",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"100100\",\"reasons\":[\"Connects measurable arrivals and duration to inferred occupancy.\",\"No confusable near-case or deciding feature is provided.\",\"Correct calculation, but omits waiting-time versus system-time distinction.\",\"Halves stated stay duration with arrivals fixed, correctly halving occupancy.\",\"Lists applications without applying or identifying the shared relationship.\",\"Halving service time need not halve total stay or occupancy.\"],\"evidence\":[\"count arrivals and duration (easy) to infer occupancy (hard)\",\"\",\"\",\"each stay is 2 minutes while arrivals stay 10 per minute\",\"\",\"halving service time halves the crowd\"]}]}",
+  "usage": {
+    "input_tokens": 20216,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 306,
+    "reasoning_output_tokens": 169
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.682
+}

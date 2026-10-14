@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "d5b93ef802845444a55f8614152873a0a22454b9fa74284180ee03d42e7c2827",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d06\",\"bits\":\"101001\",\"reasons\":[\"Connects stale profile data to deciding when to discard cached copies.\",\"No confusable near-case with a deciding feature is provided.\",\"Explains stale copies, TTL expiration, and explicit invalidation correctly.\",\"No controlled change to the original case holds other conditions fixed.\",\"No surface-different situation applies the same deciding relationship.\",\"Mechanism is accurate; acknowledges staleness and race conditions.\"],\"evidence\":[\"deciding when to throw away or refresh the copy\",\"\",\"delete the cache key so the next read refetches\",\"\",\"\",\"fresher, but more wiring and race conditions to handle\"]}]}",
+  "usage": {
+    "input_tokens": 20206,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 296,
+    "reasoning_output_tokens": 154
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.524
+}

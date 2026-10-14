@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "e7f54cd1c1282fa528061a77205c6d4001b2d20848c7d2e1638d025c8014746e",
+  "rc": 0,
+  "cost_usd_reported": 0.114715,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"d05\":\"贝叶斯公式的核心:把“阳性后患病的概率”换成“病人中阳性的比例”折算回来。设患病率0.1%,检测灵敏度99%,假阳性率1%。看100000人:病人约100人,其中约99人检测阳性;健康人99900人,约1%即约999人假阳性。阳性共约1098人,真病人只占99/1098≈9%。公式即 P(病|阳性)=P(阳性|病)×P(病)/P(阳性)。直观原因:病很罕见时,健康人基数巨大,假阳性的绝对人数可能远超真阳性,所以阳性不等于确诊,先验(患病率)非常重要。\",\"d03\":\"正反馈是输出反过来增强输入的变化方向,让变化自我放大。例子:话筒对着音箱,声音越放越大形成啸叫;买的人推高股价,上涨又吸引更多人买;信谣言的人越多,传播越快。关键在于“正”指同向增强,不是“正面、好”。它不分好坏:网络效应让产品越用越有价值是正反馈,金融泡沫、发烧失控、雪崩也是正反馈。放大过程通常会持续到某种极限(资源耗尽、市场饱和、破音)才停止,所以需要负反馈来制衡。\",\"v08\":\"Little's Law says L = λW. L is the average number of items in a system, λ the average arrival rate, W the average time each item spends in the system. Example: a coffee shop where 10 customers arrive per minute and each stays 4 minutes has, on average, 10 × 4 = 40 people inside. Intuition: in steady state, people leave at the same rate they enter, so the number inside equals (flow rate) × (time inside). It holds for any stable queue regardless of arrival or service distributions. Practical use: if your server handles 100 requests/second with 0.2 s average latency, it holds about 20 requests in flight — handy for sizing threads, buffers, or inventory.\",\"v03\":\"自然选择的逻辑:个体随机产生可遗传的变异,环境对变异进行筛选,更适应的个体留下更多后代,相关基因在下一代中比例上升;许多代之后,整个种群的平均性状就改变了。关键纠错:不是动物“想要改变”或“努力锻炼”后把结果传给后代。长颈鹿不是使劲伸脖子够高树才让脖子变长,而是天生脖子较长的个体能吃到更多食物、存活和繁殖更成功。变异是随机的,选择是环境施加的;进化改变的是种群的基因频率,不响应个体的意愿。\",\"v06\":\"Deadlock: two (or more) processes each hold a resource and wait forever for a resource the other holds. Example: Thread 1 acquires lock A, then requests lock B; Thread 2 acquires lock B, then requests lock A. Each blocks the other, so neither can proceed — they hold and wait indefinitely. The four Coffman conditions that must all hold: mutual exclusion, hold-and-wait, no preemption, and circular wait. Breaking any one prevents deadlock; the common fix is imposing a global lock ordering so both threads request A before B, or using timeouts/backoff.\",\"v05\":\"信息熵衡量随机变量的平均不确定性:H=-Σpᵢ log₂ pᵢ。均匀分布熵最大,因为每种结果等可能,你完全无法预测哪个会出现;若某个结果概率接近1,结果几乎注定,熵接近0。例子:均匀硬币(0.5,0.5)熵为1比特;偏硬币(0.9,0.1)熵约0.47比特;必然事件熵为0。直觉:概率越分散,平均来说你缺的信息越多;概率越集中,结果越可预料。所以“均匀”意味着没有哪一方占优,天然最不确定。\",\"v01\":\"过拟合就是模型把训练数据“背得太死”,连噪声和巧合都当成规律。比喻:一个学生刷题时把每道题的答案都记住了,考试题目稍一变化就不会做。在数据上:模型记住了训练集里每个样本(甚至错别字、录入错误),却没有学到真正的一般规律,于是在没见过的新数据上表现很差。典型信号是训练集准确率很高、新数据准确率明显低。常见原因:模型太复杂、数据太少。常见对策:增加数据、简化模型、正则化、用验证集提前发现。\",\"d01\":\"似然回答:假定某个假设为真,看到眼前这批数据的概率是多少,记作 P(数据|假设)。它衡量数据对假设的支持程度,不是“假设为真的概率”。后验回答:看到数据之后,这个假设成立的概率,记作 P(假设|数据)。两者由贝叶斯定理联系:后验 ∝ 似然 × 先验。硬币例子:若正面概率为0.7,扔10次得7正的似然是 C(10,7)·0.7⁷·0.3³;想知道“7正之后硬币真 biased 0.7 的概率”,还要乘上先验并对各假设归一化。\",\"d07\":\"相关只说明两个量一起变化,因果还需排除其他解释。例子:某城市统计发现冰淇淋销量与溺水人数同涨同跌,相关很强,但吃冰淇淋并不导致溺水——共同原因是夏季高温,既让人买冰淇淋也让人下泳,这叫混杂变量。区分办法:一,寻找并控制混杂因素(只比较温度相近的日子);二,做随机对照实验:随机分组发放冰淇淋,若溺水率不变,说明无因果;三,追问机制和反向因果的可能。口诀:相关是线索,因果要靠机制、控制变量或实验确立。\",\"d02\":\"Population variance measures how spread out a set of numbers is around their mean. Recipe: find the mean μ, subtract it from every value to get deviations, square each deviation, then average the squares. Formula: σ² = (1/N) Σ(xᵢ − μ)². Example: scores 4, 6, 8 have mean 6; deviations are −2, 0, 2; squares are 4, 0, 4; variance = (4+0+4)/3 ≈ 2.67. Why square? Raw deviations always sum to zero (they cancel out), and squaring makes every deviation count while punishing large departures more heavily. The units are squared, so taking the square root gives the standard deviation, which is back in the original units.\",\"d08\":\"Compound growth means growth earns growth: each period's gain is added to the base, so the next period grows from a bigger amount. Formula: final = P(1+r)^t. At 10% per year, $1,000 becomes about $6,727 in 20 years; the same rate turns $10,000 into about $67,275. Two lessons: the process is multiplicative, so the starting amount directly scales the result — a bigger P or an earlier start (more periods t) yields disproportionately more, and small rate differences compound into huge gaps. $1 doubling 10 times is $1,024; $8 doubling 10 times is $8,192. Time and principal both matter.\",\"d06\":\"A cache stores a copy of expensive-to-fetch data (like a user profile) so later requests are fast. Cache invalidation is the problem of keeping that copy correct when the underlying data changes. If a user updates their email but the cache still holds the old profile, users see stale data. Common strategies: TTL — expire entries after N seconds (simple, but briefly stale); write-through — update cache and database together on every write; delete-on-write — evict the key when data changes, so the next read refetches fresh data. It's hard because the cache and the source live on different machines: updates race with reads, failures leave copies inconsistent, and you must choose the right granularity. Hence the joke: \\\"there are only two hard things in computer science: cache invalidation and naming things.\\\"\",\"v04\":\"Idempotency: an operation has the same effect whether applied once or many times — f(f(x)) = f(x). GET and \\\"set key = 5\\\" are idempotent; \\\"increment by 1\\\" and \\\"charge my card $10\\\" are not. It matters in distributed systems because retries are unavoidable: when a network call times out, the caller doesn't know if the request reached the server, so it retries. If that request charges a card or creates an order, a retry double-charges or duplicates it. Standard fix: idempotency keys — the client attaches a unique key to each operation, and the server remembers processed keys to deduplicate retries. Alternatives include conditional writes (insert if absent) and designing updates as absolute sets rather than relative increments.\",\"v02\":\"Precision and recall measure different kinds of search quality. Say a query returns 10 results, 8 of which are relevant, while the whole corpus contains 20 relevant documents. Precision = relevant returned ÷ total returned = 8/10 = 0.8: how much of what I showed you is correct (few false positives). Recall = relevant returned ÷ total relevant = 8/20 = 0.4: how much of everything out there did I find (few false negatives). They trade off: returning more results usually raises recall but can lower precision; a stricter filter does the opposite. Which one matters more depends on cost — spam filtering favors precision, missing evidence in investigation favors recall.\",\"d04\":\"Opportunity cost is the value of the next-best alternative you give up when choosing. Your free afternoon: options are studying for an exam, taking a paid shift worth $50, or napping. If you choose to nap, the opportunity cost isn't the total of everything else — it's the single best forgone option, the $50 shift. Key points: the cost counts only the next-best alternative, not all of them; even \\\"free\\\" activities have a cost because time is scarce; and comparing choices means weighing each against its best alternative. So a \\\"free\\\" afternoon is never really free.\",\"v07\":\"公共物品有两个特征:非排他(无法阻止任何人使用,如路灯、国防、防洪堤)和非竞争(一人使用不减少他人可用)。后果是搭便车:由于没法向使用者有效收费,理性人倾向不付费却照样享受好处,指望别人出钱。当人人都这么想,即使公共物品对所有人有益,市场供给也会严重不足——路灯没人修、基础研究投入不够。常见解决办法:政府用税收出资提供、强制缴费(如社保)、把部分收益变成可收费的俱乐部物品、或依靠声誉和社会压力鼓励自愿捐助。\"}",
+  "usage": {
+    "input_tokens": 1033,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 4382,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1033,
+      "outputTokens": 4382,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.114715,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 111.246
+}

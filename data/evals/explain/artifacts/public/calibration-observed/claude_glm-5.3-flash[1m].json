@@ -1,0 +1,223 @@
+{
+  "judge_requested": "claude:glm-5.3-flash[1m]",
+  "judgments": [
+    {
+      "id": "observed-00",
+      "bits": "100001",
+      "reasons": [
+        "States the purpose: quantifying dispersion from the mean for a concrete case.",
+        "No confusable near-case (e.g., sample variance) or deciding feature given.",
+        "Correct arithmetic, but squared units and population/sample distinction absent.",
+        "No changed-condition scenario is presented.",
+        "No transfer to a surface-different situation.",
+        "Calculation 8/3 is correct; example flagged as illustrative; no errors."
+      ],
+      "evidence": [
+        "总体方差衡量一组数据离平均值有多分散",
+        "",
+        "",
+        "",
+        "",
+        "平方为4、0、4，人口方差为8/3"
+      ]
+    },
+    {
+      "id": "observed-01",
+      "bits": "111101",
+      "reasons": [
+        "Ties positive-test problem to deciding P(disease|positive) via Bayes.",
+        "Flags positive≠diseased misreading; contrasts 90% sensitivity with 15.4% posterior.",
+        "Correct counts: 90 TP, 495 FP, 585 positives, 90/585≈15.4%.",
+        "Lowers prevalence with FPR fixed, correctly derives posterior drop.",
+        "Stays inside the original screening case; no new domain applied.",
+        "Hypothetical example flagged with 例如; all arithmetic checks out."
+      ],
+      "evidence": [
+        "贝叶斯公式把目标概率写成：P(患病|阳性)=P(阳性|患病)×P(患病)÷P(阳性)",
+        "不等于一定患病",
+        "阳性者共585人，真正患病的概率是90/585≈15.4%",
+        "患病率变低时，假阳性仍可能很多，阳性后的患病概率也会下降",
+        "",
+        "例如患病率1%，检测灵敏度90%，未患病者假阳性率5%"
+      ]
+    },
+    {
+      "id": "observed-02",
+      "bits": "111001",
+      "reasons": [
+        "Concrete stale-email problem tied to what invalidation must decide.",
+        "Typical stale profile plus TTL vs delete-on-write contrast with deciding trigger.",
+        "Correct causal chain: cross-machine copies, read/write races, failure inconsistency.",
+        "Generic strategy list; no key condition changed in the original case.",
+        "No transfer to a surface-different situation with shared deciding relation.",
+        "Facts correct; TTL staleness boundary stated; no invented history."
+      ],
+      "evidence": [
+        "the cache still holds the old profile, users see stale data",
+        "delete-on-write — evict the key when data changes",
+        "updates race with reads, failures leave copies inconsistent",
+        "",
+        "",
+        "simple, but briefly stale"
+      ]
+    },
+    {
+      "id": "observed-03",
+      "bits": "101001",
+      "reasons": [
+        "Links mic-speaker howl to deciding when amplification needs limiting mechanisms",
+        "Only a typical case; no confusable near-case with deciding feature given",
+        "Correct causal loop: sound re-captured and re-amplified, grows until howling",
+        "No condition changed in original case; only a generic limiting caveat",
+        "No application to a surface-different new situation identifying shared relation",
+        "Mic-speaker feedback example factually correct, consistent with saturation oracle"
+      ],
+      "evidence": [
+        "正反馈适合需要快速放大的过程，但必须有限制机制",
+        "",
+        "扬声器声音被麦克风再次收到并放大，声音越来越大，最后啸叫",
+        "",
+        "",
+        "麦克风靠近扬声器时，扬声器声音被麦克风再次收到并放大"
+      ],
+      "evidence_transport_repair": "expanded omitted zero-check placeholders"
+    },
+    {
+      "id": "observed-04",
+      "bits": "111111",
+      "reasons": [
+        "Connects concept to concrete decision: banning ice cream to reduce drownings.",
+        "Typical confounder case plus reversed-direction near-case with deciding feature.",
+        "Correct common-cause mechanism: heat drives both, no direct causal channel.",
+        "Holds weather fixed, varies ice cream sales; drowning unchanged refutes causation.",
+        "Applies who-pushes-whom relation to surface-different fire-loss case.",
+        "Conditional 若 marks hypothetical inference; no factual or causal errors."
+      ],
+      "evidence": [
+        "把相关当成因果，会开出无效的药方",
+        "另一种假因果来自方向颠倒：「消防员人数与火灾损失正相关」，不是消防员造成损失",
+        "天热让人既买冰淇淋又下河游泳，两者是同一原因的两个结果",
+        "控制天气做对照，冰淇淋销量不同而溺水相同，因果链就断了",
+        "不是消防员造成损失，而是大火招来更多消防员",
+        "若据此禁售冰淇淋，溺水不会减少"
+      ]
+    },
+    {
+      "id": "observed-05",
+      "bits": "101001",
+      "reasons": [
+        "Concrete problem of predicting next score tied to concept's decision value",
+        "Typical case present but no explicit confusable near-case provided",
+        "Correct causal chain from memorizing noise to poor new-data performance",
+        "Only generic remedy list, no changed original case with fixed elements",
+        "No application to a new surface-different situation identifying shared relation",
+        "Hedged claims, hypothetical marked with 比如, no oracle contradiction"
+      ],
+      "evidence": [
+        "它可能完美贴合这些点，却无法预测下一次成绩",
+        "",
+        "规律和偶然噪声一起记住，导致训练题做得很好，没见过的新数据却表现差",
+        "",
+        "",
+        "模型太复杂、数据太少或训练过度，都可能加重过拟合"
+      ]
+    },
+    {
+      "id": "observed-06",
+      "bits": "111001",
+      "reasons": [
+        "Giraffe case tied to what selection decides: differential survival/reproduction",
+        "Typical case plus Lamarckian near-case; deciding feature inherited vs acquired",
+        "Correct causal chain: variation, screening, differential reproduction, gene-frequency rise",
+        "No key condition varied with fixed elements and changed outcome",
+        "Only giraffe example; no transfer to a surface-different situation",
+        "Factually correct, no invented history, corrects misconception explicitly"
+      ],
+      "evidence": [
+        "天生脖子较长的个体能吃到更多食物、存活和繁殖更成功",
+        "长颈鹿不是使劲伸脖子够高树才让脖子变长,而是天生脖子较长的个体",
+        "更适应的个体留下更多后代,相关基因在下一代中比例上升",
+        "",
+        "",
+        "变异是随机的,选择是环境施加的"
+      ]
+    },
+    {
+      "id": "observed-07",
+      "bits": "111101",
+      "reasons": [
+        "Connects entropy to how guessable an outcome is before observing.",
+        "Fair coin typical, near-always-heads near case, uniformity is deciding feature.",
+        "Formula, bits unit, correct fair-coin 1-bit calculation, distribution-level meaning.",
+        "Biased coin keeps two outcomes fixed; entropy drops since guess becomes easy.",
+        "Stays within coin/distribution case; no surface-different transferred situation.",
+        "No factual errors; correctly notes average-uncertainty boundary."
+      ],
+      "evidence": [
+        "信息熵衡量一次结果的不确定程度",
+        "均匀分布通常更不确定，因为可能结果都同样合理",
+        "两面公平硬币的结果各为1/2，熵为1比特",
+        "若硬币几乎总是正面，观察结果前就容易猜中，熵较低",
+        "",
+        "注意这是“平均不确定性”"
+      ]
+    },
+    {
+      "id": "observed-08",
+      "bits": "111101",
+      "reasons": [
+        "Links two-transaction lock problem to choosing which prevention fix applies.",
+        "Typical two-lock case plus ordinary-wait near-case; deciding feature is mutual waiting.",
+        "Correct causal chain: mutual requests, release only after finishing, cycle, no progress.",
+        "Changes lock ordering with rest fixed; correctly concludes deadlock impossible.",
+        "No application to a surface-different new situation; same scenario throughout.",
+        "Coffman conditions correct; correctly bounds failure to victims, not whole system."
+      ],
+      "evidence": [
+        "Break any one and deadlock becomes impossible",
+        "here waiting is mutual, so time doesn't help",
+        "A then asks for row 2 while B asks for row 1",
+        "acquire locks in a fixed global order (kills circular wait)",
+        "",
+        "starves its victims, not necessarily the whole system"
+      ]
+    },
+    {
+      "id": "observed-09",
+      "bits": "101001",
+      "reasons": [
+        "Café example ties arrival rate and stay time to average occupancy outcome.",
+        "Only one example; no confusable near-case or deciding feature given.",
+        "Correct formula, units, meanings, arithmetic 10×0.5=5, system-time definition matches.",
+        "No key condition is varied; only a generic stability remark appears.",
+        "No application to a surface-different new situation is attempted.",
+        "Arithmetic correct, stability boundary stated, example flagged as hypothetical."
+      ],
+      "evidence": [
+        "a café serves 10 customers per hour",
+        "",
+        "L = 10 × 0.5 = 5 customers",
+        "",
+        "",
+        "applies in a stable system over a sufficiently long period"
+      ],
+      "evidence_transport_repair": "expanded omitted zero-check placeholders"
+    }
+  ],
+  "call_files": [
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-00.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-01.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-02.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-03.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-04.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-05.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-06.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-07.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-08.call.json",
+    "calibration-observed/claude_glm-5.3-flash[1m].observed-09.call.json"
+  ],
+  "isolated_repair_calls": [
+    "claude_glm-5.3-flash[1m].observed-00.call.repair-observed-00-0.call.json",
+    "claude_glm-5.3-flash[1m].observed-05.call.repair-observed-05-0.call.json"
+  ]
+}

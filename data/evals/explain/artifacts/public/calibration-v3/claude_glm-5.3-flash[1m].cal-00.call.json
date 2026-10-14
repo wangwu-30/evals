@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "4c819ffc7713fbdaff43345dddbe6844055254f22792f5680de6f7481fc3a26f",
+  "rc": 0,
+  "cost_usd_reported": 0.043085,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"cal-00\",\"bits\":\"111111\",\"reasons\":[\"Links likelihood to deciding which hypothesis explains observed data\",\"Contrasts likelihood data-probability with posterior needing prior\",\"Correct 0.5x0.5=.25 and 0.8x0.8=.64 with data-given-hypothesis meaning\",\"Keeps HH fixed, changes p=.8 to .2, likelihood .04 reverses ranking\",\"Transfers fixed-data comparison to fault hypotheses, prior still needed\",\"Arithmetic correct, no invented facts, prior boundary stated\"],\"evidence\":[\"比较不同假设对这批数据的解释能力\",\"这是数据在各假设下的概率，不是硬币的后验\",\"独立抛掷时两次概率相乘，似然为0.25和0.64\",\"似然变为0.04，支持次序反转\",\"固定同一批测试结果比较两种故障假设\",\"决定故障后验仍要故障先验\"]}]}",
+  "usage": {
+    "input_tokens": 1267,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1470,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1267,
+      "outputTokens": 1470,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.043085,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 23.286
+}

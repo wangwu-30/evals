@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "1523db889c7be5eedb7bac64e609c9d72b993bd1f4187c6fcddb2ee038904e5a",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111011\",\"reasons\":[\"Connects uncertain network outcomes to deciding whether retries are safe.\",\"Contrasts setting status with adding money; repeated effects decide.\",\"Explains repeated state effects and server deduplication of logical operations.\",\"No controlled change to an original case with fixed conditions.\",\"Applies duplicate prevention to payments using keys per logical operation.\",\"Correct state-based definition; no material factual errors or misleading analogy.\"],\"evidence\":[\"Idempotency is what lets you retry boldly\",\"'Add ¥100 to the balance' is not: one retry double-charges.\",\"the server remembers processed keys\",\"\", \"a unique token per logical operation\",\"leave the system in the same final state\"]}]}",
+  "usage": {
+    "input_tokens": 20214,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 288,
+    "reasoning_output_tokens": 133
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 29.444
+}

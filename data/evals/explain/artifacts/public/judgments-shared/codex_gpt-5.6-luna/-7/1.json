@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-7",
+  "rep": 1,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "100000",
+      "reasons": [
+        "Connects positive tests to deciding disease probability.",
+        "No typical likelihood case paired with a confusable case.",
+        "No numerical calculation or normalization example.",
+        "No explicit condition change within a fixed case.",
+        "No second situation applies an established example relationship.",
+        "Claim that likelihood itself is not probability is overbroad."
+      ],
+      "evidence": [
+        "阳性后的患病概率仍可能不高",
+        "",
+        "",
+        "",
+        "",
+        "似然本身不是概率"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100000",
+      "reasons": [
+        "Connects population data to assessing dispersion.",
+        "No population versus sample variance near-case.",
+        "Squared deviations total 200, but variance is 200/3.",
+        "No explicit change to the original dataset.",
+        "No surface-different application.",
+        "Reported population variance is arithmetically incorrect."
+      ],
+      "evidence": [
+        "总体方差衡量一整个人群的数据离平均值有多分散。",
+        "",
+        "所以总体方差为200（平方单位）",
+        "",
+        "",
+        "所以总体方差为200（平方单位）"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "101000",
+      "reasons": [
+        "Connects amplification to judging consequences and boundaries.",
+        "Negative feedback is named without a contrasting concrete case.",
+        "Explains the reinforcing loop and possible limiting mechanisms.",
+        "Added mechanisms are generic, not a controlled original-case change.",
+        "Applications are listed without applying the shared causal relation.",
+        "Room warming example misplaces the ice-albedo climate mechanism."
+      ],
+      "evidence": [
+        "判断好坏要看被放大的是什么、是否有边界，以及最终后果。",
+        "",
+        "变化产生的结果又反过来推动原变化，因此变化被放大。",
+        "",
+        "",
+        "暗地面吸收更多热量，又使房间更暖"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choices to comparing their real costs.",
+        "Contrasts best forgone option with summing all forgone options.",
+        "Correctly identifies the highest-valued forgone alternative.",
+        "Exam urgency raises studying value while playing remains chosen.",
+        "No surface-different situation applies the relationship.",
+        "Definition and hypothetical comparisons are factually sound."
+      ],
+      "evidence": [
+        "它帮助你比较选择的真实代价。",
+        "机会成本不是“所有没做的事”",
+        "而是其中最值得的那个，比如复习带来的进步。",
+        "若明天有重要考试，复习的价值上升，打球的机会成本就变高；",
+        "",
+        "选择一件事时，放弃的最佳替代选择所带来的价值。"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "Uses positive tests to determine actual disease probability.",
+        "Distinguishes patient positivity from disease probability among positives.",
+        "Correct hypothetical counts, normalization, and posterior calculation.",
+        "Mentions prevalence influence without changing an explicit case condition.",
+        "No surface-different application.",
+        "Alternative example values and arithmetic are correct and hypothetical."
+      ],
+      "evidence": [
+        "阳性后真正患病的概率是90/585≈15.4%。",
+        "所以检测准确率高，不代表阳性者几乎一定患病",
+        "9900人未患病，其中495人也阳性。",
+        "",
+        "",
+        "设患病率为1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101101",
+      "reasons": [
+        "Connects stale product prices to choosing cache refresh behavior.",
+        "No concrete confusable case distinguishes invalidation from another phenomenon.",
+        "Explains origin mutation, stale copies, expiration, and deletion.",
+        "Changes update handling while retaining the database price mutation.",
+        "No surface-different application.",
+        "Claims are qualified and do not promise perfect TTL consistency."
+      ],
+      "evidence": [
+        "需要判断何时丢弃或更新它。",
+        "",
+        "数据库价格改了，用户仍可能看到旧价格。",
+        "若只改数据库而不处理缓存，旧值可能持续到自然过期。",
+        "",
+        "用户仍可能看到旧价格"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111001",
+      "reasons": [
+        "Connects co-movement to deciding whether causation is supported.",
+        "Contrasts apparent causation with a shared-temperature explanation.",
+        "Correctly explains how a common cause produces association.",
+        "Randomization discussion does not modify the original concrete case.",
+        "No surface-different concrete application.",
+        "Example framing and qualified causal inference are appropriate."
+      ],
+      "evidence": [
+        "只看到“同时增加”，通常只能说相关。",
+        "但冰淇淋不是溺水原因。",
+        "它既让人想吃冰淇淋，也让更多人下水。",
+        "",
+        "",
+        "差异更能支持因果"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects growth calculations to assessing starting amount effects.",
+        "Contrasts compound total 121 with noncompounding total 120.",
+        "Correct formula, annual units, calculation, and interest-on-interest explanation.",
+        "Doubles principal while explicitly fixing rate and time.",
+        "No surface-different application.",
+        "Hypothetical arithmetic is correct; stable-rate limitations are acknowledged."
+      ],
+      "evidence": [
+        "起始金额决定每一期增长的绝对数额",
+        "两年121元，而不是120元",
+        "因为第二年的10%也作用于第一年的10元收益。",
+        "本金200元、同样利率和时间，最终金额是前者两倍。",
+        "",
+        "若本金P按年增长率r，经过n年为P(1+r)^n。"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects misleading training success to assessing unseen-data performance.",
+        "Distinguishes overfitting signals from distribution mismatch.",
+        "Explains noise memorization leading to poor generalization.",
+        "Remedies and distribution caveats do not modify one fixed case.",
+        "Exam analogy lacks an explicit shared deciding condition.",
+        "Exam analogy maps memorization but gives no limitation."
+      ],
+      "evidence": [
+        "判断时要比较训练集和未见过的验证集",
+        "但如果训练和验证数据分布不同，问题未必只是过拟合。",
+        "连其中的噪声和偶然性也当成规律",
+        "",
+        "",
+        "旧题全会，但换一道题就不会"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111101",
+      "reasons": [
+        "Connects search results to deciding accuracy versus coverage priorities.",
+        "Same example distinguishes returned-result accuracy from relevant-result coverage.",
+        "Correct denominators, percentages, and meanings.",
+        "Changes threshold in the same search setting with qualified outcomes.",
+        "Other applications are listed without working through their relation.",
+        "Calculations are correct and threshold effects are appropriately qualified."
+      ],
+      "evidence": [
+        "两者没有天然谁更重要，要看任务",
+        "回答“相关结果找全了多少”",
+        "精确率precision=相关返回数/返回总数=4/10=40%",
+        "提高返回门槛，可能少返回无关项，精确率上升但召回率下降；",
+        "",
+        "召回率recall=相关返回数/全部相关数=4/8=50%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "Connects beetle survival to predicting population trait proportions.",
+        "Contrasts heritable selection with survival of nonheritable differences.",
+        "Correctly links inherited variation and differential reproduction across generations.",
+        "Changes environment while retaining beetle coloration differences.",
+        "No surface-different application.",
+        "Mechanism is accurate and avoids purposeful individual evolution."
+      ],
+      "evidence": [
+        "于是这种颜色的遗传基因在下一代比例上升。",
+        "若差异不能遗传",
+        "过程需要差异、遗传性和繁殖成功率差异。",
+        "原本有利的颜色可能变得显眼，选择方向也会改变；",
+        "",
+        "进化发生在多代种群层面。"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111101",
+      "reasons": [
+        "Connects uncertain network outcomes to designing safe retries.",
+        "Contrasts setting state with repeatedly incrementing money.",
+        "Explains repeated effects and duplicate-processing prevention.",
+        "Repeats the same payment-state operation and preserves final state.",
+        "Contrasting increment example does not apply idempotency elsewhere.",
+        "Correctly defines effects and acknowledges concurrency boundaries."
+      ],
+      "evidence": [
+        "网络超时让客户端不知道请求是否成功，因此常会重试。",
+        "给账户加100元通常不是幂等的",
+        "服务端记录已处理请求",
+        "重复请求仍是“已支付”。",
+        "",
+        "也不保证并发下自动正确"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110101",
+      "reasons": [
+        "Connects coin probabilities to assessing predictability.",
+        "Distinguishes distribution uncertainty from outcome value.",
+        "Gives formula and result, but no numerical calculation steps.",
+        "Changes coin bias while retaining the two possible outcomes.",
+        "No surface-different application.",
+        "Formula, units, maximum condition, and interpretation are correct."
+      ],
+      "evidence": [
+        "预测者没有可利用的偏向",
+        "熵描述的是概率分布的不确定性，不是结果本身的好坏",
+        "",
+        "若硬币正面概率99%、反面1%，熵较低",
+        "",
+        "对固定数量的可能结果，均匀分布通常使熵最大"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101101",
+      "reasons": [
+        "Connects blocked resource allocation to choosing prevention or recovery.",
+        "No concrete ordinary-contention near-case.",
+        "Explains retained resources and circular waiting correctly.",
+        "Changes acquisition order while retaining processes and resource needs.",
+        "No surface-different application.",
+        "Resource example and cycle-breaking claims are correct."
+      ],
+      "evidence": [
+        "就能打破循环等待。",
+        "",
+        "A不释放打印机，因为还没完成；B也不释放扫描仪",
+        "先申请打印机再申请扫描仪",
+        "",
+        "这里同时存在“占有并等待”和“互不抢占”等条件。"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111001",
+      "reasons": [
+        "Connects shared benefits to diagnosing insufficient voluntary funding.",
+        "Contrasts public goods with rivalrous public pasture.",
+        "Explains nonexclusion incentives leading to insufficient contributions.",
+        "Pasture is a separate case, not a fixed-case modification.",
+        "Examples do not apply the relationship in a new situation.",
+        "Definitions and qualified underprovision claim are sound."
+      ],
+      "evidence": [
+        "结果大家都少付，公共物品供给不足。",
+        "它并非完全非竞争",
+        "每个人都可能想“别人付钱就好”",
+        "",
+        "",
+        "也很难把不付费者排除在外"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101101",
+      "reasons": [
+        "Connects coffee-shop flow to estimating average occupancy.",
+        "No concrete confusable queue-only versus whole-system case.",
+        "Correct calculation, units, matching boundaries, and stability condition.",
+        "Doubles residence time while explicitly fixing arrival rate.",
+        "In-flight tasks are mentioned without a concrete transferred application.",
+        "Correctly avoids requiring regular arrivals and states system boundaries."
+      ],
+      "evidence": [
+        "店内平均人数就是10×0.5=5人。",
+        "",
+        "每人平均停留30分钟（0.5小时）",
+        "若到达率不变而平均停留时间翻倍，系统内平均人数也翻倍",
+        "",
+        "要在稳定状态下观察同一系统"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/-7/1.call.json",
+  "prompt_sha256": "76f5f4cc8e8861daa5afcf1a652551b288ebf81113f6dfd924c176e977250167",
+  "isolated_repair_calls": []
+}

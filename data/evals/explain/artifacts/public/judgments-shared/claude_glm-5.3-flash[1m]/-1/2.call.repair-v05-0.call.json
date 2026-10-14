@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "434a61f6db07856be689d34fd7ff61b5c0008697ff53c1c2a6135bd42fd719f7",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"111101\",\"reasons\":[\"将猜测结果的问题连接到依据概率选择押注。\",\"对比均匀与偏斜概率，以是否存在优势结果区分。\",\"平均惊讶度、比特计算及分布属性区分均正确。\",\"保持均匀分布，增加选项，正确计算熵的变化。\",\"没有应用到表面不同的新情境并说明共同关系。\",\"计算与事实正确，没有误将单次结果视为熵。\"],\"evidence\":[\"只要概率不均匀，你就能偏向大概率结果来降低猜测难度\",\"两个结果各 50% 时 H = 1 比特；改成 99% 和 1%\",\"熵就是平均惊讶度\",\"均匀分布的选项从 2 个增到 8 个，H 从 1 升到 3 比特\",\"\", \"注意熵是整个概率分布的属性，不描述某一次具体结果。\"]}]}",
+  "usage": {
+    "input_tokens": 20462,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 317,
+    "reasoning_output_tokens": 80
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.361
+}

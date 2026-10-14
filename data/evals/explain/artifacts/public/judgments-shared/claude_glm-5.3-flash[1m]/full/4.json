@@ -1,0 +1,335 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "full",
+  "rep": 4,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111001",
+      "reasons": [
+        "Connects observed data to comparing hypotheses and updating beliefs.",
+        "Contrasts likelihood and posterior using the conditioning direction.",
+        "Correct likelihood calculations and normalized posterior with equal priors.",
+        "No explicit change to a condition in the example.",
+        "No application to a surface-different situation.",
+        "Calculations and distinctions are correct; uncertainty is acknowledged."
+      ],
+      "evidence": [
+        "比较几个假设才有意义",
+        "方向相反",
+        "P(0.5|数据)=0.117/(0.117+0.267)≈30%",
+        "",
+        "",
+        "较高的似然也不等于证实"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "101101",
+      "reasons": [
+        "Explains why equal averages can conceal different spreads.",
+        "No concrete near-case distinguishing population from sample variance.",
+        "Correct calculation, squared units, and nonessential choice of squaring.",
+        "Replacing one value keeps others fixed and increases variance.",
+        "No surface-different application of the relationship.",
+        "Arithmetic and explanation of squaring are correct."
+      ],
+      "evidence": [
+        "same center, far more spread",
+        "",
+        "variance (1+0+1)/3 ≈ 0.67",
+        "replace 6 with 100 and it explodes",
+        "",
+        "not a logical necessity"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111111",
+      "reasons": [
+        "Connects feedback direction to evaluating amplification and outcomes.",
+        "Contrasts microphone amplification with corrective air conditioning.",
+        "Explains repeated amplification and finite resource limits.",
+        "Moving the microphone weakens the otherwise unchanged feedback loop.",
+        "Market buying and selling reproduce the reinforcing loop.",
+        "Separates direction from desirability and acknowledges saturation."
+      ],
+      "evidence": [
+        "再把「机制方向」与「结果好坏」分开评价",
+        "空调温度高了就制冷，偏差被压回",
+        "从音箱播出，又进话筒，再放大",
+        "把话筒拿开",
+        "涨吸引买入，涨得更凶",
+        "放大不会无限继续"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "110000",
+      "reasons": [
+        "Connects afternoon choices to their best forgone alternative.",
+        "Contrasts one forgone option with summing rejected options.",
+        "Example never establishes the nap's ranking over paid alternatives.",
+        "Nap already ranks best before supposedly becoming best.",
+        "All examples remain uses of the same free afternoon.",
+        "Contradictory rankings undermine the changed-condition conclusion."
+      ],
+      "evidence": [
+        "judge every choice against what you would actually do instead",
+        "only the value of the single best forgone option",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Uses a positive test to decide disease probability.",
+        "Contrasts sensitivity with the probability of disease after positivity.",
+        "Correct counts, conditional formula, and posterior calculation.",
+        "Changes prevalence while explicitly retaining the same test.",
+        "No surface-different application of Bayesian updating.",
+        "Teaching example arithmetic and prevalence sensitivity are correct."
+      ],
+      "evidence": [
+        "他真患病的概率是多少",
+        "直觉答99%，实际约2%",
+        "真正的患者只占99/5094≈2%",
+        "同一检测下阳性者约69%真患病",
+        "",
+        "某病患病率是千分之一"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "110100",
+      "reasons": [
+        "Connects stale biographies to choosing cache refresh strategies.",
+        "Contrasts expiration with deletion triggered by source changes.",
+        "Immediate freshness claim ignores concurrent refill and distributed races.",
+        "Missing one write path changes freshness in the same application.",
+        "No surface-different application of source-copy tracking.",
+        "Active invalidation does not guarantee immediate freshness."
+      ],
+      "evidence": [
+        "visitors see stale data",
+        "TTL: every entry expires",
+        "",
+        "miss one and users see stale data indefinitely",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "101110",
+      "reasons": [
+        "用销量与溺水问题说明怎样判断因果。",
+        "未给出具体因果近例与相关案例对照。",
+        "正确解释共同原因、控制混杂与随机干预。",
+        "固定气温后比较，说明相关消失的含义。",
+        "迁移到保健品与恢复，识别共同原因体质。",
+        "将季节性示例当作事实，未标明假设。"
+      ],
+      "evidence": [
+        "区分的依据：因果要求「改变A，B通过A这条通路跟着变」。",
+        "",
+        "天热既让人多买冷饮，也让人多下水。",
+        "只在天同样热的日子比较冰激凌销量和溺水数，若相关消失",
+        "不固定「体质」这个共同原因，相关照样冒充因果。",
+        "冰激凌销量高的月份，溺水人数也多，两者强相关"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111111",
+      "reasons": [
+        "Connects compounding to consequences of starting amount and timing.",
+        "Contrasts compound gains with simple interest on the original principal.",
+        "Correct annual calculation explains principal, rate, time, and compounded gains.",
+        "Changes starting principal while keeping the rate fixed.",
+        "Debt applies the same arithmetic to an adverse balance.",
+        "Hypothetical calculations are correct and promise no guaranteed returns."
+      ],
+      "evidence": [
+        "Why the starting amount matters",
+        "$1,745, versus $400 with simple interest",
+        "year 2 earns $11, not $10 → $121",
+        "$10,000 earns $1,000 the first year while $100 earns $10",
+        "credit-card debt compounds against you by the same arithmetic",
+        "$100 at 10% a year"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects training success and new-data failure to model selection.",
+        "Contrasts overfitting with underfitting through excessive restriction.",
+        "Explains fitting accidental details and failure on new houses.",
+        "Changes multiple conditions and overstates how more data reduces overfitting.",
+        "Student analogy lacks the required condition for valid transfer.",
+        "Analogy has no limits; data-size claims are overly categorical."
+      ],
+      "evidence": [
+        "判断依据正是这个落差：训练表现好、新数据表现差",
+        "管得太死会连规律也学不会，即欠拟合",
+        "能记住训练集里纯属巧合的细节",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111111",
+      "reasons": [
+        "Connects retrieval errors to choosing priorities by their costs.",
+        "Contrasts correctness among returned documents with coverage of relevant documents.",
+        "Correct numerical ratios and distinct denominators define both measures.",
+        "Expands returned set with relevance totals fixed and recalculates.",
+        "Spam filtering and screening share selection correctness versus true-set coverage.",
+        "Specified result counts support calculations without guaranteeing threshold performance."
+      ],
+      "evidence": [
+        "Which matters more depends on cost",
+        "correctness among your selections versus coverage of the true set",
+        "Precision = 8/15 ≈ 53%",
+        "return 60 documents to catch all 10 relevant ones",
+        "The same arithmetic applies to any retrieval or classification",
+        "recall hits 100%, but precision falls to ~17%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111111",
+      "reasons": [
+        "Connects population change to reproductive success rather than individual effort.",
+        "Contrasts inherited selection with purposeful neck stretching.",
+        "Explains variation, differential reproduction, inheritance, and changing gene frequencies.",
+        "Changes low-food availability while retaining neck variation.",
+        "Bacterial resistance applies differential survival to preexisting variation.",
+        "Examples correctly emphasize inheritance and environment-dependent advantage."
+      ],
+      "evidence": [
+        "变的是种群的基因构成",
+        "说长颈鹿拼命伸脖子所以脖子变长，是错的",
+        "留下更多继承长颈的后代",
+        "如果矮处食物充足，长颈的优势消失",
+        "种群中天然存在极少数耐药个体",
+        "变异不针对任何目标"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111111",
+      "reasons": [
+        "Connects uncertain charge outcomes to preventing duplicate billing during retries.",
+        "Contrasts setting with incrementing; repeated state effects decide idempotency.",
+        "Explains retry duplication and key-based suppression of repeated work.",
+        "Changes fixed assignment to time-dependent assignment while retaining repeated execution.",
+        "Transfers duplicate-effect reasoning from billing to variable and list operations.",
+        "Correctly defines effect equivalence without requiring identical responses."
+      ],
+      "evidence": [
+        "without idempotency the customer is billed twice",
+        "x = x+1 and list.append(item) are not",
+        "returns the stored result instead of redoing the work",
+        "SET x=now() is not, since each call yields a different value",
+        "SET x=5 is idempotent (repeating changes nothing)",
+        "has the same effect as performing it once"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "101111",
+      "reasons": [
+        "Connects entropy to predicting outcomes before their revelation.",
+        "No concrete confusable near-case involving sequence meaning or disorder.",
+        "Correct formula, bit units, and numerical entropy examples.",
+        "Changes uniform outcome count while retaining uniform probabilities.",
+        "Coin and dice apply the same uniform-distribution uncertainty relationship.",
+        "Calculations are correct and entropy is distinguished from intrinsic disorder."
+      ],
+      "evidence": [
+        "信息熵衡量结果揭晓前你有多难猜",
+        "",
+        "以2为底时单位是比特",
+        "结果数增多，均匀熵随之增大",
+        "八面均匀骰是3比特",
+        "熵描述的是猜之前的不确定性"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects circular lock dependencies to choosing ways to prevent blockage.",
+        "Contrasts ordinary temporary waiting with an unresolvable waiting circle.",
+        "Explains reciprocal lock dependencies and the four necessary conditions.",
+        "Releasing B's held lock breaks the original hold-and-wait dependency.",
+        "No surface-different situation applies the resource dependency relationship.",
+        "Lock ordering and cycle-breaking explanations are factually correct."
+      ],
+      "evidence": [
+        "That gives the fixes: break any one",
+        "Contrast an ordinary wait",
+        "A waits for B, B waits for A",
+        "If B releases the file lock before asking for the database",
+        "",
+        "making a cycle impossible"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111111",
+      "reasons": [
+        "Connects public benefits and nonpayment incentives to funding decisions.",
+        "Contrasts street lighting with a chargeable shared elevator.",
+        "Explains nonexclusion, nonrivalry, and conditional failure of voluntary contributions.",
+        "Changes group size and anonymity while retaining shared-benefit funding.",
+        "Climate mitigation shares diffuse benefits and contribution incentives.",
+        "Explicit hypothetical scenario does not claim universally zero voluntary provision."
+      ],
+      "evidence": [
+        "公共物品难靠自愿供给",
+        "电梯虽共用却能收费",
+        "不付钱也被照亮，于是人人想搭便车",
+        "人多、匿名时（如温室气体减排）就难",
+        "如温室气体减排",
+        "十户都这么想，灯就装不成"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "100100",
+      "reasons": [
+        "Connects measurable arrivals and duration to inferred occupancy.",
+        "No confusable near-case or deciding feature is provided.",
+        "Correct calculation, but omits waiting-time versus system-time distinction.",
+        "Halves stated stay duration with arrivals fixed, correctly halving occupancy.",
+        "Lists applications without applying or identifying the shared relationship.",
+        "Halving service time need not halve total stay or occupancy."
+      ],
+      "evidence": [
+        "count arrivals and duration (easy) to infer occupancy (hard)",
+        "",
+        "",
+        "each stay is 2 minutes while arrivals stay 10 per minute",
+        "",
+        "halving service time halves the crowd"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/full/4.call.json",
+  "prompt_sha256": "9ce15c845bcdae638cbd94c89ec4123dc8a8c7baa7b6eeaba96f3f6099af8576",
+  "isolated_repair_calls": [
+    "4.call.repair-d07-0.call.json",
+    "4.call.repair-v04-0.call.json",
+    "4.call.repair-v08-0.call.json"
+  ]
+}

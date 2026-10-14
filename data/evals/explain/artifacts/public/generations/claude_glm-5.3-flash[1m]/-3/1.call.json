@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "f7b3aaf62d595600f89fd7a927b593c86a312db79803f988697661d5bca3fb2e",
+  "rc": 0,
+  "cost_usd_reported": 0.23081999999999997,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"d01\":\"似然回答的是反方向的条件概率问题。高中概率常问：已知袋子里80%是红球，摸到7红3白的概率是多少？似然把方向反过来：数据（7红3白）已经摸到、固定不变，问哪个假设让这批数据最不意外——「80%红球」与「30%红球」各自给出P(数据|假设)，这两个数就是似然，用来比较假设。注意它不是「假设为真的概率」，那才归后验概率管。后验 = 似然 × 先验 ÷ 数据总概率，先验是看到数据前你对各假设的信任。两个假设先验相同时，似然大者后验也大；先验悬殊时，高似然未必赢。还有：数据有限时似然高只说明「在这个假设下这批数据不奇怪」，不等于证实了它。\",\"d04\":\"You have a free afternoon: nap, hike, or study for an exam. Whatever you pick, opportunity cost is the value of the single best option you gave up — not all of them. Choose the hike, and the cost is whichever of nap or study you would most have wanted. \\\"Free\\\" doesn't mean costless: time is the real price. This turns decisions into comparisons: an option is only worth it if its value beats its opportunity cost. Change one condition — the exam is tomorrow morning — and study's value jumps, so the same hike now costs much more and a reasonable choice can flip. Same skill elsewhere: an evening of scrolling costs whatever you'd second-most have done with that time.\",\"v04\":\"Idempotency: doing an operation once or ten times leaves the same result. It matters in distributed systems because timeouts don't mean failure — the request may have succeeded after the sender gave up, so clients and frameworks retry. \\\"Set order status to paid\\\" is idempotent: a retry changes nothing. \\\"Add 100 to the balance\\\" is not: a retry pays twice. The standard fix is an idempotency key: the client attaches a unique key to each logical operation, and the server records processed keys so duplicates return the original result instead of re-executing. Judgment shifts with conditions: on a zero-retry network you'd need none of this; given at-least-once delivery, an idempotent consumer gives you effectively-once behavior. Elsewhere: DELETE by ID is naturally idempotent; POST /orders usually isn't.\",\"d02\":\"Two classes both average 50 on a test: in one, scores run 48–52; in the other, 10–90. The average alone can't tell them apart — that's the gap variance fills: a number for how spread out data is around the mean. Recipe: subtract the mean from each value (the deviations), square them (otherwise positives and negatives cancel to zero), then average the squares — for a whole population, divide by N. Squaring also makes big deviations dominate: {0,50,100} gives variance 2500, {49,50,51} gives about 0.67. Since units get squared, people quote the square root — the standard deviation — back in original units. Change one condition: move a 51 to a 91 and the mean barely shifts, but variance jumps — it tracks spread, not location.\",\"d07\":\"某城市统计发现：冰淇淋卖得越多，溺水的人越多，两者高度相关。但因果不成立——是夏天的热同时推高两者：天热让买冰淇淋和下河游泳的人都变多。相关只说明两个量一起变；因果要求改变其中一个时另一个随之改变。相关误导的三种来路：共同原因（此处是气温）、反向因果、巧合。检验办法是控制共同原因：只比较同样炎热的日子，冰淇淋与溺水的关联大幅减弱——说明关联是气温带来的。条件变化：若冬天促销冰淇淋而溺水不涨，也证明原相关依赖「夏天」这个条件。迁移：儿童鞋码与阅读能力相关，共同原因是年龄；只比同龄孩子，关联基本消失。看到相关先问：有没有第三个因素在背后同时推动两者？\",\"d05\":\"一项检测：患病的人99%显阳性，健康的人也有1%误显阳性。阳性等于患病吗？用一万人算。患病率1%：100人患病、9900人健康。患病的100人中99人阳性；健康的9900人按1%也有约99人假阳性。阳性共约198人，其中真患病的99人，约占一半。这就是贝叶斯公式做的事：P(患病|阳性) = P(阳性|患病)×患病率 ÷ P(阳性)。两个方向要分清：P(阳性|患病)是灵敏度——已知患病，检测显阳性的概率；P(患病|阳性)是你想要的——已知阳性，患病的概率。把两者画等号，就丢掉了患病率这个权重。条件变化：换成患病率仅0.1%的罕见病，同样99%准的检测，阳性后真患病概率掉到约9%——检测没变，结论大变。\",\"v06\":\"Thread A locks file 1, then wants file 2. Thread B locks file 2, then wants file 1. Each holds what the other needs and waits forever: that's deadlock — a cycle of waiting, not a logic bug in either thread. It requires four conditions at once: exclusive resources, holders keeping them while waiting, nothing forcibly taken back, and the waits forming a circle. Break any one and deadlock becomes impossible; the usual fix is a global ordering — everyone acquires file 1 before file 2 — so no circle can form. Other breaks: grab both locks atomically up front, or time out and release what you hold. The same picture is two database transactions each holding a row lock, so for any \\\"it just hangs\\\" bug, ask who waits on whom.\",\"v07\":\"路灯是典型的公共物品：没人能把不付钱的人挡在灯光之外（非排他），多一个人走路也不减少别人的照明（非竞争）。这带来搭便车：既然不交钱照样享受，何必出钱？人人都这么算，结果路灯没人建——对个人划算，对集体供给不足。这解释了为什么路灯、国防常由税收统一提供：强制分摊消除了搭便车。判断依据是这两个特征，不是「谁提供的」：收费公路能设闸拦人，就不是公共物品；商场自愿装灯，因为招揽顾客的收益归商家自己。条件变化：技术让排他变得可行时，性质随之改变——广播电视加上加密收费后，就从公共物品变成了可以收费的商品。\",\"v08\":\"Little's law: L = λW. In steady state, the average number of items in a system (L) equals the arrival rate (λ) times the average time each spends inside (W). Coffee shop: 10 customers arrive per minute and each stays 3 minutes from joining the line to leaving — so about 30 people are inside on average. No distribution assumptions: any arrival pattern, any queueing order, as long as the system is stable and you average over long runs. The practical use: measure two, get the third — cycle time W is often hard to instrument, so a factory computes it from work-in-progress and throughput. It also sanity-checks claims: 10 requests/second with 0.1s average response implies L = 1 in flight; a dashboard showing 1000 concurrent requests under those numbers means something is mislabeled. Stability matters: if arrivals outrun service, the queue grows without bound and the steady-state premise fails.\",\"v01\":\"一个学生把往年真题连答案全背了下来：模拟考（全是原题）满分，正式考试数字一换就不会。机器学习里的过拟合就是这种状态：模型在训练数据上表现极好，靠的是记住了这批数据的细节和噪声，而不是掌握了普遍规律。判断信号就在落差：训练集准确率很高，没见过的数据上明显变差。原因通常是模型太灵活或数据太少，细节恰好能被硬记下来。对策的直觉：换更简单的模型、增加数据、在背得太细之前停下。条件变化：数据多了以后，细节记不过来，模型被迫抓规律，落差随之缩小。类比有失效处：背题的学生自己知道在背，模型不会自我报告，所以落差只能靠留出的新数据检验，不能只看训练成绩。\",\"v02\":\"Search a 1000-document library for \\\"cat photos\\\"; 40 documents are truly relevant. Your search returns 20, of which 12 are relevant. Precision = 12/20 = 60%: of what was returned, how much is right — it answers \\\"can I trust this list?\\\" Recall = 12/40 = 30%: of everything relevant out there, how much was found — it answers \\\"did I miss anything?\\\" The two push against each other: searching only \\\"cat\\\" raises precision but misses documents titled \\\"kitten\\\"; adding \\\"kitten, feline\\\" recovers relevant ones but drags in junk. Which to favor depends on the cost of each mistake: a spam filter needs high precision (never lose real mail; one more spam is tolerable), cancer screening needs high recall (better a follow-up test than a missed case). One number never tells the whole story.\",\"d08\":\"Put 1000 yuan at 10% a year: year one earns 100, so year two earns 10% of 1100 — 110, not 100. Each gain itself starts earning: that's compound growth, growth on growth. Why the starting amount matters: a percentage multiplies whatever is there, so the same rate pays bigger absolute gains to a bigger base. 1000 and 100,000 both at 10% gain 100 versus 10,000 in year one, and over decades the absolute gap keeps widening even though both multiply by the same factor. Two cautions. Compounding is symmetric — losses compound too: a 50% drop needs a 100% gain to recover. And the rate applies for as long as you stay invested: time at a positive rate is itself a multiplier, which is why starting earlier can beat starting bigger.\",\"d03\":\"麦克风靠近音箱就会啸叫：声音进话筒，放大后从音箱播出，再次进话筒——输出绕回输入，且方向与原变化相同，一圈比一圈响。这就是正反馈：结果反过来加剧原因，形成自我放大的回路。放大不是无限的，它依赖条件：回路增益足够大，外部能量不断补给；断电或把话筒拿远，啸叫立刻停止。注意：正负说的是方向，好坏说的是评价。啸叫是坏的正反馈；存款复利也是正反馈——利息生出利息。同一个机制既能解释温度失控、市场泡沫，也能解释学习：学得越好，机会越多，于是学得更多。与之相对，负反馈把系统拉回原位，比如空调恒温。判断任何回路只问一句：这个结果会不会加强原因本身？\",\"v05\":\"三枚硬币：一枚两面相同，一枚正常，一枚正面概率九成。猜正反时，第一枚毫无悬念，第三枚十猜九中，最难猜的是正常那枚。信息熵把这种「事前不确定」变成数：概率越摊得平，熵越大；概率全押在一个结果上，熵为零——结果注定。均匀分布最不确定，因为没有任何结果可以忽略：每个结果同样可能，最优猜法的把握也被压到最低；偏斜的分布里总有一个大概率结果让你押注。熵的单位是比特，含义是「用是/否问题指明结果所需的个数」，均匀时所需问题最多。注意边界：概率从1/2推向0时熵同样下降——全押反面也是确定；在同一组结果上，均匀是熵的最大值点。\",\"v03\":\"长颈鹿的脖子不是「越用越长」或「想要所以变长」。过程分三步：祖先的脖子本来就参差不齐，变异是随机的，不针对需要；环境来筛选——干旱时低处叶子吃光，只有长脖个体够得着高处，活得更久；幸存者留下更多后代，长脖基因在下一代的比例升高。看清两点：个体从未改变自己，被改变的是种群的基因构成；方向来自环境的筛选，不是生物的意愿或努力。「用进废退」式的说法没有证据支持。条件变化：食物都在低处时，长脖失去优势，筛选方向随之改变甚至反转。迁移到细菌：使用抗生素时，本来携带抗药基因的少数个体存活并繁殖，几代后种群以抗药者为主——不是细菌「练出」抗药，是筛选留下了恰好抗药的个体。\",\"d06\":\"Your web page needs the user's profile on every request. Reading it from the database each time is slow, so you keep a copy in fast memory — a cache. The catch: when the data changes (say, the password is updated), the copy doesn't know. Serving the stale copy after a password change is a correctness bug; deciding when to throw away or refresh the copy is cache invalidation — famously hard because it's a bet on the future. Two common strategies: give each entry a TTL (expire after 60 seconds — simple, but stale for up to 60s), or invalidate on write — when the database row changes, delete the cache key so the next read refetches (fresher, but more wiring and race conditions to handle). Judgment: rarely-changing, read-heavy data rewards caching; hot, constantly-rewritten data lets invalidation costs eat the gains.\"}}",
+  "usage": {
+    "input_tokens": 2629,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 8707,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2629,
+      "outputTokens": 8707,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.23081999999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 170.209
+}

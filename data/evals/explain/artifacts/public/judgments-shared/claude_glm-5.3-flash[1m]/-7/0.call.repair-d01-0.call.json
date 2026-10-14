@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "539264600ae85d5a788957a08b26ce0515e510539ff4d2ce3530c0276645e577",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d01\",\"bits\":\"110001\",\"reasons\":[\"用硬币观测连接似然与候选假设比较。\",\"对比似然与后验，明确条件方向区别。\",\"没有给出正确的简单数值计算。\",\"没有改变具体条件并说明结果变化。\",\"没有迁移到表面不同的新情境。\",\"条件方向和贝叶斯关系正确，无实质事实错误。\"],\"evidence\":[\"比比看数据跟谁更搭\",\"它以假设为条件，算的是数据的概率\",\"\",\"\",\"\",\"相乘再归一化，就得到看数据后的信任\"]}]}",
+  "usage": {
+    "input_tokens": 20313,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 206,
+    "reasoning_output_tokens": 61
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 27.576
+}

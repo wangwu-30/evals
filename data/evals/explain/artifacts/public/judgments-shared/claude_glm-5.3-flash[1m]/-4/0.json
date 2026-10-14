@@ -1,0 +1,337 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-4",
+  "rep": 0,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111001",
+      "reasons": [
+        "Connects observed tosses to comparing candidate probabilities.",
+        "Distinguishes likelihood from probability of the parameter.",
+        "Correct likelihood calculations and prior-weighted posterior relationship.",
+        "Changes sample size without fixing outcomes or sampling assumptions.",
+        "No surface-different application is provided.",
+        "Calculations and conditional-probability distinctions are correct."
+      ],
+      "evidence": [
+        "变动 p 来比较",
+        "似然不是「p=0.8 的概率是30%」",
+        "L=C(10,8)×0.5¹⁰≈0.044",
+        "",
+        "",
+        "似然是给定参数看数据，后验是给定数据看参数"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "111101",
+      "reasons": [
+        "Connects spread measurement to choosing an error-sensitive measure.",
+        "Distinguishes variance from standard deviation by units.",
+        "Correct squared deviations, average, calculation, and squared units.",
+        "Doubles values while preserving their relationships; variance quadruples.",
+        "No new situation applies the relationship explicitly.",
+        "Arithmetic and explanations are correct without claiming squaring is unique."
+      ],
+      "evidence": [
+        "Use variance when big errors hurt disproportionately",
+        "taking the square root gives the standard deviation",
+        "averaged gives variance σ² = 8/3 ≈ 2.67",
+        "double every value (4, 8, 12)",
+        "",
+        "If the data are meters, variance is in m²"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "Connects feedback direction to predicting amplified disturbances.",
+        "Contrasts reinforcing feedback with deviation-correcting negative feedback.",
+        "Explains the reinforcing loop, gain requirement, and saturation.",
+        "No explicit alteration of the microphone case is evaluated.",
+        "Applies the reinforcing relation to social-media recommendations.",
+        "Direction, amplification conditions, and saturation boundaries are correct."
+      ],
+      "evidence": [
+        "微小偏差一轮轮放大",
+        "负反馈抵消偏差",
+        "放大还需增益大于1",
+        "",
+        "转发越多越被推荐",
+        "现实中总有饱和"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111100",
+      "reasons": [
+        "Uses afternoon alternatives to evaluate the cost of studying.",
+        "Distinguishes best forgone alternative from totals and sunk costs.",
+        "Correctly identifies the best alternative under the example's ranking.",
+        "Moves the exam while retaining the afternoon's alternatives.",
+        "General advice does not supply a surface-different situation.",
+        "Exam delay alone does not establish that the rational choice flips."
+      ],
+      "evidence": [
+        "Choose studying, and your cost",
+        "single best option you give up",
+        "the $50 shift, since that beats napping",
+        "the exam moves to next month",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Connects a positive test to deciding disease probability.",
+        "Distinguishes detection among patients from disease among positive results.",
+        "Correct counts, posterior calculation, and conditional-probability meanings.",
+        "Changes prevalence while explicitly keeping test accuracy fixed.",
+        "No surface-different application is provided.",
+        "Clearly hypothetical counts and both posterior calculations are correct."
+      ],
+      "evidence": [
+        "检测阳性就等于得病吗",
+        "P(病|阳)(阳性者真患病的概率)",
+        "P(病|阳)=99÷594≈17%",
+        "同样准确的检测",
+        "",
+        "设想10000人体检"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101000",
+      "reasons": [
+        "Connects stale prices to diagnosing invalidation problems.",
+        "TTL and explicit deletion are policies, not a confusable near-case.",
+        "Explains source mutation, stale copies, expiration, and refetching.",
+        "Longer TTL does not necessarily make pages render faster.",
+        "Lists cache locations without applying the relationship elsewhere.",
+        "Claims every change is stale and longer TTL improves rendering."
+      ],
+      "evidence": [
+        "Suspect invalidation.",
+        "",
+        "the price update also deletes the cached key",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111110",
+      "reasons": [
+        "用溺水例子连接相关判断与致因判断。",
+        "对比共同原因与表面致因，并给出区分依据。",
+        "正确解释共同原因如何同时影响两个变量。",
+        "改为同等炎热条件比较，说明相关可能消失。",
+        "迁移至咖啡与心脏病，识别共同混杂关系。",
+        "将季节性示例宣称为真实数据，违反事实边界。"
+      ],
+      "evidence": [
+        "判断依据：相关只说明两个量同涨同跌；因果还要求时间先后、作用机制，并排除其他解释。",
+        "共同原因是夏天：天热既让人买冰淇淋，也让更多人下水。",
+        "天热既让人买冰淇淋，也让更多人下水。",
+        "只在同样炎热的日子里比较冰淇淋与溺水，若相关消失",
+        "可能是吸烟者更爱喝咖啡，而吸烟伤心脏",
+        "数据真实相关"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "101100",
+      "reasons": [
+        "Connects initial amounts to comparing later accumulated amounts.",
+        "Does not distinguish compound growth from simple additive growth.",
+        "Correct formula, annual-rate example, and growing absolute gap.",
+        "Changes only rate and correctly compares approximate doubling times.",
+        "Names population and viral spread without stating required conditions.",
+        "Claims starting earlier works the same despite different mathematical dependence."
+      ],
+      "evidence": [
+        "an initial $100 gap grew into $1,745",
+        "",
+        "$100 becomes 110, then 121, then 133.10",
+        "cut the rate from 10% to 3.6%",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111110",
+      "reasons": [
+        "用练习题失效说明问题，并用验证数据判断是否学会。",
+        "对比过拟合与欠拟合，区别是是否学到真实规律。",
+        "正确解释记住噪音导致训练好、新数据差。",
+        "保持数据不变，简化模型迫使学习趋势，过度则欠拟合。",
+        "将记住特例导致失效的关系迁移到理财建议。",
+        "未说明学生类比的失效边界，更多数据抵消噪音也非必然。"
+      ],
+      "evidence": [
+        "随时检查模型是真学会还是在背",
+        "但删过头连真规律也学不到，叫欠拟合",
+        "它会把数据里的细节和噪音也当成规律记下来",
+        "把模型改简单，它被迫只学大趋势",
+        "理财建议若按过去每波行情的特例去记，行情一变就失灵",
+        "给它更多数据，噪音互相抵消，死记不再划算"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111111",
+      "reasons": [
+        "Connects retrieval errors to choosing which score matters.",
+        "Distinguishes precision and recall by their different denominators.",
+        "Correct relevant-returned and total-relevant fractions and percentages.",
+        "Changes returned set while retaining fifteen relevant pages.",
+        "Transfers false-positive versus false-negative costs to spam and screening.",
+        "Calculations are correct and performance changes are appropriately qualified."
+      ],
+      "evidence": [
+        "Which matters more depends on the cost of each mistake",
+        "Precision: of what we retrieved, how much is right?",
+        "6/15 = 40%",
+        "recall falls to 1/15",
+        "a cancer screen needs recall",
+        "precision may hit 100%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "用长颈鹿误解说明如何判断种群进化与个体努力。",
+        "对比天生脖长与伸脖训练，指出变异先于选择。",
+        "正确连接原有变异、繁殖差异与跨代基因比例变化。",
+        "保留脖长差异，改变树叶供应，说明选择压力变化。",
+        "迁移到细菌耐药，指出原有变异经存活繁殖保留。",
+        "个体身体终生不变和后代全耐药均属错误绝对化。"
+      ],
+      "evidence": [
+        "进化改变的是种群的比例构成",
+        "变异先于选择、随机产生、非随机保留",
+        "留下更多后代",
+        "若树叶充足，脖长差异不影响繁殖，选择压力消失",
+        "用药后，碰巧耐药的少数个体存活并繁殖",
+        "个体的身体一生不变"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111010",
+      "reasons": [
+        "Payment timeout connects duplicate charges to choosing retry-safe processing.",
+        "SET versus ADD distinguishes repeated effects using concrete operations.",
+        "Ambiguous timeout, retry, and key deduplication explain avoiding duplicate charges.",
+        "At-least-once delivery does not guarantee retries; fixed conditions are unclear.",
+        "Queue consumers apply request deduplication through message IDs.",
+        "Incorrectly claims at-least-once delivery guarantees retries."
+      ],
+      "evidence": [
+        "without idempotency the customer is charged twice",
+        "ADD 10 to a balance applied twice adds 20",
+        "returns the stored result for repeats",
+        "retries are guaranteed",
+        "consumers must dedupe by message ID",
+        "retries are guaranteed"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "101101",
+      "reasons": [
+        "Connects entropy to predicting how uncertain outcomes are.",
+        "Contrasts distributions but supplies no confusable non-entropy near-case.",
+        "Correct formula, bit units, coin calculations, and logarithmic additivity.",
+        "Changes coin bias while preserving the binary outcome space.",
+        "Lists compression and passwords without explaining shared required conditions.",
+        "Distribution-based entropy and illustrative calculations are correct."
+      ],
+      "evidence": [
+        "平均而言你有多难预测结果",
+        "",
+        "H≈0.08比特",
+        "硬币从50:50偏向90:10,熵随之下降",
+        "",
+        "两次独立抛掷的概率相乘"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111111",
+      "reasons": [
+        "Connects stuck transfers to choosing a lock-order remedy.",
+        "Contrasts circular waiting with ordinary waiting under consistent ordering.",
+        "Explains exclusive held locks and mutually blocked acquisition.",
+        "Changes lock ordering while retaining threads and account resources.",
+        "Applies the same opposite-order lock cycle to database transactions.",
+        "Mechanism, necessary conditions, and ordering remedy are correct."
+      ],
+      "evidence": [
+        "Easiest fix: a global lock order",
+        "A waits, B finishes and releases, and A proceeds",
+        "Neither releases anything while waiting",
+        "everyone locks account 1 before account 2",
+        "two transactions lock rows in opposite orders",
+        "no forcible taking, and a circular wait"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "100000",
+      "reasons": [
+        "将供给不足连接到税收或组织供给的选择。",
+        "收费电视可排他但通常非竞争，误称私人物品。",
+        "把搭便车推成必然无人供给，违背激励机制。",
+        "同时改变人数和监督条件，未隔离单一条件。",
+        "仅列迁移对象，未解释共享的决定关系。",
+        "必然零供给及收费电视分类存在实质错误。"
+      ],
+      "evidence": [
+        "这类东西为何常需要税收或组织来供给",
+        "收费电视能设密码排他，就从公共物品变成可收费的私人物品",
+        "人人都这样想，路灯就没人建",
+        "人数少、可监督，搭便车被抑制",
+        "开源软件、防洪堤面临同样困境",
+        "人人都这样想，路灯就没人建"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101111",
+      "reasons": [
+        "Connects arrivals and duration to estimating required occupancy.",
+        "Does not distinguish waiting-only quantities from whole-system quantities.",
+        "Correct stable-system relationship, meanings, units, and numerical example.",
+        "Doubles stay duration with the same arrival rate.",
+        "Applies matching rate and latency boundaries to requests in flight.",
+        "Correct calculations and explicit stability and system-time boundaries."
+      ],
+      "evidence": [
+        "It is a capacity check",
+        "",
+        "10 customers arrive per hour",
+        "average occupancy doubles to 10",
+        "about 20 requests in flight",
+        "as long as the system is stable"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-4/0.call.json",
+  "prompt_sha256": "60ba4ca69a6a1e8df2d74408b828bb445c288dc24ea003a43d930128a2f250ce",
+  "isolated_repair_calls": [
+    "0.call.repair-d07-0.call.json",
+    "0.call.repair-v01-0.call.json",
+    "0.call.repair-v03-0.call.json",
+    "0.call.repair-v04-0.call.json",
+    "0.call.repair-v07-0.call.json"
+  ]
+}

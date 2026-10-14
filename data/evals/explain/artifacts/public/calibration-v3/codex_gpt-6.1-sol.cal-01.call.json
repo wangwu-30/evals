@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "83d0dcf63f9d37ffaa1dfd8321b70da67e01124378a77c064689f57fa1e7c586",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-01\",\"bits\":\"000001\",\"reasons\":[\"未连接具体问题与可支持的决策\",\"未给典型案例、易混案例及判别特征\",\"缺少数值计算、符号含义及与后验的区别\",\"未改变明确条件并说明结果变化\",\"未迁移到新情境并指出共同关系\",\"似然的条件概率表达正确，无实质事实错误\"],\"evidence\":[\"\",\"\",\"\",\"\",\"\",\"似然是P(D|H)。\"]}]}",
+  "usage": {
+    "input_tokens": 20097,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 179,
+    "reasoning_output_tokens": 59
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 34.464
+}

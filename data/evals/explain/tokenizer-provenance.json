@@ -1,0 +1,35 @@
+{
+  "checked_date": "2026-10-13",
+  "scope": "Plain skill text only, no chat template, BOS/EOS, CLI system prompt or rubric. Reference counts do not verify the routed backend tokenizer.",
+  "gpt": {
+    "model": "codex:gpt-5.6-luna",
+    "actual_tokenizer": null,
+    "status": "unknown",
+    "evidence": "Archived CLI calls report requested model and aggregate usage, not tokenizer identity/revision. Official model page does not specify an encoding. tiktoken 0.12.0 encoding_for_model('gpt-5.6-luna') raises KeyError; no exact or matching prefix mapping.",
+    "reference_encoding": "o200k_base",
+    "reference_status": "explicit exploratory proxy; not a verified gpt-5.6-luna tokenizer",
+    "tiktoken_version": "0.12.0",
+    "merge_ranks_sha256": "740d8e335bee7a52cd7e7fed95b6f7afd56cb651f2968727e4009fddda82db0c",
+    "fingerprint_method": "rank order: concatenate 4-byte big-endian token byte length, token bytes, 4-byte big-endian rank; SHA256",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "https://developers.openai.com/api/docs/guides/token-counting",
+      "https://platform.openai.com/tokenizer",
+      "https://developers.openai.com/cookbook/examples/partners/model_selection_guide/model_selection_guide"
+    ]
+  },
+  "glm": {
+    "model": "claude:glm-5.3-flash[1m]",
+    "actual_tokenizer": null,
+    "status": "official model reference found; CLI backend/revision not verified",
+    "evidence": "Archived CLI actual_model/modelUsage reports glm-5.3-flash[1m], without tokenizer version. Official zai-org model repository provides tokenizer.json and tokenizer_config.json. Its tokenizer_config declares TokenizersBackend; tokenizer.json declares BPE. This establishes a public model reference, not the route's deployed tokenizer.",
+    "reference_model": "zai-org/GLM-5.3-Flash",
+    "revision": "91b69215804f2d2036a8867f6ce44848e278dcda",
+    "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+    "config_sha256": "98b1271574f41abf89427ae2dda030d94dc9478f0edc5a8bd240db213c6fd5fc",
+    "tokenizers_version": "0.22.1",
+    "tokenizer_url": "https://huggingface.co/zai-org/GLM-5.3-Flash/resolve/91b69215804f2d2036a8867f6ce44848e278dcda/tokenizer.json",
+    "config_url": "https://huggingface.co/zai-org/GLM-5.3-Flash/resolve/91b69215804f2d2036a8867f6ce44848e278dcda/tokenizer_config.json",
+    "sources": ["https://huggingface.co/zai-org/GLM-5.3-Flash/tree/91b69215804f2d2036a8867f6ce44848e278dcda"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "5e4d0cb3ad81bca0a1373c6dead128be21837c0d9748b9252b25c1e3caa93c52",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d06\",\"bits\":\"111101\",\"reasons\":[\"Connects stale prices to choosing freshness versus speed.\",\"Contrasts write-triggered invalidation with time-triggered expiry.\",\"Explains mutation, stale copies, deletion, refetching, and expiry correctly.\",\"Changes expiry duration with cached prices fixed; explains consequences.\",\"No surface-different situation applies the same deciding relationship.\",\"No material errors or claims of perfect TTL consistency.\"],\"evidence\":[\"The trade-off never changes: freshness versus speed.\",\"give every copy an expiry time, say 60 seconds\",\"delete the cached entry and let the next request re-fetch\",\"Expiry too long leaves stale prices for minutes\",\"\", \"a copy can go stale\"]}]}",
+  "usage": {
+    "input_tokens": 20228,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 316,
+    "reasoning_output_tokens": 163
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.526
+}

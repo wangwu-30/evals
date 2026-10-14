@@ -1,0 +1,337 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-4",
+  "rep": 4,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110100",
+      "reasons": [
+        "固定数据比较假设，支持判断解释力度。",
+        "区分似然与后验，并指出条件方向。",
+        "未解释后验归一化这一关键步骤。",
+        "固定数据，改变先验，说明后验改变。",
+        "没有应用于表面不同的新情境。",
+        "打分比喻未说明边界，且后验总分表述含混。"
+      ],
+      "evidence": [
+        "固定同一批数据比较假设",
+        "P(数据|假设) 与 P(假设|数据) 方向相反",
+        "",
+        "数据相同，先验不同，后验就不同",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "110101",
+      "reasons": [
+        "相同平均数掩盖波动，方差帮助判断稳定性。",
+        "区分总体与样本，并说明分母条件。",
+        "计算正确，但未说明方差具有平方单位。",
+        "只替换一个数，正确计算方差增加。",
+        "没有表面不同的新情境及关系映射。",
+        "数值正确，未声称平方是唯一选择。"
+      ],
+      "evidence": [
+        "平均都是 60，稳定性却天差地别",
+        "若它们只是样本、要推断更大的总体，则除以 N−1",
+        "",
+        "把 6 换成 60，平均变 22",
+        "",
+        "平方去掉符号，同时放大大偏差的权重"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "用啸叫问题说明如何判断反馈方向与好坏。",
+        "正负反馈对照明确，决定特征是加强或抵消。",
+        "音频回路逐圈放大，方向与饱和解释正确。",
+        "没有改变原案例中的明确条件。",
+        "挤兑映射到同向增强的共同回路。",
+        "区分方向与价值，并说明饱和限制。"
+      ],
+      "evidence": [
+        "判断一个回路，就问「反馈回来的是加强还是抵消」",
+        "输出反向抑制输入",
+        "又被麦克风拾起再放大",
+        "",
+        "取款引发恐慌、恐慌引发更多取款",
+        "这里「正」指方向"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "下午选择连接到比较选择与牺牲的价值。",
+        "区分最佳放弃选项与所有选项之和。",
+        "指定最佳替代项，正确推导五十美元成本。",
+        "保持写作文不变，取消看护降低机会成本。",
+        "没有表面不同的新情境。",
+        "最佳替代项明确指定，无实质错误。"
+      ],
+      "evidence": [
+        "pick the one worth more than what you sacrifice",
+        "not all of them added together",
+        "babysitting was the best thing you passed up",
+        "same activity, different cost",
+        "",
+        "the single best option you gave up"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "000000",
+      "reasons": [
+        "答案为空，无目的证据。",
+        "答案为空，无识别证据。",
+        "答案为空，无推导或计算。",
+        "答案为空，无条件变化。",
+        "答案为空，无迁移应用。",
+        "答案为空，无事实或边界证据。"
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101101",
+      "reasons": [
+        "旧价格问题连接到失效策略选择。",
+        "未提供具有决定特征的易混淆近例。",
+        "解释源数据变化、旧副本及两种更新机制。",
+        "保持TTL策略，降低数据变化频率，解释适用性增加。",
+        "商品描述仍是同类网页缓存情境。",
+        "TTL旧值窗口明确，未承诺完美一致性。"
+      ],
+      "evidence": [
+        "只有「数据多新才够用」和「愿意付多少复杂度」之间的取舍",
+        "",
+        "数据库里的数据变了，抄本不会自己变",
+        "把易变的价格换成不常动的商品描述，TTL 就够用了",
+        "",
+        "简单但窗口内是旧价"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110100",
+      "reasons": [
+        "用冰淇淋与溺水说明需要判断关联是否支持因果。",
+        "对比共同变化与干预效果，以共同原因区分。",
+        "把控制后关系消失视为充分证明，缺少必要假设。",
+        "固定炎热程度，说明关联消失如何改变判断。",
+        "药物例子未解释选择机制如何影响观察到的疗效。",
+        "将季节性示例当作事实，并断言唯一真正原因。"
+      ],
+      "evidence": [
+        "冰淇淋销量与溺水人数同涨同跌，但吃冰淇淋不会让人溺水",
+        "相关是「两个量一起变」，因果是「改变其中一个，另一个随之改变」。",
+        "若两者的关系消失，说明原相关只是热的影子",
+        "只看同样炎热的日子，若两者的关系消失",
+        "若某药只用在病最重的人身上，汇总数据可能看不出疗效",
+        "真正原因天气热"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "比较不同本金的终值，解释起始金额影响。",
+        "乘法增长与加法增长对照，累计收益是特征。",
+        "公式、金额、年利率及终值计算正确。",
+        "固定本金和期限，降低利率，正确计算终值。",
+        "没有表面不同的新情境。",
+        "计算正确，固定利率例子未承诺金融回报。"
+      ],
+      "evidence": [
+        "a 10× larger start stays 10× larger",
+        "growth applies to the accumulated total, including past gains",
+        "1000 × 1.1²⁰ ≈ $6,727",
+        "at 7% instead of 10%",
+        "",
+        "each period the amount becomes (1+r) times what it was"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111010",
+      "reasons": [
+        "联系旧题满分、新题失败的问题，帮助判断学习故障。",
+        "对比过拟合与欠拟合，以训练和新数据表现区分。",
+        "正确解释拟合偶然波动导致泛化变差的因果链。",
+        "断言简化模型或增加数据必然缩小落差，不成立。",
+        "从学生考试迁移到模型，明确共享记细节的机制。",
+        "补救效果被绝对化，且未说明学生类比的局限。"
+      ],
+      "evidence": [
+        "两种病药方不同",
+        "两边都差则是根本没学会（欠拟合）",
+        "把训练数据里的偶然波动、甚至标注错误都拟合进去",
+        "背不住就只能学规律，落差随之缩小",
+        "模型同理",
+        "处处贴合 training 材料的「完美」，恰恰牺牲了在新情境下的可靠"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111111",
+      "reasons": [
+        "检索垃圾与遗漏问题连接到指标选择。",
+        "精确率与召回率对照，分母和失败类型明确。",
+        "两个分母含义与所有百分比计算正确。",
+        "固定语料相关总数，扩大结果集，正确重算指标。",
+        "法律取证和搜索首页映射到遗漏与垃圾成本。",
+        "具体结果集变化支持结论，未宣称阈值保证表现。"
+      ],
+      "evidence": [
+        "Which one matters depends on cost",
+        "junk in the results versus missing good ones",
+        "4/10 = 40%",
+        "20 results including 6 relevant",
+        "legal discovery prizes recall (missing evidence is costly)",
+        "That is the typical trade-off"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111100",
+      "reasons": [
+        "种群长脖比例变化用于判断适应解释是否有目的。",
+        "遗传差异与个体努力对照，变异先于选择。",
+        "遗传变异、后代数量差异和跨代比例变化完整。",
+        "改变食物高度，说明适应优势依环境改变。",
+        "没有表面不同的新情境。",
+        "把未经确立的长颈鹿演化故事当作实际历史。"
+      ],
+      "evidence": [
+        "种群整体变了",
+        "变异先随机发生，环境只做淘汰",
+        "后代继承亲代性状",
+        "若食物变成低矮灌木，脖长的优势消失",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111010",
+      "reasons": [
+        "Connects timeout retries to deciding whether deduplication is needed.",
+        "Contrasts setting status with incrementing balance using repeated effects.",
+        "Correctly explains unchanged status versus doubled balance after repetition.",
+        "No explicit condition change with fixed context and changed result.",
+        "Transfers repeated-effect reasoning to HTTP resource storage.",
+        "POST can be idempotent; it need not create another resource."
+      ],
+      "evidence": [
+        "If yes, add deduplication before going live.",
+        "'add $10 to the balance' is not",
+        "two runs give $20",
+        "",
+        "HTTP PUT is defined as idempotent (store this resource)",
+        "POST is not (create another each time)"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "011101",
+      "reasons": [
+        "说明不确定性含义，但没有具体问题与决策连接。",
+        "均匀与偏置硬币对照，概率是否占优势决定。",
+        "公式、加权含义、比特单位及数值正确。",
+        "固定硬币结果空间，改变偏置，正确说明熵回升。",
+        "没有表面不同的新情境。",
+        "固定结果数量限定最大值，并区分熵与具体结果。"
+      ],
+      "evidence": [
+        "",
+        "均匀硬币 p=0.5，熵为 1 比特",
+        "熵就是按概率加权的平均意外",
+        "把 0.99 改成 0.9，熵回升到约 0.47",
+        "",
+        "数学上可证固定 n 时它取最大值"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101010",
+      "reasons": [
+        "Connects mutual waiting to choosing a global lock order.",
+        "No confusable near-case or deciding comparison is provided.",
+        "Correctly explains circular waiting and how ordering prevents it.",
+        "Proposed preemption releases Lock 2 from A, which holds Lock 1.",
+        "Database transactions reproduce the same hold-and-request cycle.",
+        "Misidentifies lock ownership and falsely generalizes stoppage and CPU idleness."
+      ],
+      "evidence": [
+        "impose a global lock order",
+        "",
+        "Each waits forever for the other",
+        "forcibly release Lock 2 from A",
+        "each hold a row lock and request the other's",
+        "everything stops while the CPU sits idle"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "110010",
+      "reasons": [
+        "将不付费激励连接到是否担心搭便车的判断。",
+        "对照路灯与可收费的俱乐部物品，指出排他性差别。",
+        "把搭便车必然推成无人付费、零供给，推导错误。",
+        "改变排他条件，但断言供给恢复缺乏充分条件。",
+        "将收费排他关系迁移到收费频道的私营供给。",
+        "断言所有理性人搭便车并导致零供给，违背事实边界。"
+      ],
+      "evidence": [
+        "判断某物品要不要担心搭便车，就看这两条",
+        "若能低成本收费（小区路灯只对缴费住户亮），就变成俱乐部物品",
+        "合起来却是没人付钱、路灯建不出来",
+        "搭便车被排除，供给恢复",
+        "这解释了为什么国防、基础研究常由税收公共提供，而收费频道可以私营",
+        "于是每个理性人都想「让别人付钱，我白享」"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111101",
+      "reasons": [
+        "咖啡店人数与停留时间连接到推断和减少队列。",
+        "区分系统边界匹配与不匹配，决定特征明确。",
+        "公式、单位、四十人数计算及稳态条件正确。",
+        "固定需求，时间减半，人数正确减半。",
+        "没有表面不同的新情境。",
+        "说明稳态与一致边界，无分布假设或算术错误。"
+      ],
+      "evidence": [
+        "you can infer the wait",
+        "must mean the same thing in both L and W",
+        "10 customers per minute",
+        "halve the wait to 2 minutes and occupancy falls to 20",
+        "",
+        "it follows from conservation in steady state"
+      ]
+    }
+  ],
+  "call_file": "judgments/claude_glm-5.3-flash[1m]/-4/4.call.json",
+  "prompt_sha256": "b7667b095ff245e9e8c5a9c8f855ca95ee0f78ea700ddeaf5f1ac7c659f7f8a3",
+  "isolated_repair_calls": [
+    "4.call.repair-d07-0.call.json",
+    "4.call.repair-v01-0.call.json",
+    "4.call.repair-v04-0.call.json",
+    "4.call.repair-v06-0.call.json",
+    "4.call.repair-v07-0.call.json"
+  ]
+}

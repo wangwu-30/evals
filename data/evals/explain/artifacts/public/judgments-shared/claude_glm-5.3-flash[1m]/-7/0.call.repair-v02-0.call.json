@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "a0703566c34d07246fab5b49f2584645d7244d220d8c1feba60cddd75971006f",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v02\",\"bits\":\"101010\",\"reasons\":[\"Connects search-result errors to choosing which metric matters.\",\"No confusable near-case with a deciding feature is provided.\",\"Correct ratios distinguish returned results from all relevant papers.\",\"Query tightening does not guarantee the claimed metric changes.\",\"Transfers error-cost reasoning to spam filtering and disease screening.\",\"Unconditionally claims query changes guarantee precision and recall tradeoffs.\"],\"evidence\":[\"Which matters more depends on the cost of each error\",\"\", \"Precision = 8/10\", \"\", \"a disease screening test needs recall\", \"precision rises while recall falls\"]}]}",
+  "usage": {
+    "input_tokens": 20204,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 292,
+    "reasoning_output_tokens": 160
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 29.811
+}

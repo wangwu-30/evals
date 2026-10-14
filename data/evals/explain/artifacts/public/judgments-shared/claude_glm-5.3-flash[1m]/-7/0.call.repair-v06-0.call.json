@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "bfc669bccbc547cd05e6a35d9fdd2ebad90daca063c6de1eb3784ad750a0568b",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v06\",\"bits\":\"111101\",\"reasons\":[\"Connects frozen threads to choosing lock ordering as a fix.\",\"Contrasts circular waiting with ordinary waiting at the first lock.\",\"Correctly derives deadlock from exclusive holdings and circular waits.\",\"Changes lock order with the same threads and resources, preventing cycles.\",\"No surface-different situation applies the shared relationship.\",\"Correct mechanism and boundaries; resource example introduces no misleading analogy.\"],\"evidence\":[\"The standard fix is lock ordering\",\"instead of grabbing the second — the circle never forms\",\"A waits for B to release the log; B waits for A\",\"every thread must take the account lock before the log lock\",\"\",\"resources cannot be forcibly taken away\"]}]}",
+  "usage": {
+    "input_tokens": 20208,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 296,
+    "reasoning_output_tokens": 144
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 29.722
+}

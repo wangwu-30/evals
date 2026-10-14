@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "ffdd8cb778c7a477645db0f821627776e8ea5d7f16d897e97770c61795d73b9b",
+  "rc": 0,
+  "cost_usd_reported": 0.070395,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-03\",\"bits\":\"101001\",\"reasons\":[\"Links mic-speaker problem to deciding when feedback suits rapid amplification with limits\",\"Typical mic-speaker case only; no confusable near-case with deciding feature\",\"Loop: sound recaptured and re-amplified each cycle, correctly explains growth\",\"No condition changed in the original case; only generic advice given\",\"No second surface-different situation applying the shared relation\",\"Feedback explanation factually correct, no invented causes or arithmetic errors\"],\"evidence\":[\"正反馈适合需要快速放大的过程，但必须有限制机制\",\"扬声器声音被麦克风再次收到并放大，声音越来越大，最后啸叫\",\"它不等于好事，因为它会削弱稳定性、放大噪声或小故障\"]}]}",
+  "usage": {
+    "input_tokens": 1154,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2585,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1154,
+      "outputTokens": 2585,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.070395,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 246.506
+}

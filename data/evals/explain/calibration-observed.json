@@ -1,0 +1,402 @@
+[
+  {
+    "id": "observed-00",
+    "task_id": "d02",
+    "task": {
+      "id": "d02",
+      "split": "dev",
+      "language": "en",
+      "kind": "formula",
+      "keywords": [
+        "variance"
+      ],
+      "prompt": "Explain population variance to someone who knows averages but no statistics.",
+      "oracle": "Population variance of [1,3] is 1, mean2, squared units; sample unbiased variance2 for n=2. Squaring is not uniquely forced by avoiding cancellation.",
+      "reference": "Population variance measures spread that an average alone hides. Assume the complete population is [1,3]; it has mean 2, just like [2,2], but only the first pair is spread out. Its deviations are -1,+1; squared deviations average to (1+1)/2=1 in squared units. Dividing by n-1 instead estimates population variance from a sample; squaring emphasizes large deviations, rather than being the only possible spread measure. Keep the mean and population size fixed and change the distance from the mean: [0,4] gives (4+4)/2=4. Two machines may have the same average delivery time; comparing squared deviations of their complete delivery records reveals which is less consistent.",
+      "reference_parts": [
+        "Population variance measures spread that an average alone hides.",
+        "Assume the complete population is [1,3]; it has mean 2, just like [2,2], but only the first pair is spread out.",
+        "Its deviations are -1,+1; squared deviations average to (1+1)/2=1 in squared units. Dividing by n-1 instead estimates population variance from a sample; squaring emphasizes large deviations, rather than being the only possible spread measure.",
+        "Keep the mean and population size fixed and change the distance from the mean: [0,4] gives (4+4)/2=4.",
+        "Two machines may have the same average delivery time; comparing squared deviations of their complete delivery records reveals which is less consistent."
+      ]
+    },
+    "answer": "总体方差衡量一组数据离平均值有多分散。做法是：先求每个数与平均值的差，把差平方后求平均。平方能避免正负差互相抵消，并让较大的偏离受到更大权重。例如数据2、4、6的平均数是4，差为-2、0、2，平方为4、0、4，人口方差为8/3。方差越大，数据越不集中。",
+    "source_generation": "generations/codex_gpt-5.6-luna/none/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "101001",
+    "manual_reasons": [
+      "给出均值不能表示分散程度的用途和2/4/6案例",
+      "没有易混淆的近例或归类对照",
+      "平方避免抵消并加重大偏离，单位未给的纯数总体8/3正确",
+      "没有在该数据案例中改一个条件",
+      "没有新领域迁移",
+      "没有把平方说成唯一选择，数值及定义正确"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-01",
+    "task_id": "d05",
+    "task": {
+      "id": "d05",
+      "split": "dev",
+      "language": "zh",
+      "kind": "formula",
+      "keywords": [
+        "贝叶斯",
+        "阳性",
+        "患病"
+      ],
+      "prompt": "给高中生讲解贝叶斯公式如何从阳性检测推到患病概率。",
+      "oracle": "Teaching example prior1%, sensitivity90%, specificity90%; among1000 9 truepositive99 falsepositive, posterior9/108=8.33%. Not medical advice.",
+      "reference": "贝叶斯公式把阳性检测和原先患病比例合起来，回答阳性者中有多少真正患病。 假设1000人中10人患病，灵敏度和特异度都为90%；“病人测阳性的概率”与“阳性者患病的概率”方向不同。 10位病人中9人阳性，990位非病人中99人阳性，阳性者患病概率为9/(9+99)≈8.3%。分母合并所有阳性，分子只留患病阳性。 保持两项检测性能不变，只把患病比例改为50%，同样1000人有450个真阳性和50个假阳性，后验变为90%。 垃圾邮件过滤也把某个词在垃圾与正常邮件中的出现率和垃圾邮件先验合并；仅见到这个词还不能直接认定垃圾邮件。",
+      "reference_parts": [
+        "贝叶斯公式把阳性检测和原先患病比例合起来，回答阳性者中有多少真正患病。",
+        "假设1000人中10人患病，灵敏度和特异度都为90%；“病人测阳性的概率”与“阳性者患病的概率”方向不同。",
+        "10位病人中9人阳性，990位非病人中99人阳性，阳性者患病概率为9/(9+99)≈8.3%。分母合并所有阳性，分子只留患病阳性。",
+        "保持两项检测性能不变，只把患病比例改为50%，同样1000人有450个真阳性和50个假阳性，后验变为90%。",
+        "垃圾邮件过滤也把某个词在垃圾与正常邮件中的出现率和垃圾邮件先验合并；仅见到这个词还不能直接认定垃圾邮件。"
+      ]
+    },
+    "answer": "阳性检测只说明“在患病和不患病的人中，阳性更常见”，不等于一定患病。贝叶斯公式把目标概率写成：P(患病|阳性)=P(阳性|患病)×P(患病)÷P(阳性)。例如患病率1%，检测灵敏度90%，未患病者假阳性率5%。每万人中约100人患病，其中90人阳性；9900人未患病，其中495人假阳性。因此阳性者共585人，真正患病的概率是90/585≈15.4%。患病率变低时，假阳性仍可能很多，阳性后的患病概率也会下降。",
+    "source_generation": "generations/codex_gpt-5.6-luna/full/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "111100",
+    "manual_reasons": [
+      "用阳性者真正患病比例回答具体疑惑",
+      "区分阳性观察与患病判断，真阳性和假阳性可辨",
+      "贝叶斯条件方向和90/585计算正确",
+      "只降低患病率，同一检测性能隐含不变，后验下降",
+      "没有迁移到检测以外的新情境",
+      "首句将一次阳性误说成患病和不患病者中阳性更常见，观察不能推出此性能命题"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-02",
+    "task_id": "d06",
+    "task": {
+      "id": "d06",
+      "split": "dev",
+      "language": "en",
+      "kind": "mechanism",
+      "keywords": [
+        "cache"
+      ],
+      "prompt": "Explain cache invalidation in a web application to a beginner.",
+      "oracle": "Stale cached copies after origin mutation; TTL vs explicit invalidation; distributed races and eventual freshness, do not claim perfect TTL consistency.",
+      "reference": "Cache invalidation prevents an old saved result from outliving the change that made it wrong. Imagine a shop caching a product price: an unchanged price is a valid cache hit, but a hit after the database price changes can return stale data. The cache bypasses a database read; deleting or replacing its entry after a price update forces the next read to obtain the new price. A TTL only bounds staleness and does not synchronize all readers. Hold traffic and update timing fixed; shorten the TTL from ten minutes to one minute, reducing the stale window while increasing database reads. A DNS record also has cached copies and expiry: the same origin-change/copy-lifetime relation explains why an address change may take time to appear, though its protocol differs.",
+      "reference_parts": [
+        "Cache invalidation prevents an old saved result from outliving the change that made it wrong.",
+        "Imagine a shop caching a product price: an unchanged price is a valid cache hit, but a hit after the database price changes can return stale data.",
+        "The cache bypasses a database read; deleting or replacing its entry after a price update forces the next read to obtain the new price. A TTL only bounds staleness and does not synchronize all readers.",
+        "Hold traffic and update timing fixed; shorten the TTL from ten minutes to one minute, reducing the stale window while increasing database reads.",
+        "A DNS record also has cached copies and expiry: the same origin-change/copy-lifetime relation explains why an address change may take time to appear, though its protocol differs."
+      ]
+    },
+    "answer": "A cache stores a copy of expensive-to-fetch data (like a user profile) so later requests are fast. Cache invalidation is the problem of keeping that copy correct when the underlying data changes. If a user updates their email but the cache still holds the old profile, users see stale data. Common strategies: TTL — expire entries after N seconds (simple, but briefly stale); write-through — update cache and database together on every write; delete-on-write — evict the key when data changes, so the next read refetches fresh data. It's hard because the cache and the source live on different machines: updates race with reads, failures leave copies inconsistent, and you must choose the right granularity. Hence the joke: \"there are only two hard things in computer science: cache invalidation and naming things.\"",
+    "source_generation": "generations/claude_glm-5.3-flash[1m]/none/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "101001",
+    "manual_reasons": [
+      "用户改邮箱造成旧副本的具体问题与缓存用途",
+      "没有一个正确缓存命中与混淆命中的成对判断案例",
+      "删除键使下次回源，TTL和分布式竞态过程正确",
+      "只列策略，没有原邮箱案例中改一个变量并说明结果",
+      "没有不同场景迁移",
+      "副本假设明确，写穿策略并未声称原子一致，承认竞态失败"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-03",
+    "task_id": "d03",
+    "task": {
+      "id": "d03",
+      "split": "dev",
+      "language": "zh",
+      "kind": "mechanism",
+      "keywords": [
+        "正反馈",
+        "同向",
+        "放大"
+      ],
+      "prompt": "讲解正反馈为什么会放大变化，以及为何不等于好事。",
+      "oracle": "反馈正负指方向不是好坏；环路有放大条件和饱和限制，增强不保证无限增长。",
+      "reference": "正反馈会把初始变化沿回路送回来继续增强，方向的“正”不代表好坏。 教学假设：麦克风拾取扬声器声音后再次放大；温度升高后空调加强降温则是反向作用。 声音经麦克风、放大器、扬声器再回到麦克风，若每圈回来的增量更大就增长；设备饱和会限制增长。 保持位置和音量输入不变，只降低环路增益到衰减区，啸叫会减弱而非持续放大。 传言引来关注、关注又扩大传言传播，也有同向回路；只有反馈足够强且未触及限制时才明显放大。",
+      "reference_parts": [
+        "正反馈会把初始变化沿回路送回来继续增强，方向的“正”不代表好坏。",
+        "教学假设：麦克风拾取扬声器声音后再次放大；温度升高后空调加强降温则是反向作用。",
+        "声音经麦克风、放大器、扬声器再回到麦克风，若每圈回来的增量更大就增长；设备饱和会限制增长。",
+        "保持位置和音量输入不变，只降低环路增益到衰减区，啸叫会减弱而非持续放大。",
+        "传言引来关注、关注又扩大传言传播，也有同向回路；只有反馈足够强且未触及限制时才明显放大。"
+      ]
+    },
+    "answer": "正反馈会让变化产生更多同方向的变化。例如，麦克风靠近扬声器时，扬声器声音被麦克风再次收到并放大，声音越来越大，最后啸叫。它不等于好事，因为它会削弱稳定性、放大噪声或小故障，甚至导致失控。正反馈适合需要快速放大的过程，但必须有限制机制，否则会超过安全范围。",
+    "source_generation": "generations/codex_gpt-5.6-luna/none/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "101000",
+    "manual_reasons": [
+      "麦克风啸叫把同向放大连接到失控问题",
+      "没有负反馈或好坏评价的具体易混淆近例",
+      "麦克风收音到放大器再扬声器的循环因果可见",
+      "未改变同一啸叫案例的一项条件",
+      "没有不同场景迁移",
+      "无条件声称没有限制机制就超过安全范围，遗漏低增益可衰减的条件"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-04",
+    "task_id": "d07",
+    "task": {
+      "id": "d07",
+      "split": "dev",
+      "language": "zh",
+      "kind": "concept",
+      "keywords": [
+        "相关",
+        "因果"
+      ],
+      "prompt": "用一个具体例子讲解相关与因果怎样区分。",
+      "oracle": "Common cause, observational association insufficient, causal interventions need assumptions; icecream/drowning seasonal toy not actualdata.",
+      "reference": "相关表示一起变化，因果还要求一个变化能在合适条件下改变另一个。 假设夏天冰淇淋销量和溺水事件同时增加；这能体现相关，但共同的炎热天气可同时增加销量和游泳人数。 “炎热→销量”和“炎热→下水人数→溺水”两条路径足以产生一起上升，不需要冰淇淋导致溺水。 保持天气和下水人数固定，只减少冰淇淋销售；上述模型不会因此减少溺水，若真实结果不同还需重新检查模型与干预条件。 学校中课外阅读和成绩一起提高，也需检查家庭支持等共同原因；仅凭成绩相关无法确定阅读的因果效果。",
+      "reference_parts": [
+        "相关表示一起变化，因果还要求一个变化能在合适条件下改变另一个。",
+        "假设夏天冰淇淋销量和溺水事件同时增加；这能体现相关，但共同的炎热天气可同时增加销量和游泳人数。",
+        "“炎热→销量”和“炎热→下水人数→溺水”两条路径足以产生一起上升，不需要冰淇淋导致溺水。",
+        "保持天气和下水人数固定，只减少冰淇淋销售；上述模型不会因此减少溺水，若真实结果不同还需重新检查模型与干预条件。",
+        "学校中课外阅读和成绩一起提高，也需检查家庭支持等共同原因；仅凭成绩相关无法确定阅读的因果效果。"
+      ]
+    },
+    "answer": "相关只说明两个数字一起涨落，因果还要求「谁推动谁」。把相关当成因果，会开出无效的药方。例子：某城市统计发现，冰淇淋销量越高，溺水人数越多，两者高度相关。若据此禁售冰淇淋，溺水不会减少——因为真正的推手是第三个因素：天气热。天热让人既买冰淇淋又下河游泳，两者是同一原因的两个结果，这叫「混杂变量」；冰淇淋和溺水之间没有直接通道。另一种假因果来自方向颠倒：「消防员人数与火灾损失正相关」，不是消防员造成损失，而是大火招来更多消防员。判断因果需要能「改变一个，看另一个是否跟着变」：控制天气做对照，冰淇淋销量不同而溺水相同，因果链就断了。所以看到相关先问三件事：有没有共同原因？方向会不会反？是不是巧合？能设计干预实验时，答案才最硬。",
+    "source_generation": "generations/claude_glm-5.3-flash[1m]/full/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "111110",
+    "manual_reasons": [
+      "把误判因果导致无效干预落到冰淇淋案例",
+      "并列相关、共同原因、方向反转并说明识别依据",
+      "天气分别影响销量和下水，共因路径清楚",
+      "控制天气改变销量，给出同一简化模型下溺水不变",
+      "消防员与损失展示不同情境的同一关联不等于指定因果关系",
+      "假称某城市真实统计且断言真正原因，没有来源或教学假设标识"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-05",
+    "task_id": "v01",
+    "task": {
+      "id": "v01",
+      "split": "validation",
+      "language": "zh",
+      "kind": "concept",
+      "keywords": [
+        "过拟合",
+        "训练",
+        "新题"
+      ],
+      "prompt": "给没有机器学习背景的人讲解过拟合。",
+      "oracle": "Low trainingerror not guaranteegeneralization; memorize noise, heldout leakage invalidates evaluation; no claim modelcomplexityalwaysbad.",
+      "reference": "过拟合会把训练样本里的偶然细节也记住，因此旧题表现好，新题可能变差。 假设模型预测房价；记住每栋训练房子的成交价可做到旧房零误差，学到面积等稳定关系则更有机会用于新房，零误差本身不能判定过拟合。 样本噪声并不稳定；模型用它减少训练误差时，新房不再有相同细节，预测便偏离。 保持模型和评估方式固定，只增加来自同一分布的独立训练样本，偶然细节更难支撑规则，过拟合风险通常下降，但不保证归零。 学生背答案而不会解新题也体现旧样本记忆和新情境应用的差别；这个类比不代表机器像人一样理解，新房评估仍要独立留出数据。",
+      "reference_parts": [
+        "过拟合会把训练样本里的偶然细节也记住，因此旧题表现好，新题可能变差。",
+        "假设模型预测房价；记住每栋训练房子的成交价可做到旧房零误差，学到面积等稳定关系则更有机会用于新房，零误差本身不能判定过拟合。",
+        "样本噪声并不稳定；模型用它减少训练误差时，新房不再有相同细节，预测便偏离。",
+        "保持模型和评估方式固定，只增加来自同一分布的独立训练样本，偶然细节更难支撑规则，过拟合风险通常下降，但不保证归零。",
+        "学生背答案而不会解新题也体现旧样本记忆和新情境应用的差别；这个类比不代表机器像人一样理解，新房评估仍要独立留出数据。"
+      ]
+    },
+    "answer": "过拟合是模型把训练数据里的规律和偶然噪声一起记住，导致训练题做得很好，没见过的新数据却表现差。比如根据几次考试成绩，画一条曲线穿过每个学生的分数点；它可能完美贴合这些点，却无法预测下一次成绩。模型太复杂、数据太少或训练过度，都可能加重过拟合。判断它要比较训练集和未参与训练的验证集：训练准确率高而验证准确率明显低，通常是过拟合。增加数据、限制模型复杂度或正则化，可能改善泛化。",
+    "source_generation": "generations/codex_gpt-5.6-luna/full/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "101001",
+    "manual_reasons": [
+      "用考试分数曲线把旧数据拟合与新预测失败连接",
+      "有典型例和训练验证差距，没有易混淆近例的明确对照",
+      "训练噪声记忆导致新数据失败的关系清楚",
+      "只有改善方法列表，无同一案例保持其他条件只改一个条件",
+      "没有不同情境的共享关系迁移",
+      "通常和可能限定合理，没有声称复杂模型必然差"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-06",
+    "task_id": "v03",
+    "task": {
+      "id": "v03",
+      "split": "validation",
+      "language": "zh",
+      "kind": "mechanism",
+      "keywords": [
+        "自然选择",
+        "遗传",
+        "后代"
+      ],
+      "prompt": "讲解自然选择如何改变一个种群，避免把它讲成动物主动努力。",
+      "oracle": "Heritablevariation differentialreproduction acrossgenerations, not purposeful individualchange, fitnessenvironment dependent.",
+      "reference": "自然选择使能遗传且有利于繁殖的差异在多代种群中逐渐增多。 假设甲虫有可遗传的深浅体色，深色背景上鸟更容易发现浅色甲虫；甲虫临时染黑虽相似，却不一定把改变传给后代。 原有差异影响存活和繁殖，深色个体留下更多后代，于是下一代深色比例可能提高；过程没有预定目标，也不是个体主动改变基因。 保持遗传差异和捕食者固定，只把背景改成浅色，隐蔽优势可能转向浅色，原先的判断也随之改变。 细菌群体已有耐药遗传差异时，药物环境会改变不同变体留下后代的机会；条件仍是可遗传差异和繁殖差别。",
+      "reference_parts": [
+        "自然选择使能遗传且有利于繁殖的差异在多代种群中逐渐增多。",
+        "假设甲虫有可遗传的深浅体色，深色背景上鸟更容易发现浅色甲虫；甲虫临时染黑虽相似，却不一定把改变传给后代。",
+        "原有差异影响存活和繁殖，深色个体留下更多后代，于是下一代深色比例可能提高；过程没有预定目标，也不是个体主动改变基因。",
+        "保持遗传差异和捕食者固定，只把背景改成浅色，隐蔽优势可能转向浅色，原先的判断也随之改变。",
+        "细菌群体已有耐药遗传差异时，药物环境会改变不同变体留下后代的机会；条件仍是可遗传差异和繁殖差别。"
+      ]
+    },
+    "answer": "自然选择的逻辑:个体随机产生可遗传的变异,环境对变异进行筛选,更适应的个体留下更多后代,相关基因在下一代中比例上升;许多代之后,整个种群的平均性状就改变了。关键纠错:不是动物“想要改变”或“努力锻炼”后把结果传给后代。长颈鹿不是使劲伸脖子够高树才让脖子变长,而是天生脖子较长的个体能吃到更多食物、存活和繁殖更成功。变异是随机的,选择是环境施加的;进化改变的是种群的基因频率,不响应个体的意愿。",
+    "source_generation": "generations/claude_glm-5.3-flash[1m]/none/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "111000",
+    "manual_reasons": [
+      "从长颈鹿具体问题到多代种群频率变化用途",
+      "可遗传天生差异与伸脖锻炼对照，判断依据明确",
+      "差异影响存活繁殖，再改变下一代比例的机制清楚",
+      "没有改变该案例中的环境或遗传条件",
+      "没有不同情境迁移",
+      "把长颈鹿长脖历史原因断言为高处食物优势，未限定教学模型或提供证据"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-07",
+    "task_id": "v05",
+    "task": {
+      "id": "v05",
+      "split": "validation",
+      "language": "zh",
+      "kind": "formula",
+      "keywords": [
+        "熵",
+        "不确定"
+      ],
+      "prompt": "讲解信息熵，说明为什么均匀概率通常更不确定。",
+      "oracle": "H=-sum p log2p bits; faircoin1bit deterministic0; entropyofdistribution not individualsequence meaning/quality.",
+      "reference": "信息熵衡量一个概率分布下，结果尚未出现时平均有多不确定。 假设一枚公平硬币，正反各半；另一枚总是正面。两者都可能看到正面，但预测难度不同，熵描述分布而非某一次结果的意义。 H=-Σp log₂p：p是各结果概率，单位为比特。公平硬币算得-2×0.5×(-1)=1比特；确定结果为0，零概率项按极限取0。 保持两个可能结果固定，只把概率改成0.9和0.1，熵约0.469比特，因结果更易预测而降低。 明天只有“晴”“雨”两种教学假设时，也可用概率分布算预测不确定性；熵不衡量天气好坏或信息真假。",
+      "reference_parts": [
+        "信息熵衡量一个概率分布下，结果尚未出现时平均有多不确定。",
+        "假设一枚公平硬币，正反各半；另一枚总是正面。两者都可能看到正面，但预测难度不同，熵描述分布而非某一次结果的意义。",
+        "H=-Σp log₂p：p是各结果概率，单位为比特。公平硬币算得-2×0.5×(-1)=1比特；确定结果为0，零概率项按极限取0。",
+        "保持两个可能结果固定，只把概率改成0.9和0.1，熵约0.469比特，因结果更易预测而降低。",
+        "明天只有“晴”“雨”两种教学假设时，也可用概率分布算预测不确定性；熵不衡量天气好坏或信息真假。"
+      ]
+    },
+    "answer": "信息熵衡量一次结果的不确定程度。若结果概率为p_i，熵为 H=-Σp_i log₂p_i，单位通常是比特。两面公平硬币的结果各为1/2，熵为1比特；若硬币几乎总是正面，观察结果前就容易猜中，熵较低。均匀分布通常更不确定，因为可能结果都同样合理，没有一个结果特别值得押注。注意这是“平均不确定性”，不是结果数量越多就必然越大；概率极不均匀时，新增的罕见结果贡献可能很小。",
+    "source_generation": "generations/codex_gpt-5.6-luna/full/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "111101",
+    "manual_reasons": [
+      "公平硬币易猜程度连接概率分布的不确定性",
+      "公平与几乎总正面对照，并区分结果数量与分布不确定",
+      "公式、各p、比特和两个1/2得到1的简单算例正确",
+      "同一硬币只变正面概率，说明更易猜且熵更低",
+      "没有表面不同的新场景迁移",
+      "补充平均含义和结果多不保证熵大，无实质事实错误"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-08",
+    "task_id": "v06",
+    "task": {
+      "id": "v06",
+      "split": "validation",
+      "language": "en",
+      "kind": "mechanism",
+      "keywords": [
+        "deadlock"
+      ],
+      "prompt": "Explain deadlock with a small resource-allocation example.",
+      "oracle": "Circularwaiting with exclusive locks and holdandwait, consistentordering breakscycle not allcontention; removingone process not alwaysglobalfailure.",
+      "reference": "Deadlock occurs when waiting tasks prevent one another from making the progress needed to release resources. Assume task A holds exclusive lock X and waits for Y, while B holds Y and waits for X. One task waiting for a lock that another will soon release is ordinary contention, not this cycle. Neither can continue to its release step: A needs B’s resource and B needs A’s. The exclusive locks and hold-while-waiting rule sustain the cycle. Keep the two tasks and resources, but require both to acquire X before Y: B cannot hold Y while waiting for X, breaking this cycle while contention remains. Two trains occupying sections and each waiting for the other’s section can share the same exclusive-resource waiting cycle; actual railway rules determine whether that model applies.",
+      "reference_parts": [
+        "Deadlock occurs when waiting tasks prevent one another from making the progress needed to release resources.",
+        "Assume task A holds exclusive lock X and waits for Y, while B holds Y and waits for X. One task waiting for a lock that another will soon release is ordinary contention, not this cycle.",
+        "Neither can continue to its release step: A needs B’s resource and B needs A’s. The exclusive locks and hold-while-waiting rule sustain the cycle.",
+        "Keep the two tasks and resources, but require both to acquire X before Y: B cannot hold Y while waiting for X, breaking this cycle while contention remains.",
+        "Two trains occupying sections and each waiting for the other’s section can share the same exclusive-resource waiting cycle; actual railway rules determine whether that model applies."
+      ]
+    },
+    "answer": "Deadlock is when processes each hold a resource and wait for the other's — so none can ever proceed. Small example: Transaction A locks row 1; Transaction B locks row 2. A then asks for row 2 while B asks for row 1. Each waits for the other to release, and neither ever will, because they only release after finishing. They wait forever. Four conditions must all hold: mutual exclusion (one holder per resource), hold-and-wait, no preemption (you can't take a lock away), and circular wait. Break any one and deadlock becomes impossible — which is where the fixes come from: acquire locks in a fixed global order (kills circular wait), request everything upfront (kills hold-and-wait), or time out and abort one victim. Notice the contrast with an ordinary wait: here waiting is mutual, so time doesn't help. A third transaction holding nothing can still run — deadlock starves its victims, not necessarily the whole system.",
+    "source_generation": "generations/claude_glm-5.3-flash[1m]/full/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "111101",
+    "manual_reasons": [
+      "两事务资源等待解释无法继续的具体疑惑",
+      "互相循环等待与普通等待明确对照",
+      "两行锁与互相请求、释放依赖形成等待环的过程清楚",
+      "同样资源与任务采用统一取锁顺序，环消失，其他条件隐含保持",
+      "第三个事务仍是原数据库领域，不算表面不同迁移",
+      "互斥等待环等假设及只阻塞受害者边界正确"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  },
+  {
+    "id": "observed-09",
+    "task_id": "v08",
+    "task": {
+      "id": "v08",
+      "split": "validation",
+      "language": "en",
+      "kind": "formula",
+      "keywords": [
+        "Little"
+      ],
+      "prompt": "Explain Little’s law for an introductory queueing class.",
+      "oracle": "L=lambda W stable longrun matchingboundaries units;2customers/min*3min=6; noPoissonneeded, waitingtimeversussystemtime match.",
+      "reference": "Little’s law connects the average number in a stable system to the arrival rate and average time spent there. Assume a stable café averages two customer arrivals per minute and three minutes from entry to exit. Customers in the café and customers only waiting in line are different system boundaries. L=λW gives 2 customers/minute × 3 minutes = 6 customers on average. Each arrival contributes its residence time, so the long-run accumulated customer-time divided by observation time yields the same average occupancy; no Poisson assumption is required. Hold arrival rate and the stable café boundary fixed; reduce average residence to two minutes and L becomes four customers. Stable network requests in flight obey the same rate-times-latency relation, provided latency and request count refer to the same boundary and arrivals do not exceed sustainable service.",
+      "reference_parts": [
+        "Little’s law connects the average number in a stable system to the arrival rate and average time spent there.",
+        "Assume a stable café averages two customer arrivals per minute and three minutes from entry to exit. Customers in the café and customers only waiting in line are different system boundaries.",
+        "L=λW gives 2 customers/minute × 3 minutes = 6 customers on average. Each arrival contributes its residence time, so the long-run accumulated customer-time divided by observation time yields the same average occupancy; no Poisson assumption is required.",
+        "Hold arrival rate and the stable café boundary fixed; reduce average residence to two minutes and L becomes four customers.",
+        "Stable network requests in flight obey the same rate-times-latency relation, provided latency and request count refer to the same boundary and arrivals do not exceed sustainable service."
+      ]
+    },
+    "answer": "Little’s law says: L = λW. Here, L is the average number of items in a system, λ is the average arrival rate, and W is the average time an item spends in the system. For example, if a café serves 10 customers per hour and each customer stays 0.5 hours on average, then L = 10 × 0.5 = 5 customers in the café on average. The law applies in a stable system over a sufficiently long period, regardless of the detailed service rule.",
+    "source_generation": "generations/codex_gpt-5.6-luna/none/0.json",
+    "annotation_mode": "agent-manual-style-observed",
+    "judge_labels_not_consulted": true,
+    "expected_bits": "100001",
+    "manual_reasons": [
+      "咖啡店流量和停留时间用于判断平均在店人数",
+      "无等候队列与整个系统等易混淆近例",
+      "数值和单位正确，但没有解释流量乘停留时间为何得到平均占用",
+      "没有在同一咖啡店改变变量",
+      "没有不同领域迁移",
+      "稳定长期均值等条件明确，没有要求泊松或把瞬时值当均值"
+    ],
+    "annotated_before_judge": true,
+    "annotated_utc": "2026-10-13T16:38:56Z",
+    "annotation_timing_scope": "before the separate calibration call; primary judgments, if already recorded, were not consulted"
+  }
+]

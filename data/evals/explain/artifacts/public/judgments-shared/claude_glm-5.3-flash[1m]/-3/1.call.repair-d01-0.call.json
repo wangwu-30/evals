@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "51b3980cdc70a696dc2766eb9b852403a5ea55fc67411afd0f3100046daa95f2",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d01\",\"bits\":\"110101\",\"reasons\":[\"固定已观察数据，用似然比较哪个假设更支持数据。\",\"给出似然案例，并以条件方向区分易混的后验。\",\"缺少公式任务要求的简单数值计算。\",\"保持数据和似然比较，改变先验可改变后验排序。\",\"没有应用到表面不同的新情境并说明共同关系。\",\"正确区分似然、后验和证实，未见实质错误。\"],\"evidence\":[\"这两个数就是似然，用来比较假设\",\"注意它不是「假设为真的概率」，那才归后验概率管。\",\"\",\"两个假设先验相同时，似然大者后验也大；先验悬殊时，高似然未必赢。\",\"\",\"后验 = 似然 × 先验 ÷ 数据总概率\"]}]}",
+  "usage": {
+    "input_tokens": 20306,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 330,
+    "reasoning_output_tokens": 126
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.621
+}

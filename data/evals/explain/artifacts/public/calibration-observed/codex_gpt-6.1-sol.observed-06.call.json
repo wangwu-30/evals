@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "6e8611e67d757d8333c005049c5e95fc04f8be1f637ba3c34da34add335b2640",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-06\",\"bits\":\"111001\",\"reasons\":[\"用长颈鹿脖长问题区分选择作用与主动努力。\",\"对照天生脖长与伸脖努力，强调遗传和繁殖差异。\",\"正确连接可遗传变异、差异繁殖和跨代频率变化。\",\"未改变具体条件并比较结果。\",\"未迁移到另一个表面不同的情境。\",\"无实质事实错误，明确排除个体意愿导致进化。\"],\"evidence\":[\"长颈鹿不是使劲伸脖子够高树才让脖子变长\",\"而是天生脖子较长的个体能吃到更多食物、存活和繁殖更成功\",\"更适应的个体留下更多后代,相关基因在下一代中比例上升\",\"\",\"\",\"进化改变的是种群的基因频率,不响应个体的意愿。\"]}]}",
+  "usage": {
+    "input_tokens": 20194,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 332,
+    "reasoning_output_tokens": 105
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.259
+}

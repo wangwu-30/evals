@@ -1,0 +1,16 @@
+{
+ "id": "2026-10-13-explain-v1",
+ "date": "2026-10-13",
+ "env": "Mac · local CLI single-shot",
+ "notes": "8 validation题/轮×10项；每格5轮，生成费用在dev批次记录以避免重复计费。共同gpt-6.1-sol请求裁判，holdout不入仓。",
+ "format": "jsonl",
+ "models": [
+  "claude:glm-5.3-flash[1m]",
+  "codex:gpt-5.6-luna"
+ ],
+ "n_records": 90,
+ "cost_usd_reported": null,
+ "cost_records": 0,
+ "sum_latency_min": 222.1,
+ "wall_min": null
+}

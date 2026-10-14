@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "8bf1af4422d79b0e8974592b5247feb623bc323030f17ce3dc6c8c9b88e51252",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d05\",\"bits\":\"111101\",\"reasons\":[\"用阳性是否代表患病的问题引出后验概率判断。\",\"对比真阳性与假阳性，以实际患病状态区分。\",\"人数计算正确，解释公式及两种条件概率的区别。\",\"固定检测性能，降低患病率，正确得到约9%。\",\"没有迁移到表面不同的新情境。\",\"教学假设清楚，计算正确，无实质事实错误。\"],\"evidence\":[\"阳性等于患病吗？\",\"健康的9900人按1%也有约99人假阳性\",\"阳性共约198人，其中真患病的99人，约占一半\",\"检测没变，结论大变\",\"\",\"一项检测：患病的人99%显阳性，健康的人也有1%误显阳性。\"]}]}",
+  "usage": {
+    "input_tokens": 20301,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 322,
+    "reasoning_output_tokens": 122
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 38.008
+}

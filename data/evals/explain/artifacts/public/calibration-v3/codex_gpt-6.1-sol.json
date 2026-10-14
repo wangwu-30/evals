@@ -1,0 +1,260 @@
+{
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "cal-00",
+      "bits": "110111",
+      "reasons": [
+        "Connects observed data to comparing hypotheses.",
+        "Contrasts likelihood with posterior, identifying the need for priors.",
+        "Correct likelihood calculation, but omits posterior normalization.",
+        "Fixes HH, changes one parameter, correctly reverses likelihood ranking.",
+        "Transfers fixed-data hypothesis comparison to fault detection.",
+        "Calculations and probability distinctions are correct; examples are hypothetical."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        "这是数据在各假设下的概率，不是硬币的后验。"
+      ]
+    },
+    {
+      "id": "cal-01",
+      "bits": "000001",
+      "reasons": [
+        "未连接具体问题与可支持的决策",
+        "未给典型案例、易混案例及判别特征",
+        "缺少数值计算、符号含义及与后验的区别",
+        "未改变明确条件并说明结果变化",
+        "未迁移到新情境并指出共同关系",
+        "似然的条件概率表达正确，无实质事实错误"
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "似然是P(D|H)。"
+      ]
+    },
+    {
+      "id": "cal-02",
+      "bits": "100111",
+      "reasons": [
+        "用硬币数据说明似然用于比较假设。",
+        "未给出后验概率这一易混近例及区别。",
+        "计算正确，但缺少后验的先验与归一化推导。",
+        "固定HH改变H2参数，正确说明支持次序反转。",
+        "迁移到缺陷检测，指出固定结果比较假设的关系。",
+        "数值与独立概率相乘正确，无实质事实错误。"
+      ],
+      "evidence": [
+        "似然用固定数据比较假设的解释能力。",
+        "",
+        "",
+        "保持HH固定，把H2的p改成.2，似然为.04，支持次序反转。",
+        "缺陷检测也可固定结果比较故障假设，需要独立性和合适概率模型。",
+        "指定顺序HH的概率分别为.25和.64，因为独立概率相乘。"
+      ]
+    },
+    {
+      "id": "cal-03",
+      "bits": "110111",
+      "reasons": [
+        "用硬币数据比较假设支持程度。",
+        "区分似然与后验的条件方向。",
+        "缺少简单数值计算及归一化推导。",
+        "固定HH，改变参数并正确判断支持度。",
+        "迁移到故障检测并指出共同条件。",
+        "事实正确，无实质错误或误导。"
+      ],
+      "evidence": [
+        "似然用固定数据比较假设的解释能力。",
+        "似然问数据在假设下的概率，后验问假设在数据后的概率且需要先验。",
+        "",
+        "保持数据HH固定，把H2的p改成.2，就比p=.8更不支持H2。",
+        "缺陷检测也可固定测试结果比较故障假设，需要相同观测和合适概率模型。",
+        "后验问假设在数据后的概率且需要先验。"
+      ]
+    },
+    {
+      "id": "cal-04",
+      "bits": "110011",
+      "reasons": [
+        "用已观测数据比较假设，明确似然的用途",
+        "区分比较数据概率与判断硬币后验，指出先验",
+        "计算正确，但未解释后验如何结合先验并归一化",
+        "未改变明确条件并解释结果变化",
+        "迁移到故障检测，保留固定数据比较假设的关系",
+        "计算与概率方向正确，无实质事实错误"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验",
+        "",
+        "",
+        "固定同一批测试结果比较两种故障假设",
+        "这是数据在各假设下的概率，不是硬币的后验"
+      ]
+    },
+    {
+      "id": "cal-05",
+      "bits": "110101",
+      "reasons": [
+        "Connects observed data to comparing hypotheses.",
+        "Contrasts likelihood with posterior; identifies prior requirement.",
+        "Omits prior weighting and normalization needed to derive posterior.",
+        "Fixes HH, changes head probability, correctly reverses likelihood ranking.",
+        "No surface-different situation or shared relationship provided.",
+        "Calculations and likelihood-versus-posterior distinction are correct."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "",
+        "这是数据在各假设下的概率，不是硬币的后验。"
+      ]
+    },
+    {
+      "id": "cal-06",
+      "bits": "110110",
+      "reasons": [
+        "用已知数据比较假设，并指出判断硬币需要先验。",
+        "区分数据在假设下的概率与硬币的后验。",
+        "0.8硬币产生HH的似然应为0.64，且缺归一化。",
+        "固定HH，改变正面率后似然为0.04，支持次序反转。",
+        "迁移到故障检测，仍固定数据比较假设并考虑先验。",
+        "将0.8硬币的HH似然算成0.16，存在实质错误。"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "这是数据在各假设下的概率，不是硬币的后验。",
+        "似然为0.25和0.16",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。",
+        "似然为0.25和0.16"
+      ]
+    },
+    {
+      "id": "cal-07",
+      "bits": "110110",
+      "reasons": [
+        "用已观察数据比较假设，说明似然的决策用途。",
+        "区分数据在假设下的概率与需要先验的后验。",
+        "计算正确，但缺少后验归一化且最终混淆概念。",
+        "固定HH改变正面率，正确计算并解释支持次序反转。",
+        "迁移到缺陷检测，明确固定结果比较故障假设。",
+        "最后将似然等同后验，违反核心概率区别。"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "这些似然就是两枚硬币的后验概率。",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。",
+        "这些似然就是两枚硬币的后验概率。"
+      ]
+    },
+    {
+      "id": "cal-08",
+      "bits": "110110",
+      "reasons": [
+        "Connects observed data to comparing hypotheses.",
+        "Contrasts likelihood with posterior using the need for priors.",
+        "Correct likelihood calculation, but posterior normalization is missing.",
+        "Fixes HH, changes one parameter, correctly reverses likelihood ranking.",
+        "Transfers fixed-data comparison and prior requirement to fault detection.",
+        "Suspect analogy omits limits and conflates likelihood with suspicion."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。",
+        "似然就像给嫌疑人打分，分数越大越可疑。"
+      ]
+    },
+    {
+      "id": "cal-09",
+      "bits": "110111",
+      "reasons": [
+        "Connects observed data to comparing competing hypotheses.",
+        "Contrasts likelihood comparison with posterior identification using priors.",
+        "Correct likelihood calculation, but posterior normalization is unexplained.",
+        "Fixes HH, changes one parameter, correctly reverses likelihood ranking.",
+        "Transfers fixed-data hypothesis comparison and prior requirement to fault detection.",
+        "Calculations and likelihood–posterior distinction are correct; no material errors."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。",
+        "这是数据在各假设下的概率，不是硬币的后验。"
+      ]
+    },
+    {
+      "id": "cal-10",
+      "bits": "110111",
+      "reasons": [
+        "用观察到的HH比较两枚硬币假设。",
+        "区分固定数据的似然与需要先验的后验。",
+        "计算正确，但未说明后验如何归一化。",
+        "固定HH改变正面率，正确说明支持次序反转。",
+        "迁移到缺陷检测，保留固定数据比较假设的关系。",
+        "概念及计算无实质错误，硬币情境明确是假设。"
+      ],
+      "evidence": [
+        "已观察指定顺序HH；比较这份数据的概率是似然",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        "假设两枚硬币正面率分别为0.5和0.8"
+      ]
+    },
+    {
+      "id": "cal-11",
+      "bits": "110111",
+      "reasons": [
+        "用已知数据比较假设，说明决策用途。",
+        "区分似然与后验，指出后验需要先验。",
+        "似然计算正确，但未解释后验归一化。",
+        "固定HH改变正面率，正确说明支持反转。",
+        "迁移到故障检测，保留固定数据比较假设关系。",
+        "计算和概念正确，无实质事实错误。"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+        "固定同一批测试结果比较两种故障假设",
+        "这是数据在各假设下的概率，不是后验概率"
+      ]
+    }
+  ],
+  "call_files": [
+    "calibration-v3/codex_gpt-6.1-sol.cal-00.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-01.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-02.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-03.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-04.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-05.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-06.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-07.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-08.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-09.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-10.call.json",
+    "calibration-v3/codex_gpt-6.1-sol.cal-11.call.json"
+  ],
+  "isolated_repair_calls": []
+}

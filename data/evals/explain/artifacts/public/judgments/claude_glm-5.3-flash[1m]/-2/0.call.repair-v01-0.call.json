@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "70209914871d136b99d4aaef9b41a4ef2d3eb059180ad6b173084a5828b0f316",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"101010\",\"reasons\":[\"连接新数据失效问题与用未见数据判断模型的决策。\",\"没有提供易混淆的非过拟合近例及区分特征。\",\"正确解释把偶然噪声当规律导致泛化失败。\",\"没有明确固定其他条件并改变原案例的关键条件。\",\"考试类比对应背偶然特征与学习可迁移规律的区别。\",\"复杂度越高预测越差的断言过度，类比缺少失效边界。\"],\"evidence\":[\"判断标准很明确：看没见过的数据上的表现，而不是训练数据。\",\"\",\"过拟合是模型把训练数据里的偶然噪声也当成了规律，结果在见过的题目上表现极好，换新数据就露馅。\",\"\",\"他背的是这批题的偶然特征，不是解题方法。\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 20212,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 359,
+    "reasoning_output_tokens": 141
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.634
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "f0003eb351d766f6ed369fbb642052fbd16ffdbb7b67b2620ce945924dfc435e",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-09\",\"bits\":\"110111\",\"reasons\":[\"Connects observed data to comparing competing hypotheses.\",\"Contrasts likelihood comparison with posterior identification using priors.\",\"Correct likelihood calculation, but posterior normalization is unexplained.\",\"Fixes HH, changes one parameter, correctly reverses likelihood ranking.\",\"Transfers fixed-data hypothesis comparison and prior requirement to fault detection.\",\"Calculations and likelihood–posterior distinction are correct; no material errors.\"],\"evidence\":[\"似然用已经看到的数据比较不同假设对这批数据的解释能力。\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。\",\"独立抛掷时两次概率相乘，似然为0.25和0.64\",\"保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。\",\"在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。\",\"这是数据在各假设下的概率，不是硬币的后验。\"]}]}",
+  "usage": {
+    "input_tokens": 20279,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 326,
+    "reasoning_output_tokens": 67
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 36.913
+}

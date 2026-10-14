@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "2e09543f51ea2e396326f1cbaf45286e1ee6173f6ef20c851d44b4bf93341923",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"111101\",\"reasons\":[\"Connects starting capital to deciding how final amounts compare.\",\"Contrasts compound multiplication with fixed additions, identifying the deciding feature.\",\"Correct formula and numerical example explain interest on accumulated interest.\",\"Halves the rate while keeping starting amount and duration fixed.\",\"Lists applications without applying the relationship to a new situation.\",\"Calculations are correct; stipulated rates frame examples without guaranteeing returns.\"],\"evidence\":[\"double the start, double the result\",\"multiplies the running total instead of adding a fixed amount\",\"$1000 at 10%: after one year $1100, after two $1210\",\"drop the rate to 5% and $1000 over 30 years yields only $4,322\",\"\",\"$1000 and $2000, same 10%, same 30 years\"]}]}",
+  "usage": {
+    "input_tokens": 20427,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 382,
+    "reasoning_output_tokens": 200
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.31
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "58c715f5852c92bc25a5492ecccec361eae016f9801ceebd83b3e81928e68b4f",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d07\",\"bits\":\"110100\",\"reasons\":[\"用冰淇淋与溺水说明需要判断关联是否支持因果。\",\"对比共同变化与干预效果，以共同原因区分。\",\"把控制后关系消失视为充分证明，缺少必要假设。\",\"固定炎热程度，说明关联消失如何改变判断。\",\"药物例子未解释选择机制如何影响观察到的疗效。\",\"将季节性示例当作事实，并断言唯一真正原因。\"],\"evidence\":[\"冰淇淋销量与溺水人数同涨同跌，但吃冰淇淋不会让人溺水\",\"相关是「两个量一起变」，因果是「改变其中一个，另一个随之改变」。\",\"若两者的关系消失，说明原相关只是热的影子\",\"只看同样炎热的日子，若两者的关系消失\",\"若某药只用在病最重的人身上，汇总数据可能看不出疗效\",\"真正原因天气热\"]}]}",
+  "usage": {
+    "input_tokens": 20269,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 480,
+    "reasoning_output_tokens": 234
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 40.629
+}

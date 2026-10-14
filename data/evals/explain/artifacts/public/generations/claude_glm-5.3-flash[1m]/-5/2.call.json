@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "16d39c93bca0f553b8ced70b9ddac04df5008784ed979b57e42aef0ed8ee731d",
+  "rc": 0,
+  "cost_usd_reported": 0.178645,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"d03\":\"正反馈放大变化，是因为结果反过来成了原因：输出回到输入端，沿同一方向再加一把力。麦克风靠近音箱，一点声音被放大播出，又被拾取再放大，几轮就啸叫。每一轮都以上一轮的产物为原料，所以变化不被拉回，反被推得更远。但「正」只指同向加强，不是评价。利滚利是正反馈，常被视为好事；银行挤兑和发烧失控也是正反馈，就是灾难。判断好坏要看放大的是什么，以及有没有上限：放大都需要外部资源，碰到边界会停，或直接崩溃。\",\"v02\":\"Precision and recall answer different questions about the same search. You search 'jaguar' wanting the animal; the engine returns 10 results, 6 about animals, and 20 animal pages exist in total. Precision = 6/10: of what was shown, how much was right — 'can I trust each result?' Recall = 6/20: of everything that exists, how much was found — 'did it get everything?' You can trade one for the other: return only 3 sure-fire results and precision rises while recall drops; return everything and recall is perfect while precision sinks. A single score can hide which one you are losing.\",\"d06\":\"A cache keeps a copy nearby so you don't recompute or re-fetch it. The price of speed: the original can change while the copy stays old. Cache invalidation is deciding when that copy is no longer trustworthy and must be dropped or refreshed. Say a product page caches the ¥99 price for an hour; the shop raises it to ¥120, and users keep seeing ¥99. Common rules: expire the copy after a fixed time (TTL) and accept brief staleness; or delete the cached entry the moment the underlying data is written. The hard part is knowing every copy that exists — miss one place, and different users see different answers.\",\"d02\":\"平均数告诉你中心在哪，却藏起数据的散开程度。两个班平均都是70分：一个班人人65–75，另一个班一半20分、一半满分，平均数完全一样。方差把「散开多少」变成一个数：先算每个数据与平均数的差，平方，再取平均。平方做两件事：让高于和低于平均的差距不会正负抵消，同时放大远离平均的点——一个差10分的点顶四个差5分的。得到的单位是原单位的平方，所以常再开平方变回「分」，就是标准差。总体方差是对全部数据而言，分母用总数N。\",\"v05\":\"熵衡量「平均需要多少信息才能确定结果」，也就是不确定的程度。一枚永远正面的硬币不用猜，熵为零；一枚公平硬币正反各半，猜中前最没把握，熵最大。为什么均匀时最不确定：熵是各结果的 −p·log p 之和。某个概率占压倒优势时，几乎必然的结果贡献很小，稀有结果又几乎不出现，总和低；各概率拉平时，每个结果都真实可能、又都不占上风，没有任何线索偏向谁，总和自然更高。对数以2为底时单位是比特：公平硬币的熵恰好1比特，问一次「是/否」就能确定结果。\",\"d05\":\"「检测准确率99%」容易被读成「阳性者99%患病」，两者不是一回事。设10000人普查，患病率1%：患者100人，检出阳性99人；健康9900人，误报1%也有99人阳性。阳性共198人，其中真患者99人——阳性者的患病概率是50%，不是99%。原因在基数悬殊：健康人多得多，误报率虽低，假阳性的绝对数量却追上了真阳性。贝叶斯公式写成一般式：P(患病|阳性) = P(阳性|患病)×P(患病) ÷ P(阳性)，分子是真患者且被查出，分母是全部阳性。检测越准、患病率越高，这个概率才越接近99%。\",\"v01\":\"A student memorizes last year's exam answers word for word, aces every practice paper — then fails the real exam because the questions changed. That's overfitting. A model trained too hard on its examples stops learning the general pattern and starts memorizing details, including pure noise. It looks brilliant on data it has seen and falls apart on new data, so a training score alone proves nothing: always test on data it never trained on. The usual cures — more examples, a simpler model, stopping training earlier — all say the same thing: stay roughly right about the unfamiliar rather than exactly right about the familiar.\",\"v08\":\"Little's law: L = λW. In a stable system, the average number of items inside (L) equals the arrival rate (λ) times the average time each one spends inside (W). Coffee shop: 10 customers arrive per minute and each stays 3 minutes, so on average 30 people are inside at any moment. It applies to queues, servers, or tickets in flight. The practical use: measure any two, derive the third — if the shop feels crowded (L=30) and arrivals are known (λ=10), each customer must be spending W=3 minutes. The requirement is stability: arrivals and departures must balance; when work piles up without bound, the law no longer applies.\",\"v07\":\"公共物品有两个特征：没法把不付钱的人排除在外（非排他），多一人使用也不减少别人的份（非竞争）。路灯、堤坝、干净的空气都是。搭便车跟着出现：好处大家共享，就有人想「让别人出钱，我白享」。楼道灯坏了，每户都这么想，灯一年不亮；愿意出钱的人觉得不公平，更不肯掏。结果不是没人受益，而是没人供给——好处再大也供给不足。正因为收不到钱，市场会少建，所以公共物品常靠税收统一出资。判断某物是不是公共物品，看这两个特征，而不是看它由谁提供。\",\"v03\":\"长颈鹿的脖子不是伸出来的。变异先随机发生：每代脖子的长短本来就有差异，个体无法选择自己长成什么样。环境只负责筛选：脖子长的够得到高处树叶，饿不死、留下更多后代；脖短的留下得少。于是下一代的脖子分布整体向「长」偏移——变的是种群里的比例，不是某个个体的身体。关键在方向：变异不定向、不预知需要，是环境决定哪些版本留下更多副本。所以自然选择更像筛子而不是教练：它不帮谁努力，只让本来就存在的差异在繁殖机会上分出胜负。\",\"v04\":\"An operation is idempotent when doing it once and doing it five times leave the system in the same state. Distributed systems need this because networks lose and delay messages: a payment request times out, the client can't tell whether it went through, so it retries — and without idempotency the customer is charged twice. The standard fix is an idempotency key: the client attaches a unique ID to each logical request; the server records the ID with its result, and on seeing a repeat returns the stored result instead of re-executing. Compare: setting status to 'shipped' is idempotent; 'add 1 to quantity' is not. Retries stop being dangerous once repeats are harmless.\",\"d01\":\"似然回答「固定数据，哪个假设更配它」；后验回答「看到数据后，对假设该有多大信心」。方向相反：似然是P(数据|假设)，后验是P(假设|数据)。掷硬币10次得10个正面：若硬币均匀，出现这个结果的概率是(1/2)^10≈千分之一——这是均匀假设下的似然，很低。但似然不是「硬币不均匀」的概率。要后验，先要有先验（看数据前你对各假设的信心），按贝叶斯公式：后验 ∝ 似然×先验，再归一。似然是数据说话的部分，先验是你原有的信心，后验是听完数据后的信心。\",\"v06\":\"Two locks, one bank transfer. Thread A moves money from account X to Y: it locks X first, then needs the lock on Y. Thread B does the reverse: locks Y, needs X. Now A holds X and waits for Y; B holds Y and waits for X. Each refuses to release what it holds until it gets the other lock — so both wait forever. That's deadlock: a cycle where each thread holds a resource the next one needs. Prevention attacks the cycle: make everyone acquire locks in the same global order (B must take X before Y, so it can never hold Y while waiting on X), or let each thread grab all resources at once or none.\",\"d08\":\"Compound growth means growth earns growth: each period's gain is added to the base before the next round. ¥100 at 10%: year 1 gives ¥110, year 2 gives 110×1.1 = ¥121, year 3 = ¥133.1. The gains themselves grow — 10, then 11, then 12.1 — because the base keeps expanding. This is why the starting amount matters as much as the rate: at the same 10%, ¥100 and ¥10,000 both multiply by 1.1 each year, so the absolute gap doesn't just persist, it widens — ¥10 extra the first year, ¥1,000 extra per year after ten. Same percentage, different base, different money; time then multiplies the difference further.\",\"d04\":\"A free afternoon: you could nap, go to the gym, or take a freelance gig paying ¥500. You choose to nap. The opportunity cost is not all the other options added together — it's the value of the single best thing you gave up. You couldn't have done all three anyway; napping beat the gym and the gig, so the cost is whatever ranked second. Cost is measured in what you value, not just money: if rest was what you needed most, napping was worth it — you simply paid the gig's ¥500 (or the gym's fitness) as the price. Asking 'what is my second-best option?' makes the trade-off visible before you commit.\",\"d07\":\"冰淇淋卖得多的月份，溺水的人也多——两者相关，但谁也不是谁的原因。真正的推手是炎热：天热，人们多吃冰淇淋，也更多去游泳，于是两个数字同涨同跌。看到两个量一起变化，至少有三种解释：A导致B，B导致A，或者第三个因素C同时推动两者，此外还可能纯属巧合。单凭统计上的同步分不清是哪一种。要确认因果得做干预：随机分两组，一组限制吃冰淇淋、另一组照常，若溺水率不变，冰淇淋的嫌疑就洗清了。相关只提醒「可能有关」，因果要靠控制住其他因素的比较来确认。\"}}\n\nThe explanation skill has been applied to all 16 answers.",
+  "usage": {
+    "input_tokens": 2694,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 6607,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2694,
+      "outputTokens": 6607,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.178645,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 129.114
+}

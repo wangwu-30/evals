@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-1",
+  "rep": 0,
+  "judge_requested": "claude:glm-5.3-flash[1m]",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110101",
+      "reasons": [
+        "Fixes data to compare hypotheses on coin problem",
+        "Contrasts likelihood vs posterior with deciding direction",
+        "No numerical likelihood calculation performed",
+        "Rare prior varied, likelihood fixed, posterior correctly lowered",
+        "No new surface-different situation",
+        "Proportionality and coin example factually sound"
+      ],
+      "evidence": [
+        "它把数据固定，比较不同假设",
+        "似然问的是：“假设某个原因是真的，眼前这批数据有多符合它？”",
+        "",
+        "一个很少见的假设，即使能解释数据，也可能仍不如常见假设可信",
+        "",
+        "后验 ∝ 似然×先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "111001",
+      "reasons": [
+        "Defines variance as measuring spread around mean",
+        "Contrasts population variance with sample estimation",
+        "8/3≈2.67 arithmetic correct, units squared stated",
+        "No key condition changed with explained result",
+        "No transfer to different situation",
+        "Calculation and definitions error-free"
+      ],
+      "evidence": [
+        "衡量一整个人群的数值离平均值有多分散",
+        "这里是整个总体，不是从样本估计总体",
+        "总体方差是8÷3≈2.67",
+        "",
+        "",
+        "它的单位是原单位的平方"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111111",
+      "reasons": [
+        "Mic-speaker howl shows what amplification enables",
+        "Direction-not-value feature separates sign from goodness",
+        "Loop steps and gain/saturation conditions correct",
+        "Moving speaker changes gain, feedback correctly weakens",
+        "Clotting transfers amplification relation across domain",
+        "Mechanistically accurate, no invented causality"
+      ],
+      "evidence": [
+        "变化造成的结果，又沿同一方向推动原变化",
+        "它放大的是方向，不是价值",
+        "音箱更响，麦克风收到的声音更强，于是继续变响",
+        "若把音箱移远，反馈减弱",
+        "血液凝固可快速止血，但过度凝固也可能形成血栓",
+        "常受资源、饱和或保护机制限制"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Afternoon choice framed as comparing alternatives",
+        "Best alternative vs sum-of-all confusion explicitly decided",
+        "200 yuan correctly identified as forgone best value",
+        "Higher study benefit changes comparison, alternative fixed",
+        "Stays within one example, no transfer",
+        "No factual errors"
+      ],
+      "evidence": [
+        "你的周日下午只能做一件事",
+        "机会成本不是所有没做的事，而是“最佳替代方案”",
+        "放弃的最佳替代选择的价值",
+        "若后来发现复习能显著提高成绩，选择的价值要与这项收益比较",
+        "",
+        "时间免费不代表没有机会成本"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Positive test to disease probability framed correctly",
+        "Positive-diseased confusion decided by conditioning direction",
+        "9/58.5≈15.4% arithmetic correct with normalization",
+        "Prevalence raised, others fixed, posterior direction correct",
+        "No new situation",
+        "All arithmetic checks correct"
+      ],
+      "evidence": [
+        "阳性只说明“检测结果为阳性”，不等于“已经患病”",
+        "患病且阳性的概率 ÷ 所有阳性的概率",
+        "阳性者真正患病的概率是9÷58.5≈15.4%",
+        "若患病率升高，其他条件不变，阳性后的患病概率也会升高",
+        "",
+        "患病者中9人阳性"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111101",
+      "reasons": [
+        "Speed versus staleness motivates invalidation",
+        "TTL versus deletion versus versioning tradeoffs given",
+        "Origin mutation leaves stale copy causally correct",
+        "TTL length changes staleness versus savings correctly",
+        "No transfer beyond original case",
+        "No perfect-TTL claim; races acknowledged"
+      ],
+      "evidence": [
+        "让下次读取更快",
+        "设置过期时间、更新数据时主动删除缓存，或给资源加版本号",
+        "用户换头像后，缓存仍显示旧图",
+        "缓存太久会读到旧数据，太快失效则节省不了多少请求",
+        "",
+        "主动删除还可能漏掉某个副本"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111001",
+      "reasons": [
+        "Distinguishes when causal claims are warranted",
+        "Ice cream near-case decided by common cause",
+        "Common cause and intervention requirements correctly derived",
+        "Only poses intervention question, no changed result stated",
+        "No second situation",
+        "Toy example flagged as example, no errors"
+      ],
+      "evidence": [
+        "因果表示改变一个量会导致另一个量改变",
+        "气温升高同时增加游泳和冰淇淋购买，气温是共同原因",
+        "二者相关，但冰淇淋不是溺水原因",
+        "",
+        "",
+        "不能自动推出因果"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Explains why starting amount changes outcome",
+        "121 versus 120 contrast with compounding feature",
+        "100×1.1×1.1=121 correct with variable meanings",
+        "Negative rate flips to accelerated decrease",
+        "No new situation",
+        "Proportionality claim correct"
+      ],
+      "evidence": [
+        "每一轮增长都作用在上一轮已经增长后的金额上",
+        "因为第二次增长也包含第一次赚到的10元",
+        "100×1.1×1.1=121元",
+        "若增长率为负，复合也会加速减少",
+        "",
+        "最终金额与起始金额成正比"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111101",
+      "reasons": [
+        "Training versus new data gap motivates concept",
+        "Noise memorization decides memorize versus generalize confusion",
+        "Memorizing noise causally explains poor generalization",
+        "Distribution mismatch changes test reliability conclusion",
+        "Student analogy illustrates, not a transfer",
+        "Hedged complexity claim, no errors"
+      ],
+      "evidence": [
+        "训练题做得很好，遇到新数据却表现差",
+        "模型把训练数据中的规律和偶然噪声一起记住",
+        "越容易画出一条曲线穿过每个训练点，但这条曲线可能不代表真实规律",
+        "若训练和测试数据分布完全不同，测试好也未必代表真实应用中可靠",
+        "",
+        "减少模型复杂度或增加数据，常能缓解过拟合"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111101",
+      "reasons": [
+        "Search example ties metrics to questions asked",
+        "Denominator difference decides precision versus recall",
+        "6/10 and 6/12 computed correctly",
+        "Threshold changes precision-recall tradeoff correctly",
+        "Task examples listed without shared deciding relation",
+        "No threshold-guarantee claim, tradeoff correct"
+      ],
+      "evidence": [
+        "系统找出来的结果里，有多少是真的相关？",
+        "所有真正相关的结果里，系统找出了多少？",
+        "精确率=6/10=60%，召回率=6/12=50%",
+        "通常提高筛选门槛，结果更少但更准",
+        "",
+        "两者没有天然谁更重要，要看任务"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "Beetle population change traced to selection",
+        "Need-based change near-case decided by heritable variation",
+        "Variation, differential reproduction, gene frequency steps correct",
+        "Light bark reverses selection direction, mechanism fixed",
+        "No second situation",
+        "No Lamarckian error; claims hedged"
+      ],
+      "evidence": [
+        "环境让某些差异更容易存活和繁殖",
+        "个体不会因为“需要”而定向变色",
+        "几代后，深色基因比例上升，种群就改变了",
+        "若环境换回浅色树皮，选择方向也可能改变",
+        "",
+        "种群中原本就有可遗传差异"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111101",
+      "reasons": [
+        "Timeout retries motivate idempotency need",
+        "Set versus increment decided by state dependence",
+        "Request-ID dedup correctly derived for transfers",
+        "Changing operation to increment flips idempotency result",
+        "No new situation",
+        "Effect-versus-response distinction correctly stated"
+      ],
+      "evidence": [
+        "幂等操作能让重试更安全",
+        "同一个请求执行一次或重复执行多次，最终效果相同",
+        "服务端记录已处理的ID并避免重复执行",
+        "“账户增加100元”重复发送会加两次，因此不是幂等的",
+        "",
+        "也不保证每次响应文字完全相同"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110101",
+      "reasons": [
+        "Entropy tied to predictability question",
+        "Fair versus biased coin decided by spread",
+        "Formula stated but no numerical value computed",
+        "Varying outcome count changes uniform-max conclusion",
+        "No transfer",
+        "Distribution-level interpretation correct, no errors"
+      ],
+      "evidence": [
+        "信息熵衡量一个随机结果有多难预测",
+        "抛公平硬币比“99%正面、1%反面”更不确定",
+        "",
+        "若允许增加结果数量，结果越多也可能更不确定",
+        "",
+        "熵描述的是概率分布的不确定性"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Permanent stall problem motivates deadlock concept",
+        "Slow versus deadlock decided by self-recovery",
+        "Hold-and-wait plus circular wait derived correctly",
+        "Ordering rule breaks cycle, flexibility cost noted",
+        "No transfer",
+        "Four conditions correctly listed"
+      ],
+      "evidence": [
+        "多个任务互相等资源，谁也无法继续",
+        "死锁不同于单纯变慢：死锁中的任务不会自行恢复",
+        "进程A拿着打印机，等待扫描仪；进程B拿着扫描仪，等待打印机",
+        "若规定所有进程必须先申请扫描仪再申请打印机，就不会形成这个环路",
+        "",
+        "资源互斥、占有并等待、不能被强行夺走、等待形成环路"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111101",
+      "reasons": [
+        "Lighting example shows underprovision problem",
+        "Government-provider confusion decided by two features",
+        "Free-ride incentive to underfunding chain correct",
+        "Widespread free-riding changes provision degree correctly",
+        "Single example only",
+        "Underprovision not zero; boundaries correct"
+      ],
+      "evidence": [
+        "一个人的使用不太减少别人使用的机会",
+        "公共物品不等于政府必然提供",
+        "每个人都希望别人出钱、自己享受，形成“搭便车”",
+        "若很多人都这样，资金不足，物品就会供应不足",
+        "",
+        "也难以把不付费者排除在外（非排他）"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111101",
+      "reasons": [
+        "Coffee shop connects count, arrival rate, duration",
+        "Instantaneous near-case decided by long-run averaging",
+        "10×0.5=5 correct with unit meanings",
+        "Queue surge breaks steady-state applicability correctly",
+        "No transfer",
+        "Boundary-matching caveat correct"
+      ],
+      "evidence": [
+        "一家咖啡店平均每小时接待10人",
+        "它回答的是长期平均关系，不是说每一刻都正好有5人",
+        "10×0.5=5人",
+        "若排队突然增长，暂时不能直接套用稳定状态的直觉",
+        "",
+        "统计的是同一系统边界内的人数与时间"
+      ]
+    }
+  ],
+  "call_file": "judgments/codex_gpt-5.6-luna/-1/0.call.json",
+  "prompt_sha256": "84a9d14e2328be2e0f273c2c892fd8c726d50734ad2127567939360d31aba309",
+  "isolated_repair_calls": []
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "08b544b9c5af25432e7b13b072cd00d65f6c0e02edf8dce09a1355130784d7b2",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"101010\",\"reasons\":[\"将房价预测问题连接到判断模型泛化表现。\",\"有典型案例，但缺少易混淆近例及区分特征。\",\"正确解释记忆偶然细节如何降低训练误差。\",\"增加数据并不必然迫使模型学习稳定规律。\",\"从备考迁移到房价预测，指出共同的偶然细节。\",\"更多数据的结论过强，且未说明类比边界。\"],\"evidence\":[\"判断信号：训练误差很低、新数据误差高\",\"\",\"死记细节比找规律更能压低训练误差\",\"\",\"这在本批数据里碰巧成立，一般并不成立。\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 20262,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 265,
+    "reasoning_output_tokens": 89
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 30.214
+}

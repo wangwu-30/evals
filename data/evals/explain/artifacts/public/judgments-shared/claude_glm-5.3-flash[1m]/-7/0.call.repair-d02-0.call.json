@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "d1d7398463a1996f1f9f106acb79ac1081908e8f42c3a793227b7ebf8cde5826",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d02\",\"bits\":\"110001\",\"reasons\":[\"Connects equal class averages to distinguishing their spread.\",\"Distinguishes variance from standard deviation by square root and units.\",\"Correct calculation, but omits population versus unbiased sample variance distinction.\",\"Outlier caveat lacks a specific controlled change and resulting comparison.\",\"No surface-different situation applies the same relationship.\",\"Arithmetic and units are correct; no material factual errors.\"],\"evidence\":[\"Variance is the number that captures this difference in spread\",\"take the square root to get the standard deviation\",\"\",\"\",\"\",\"variance = (100 + 0 + 100)/3 ≈ 67\"]}]}",
+  "usage": {
+    "input_tokens": 20241,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 327,
+    "reasoning_output_tokens": 188
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.019
+}

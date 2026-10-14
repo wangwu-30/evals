@@ -1,0 +1,26 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "none",
+  "rep": 2,
+  "answers": {
+    "d03": "正反馈是“变化带来更多同方向变化”：例如气温升高使冰雪融化，露出更深色地面，而深色地面吸收更多阳光，进一步升温。它能迅速放大趋势，但不代表结果好，因为它也会放大错误、风险或损失，甚至造成失控。好坏取决于被放大的是什么，以及系统是否有边界和制动机制。",
+    "v02": "Suppose a search returns 10 results, and 6 are relevant. Precision asks: “Of the 10 returned, how many are relevant?” So precision = 6/10 = 60%. Suppose there are 15 relevant documents in the whole collection. Recall asks: “Of all relevant documents, how many did we find?” So recall = 6/15 = 40%. Precision measures result quality; recall measures coverage. Improving one can sometimes reduce the other.",
+    "d06": "缓存是把网页数据的副本暂时放在更近、更快的地方，以减少等待和服务器负担。缓存失效就是告诉系统：这份副本可能过时，不能继续直接使用，应重新向服务器获取最新数据。例如你修改了头像，但浏览器仍显示旧头像；清除缓存或给新文件改名，能让浏览器重新下载。实际系统通常设置过期时间、版本号或主动删除缓存。",
+    "d02": "总体方差表示一组数据有多分散。先算平均数，再看每个数与平均数相差多少；把这些差值平方后求平均，就是总体方差。平方能避免正负差值互相抵消，也会让较大的偏离受到更重惩罚。例如数据都接近平均数，方差小；数据分布很开，方差大。它的单位是原单位的平方。",
+    "v05": "信息熵衡量一个概率分布的不确定程度。结果越难预测，熵通常越高。比如硬币正反各半时，下一次最难猜；若硬币99%出正面，结果几乎确定，熵较低。均匀概率通常更不确定，因为可能结果更平均，没有某个结果明显占优势。熵不是事件“重要程度”，而是对结果不确定性的整体衡量。",
+    "d05": "贝叶斯公式把“检测结果”更新为“患病概率”。关键是先看基础患病率。例如1000人中有10人患病；检测灵敏度90%，所以10名患者中约9人阳性。若健康者的假阳性率为5%，990名健康者中约有50人也阳性。因此阳性者约59人，其中真正患病的9人，阳性后的患病概率约为9/59，即15%，而不是90%。",
+    "v01": "过拟合是模型把训练资料记得过于死，连其中的噪声和偶然细节也当成规律。它在练习题上表现很好，但遇到新题就变差。比如学生背熟一套例题的答案，却没学会解题方法。常见对策包括使用更多数据、限制模型复杂度、正则化，以及用未参与训练的数据检验。",
+    "v08": "Little’s law states: L = λW. Here, L is the average number of items in the system, λ is the average arrival rate, and W is the average time an item spends there. For example, if a café serves 20 customers per hour and each stays 15 minutes on average, then L = 20 × 0.25 = 5 customers on average. The law applies in a stable system over a suitable long-run period.",
+    "v07": "公共物品通常具有非排他性和非竞争性：很难阻止别人使用，而且一个人使用不会明显减少别人可用的数量，例如公共道路照明。搭便车是指享受好处却不愿承担成本。若大家都这样做，公共物品就可能供给不足。因此政府常通过税收、公共管理或规则来筹资和维护。",
+    "v03": "自然选择不是动物主动努力后把特征传给后代，而是种群中原本存在差异。若某些可遗传特征让个体更容易存活并繁殖，这些特征在后代中的比例会逐代上升；不利特征的比例可能下降。例如颜色更接近环境的昆虫较不易被捕食，经过许多代，种群中这种颜色可能变得更常见。",
+    "v04": "Idempotency means repeating the same operation has the same intended effect as performing it once. For example, setting a user’s status to “active” is idempotent: sending the request repeatedly still leaves it active. This is valuable when network retries may duplicate requests. A payment charge is not naturally idempotent, so APIs often accept an idempotency key to recognize retries and avoid charging twice.",
+    "d01": "似然是在假设某个参数或原因成立时，观察到当前数据的可能程度。它问的是“这个假设对这些数据解释得多好”，不是“数据出现后假设有多大概率”。后验概率才是结合数据后的假设概率。贝叶斯公式用先验概率乘以似然，再归一化，得到后验概率：后验反映更新后的相信程度。",
+    "v06": "死锁是多个任务互相等待，谁也无法继续。例如线程A先占有打印机，等待扫描仪；线程B先占有扫描仪，等待打印机。A不释放打印机，B不释放扫描仪，于是双方永久等待。避免方法包括按统一顺序申请资源、一次申请全部资源、设置超时，或检测到循环等待后回滚。",
+    "d08": "复合增长是每次增长都作用在新的总额上，因此会产生“增长的增长”。例如100元每期增长10%，第一期变110元，第二期按110元增长，变121元。公式是最终金额=起始金额×(1+增长率)^期数。起始金额越大，同样的增长率和时间带来的绝对增加额越大。",
+    "d04": "机会成本是选择某件事时放弃的最佳替代方案的价值。一个免费下午若用来兼职赚100元，而你最终选择看电影，那么机会成本不是电影票价，而是放弃的100元收入（以及相关体验）。它不等于所有放弃的事情，只指其中价值最高的那个替代选择。",
+    "d07": "例如冰淇淋销量高的日子，溺水人数也可能更多。两者相关，但不一定是冰淇淋导致溺水；真正的共同原因可能是天气炎热：天气越热，买冰淇淋的人越多，人们去游泳也越多。要判断因果，需要控制混杂因素、进行实验或利用可靠的时间与比较证据。"
+  },
+  "call_file": "generations/codex_gpt-5.6-luna/none/2.call.json",
+  "prompt_sha256": "98866408a8384991f611d2d26f89e468bdf589c458b44ccdcb38b080a92ff77c",
+  "skill_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
