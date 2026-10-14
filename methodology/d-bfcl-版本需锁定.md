@@ -12,4 +12,4 @@
 | 来源链接 | [初版官方说明](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
 | 我们实际用下来的结果 | 尚未使用 |
 
-出处：调研报告 §3（共享电脑 `/workspace/research/2026-10-14-评测方法论.md`）（2026-10-14，共享电脑）。
+出处：调研报告 §3（内部报告：2026-10-14-评测方法论.md）（2026-10-14，共享电脑）。

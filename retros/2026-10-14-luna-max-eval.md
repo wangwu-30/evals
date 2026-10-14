@@ -1,6 +1,6 @@
 # luna max eval 复盘（2026-10-14）
 
-数据集：[luna-max-eval](../datasets/luna-max-eval.md)。原报告：Mac mini `~/codex-jobs/luna-max-eval/REPORT-zh.md`（只读引用）。
+数据集：[luna-max-eval](../datasets/luna-max-eval.md)。原报告：内部报告：REPORT-zh.md（只读引用）。
 
 - **假设**：把推理档位开到 max（或换成更强的 sol）能提高批处理任务的通过率。
 - **结果**：480 次有效首轮运行（4 种配置 × 3 个说明等级 × 8 任务 × 5 次），0 次环境失败。**题面写清楚比换模型重要得多**：L1 只给目标时，四种配置通过率都只有 10%–12.5%；L2 加上验收条件后升到 92.5%–97.5%；L3 为 95%–100%。同一等级内 luna low/medium/max 和 sol high 差距很小，max 的中位耗时和 token 反而更高（L3：74 秒、约 10.4 万 token；low 为 40 秒、约 7.9 万 token）。跨配置异号比较 0 个。

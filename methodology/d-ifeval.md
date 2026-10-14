@@ -12,4 +12,4 @@
 | 来源链接 | [论文正文](https://arxiv.org/html/2311.07911v1)、[许可声明](https://raw.githubusercontent.com/google-research/google-research/master/README.md) |
 | 我们实际用下来的结果 | 尚未使用 |
 
-出处：调研报告 §3（共享电脑 `/workspace/research/2026-10-14-评测方法论.md`）（2026-10-14，共享电脑）。
+出处：调研报告 §3（内部报告：2026-10-14-评测方法论.md）（2026-10-14，共享电脑）。

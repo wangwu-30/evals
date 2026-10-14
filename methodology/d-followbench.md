@@ -12,4 +12,4 @@
 | 来源链接 | [论文](https://aclanthology.org/2024.acl-long.257.pdf)、[仓库](https://github.com/YJiangcm/FollowBench)、[许可](https://raw.githubusercontent.com/YJiangcm/FollowBench/master/LICENSE) |
 | 我们实际用下来的结果 | 尚未使用 |
 
-出处：调研报告 §3（共享电脑 `/workspace/research/2026-10-14-评测方法论.md`）（2026-10-14，共享电脑）。
+出处：调研报告 §3（内部报告：2026-10-14-评测方法论.md）（2026-10-14，共享电脑）。

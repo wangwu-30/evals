@@ -1,6 +1,6 @@
 # teamrecall eval v0 复盘（2026-10-11）
 
-数据集：[teamrecall](../datasets/teamrecall.md)。原报告：共享电脑 `/workspace/teamrecall-eval/README.md`。
+数据集：[teamrecall](../datasets/teamrecall.md)。原报告：内部报告：README.md。
 
 - **假设**：评审意见会在后续 PR 里反复出现，可以提前拦住。
 - **结果**：vitest/tldraw 在 T 之后约 15–22% 的评论属于 T 之前出现过的类别；ruff 约 2%、biome 约 6%（只标了一小部分，是下界）。vitest 有 43% 的复现落在未合并就关闭的 PR 上。
