@@ -139,7 +139,6 @@ scripts/check_public.py:14:word_private  # Detector pattern definition only; no 
 scripts/check_public.py:15:holdout_location  # Detector pattern definition only; no actual sensitive value.
 scripts/check_public.py:18:deploy_secrets  # Detector pattern definition only; no actual sensitive value.
 scripts/check_public.py:19:word_private  # Detector pattern definition only; no actual sensitive value.
-scripts/check_public.py:21:hostname  # Detector pattern definition only; no actual sensitive value.
 scripts/explain/README.md:27:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
 scripts/explain/README.md:33:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
 scripts/explain/export.py:1:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
@@ -180,19 +179,19 @@ scripts/explain/write_report.py:159:holdout_location  # Generic split/privacy de
 scripts/explain/write_report.py:188:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
 scripts/explain/write_report.py:193:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
 scripts/explain/write_report.py:196:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
-scripts/test_check_public.py:9:abs_path  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:9:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:10:holdout_location  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:11:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:12:word_hpo  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:13:deploy_secrets  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:14:credential  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:12:abs_path  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:12:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:13:holdout_location  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
 scripts/test_check_public.py:14:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:15:private_ip  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
-scripts/test_check_public.py:16:hostname  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:15:word_hpo  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:16:deploy_secrets  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:17:credential  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:17:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:18:private_ip  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:19:hostname  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
 data/evals/explain/batches/2026-10-13-explain-v1.private-costs.json:0:word_private  # Generic cost receipt filename; contains anonymous usage and costs, no questions or scores.
 scripts/public_scan_allow.txt:133:word_private  # Names a reviewed public cost receipt or rule; no confidential value.
-scripts/public_scan_allow.txt:193:word_private  # Names a reviewed public cost receipt or rule; no confidential value.
-scripts/test_check_public.py:10:hostname  # Deliberately fictitious hostname in detector fixture.
+scripts/public_scan_allow.txt:192:word_private  # Names a reviewed public cost receipt or rule; no confidential value.
+scripts/test_check_public.py:13:hostname  # Deliberately fictitious hostname in detector fixture.
 datasets/daily-skill-holdout.md:0:holdout_location  # Existing main public dataset-catalog filename, not a storage path for unpublished data.
-scripts/public_scan_allow.txt:197:holdout_location  # Names the reviewed public dataset-catalog file, not a data storage location.
+scripts/public_scan_allow.txt:196:holdout_location  # Names the reviewed public dataset-catalog file, not a data storage location.

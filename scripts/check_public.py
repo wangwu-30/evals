@@ -1,4 +1,4 @@
-"""Scan committed blobs and every added line being pushed, using only stdlib."""
+"""Scan committed blobs and added lines; site-specific machine names belong in the optional untracked scripts/.public_scan_local_deny (one regex per line)."""
 import argparse
 import ast
 import collections
@@ -18,14 +18,26 @@ PATTERNS = {
     'deploy_secrets': r'deploy/secrets|secrets/',
     'credential': r'AKIA[A-Z0-9]{16}|sk-[A-Za-z0-9_-]{12,}|(?:gh[pso]_|github_pat_)[A-Za-z0-9_]{12,}|xox[abprs]-[A-Za-z0-9-]{12,}|AIza[A-Za-z0-9_-]{20,}|eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+|-----BEGIN [A-Z ]*PRIVATE KEY-----|Bearer\s+[A-Za-z0-9._~+/-]{16,}|\b(?:password|secret|api_key|access_token|refresh_token)[\s\x22\x27]*[:=]\s*[\x22\x27]?[^\s\x22\x27,;]{8,}|auth\.json',
     'private_ip': r'(?<![\d.])(?:10(?:\.\d{1,3}){3}|192\.168(?:\.\d{1,3}){2}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2})(?![\d.])',
-    'hostname': r'LJ9HWV27NC|\b[A-Za-z0-9_-]+\.local\b',
+    'hostname': r'\b[A-Za-z0-9_-]+\.local\b',
 }
 RULES = {key: re.compile(pattern, 0 if key == 'abs_path' else re.I)
          for key, pattern in PATTERNS.items()}
 
 
-def categories(line):
-    return {key for key, pattern in RULES.items() if pattern.search(line)}
+def load_local_deny(path=None):
+    path = ROOT / 'scripts/.public_scan_local_deny' if path is None else pathlib.Path(path)
+    try:
+        lines = path.read_text(encoding='utf-8').splitlines()
+    except FileNotFoundError:
+        return ()
+    return tuple(re.compile(line, re.I) for line in lines if line.strip())
+
+
+def categories(line, local_deny=()):
+    found = {key for key, pattern in RULES.items() if pattern.search(line)}
+    if any(pattern.search(line) for pattern in local_deny):
+        found.add('local_deny')
+    return found
 
 
 def git(*args):
@@ -130,6 +142,7 @@ def main(argv=None):
     parser.add_argument('--pre-push', action='store_true', help='Read Git ref updates from stdin')
     args = parser.parse_args(argv)
     try:
+        local_deny = load_local_deny()
         head = tree('HEAD')
         allowed = allowlist(head)
         updates = sys.stdin.read().splitlines() if args.pre_push else []
@@ -138,10 +151,10 @@ def main(argv=None):
         for ref in {'HEAD'} | tips:
             for path, lines in (head if ref == 'HEAD' else tree(ref)).items():
                 for number, line in enumerate([path] + lines):
-                    hits.update((path, number, cat, line) for cat in categories(line))
+                    hits.update((path, number, cat, line) for cat in categories(line, local_deny))
         for commit in commits:
             for path, number, line in added_lines(commit):
-                hits.update((path, number, cat, line) for cat in categories(line))
+                hits.update((path, number, cat, line) for cat in categories(line, local_deny))
         counts, exemptions = collections.Counter(), collections.Counter()
         for path, number, category, line in sorted(hits):
             key = (path, number, category)
@@ -152,15 +165,15 @@ def main(argv=None):
             label = 'ALLOW' if exempt else 'HIT'
             # Mask the entire excerpt: other text on the line could be another secret.
             excerpt = '*' * min(24, len(line))
-            safe_path = '[masked filename]' if categories(path) else path
+            safe_path = '[masked filename]' if categories(path, local_deny) else path
             print(f'{safe_path}:{number}: {category} [{label}] {excerpt}')
-        for category in RULES:
+        for category in (*RULES, 'local_deny'):
             print(f'{category}: {counts[category]} un-allowlisted, {exemptions[category]} allowlisted')
         print(f'Scanned HEAD, {len(tips)} push tips and added lines of {len(commits)} commits.')
         print(f'Result: {sum(counts.values())} un-allowlisted hits; {sum(exemptions.values())} allowlisted hits.')
         return 1 if counts else 0
-    except (ValueError, KeyError, subprocess.CalledProcessError):
-        print('Scan failed: invalid input or unreadable Git objects; push blocked.', file=sys.stderr)
+    except (ValueError, KeyError, OSError, re.error, subprocess.CalledProcessError):
+        print('Scan failed: invalid input, unreadable Git objects or invalid local deny file; push blocked.', file=sys.stderr)
         return 2
 
 

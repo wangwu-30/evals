@@ -1,3 +1,4 @@
 site/
 __pycache__/
 .local-runs/
+scripts/.public_scan_local_deny

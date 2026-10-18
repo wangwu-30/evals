@@ -19,6 +19,14 @@ new branches use origin/main as their base. Standalone checks default to
 origin/main..HEAD; use `--range BASE..TIP` for another range. Missing objects
 or malformed input block the push. Outgoing tip trees are checked as well.
 
+Put site-specific machine names in the optional, untracked
+`scripts/.public_scan_local_deny`, with one regular expression per line.
+Blank lines are ignored; matching is case-insensitive and reported as
+`local_deny`. These rules check both trees and outgoing added lines and cannot
+be allowlisted. An unreadable file or invalid expression blocks the check.
+The file is ignored by Git and must never be committed. Tests use a temporary
+deny file with an obviously fictitious name inside the checkout's parent.
+
 Findings show the file, line, category and a fully masked excerpt. A nonzero
 exit code blocks publication. Fix findings first. A demonstrably harmless
 match may have an exact `path:line:category  # reason` entry in
