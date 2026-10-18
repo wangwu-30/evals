@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "7bca26978e98d3e535be74f7b63e00e5722d60aa0a5f338105c5fc590271eb5e",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"111010\",\"reasons\":[\"Concurrent requests and throughput enable calculating average server latency.\",\"Stable coffee queue contrasts with overload, distinguished by capacity.\",\"Correct formula, units, calculation, system boundaries, and distribution independence.\",\"Overload caveat does not change the original case with fixed conditions.\",\"Hospital occupancy applies the same arrival-rate times residence-time relationship.\",\"Water analogy lacks an explanation of where its mapping fails.\"],\"evidence\":[\"has average latency 200/1000 = 0.2 s\",\"if λ exceeds the service rate, the queue grows without bound\",\"on average 10 × 3 = 30 people are inside\",\"\",\"100 patients/day with a 5-day average stay\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 20267,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 384,
+    "reasoning_output_tokens": 228
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.088
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "a4236c5785e29a6eedeb732098f6a9e105b2bf943c457febb98102b240dc93cd",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"111000\",\"reasons\":[\"Order example connects arrival and duration to average inventory.\",\"System and waiting-area cases distinguish the required measurement boundaries.\",\"Correct calculation, units, stability requirement, and time-boundary distinction.\",\"Processing time differs from residence time; unchanged arrivals alone are insufficient.\",\"No surface-different application identifies the shared relationship.\",\"Processing-time increase does not necessarily increase population with arrivals fixed.\"],\"evidence\":[\"则系统内平均有2×5=10个订单\",\"例如只计算等待区，就必须用进入等待区的到达率和等待时间。\",\"每分钟到达2个订单，订单平均停留5分钟\",\"若到达率不变而平均处理时间增加\",\"\", \"若到达率不变而平均处理时间增加，平均在系统中的数量就会上升。\"]}]}",
+  "usage": {
+    "input_tokens": 20165,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 499,
+    "reasoning_output_tokens": 315
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 39.327
+}

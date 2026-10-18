@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-4",
+  "rep": 3,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "Uses observed coin data to compare candidate probabilities.",
+        "Distinguishes likelihood from posterior by conditioning direction.",
+        "Omits posterior normalization and a numerical posterior calculation.",
+        "No explicit condition change with fixed comparison conditions.",
+        "No application to a different situation.",
+        "Likelihood calculations and conditioning directions are correct."
+      ],
+      "evidence": [
+        "数据已经看到，哪个参数使它最合理",
+        "方向是参数到数据",
+        "后验 ∝ 似然 × 先验",
+        "",
+        "",
+        "数据固定，让 p 变化"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "110001",
+      "reasons": [
+        "Equal class averages motivate comparing spread.",
+        "Contrasts equal averages with differing spreads using deviations.",
+        "Omits population versus unbiased sample variance distinction.",
+        "No explicit changed condition applied to the original classes.",
+        "No different situation applies the same relationship.",
+        "Calculation is correct; squaring is not presented as uniquely necessary."
+      ],
+      "evidence": [
+        "Same center, very different reliability",
+        "one with scores 68, 70, 72; another with 40, 70, 100",
+        "variance (4+0+4)/3 ≈ 2.7",
+        "",
+        "",
+        "Absolute values would also fix the sign problem"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111111",
+      "reasons": [
+        "Identifying feedback conditions supports evaluating amplified consequences.",
+        "Contrasts beneficial learning with harmful panic using identical feedback direction.",
+        "Explains reinforcing loops, gain exceeding loss, and saturation.",
+        "Speaker saturation changes growth while the feedback loop remains.",
+        "Learning and market examples explicitly share reciprocal reinforcement.",
+        "Correctly separates feedback direction, value judgments, and growth limits."
+      ],
+      "evidence": [
+        "先找出回路在哪里、放大条件是什么，再单独评价后果",
+        "学习中的「学会→受鼓励→更愿练」",
+        "放大的条件是增益大于损耗",
+        "一旦饱和（如音箱功率到顶），增长就停止",
+        "同样满足 A 推 B、B 推 A",
+        "「放大」只描述方向，不包含价值判断"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choices to valuing apparently free time.",
+        "Distinguishes best forgone option from summing all alternatives.",
+        "Explains ranking alternatives and selecting the highest forgone value.",
+        "Exhaustion changes nap valuation while afternoon options remain fixed.",
+        "Transfer examples lack an identified best forgone alternative.",
+        "Correctly defines opportunity cost without asserting guaranteed scholarship value."
+      ],
+      "evidence": [
+        "This reframes apparently free time",
+        "it is the single best forgone option",
+        "the cost is measured by the top alternative",
+        "if you are exhausted, the nap's value rises",
+        "",
+        "Opportunity cost is the value of the best option you give up"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "Poses determining disease probability after a positive test.",
+        "Distinguishes sensitivity from disease probability among positive results.",
+        "Correctly counts both positive sources and normalizes their probabilities.",
+        "No changed prevalence or test condition is worked through.",
+        "No surface-different application of Bayesian updating.",
+        "Hypothetical population calculation and conditional probabilities are correct."
+      ],
+      "evidence": [
+        "某人检出阳性，真患病的概率是多少？",
+        "关键是分清方向",
+        "真患者占 9.9/59.4 ≈ 16.6%",
+        "",
+        "",
+        "想 1000 人"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111001",
+      "reasons": [
+        "Connects stale profile displays to choosing freshness strategies.",
+        "Contrasts valid cached copies with stale copies after edits.",
+        "Explains origin writes, surviving cached data, expiry, and explicit deletion.",
+        "Strategies are listed without a controlled original-case condition change.",
+        "No different caching situation applies the same relationship.",
+        "Describes TTL as accepting staleness without claiming perfect consistency."
+      ],
+      "evidence": [
+        "the change appears to have failed",
+        "This only works while the copy matches the real data",
+        "delete the cache entry on write",
+        "",
+        "",
+        "TTL (accept brief staleness, here 60 seconds)"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Uses associated sales and drownings to question causal attribution.",
+        "Distinguishes joint variation from effects of changing a variable.",
+        "Explains how heat independently increases purchases and swimming exposure.",
+        "Changing observational comparisons does not establish the asserted causal conclusion.",
+        "No surface-different causal example is analyzed.",
+        "Invents observed statistics and overstates what disappearing correlation establishes."
+      ],
+      "evidence": [
+        "能说吃冰淇淋导致溺水吗？不能",
+        "因果是「改变 A 会改变 B」，相关只是「A 与 B 一起变」",
+        "炎热既让人多买冰淇淋，也让人多下水游泳",
+        "",
+        "",
+        "某城市统计发现"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111100",
+      "reasons": [
+        "Starting-amount comparison explains why equal rates preserve wealth ratios.",
+        "Contrasts growth on current totals with growth on original principal.",
+        "Correct formula and numerical progression explain proportional compound growth.",
+        "Withdrawals change reinvestment while initial principal and rate remain fixed.",
+        "Transfer merely lists applications without establishing their required conditions.",
+        "Claims network effects share proportional growth without necessary qualification."
+      ],
+      "evidence": [
+        "the rate alone never closes that gap",
+        "the current total, not the original",
+        "1000 at 10% becomes 1100, then 1210, then 1331",
+        "if gains are withdrawn each period, growth becomes linear",
+        "",
+        "network effects all follow the same proportional mechanism"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111010",
+      "reasons": [
+        "Explains why training success can mislead housing predictions.",
+        "Contrasts general area patterns with memorized exceptional sale prices.",
+        "Links memorized training coincidences to poor new-data predictions.",
+        "Generic data-size and complexity claims lack controlled original-case changes.",
+        "Exam memorization maps to fitting specifics rather than transferable patterns.",
+        "Analogy lacks limits; prediction failure is asserted as inevitable."
+      ],
+      "evidence": [
+        "导致在新数据上表现变差",
+        "简单模型学到「面积越大越贵」",
+        "把训练数据中的噪声与巧合当成规律记住",
+        "",
+        "他记住的是每道题的具体答案，不是解题方法",
+        "预测下一套 48.3 平米的房子必然离谱"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111010",
+      "reasons": [
+        "Connects search quality measures to noise and missed relevant documents.",
+        "Distinguishes precision and recall through their different denominators.",
+        "Initial search calculation correctly computes both measures and meanings.",
+        "Stricter filtering does not guarantee either asserted metric change.",
+        "Legal discovery applies recall to the cost of missing evidence.",
+        "Invents collection size and guarantees unsupported precision and threshold outcomes."
+      ],
+      "evidence": [
+        "how much noise you must wade through",
+        "of everything that exists, how much did I find",
+        "Precision = relevant returned / all returned = 7/10",
+        "",
+        "legal discovery wants high recall (missing evidence is severe)",
+        "Return everything: recall 100%, precision 35%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111111",
+      "reasons": [
+        "Explains population change without attributing purposeful effort to individuals.",
+        "Contrasts inherited variation selection with individuals deliberately becoming darker.",
+        "Links heritable differences to differential reproduction across generations.",
+        "Reversing tree coloration reverses selection within the same moth example.",
+        "Antibiotic resistance shares selection of preexisting reproducing variants.",
+        "Correctly states inheritance requirements and environment-dependent selection."
+      ],
+      "evidence": [
+        "自然选择不要求动物「努力改变」",
+        "蛾子并没有「为了适应污染而变黑」",
+        "性状可遗传、个体存在差异、差异影响繁殖成败",
+        "治理污染使树干重新变浅后，选择方向反转",
+        "让本已存在的抗药者得以繁殖",
+        "种群随环境变化，没有固定目标"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111110",
+      "reasons": [
+        "Connects uncertain payment outcomes to deciding how retries affect state.",
+        "Contrasts setting status with decrementing balance by repeated effects.",
+        "Explains timeout ambiguity, duplicate execution, and state-based idempotency.",
+        "Adding a key changes repeated payment effects while retries remain fixed.",
+        "Status setting and balance decrement apply the repeated-state-effect criterion.",
+        "Unconditional exactly-once guarantee omits atomicity, key scope, and retention."
+      ],
+      "evidence": [
+        "a timeout followed by a retry charges the customer twice",
+        "setting user status to inactive is naturally idempotent",
+        "the definition concerns server state, not identical responses",
+        "The standard fix is an idempotency key",
+        "decrementing a balance by 1 is not",
+        "exactly one payment executes no matter how many retries arrive"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111101",
+      "reasons": [
+        "Connects uncertainty before revelation to guessing and encoding decisions.",
+        "Distinguishes individual surprise from distribution-level average surprise.",
+        "Correctly calculates entropy with base-two logarithms and bit units.",
+        "Changes color proportions while retaining four balls and observation task.",
+        "Encoding is asserted without applying the relationship to a concrete example.",
+        "Calculations and interpretation of entropy as expected uncertainty are correct."
+      ],
+      "evidence": [
+        "这也决定了编码长度",
+        "单个结果的意外程度取 −log p",
+        "H = −4×(1/4×log₂1/4) = 2 比特",
+        "若 3 红 1 蓝",
+        "",
+        "熵就是各结果意外程度的加权平均"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects permanently blocked processes to choosing lock-ordering prevention.",
+        "Contrasts circular deadlock with ordinary waiting under ordered acquisition.",
+        "Explains exclusive holding, waiting, nonpreemption, and circular dependencies.",
+        "Changes acquisition order while keeping processes and file resources fixed.",
+        "No different resource-allocation situation applies the same relationship.",
+        "Correctly explains ordering breaks cycles while permitting ordinary contention."
+      ],
+      "evidence": [
+        "The practical fix targets circular wait",
+        "B simply waits instead of grabbing file 2",
+        "A will not release file 1 until it gets file 2",
+        "always acquire file 1 before file 2",
+        "",
+        "the circle never forms"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111010",
+      "reasons": [
+        "Connects beneficial neighborhood lighting to funding and provision decisions.",
+        "Contrasts public lighting with excludable bread using payment access.",
+        "Explains how nonexclusion permits withholding contributions despite collective value.",
+        "No explicit original-case condition change is analyzed.",
+        "National defense applies shared benefit with mandatory cost allocation.",
+        "Categorically calls bread markets efficient, ignoring necessary market conditions."
+      ],
+      "evidence": [
+        "整体上很划算。但没有机制强迫出钱",
+        "不付钱就吃不到",
+        "每户都可以等别人装，灯一亮自己照样受益",
+        "",
+        "税收建国防、物业费装路灯",
+        "市场有效"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111111",
+      "reasons": [
+        "Connects occupancy and latency measurements to computing missing quantities.",
+        "Distinguishes stable long-run averages from growing queues and instant counts.",
+        "Correct calculations match rates, durations, and system occupancy boundaries.",
+        "Reducing time with arrival rate fixed reduces average occupancy.",
+        "Server requests apply the same rate-times-residence-time relationship.",
+        "States stability and long-run averaging without requiring Poisson arrivals."
+      ],
+      "evidence": [
+        "measure any two and compute the third",
+        "long-run means, not any single instant",
+        "10 × 4 = 40 people are inside",
+        "without touching the arrival rate",
+        "200 × 0.05 = 10 requests in flight",
+        "in a stable system, L = λW"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-4/3.call.json",
+  "prompt_sha256": "e6c5d95ac5539c596d8fc6f431c2dd2310b680cf04036c11c67430fca0398def",
+  "isolated_repair_calls": []
+}

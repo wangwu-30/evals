@@ -1,0 +1,35 @@
+{
+  "id": "explain-validation",
+  "title": "ljg-explain · 验证集",
+  "kind": "matrix",
+  "order": 9,
+  "description": "20题基准的validation切分；每格5次独立批量作答，每次8题×10项检查等权平均，按5次截尾均值。六项盲裁判语义检查+四项规则；原始正文及裁判理由可审计。",
+  "task_file": "task.md",
+  "checks": {
+    "S1": "Purpose: connect a concrete problem to what the concept enables us to decide.",
+    "S2": "Recognition: give a typical case AND a confusable near-case, with the deciding feature; merely naming a synonym fails.",
+    "S3": "Derivation: explain the load-bearing causal/logical/quantitative steps correctly. Formula tasks require a correct simple numerical calculation, meanings/units and the relevant distinction in the oracle.",
+    "S4": "Sensitivity: change one explicit key condition in the original case, state what stays fixed (explicitly or unambiguously), and correctly explain the changed result/degree/confidence. Generic caveats alone fail.",
+    "S5": "Transfer: apply the same relationship to a surface-different new situation and identify the shared deciding relation/required condition. A list of applications alone fails.",
+    "S6": "Evidence/boundaries: no material factual/arithmetic errors or invented causal history; distinguish hypothetical examples, observations and inference where relevant. If using an analogy, explain its mapping AND where it fails. Ordinary stable textbook facts need no citation. Contradiction with the task oracle fails.",
+    "A1": "Chinese first-sentence proxy: contains a task keyword and no recognized prefatory phrase (English N/A=pass). This checks a surface proxy, not whether the sentence really states the conclusion.",
+    "A2": "Chinese: no '不是…而是…' rhetorical construction within a sentence (English N/A=pass).",
+    "A3": "No self-awarded numeric score or assertion that the reader has already mastered the concept.",
+    "A4": "No mechanical set of five headings named purpose/recognition/result/conditions/transfer; headings or lists about the actual subject are allowed."
+  },
+  "cond_labels": {
+    "none": "无 skill",
+    "full": "完整 skill",
+    "-1": "删 读者与交付",
+    "-2": "删 理解标准",
+    "-3": "删 公式与原理",
+    "-4": "删 中文表达",
+    "-5": "删 证据与版式",
+    "-6": "删 Gotchas",
+    "-7": "删 Examples"
+  },
+  "baseline": "full",
+  "null_cond": "none",
+  "split": "validation",
+  "conclusion": "每格5轮，公开validation共8题。全文对照的点估计见报告；所有逐段删除95%差值区间含0，不据此给段落排贡献名次。裁判为共同gpt-6.1-sol请求配置，真实输出校准一致率80%；总账单未知。完整区间/校准/费用详见docs/explain-eval-2026-10-13.md。"
+}

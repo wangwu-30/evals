@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "52b77347efb3f042f35e7413c3b45232f4a7f0e1654ee69bb20da7c39a1fe790",
+  "rc": 0,
+  "cost_usd_reported": 0.11116,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"v02\":\"Suppose you search a document collection for 'jaguar speed' and the system returns 10 results, 8 of which are actually relevant. Precision = relevant returned / total returned = 8/10 = 80%: 'of what I showed you, how much was right?' Now suppose 40 relevant documents exist in total; the system found only 8 of them, so recall = 8/40 = 20%: 'of everything that should be found, how much did I actually find?' Returning only 1 very safe result gives high precision but low recall; returning everything gives 100% recall but terrible precision. The two trade off, so which matters more depends on the task (spam filters favor precision; cancer screening favors recall).\",\"v07\":\"公共物品有两个特点：非排他性（没法阻止不付钱的人使用）和非竞争性（一人使用不妨碍他人），典型例子是路灯、国防、灯塔。搭便车指人们不付钱也照样享受这些物品。设想小区想集资装路灯：装好后每户不管出没出钱都能照明，于是很多人想'别人出钱我蹭光就行'，结果集资失败，路灯没人建。这说明市场会供给不足——每个人都理性地隐瞒需求，但整体结果糟糕。所以公共物品通常由政府用税收提供，或通过强制分摊解决搭便车问题。\",\"v05\":\"信息熵衡量一个随机变量的平均不确定性：H = -Σ p(x)·log p(x)，即每个结果概率乘以它的'意外程度'再求和。罕见结果信息量大但概率小，常见结果概率大但意外小，熵把两者平衡成一个数。均匀分布时熵最大，因为每个结果等可能：猜硬币或掷骰子时，你完全无法预测哪个面出现，每次结果都带来最多新信息。反之，若某个结果的概率接近1（比如明天天亮），结果几乎确定，平均意外很小，熵接近0。直觉上，均匀=完全'平坦'、毫无线索，所以最不可预测；概率越偏斜，越能押中，不确定性越低。\",\"d07\":\"假设某城市统计发现：冰淇淋销量越高，溺水人数越多，两者强相关。这并不意味着吃冰淇淋导致溺水，也不是溺水让人买冰淇淋。真正的原因是第三个变量——炎热夏天：天热时人们既多买冰淇淋，也多去游泳，溺水自然增多。这叫混杂变量。相关与因果的区别在于：相关只说明两个量一起变动，可能是因果、反向因果、共同原因或纯粹巧合。要确立因果，最可靠的办法是随机对照实验——比如随机分组让人吃/不吃冰淇淋再看溺水率，随机化会抵消混杂因素的影响。\",\"d04\":\"Opportunity cost is the value of the best alternative you give up when you choose one option. You have a free afternoon: you could study for an exam, go to the gym, nap, or meet a friend. If you choose studying, the opportunity cost is not 'all the other three options'—it's specifically the one you would most likely have done instead, say going to the gym. You spent no money, but you still paid a cost: the afternoon itself. Reasoning this way improves decisions—don't just ask 'is this option good?', ask 'is it better than my next-best use of this time?' That's why 'free' things aren't truly free: your time always has alternative uses.\",\"v04\":\"An operation is idempotent if performing it once has the same effect as performing it many times. In distributed systems this matters because networks are unreliable: when a client doesn't get a reply, it retries—but the server may have already executed the first request. If 'transfer $10 to Bob' is retried, Bob gets $20. Idempotent design makes duplicates harmless. Examples: 'set user status to active' is naturally idempotent; 'add item to order with ID X' can be made idempotent by keying on X. The standard pattern is an idempotency key: the client sends a unique token with each logical request, and the server stores results so repeated tokens return the same response instead of re-executing. Every payment API you'll meet relies on this.\",\"d05\":\"假设某病患病率是1%（先验概率），某检测灵敏度99%（病人99%呈阳性），假阳率5%（健康人5%误报阳性）。你检测阳性，患病概率是多少？很多人以为是99%，其实约17%。用贝叶斯公式：P(病|阳性) = P(阳性|病)·P(病) / P(阳性)。分母用全概率展开：真阳性 0.99×0.01=0.0099，假阳性 0.05×0.99=0.0495，合计0.0594。所以后验 = 0.0099/0.0594 ≈ 16.7%。直觉：健康人基数巨大，假阳性人数反而远超真阳性。贝叶斯的核心就是'用新证据更新旧信念'：从1%的先验出发，阳性这条证据把概率拉高到约17%。\",\"d06\":\"A cache is a fast temporary copy of data kept close to your application—say, the result of an expensive database query, or a rendered page—so repeat requests skip the slow work. The problem: the underlying data changes. If a user updates their profile but the cached page still shows the old one, they see stale data. Cache invalidation is the process of removing or refreshing cached entries when the source data changes, so the next request rebuilds it fresh. Common strategies: TTL (each entry expires after N seconds, simple but serves stale data until then); write-through (update cache and database together); and delete-on-write (when data changes, evict the cache key so it's recomputed). It's famously called one of the hardest problems in computer science because knowing exactly which entries to invalidate, and when, gets tricky as data dependencies grow.\",\"v08\":\"Little's law states L = λW: in steady state, the average number of items in a system (L) equals the arrival rate (λ) times the average time each item spends in the system (W). Example: customers arrive at a coffee shop at 10 per minute, and each spends on average 5 minutes ordering and waiting; then on average L = 10 × 5 = 50 customers are in the shop at any time. The law is remarkably general—it holds regardless of the arrival or service distributions, number of servers, or queue discipline, as long as the system is stable and you use consistent units. Practically, it lets you compute the third quantity from any two: measure throughput and waiting time to infer work-in-progress, or size buffer capacity. It's a conservation-style identity, not a model of behavior.\",\"v06\":\"Deadlock is when two or more processes each hold a resource and wait for the other's, so none can ever proceed. Example: Thread 1 acquires Lock A, then wants Lock B. Thread 2 acquires Lock B, then wants Lock A. Each blocks waiting for the other, forever—they're stuck in a cycle of waiting. Formally, deadlock requires four conditions simultaneously: mutual exclusion (resources can't be shared), hold-and-wait (a process keeps its resources while waiting for more), no preemption (resources can't be forcibly taken), and circular wait (a cycle in the wait-for graph). Break any one and deadlock is impossible; the classic fix is imposing a global lock order so every thread requests A before B, eliminating circular wait. Others: acquire-with-timeout, or acquiring all resources atomically.\",\"d02\":\"An average tells you the center of a set of numbers; variance tells you how spread out they are around that center. To compute it: find the mean, subtract it from every value to get each deviation, square each deviation (so negatives don't cancel positives), then average those squares. Example: {4, 4, 4, 4} and {1, 7, 1, 7} both have mean 4. The first set has variance 0—every value equals the mean. The second: deviations are -3, 3, -3, 3; squares are 9, 9, 9, 9; variance = 36/4 = 9. Bigger variance means values typically wander further from the average. Note the units are squared (if data is in kg, variance is kg²); taking the square root gives the standard deviation, which is back in original units.\",\"v03\":\"自然选择不需要任何个体'努力'或'想要'进化。关键在于三步：第一，群体中的变异是随机产生的——基因突变和重组不定向，也不是为了适应环境而出现；第二，环境像筛子：具有某类遗传性状的个体恰好存活率或繁殖率更高；第三，这些个体的后代更多，相应基因在下一代中的频率升高。以细菌耐药为例：突变随机发生，抗生素只是把偶然带耐药突变的细菌筛出来，让它们存活并繁殖。长颈鹿也一样：脖子长的个体是偶然变异的结果，它们碰巧吃到高处树叶、留下更多后代，而不是靠伸长脖子'锻炼'并把 acquired 性状遗传下去。变化发生在种群的基因频率上，个体一生不会进化。\",\"d03\":\"正反馈指输出被送回输入端，且与原变化方向一致，从而不断放大它。例子：话筒靠近音箱，微小的声音被放大、再被拾取、再放大，形成刺耳啸叫；又如股价下跌引发恐慌抛售，抛售又压低股价；融化的冰雪降低地表反照率，吸收更多热量，加速融化。与之相对，负反馈抵消偏差（如恒温器），使系统回到平衡；正反馈则放大偏离，让小差异滚雪球。注意'正'只是数学上的方向（同号增强），不是'好'。正反馈常导致失控、泡沫和崩溃，但有时也有建设性用途，比如成功的喜悦激励你继续练习，或放大有用的信号。关键在于是否有机制把放大限制住。\",\"d08\":\"Compound growth means growth on growth: each period's gains are added to the base, so future gains are earned on past gains too. Formula: A = P(1+r)^t. Invest $100 at 7% per year: after one year $107, but after 30 years about $761—not $310 as with simple interest, because the interest itself earns interest. This is why the starting amount matters so much: the formula multiplies everything by P, so starting with $1,000 instead of $100 yields 10× the final amount for the same rate and time. Equivalently, what you lack in starting capital you must partly make up with more time—starting 10 years earlier often beats earning a higher rate. The same math governs population growth, inflation, and compound interest alike.\",\"d01\":\"似然回答的问题是：'如果参数是θ，看到眼前这批数据的可能性有多大？'即 L(θ) = P(数据|θ)，固定数据、变动参数。例：抛一枚硬币10次得9次正面。若θ=0.5，这个结果的似然是 C(10,9)·0.5^10 ≈ 0.0098；若θ=0.9，似然约0.387。可见θ=0.9时数据更'说得通'。注意似然不是θ的概率分布——它沿参数轴比较，通常不积分为1。它与后验的关系由贝叶斯公式给出：P(θ|数据) ∝ P(数据|θ)·P(θ)，即后验 = 似然×先验（再归一化）。也就是说，似然描述'数据对参数的支持程度'，后验再结合你事先对参数的信念，得到观测数据后对参数的最终信念。\",\"v01\":\"过拟合就像一个学生复习时不理解原理，只把练习题的答案死记硬背下来。做原题全对，可考试一换数字就傻眼。机器学习模型同理：如果模型太复杂或训练太久，它会把训练数据里的细节和噪声也'背'下来，而不只是学到真正的规律。结果就是：训练数据上表现极好，但在没见过的新数据上表现很差——这叫泛化能力差。判断办法是把数据分成训练集和测试集：训练准确率很高、测试准确率却明显更低，往往就是过拟合的信号。常见对策：用更多数据训练、换更简单的模型、提前停止训练，或加正则化惩罚复杂度——本质都是逼模型学规律而非背答案。\"}}",
+  "usage": {
+    "input_tokens": 1032,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 4240,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1032,
+      "outputTokens": 4240,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.11116,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 91.765
+}

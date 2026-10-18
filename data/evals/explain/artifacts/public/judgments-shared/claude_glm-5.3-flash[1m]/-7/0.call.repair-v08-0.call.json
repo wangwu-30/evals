@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "a0769f835105ba1f905b9efffc62213f46ca763b3e2551a1f2d7d54db0f45437",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"101100\",\"reasons\":[\"Connects occupancy estimation to two easier measurements.\",\"No confusable near-case with a deciding feature.\",\"Correct formula, calculation, units, and matching system-time scope.\",\"Doubles visit duration while holding arrivals fixed; occupancy correctly doubles.\",\"No surface-different application identifying the shared relationship.\",\"Stability alone omits required matching boundaries and finite averages.\"],\"evidence\":[\"compute how full a system gets from two easier measurements\",\"\",\"customers/minute × minutes = customers\",\"L doubles to 40 with unchanged arrivals\",\"\",\"stability being the only requirement\"]}]}",
+  "usage": {
+    "input_tokens": 23464,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 347,
+    "reasoning_output_tokens": 215
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.192
+}

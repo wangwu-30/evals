@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "419f51c637fb6d06346ff225f281c119ffd7a2e391ee7ecb620b3c3b29582bb4",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v06\",\"bits\":\"101111\",\"reasons\":[\"Connects a concrete lock hang to choosing an ordering fix.\",\"No concrete confusable near-case with a deciding feature.\",\"Correctly explains circular waiting and the four necessary conditions.\",\"Changes acquisition order, preserving resources, and explains cycle prevention.\",\"Transfers the same waiting relationship to database row locks.\",\"Resource example and prevention mechanism are factually sound.\"],\"evidence\":[\"the usual fix is a global ordering\",\"\",\"Each holds what the other needs and waits forever\",\"everyone acquires file 1 before file 2 — so no circle can form\",\"The same picture is two database transactions\",\"exclusive resources, holders keeping them while waiting\"]}]}",
+  "usage": {
+    "input_tokens": 20192,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 301,
+    "reasoning_output_tokens": 153
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 36.169
+}

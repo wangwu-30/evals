@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "cd8f3b32708c939d1fcea5df1b886ba3faebbf3cfa9815dac5cc2c0cd690decd",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"110101\",\"reasons\":[\"用硬币例子连接不确定性与能否提前猜中。\",\"对比公平与偏置硬币，以概率偏向区分。\",\"未说明熵针对分布而非单个序列的意义或质量。\",\"保持正反两种结果，改变概率并说明熵降低。\",\"没有迁移到表面不同的新情境。\",\"公式、单位及事实正确，没有实质错误。\"],\"evidence\":[\"结果几乎可猜\",\"比如硬币正反各半，熵为1比特；若正面概率99%、反面1%，结果几乎可猜，熵较低。\",\"\",\"比如硬币正反各半，熵为1比特；若正面概率99%、反面1%，结果几乎可猜，熵较低。\",\"\",\"在结果数量固定时，它没有偏向任何一个结果\"]}]}",
+  "usage": {
+    "input_tokens": 20148,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 378,
+    "reasoning_output_tokens": 163
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.548
+}

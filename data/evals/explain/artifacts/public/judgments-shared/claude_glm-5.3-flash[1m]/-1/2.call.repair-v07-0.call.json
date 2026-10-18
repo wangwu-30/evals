@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "7e9963b5b03b156aca68e24ab1fc3531d7365c2d0f6f4749a21e61d024bb5a8b",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v07\",\"bits\":\"110110\",\"reasons\":[\"用楼栋案例说明集体收益与供给不足的判断。\",\"对比路灯与电影院座位，给出两项区分特征。\",\"把不出钱断言为人人最优，忽略关键贡献者情形。\",\"保持享用需求，改变排除技术，解释私人供给变化。\",\"迁移到加密电视，指出排除非付费者这一关系。\",\"人人不出钱最划算的绝对断言存在实质错误。\"],\"evidence\":[\"这解释了为什么这类东西市场往往供给不足\",\"电影院座位会被坐掉、能检票，就不算\",\"每个人最划算的做法就是不出钱，等别人付\",\"一旦技术能排除不付钱者（加密电视），搭便车被堵住，私人供给就变得可行\",\"一旦技术能排除不付钱者（加密电视）\",\"每个人最划算的做法就是不出钱，等别人付\"]}]}",
+  "usage": {
+    "input_tokens": 20458,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 503,
+    "reasoning_output_tokens": 255
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 43.706
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "8c01d71e4a738f81996a5e427e241c4a00b7cdcb33b3b8186fefb53dc85fd5ca",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-04\",\"bits\":\"110011\",\"reasons\":[\"用已观测数据比较假设，明确似然的用途\",\"区分比较数据概率与判断硬币后验，指出先验\",\"计算正确，但未解释后验如何结合先验并归一化\",\"未改变明确条件并解释结果变化\",\"迁移到故障检测，保留固定数据比较假设的关系\",\"计算与概率方向正确，无实质事实错误\"],\"evidence\":[\"似然用已经看到的数据比较不同假设\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验\",\"\",\"\",\"固定同一批测试结果比较两种故障假设\",\"这是数据在各假设下的概率，不是硬币的后验\"]}]}",
+  "usage": {
+    "input_tokens": 20227,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 227,
+    "reasoning_output_tokens": 47
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.797
+}

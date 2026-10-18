@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "652f49824f2d7d9cf9eef29e66fb267a6037e12037463d64db8b0b3b22d8b0b1",
+  "rc": 0,
+  "cost_usd_reported": 0.2606,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"v02\":\"Search 'jaguar' returns 10 results; 8 are about the animal, but 12 relevant pages exist overall. Precision = 8/10 = 0.8: of what the system returned, how much was right — it answers 'how much junk must I skip?' Recall = 8/12 ≈ 0.67: of everything relevant out there, how much was found — 'did I miss anything important?' The denominators differ — precision divides by returned items, recall by all relevant items — so a system can score high on one and low on the other. Loosen the filter to return 20 results: recall rises, precision falls; the two trade off. A medical safety review should maximize recall (missing a case is costly); a quick web search leans on precision. Same two numbers, different priorities depending on which mistake you fear more.\",\"v07\":\"路灯和国防有两个特点：没人能被排除在好处之外（非排他），多一人享用也不减少别人的份（非竞争）。这带来一个麻烦：我家门口的路灯照样照亮你，所以人人都盼着别人出钱、自己白享福——这就是搭便车。当每个人都这么想，路灯就没人建，尽管它对大家的总价值很高。这不是大家不识货，而是'付钱与享用挂钩'这个机制在公共物品上失效了，所以通常要靠税收集体供给。判断依据看两点：能否排他、是否竞争——电影院能查票，排他性强，就不算公共物品。改一个条件：一旦技术上可以收费（如加密频道），私人供给就变得可行。同一逻辑也出现在开源软件和小组作业里：成果共享时，总有人想少干多得。\",\"v05\":\"信息熵衡量平均的不确定性：结果越难猜，熵越大。抛均匀硬币，正反各半，最难猜；若九成是正面，结果基本能猜中，熵就低。公式 H = −Σp·log₂p 的读法：−log p 度量一个结果的意外程度（概率越小越意外），再按出现概率加权平均。均匀硬币 H = 1 比特；九成正面时约 0.47 比特。为什么均匀最不确定：概率总和固定为 1，均匀时你无法偏向任何结果，每种结果同样意外；一旦某个结果概率升高，它变得可预测，平均意外程度必然下降。可验证：从 0.5/0.5 改为 0.9/0.1，熵从 1 降到约 0.47。注意熵是整个概率分布的性质，不是某个具体结果的概率；'更不确定'指猜中之前的信息缺口更大。\",\"d07\":\"夏天冰淇淋销量和溺水人数一起涨，但吃冰淇淋不会淹死人，溺水也不让人想吃冰淇淋——背后有共同原因：天热，游泳和买冰淇淋的人都变多。控制住气温后，这层相关就消失。相关只说明两个量同涨同跌；因果还要求改变一个真的会改变另一个。有共同原因、或因果颠倒（不是失眠导致焦虑，而是焦虑导致失眠）时，相关都存在，这是最容易混淆之处。判断依据：能否找到并排除第三因素；最可靠的办法是随机实验——随机分组让其他因素在两组间均匀分布，剩下的差异就只能来自处理本身。迁移一个新情境：鞋码和阅读能力相关，背后是年龄；在同龄孩子内部比较，相关基本消失。看到相关先问：还有谁在同时推动这两件事？\",\"d04\":\"Opportunity cost is the value of the best option you give up. A free afternoon seems costless — no money changes hands — but choosing among gaming, a three-hour tutoring shift paying $60, and reviewing for Monday's exam forces a real trade-off. If you game, the cost isn't all the other options added up; it's the single best one you forfeited, say the $60 shift (or the exam review, if passing matters more to you than $60). That reframes 'free time': every choice is priced in forgone alternatives. The comparison counts only real options, and only the best one — lower-ranked alternatives add nothing. Change one condition: if the tutoring slot fills up, that option vanishes and gaming's cost drops. The same logic explains why busy people pay for errands to be done: their time's opportunity cost exceeds the helper's fee.\",\"v04\":\"An operation is idempotent when running it once and running it five times leave the system in the same final state. Distributed systems need this because networks, not intentions, trigger retries: your payment request arrives, the confirmation is lost, your client times out and resends — the server must not charge twice. A naive POST charges twice; an idempotent design doesn't. The standard mechanism: the client attaches an idempotency key to each logical operation. The server records the key with its result; a repeat carrying the same key returns the stored result without re-executing. Note the guarantee is about the end state, not about doing nothing — side effects happen once, then the answer is merely replayed. Without keys, retries are unsafe; with them, 'at least once' delivery becomes tolerable. The same trick deduplicates queue messages: the consumer checks a key before applying each message.\",\"d05\":\"检测呈阳性，就真得病了吗？贝叶斯公式回答的是：看到证据后，该把判断改成多少。设患病率 1%，一万人里 100 人患病。检测灵敏度 99%，这 100 人中 99 人呈阳性；健康人 9900 人，假阳性率 5%，又误报 495 人。于是 594 个阳性里真患病的只有 99 人，概率约 99/594 ≈ 1/6。直觉错在只盯'99% 准确'，忽略健康人群基数大得多，假阳性总量压过真阳性。公式写作 P(病|阳) = P(阳|病)×P(病) / P(阳)；注意 P(阳|病) 是'患病者中多少被检出'，方向与你要问的'检出后有多大可能患病'正好相反，不能混用。改一个条件：换到患病率 10% 的高危人群，同样的检测给出的阳性可信度就大幅上升——先验不同，同一证据把结论推向不同位置。\",\"d06\":\"网页每次都重新查数据库太慢，所以把结果的副本存起来，下次直接返回——这是缓存。但数据库里的数据会变：用户改了头像，缓存里还是旧图，于是需要'失效'，即决定副本何时作废并重新回源头取。难点在于副本和源头是两份数据，你并不总知道源头何时变了。常见做法有两种：给副本设定生存时间（TTL），到期自动作废，代价是到期前用户可能看到旧数据；或者在写入数据时顺手删掉相关缓存，下次读取被迫回源，代价是写路径更复杂，分布式环境下'先改库还是先删缓存'的顺序还要小心处理。改一个条件看结果：商品页允许几分钟延迟，TTL 就够用；账户余额要求实时，就只能少缓存或写后立即失效。所以缓存失效公认麻烦——难的不是删除本身，而是知道在什么时机、以什么范围删。\",\"v08\":\"Little's law connects three averages in any stable queue: L = λW. L is the average number of items in the system, λ the arrival rate, W the average time each item spends waiting plus being served. The multiplication is a stock–flow identity: items per hour times hours per item equals items present on average. Check it at a restaurant: 30 diners arrive per hour, each stays half an hour, so on average 15 people are inside — 30 × 0.5 = 15. The law is bookkeeping, not an assumption about distributions: know any two quantities, compute the third. Its one requirement is stability — inflow and capacity must balance. If the kitchen serves only 20 per hour while 30 arrive, the queue grows without bound, W climbs toward infinity, and the steady-state premise fails. To shrink the crowd inside, cut W or λ — that's the law's practical use.\",\"v06\":\"Deadlock: two threads each hold a resource and wait forever for the other's, forming a cycle. Thread A locks file 1, then wants file 2; thread B locks file 2, then wants file 1. Neither crashes; each simply waits for a release that never comes, so both stall permanently. It isn't a bug in either thread alone — the allocation pattern itself is stuck. Deadlock needs four conditions at once: mutual exclusion, holding one resource while requesting another, resources that can't be forcibly reclaimed, and a circular wait. Remove any one and deadlock becomes impossible. The cheapest fix targets the cycle: require all threads to acquire locks in one global order, say always 1 before 2. Then B can't hold 2 while wanting 1; the circle breaks and at worst someone waits briefly. Databases use the harsher option: detect a cycle and abort one transaction.\",\"d02\":\"平均数只告诉你数据中心在哪，不告诉你数据铺得多开。两个班平均分都是 70：一个班人人 68–72，另一个班从 30 到 100 都有——平均一样，稳定程度天差地别。方差量的就是这个铺开程度：先把每个数据减去平均数得到偏差，把偏差平方，再取平均，公式是各数据与均值之差的平方的平均。为什么要平方：直接求和会正负抵消，偏差 −2 和 +2 相加成零，看起来毫无波动；平方后全变正，波动才显形，而且大偏差被放得更重，极端值的影响不会被平均值稀释掉。跑一个数：数据 68、70、72，均值 70，偏差 −2、0、2，平方后 4、0、4，方差 (4+0+4)/3 = 8/3。注意平方让单位变成'分的平方'，取平方根得到标准差，才和原数据同单位、能直观比较。\",\"v03\":\"长颈鹿的脖子不是'够不着树叶所以越伸越长'——个体努力改变不了基因。真实过程分三步：同一代里脖子本来有长有短，变异是随机产生的，不是环境逼出来的；旱季低处叶子吃光时，长颈个体吃得更多、活下来并留下更多后代，环境在这里只做筛选，不做改造；长短能遗传，长脖子后代中长的比例更高，一代代累积，种群整体脖长的占比上升。变化发生在种群的构成上，不是某个个体在一生中变身。改一个条件：若气候变湿、低处食物充足，长短个体繁殖率相近，脖长就不会朝任何方向变化——选择压力变了，趋势随之消失。同一机制迁移到细菌：抗生素没有'教会'细菌抗药，而是杀死了不带抗药基因的个体，抗药个体的后代于是占据整个种群。\",\"d03\":\"正反馈指输出的效果被送回输入端、并朝同一方向加强它：越吵→拾音越多→更吵。把麦克风对准音箱就能听见：一点环境声被放大、从音箱播出、又被麦克风拾到、再放大，几秒内变成刺耳啸叫。这就是放大——变化不是匀速推进，而是每绕一圈就加快一次，像滚雪球。'正'与'负'说的是方向：正反馈加剧偏离，负反馈拉回原位（空调恒温）；'好'与'坏'是另一维度的评价，两者不挂钩。存款复利、爆款传播、谣言扩散都是正反馈，评价却各不相同。放大也不会无限持续：啸叫最终顶到功放上限或烧掉喇叭；麦克风拿开、回路断开，增长立刻停止。所以判断一个正反馈系统看两点：回路是否闭合、增益是否够大——这决定它会不会失控；限制在哪里——这决定它停在哪里。\",\"d08\":\"Compound growth means gains earn gains: each period grows by a percentage of the new, larger total, so value multiplies by (1+r)^n. At 10% a year, $1,000 becomes $1,100, then $1,210 — year two's gain is bigger because it's computed on a bigger base. Over 50 years, $1,000 grows to about $117,000, while $10,000 grows to about $1.17 million. The multiple is identical (×117); the absolute gain differs, because the formula multiplies whatever you start with: gain = P × ((1+r)^n − 1). That's why the starting amount matters — the same rate and time yield ten times the dollars from ten times the seed, which is why early saving gets so much emphasis. Change one condition: stretch 50 years to 60 and the multiplier jumps from 117 to about 304. Because n sits in the exponent, small changes in rate or time swing the outcome enormously.\",\"d01\":\"掷一枚硬币 10 次得到 9 正 1 反。似然回答的是：在某个假设下（比如'硬币公平'），出现这批数据的可能性有多大——公平硬币的似然是 C(10,9)×0.5¹⁰ ≈ 0.0098；换成'正面概率 0.9'的假设，似然是 10×0.9⁹×0.1 ≈ 0.387，高得多。注意方向：数据固定不动，假设在变，似然随假设变。它不是'这个假设为真的概率'——所有假设的似然加起来不必等于 1。后验概率才回答'看到数据后，这个假设为真的概率多大'，由贝叶斯公式从先验和似然算出：后验 ∝ 似然 × 先验。所以 0.9 的硬币似然虽高，若你事先几乎不可能遇到这种硬币（先验极低），后验仍然很小。一句话：似然是'假设为真时，数据像不像'，后验是'数据在手后，假设有多可信'，前者是计算后验的原料。\",\"v01\":\"过拟合就像学生把练习题答案全部背下来：模拟卷满分，换一套新题就露馅——他记住的是题面与答案的对应，不是解题规律。机器学习同理：模型在训练数据上追求每个点都猜对，连数据里的噪声和巧合也当成规律记住，于是训练集成绩极高，遇到新数据反而很差。举个例子：给身高体重散点画一条直线已能反映大致趋势；若强行用高次曲线穿过每一个点，连两个因测量误差而偏离的点也被曲线绕过去照顾，这条弯弯曲曲的线对新的人预测更糟。怎么辨认：训练成绩好而测试成绩差，两者的差距就是过拟合的信号。改一个条件：数据变多时，随机噪声相互抵消，模型更难记住个别巧合，过拟合减轻；数据少而模型复杂时最容易发生。对策由此而来：加数据、降低模型复杂度，或用验证集提前叫停训练。\"}",
+  "usage": {
+    "input_tokens": 2695,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 9885,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2695,
+      "outputTokens": 9885,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.2606,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 191.426
+}

@@ -1,0 +1,348 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-7",
+  "rep": 0,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "用硬币观测连接似然与候选假设比较。",
+        "对比似然与后验，明确条件方向区别。",
+        "没有给出正确的简单数值计算。",
+        "没有改变具体条件并说明结果变化。",
+        "没有迁移到表面不同的新情境。",
+        "条件方向和贝叶斯关系正确，无实质事实错误。"
+      ],
+      "evidence": [
+        "比比看数据跟谁更搭",
+        "它以假设为条件，算的是数据的概率",
+        "",
+        "",
+        "",
+        "相乘再归一化，就得到看数据后的信任"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "110001",
+      "reasons": [
+        "Connects equal class averages to distinguishing their spread.",
+        "Distinguishes variance from standard deviation by square root and units.",
+        "Correct calculation, but omits population versus unbiased sample variance distinction.",
+        "Outlier caveat lacks a specific controlled change and resulting comparison.",
+        "No surface-different situation applies the same relationship.",
+        "Arithmetic and units are correct; no material factual errors."
+      ],
+      "evidence": [
+        "Variance is the number that captures this difference in spread",
+        "take the square root to get the standard deviation",
+        "",
+        "",
+        "",
+        "variance = (100 + 0 + 100)/3 ≈ 67"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "用繁荣和挤兑说明不能凭正反馈判断好坏。",
+        "麦克风与空调形成对照，区分加强和削弱原因。",
+        "正确解释闭环增强及每圈增益大于1的放大条件。",
+        "没有改变原案例的明确条件并比较结果。",
+        "迁移到股价和挤兑，指出共同的自我加强机制。",
+        "正确区分方向与好坏，并说明饱和边界。"
+      ],
+      "evidence": [
+        "正反馈不区分方向，它只是一种结构而非价值判断",
+        "对照负反馈：空调到设定温度就停机，结果削弱原因",
+        "放大的关键在每圈增益大于1：变化不减反增",
+        "",
+        "恐慌挤兑加速银行倒闭，放大崩坏——机制相同",
+        "它也不能无限放大，资源总有上限"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111100",
+      "reasons": [
+        "Connects afternoon choices to comparing the best available alternative.",
+        "Contrasts forgone earnings with summing all rejected alternatives.",
+        "Correctly derives opportunity cost from the best forgone available option.",
+        "Removes the job option while retaining reading, changing opportunity cost.",
+        "No surface-different situation applies the same deciding relationship.",
+        "Basketball example incorrectly assigns reading’s opportunity cost after switching activities."
+      ],
+      "evidence": [
+        "而是它和你能做的最好替代相比哪个更好",
+        "机会成本不是三项加起来，而只是次优选择的价值",
+        "如果你本来最想接那单活，代价就是300元",
+        "如果兼职根本不可得，成本就只是锻炼或休息能带给你的好处",
+        "",
+        "你若改去打球，看书的机会成本就换成了球赛的乐趣"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "将阳性检测问题连接到患病概率判断。",
+        "区分检测灵敏度与阳性后的患病概率。",
+        "人数计算正确，解释分子分母及条件方向。",
+        "仅降低患病率，正确说明后验概率下降。",
+        "没有应用于表面不同的新情境。",
+        "假设明确，计算正确，无实质事实错误。"
+      ],
+      "evidence": [
+        "检测阳性，得病的概率有多大？",
+        "P(阳性|患病)是检测的性能，P(患病|阳性)才是你要的答案",
+        "阳性共198人，真患病只有99人，所以阳性者患病概率是99/198=50%。",
+        "若患病率降到千分之一，同样的阳性结果患病概率只剩约9%",
+        "",
+        "设患病率1%，灵敏度99%，健康人误报率也是1%。"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111101",
+      "reasons": [
+        "Connects stale prices to choosing freshness versus speed.",
+        "Contrasts write-triggered invalidation with time-triggered expiry.",
+        "Explains mutation, stale copies, deletion, refetching, and expiry correctly.",
+        "Changes expiry duration with cached prices fixed; explains consequences.",
+        "No surface-different situation applies the same deciding relationship.",
+        "No material errors or claims of perfect TTL consistency."
+      ],
+      "evidence": [
+        "The trade-off never changes: freshness versus speed.",
+        "give every copy an expiry time, say 60 seconds",
+        "delete the cached entry and let the next request re-fetch",
+        "Expiry too long leaves stale prices for minutes",
+        "",
+        "a copy can go stale"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110000",
+      "reasons": [
+        "Concrete example helps decide whether association supports a causal claim.",
+        "Heat causing both outcomes contrasts with their noncausal association.",
+        "Temperature adjustment alone cannot guarantee disappearance or establish confounding.",
+        "Restricting temperature does not justify the asserted disappearance of association.",
+        "No surface-different situation applies the same deciding relationship.",
+        "Presents hypothetical seasonal patterns and adjustment outcomes as established facts."
+      ],
+      "evidence": [
+        "前者推不出后者。冰淇淋销量高的月份，溺水事故也多",
+        "夏天热，既让人多买冰淇淋，也让人多去游泳",
+        "相关消失，说明它原本是混杂造出来的假因果",
+        "只比较同样炎热的那些天，冰淇淋卖多卖少与溺水就基本无关",
+        "",
+        "冰淇淋销量高的月份，溺水事故也多"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "011101",
+      "reasons": [
+        "Explains outcomes but connects no concrete problem to a decision.",
+        "Contrasts compound and simple interest by the amount earning interest.",
+        "Correct formula, annual units, and two-year calculation demonstrate reinvested gains.",
+        "Changes starting amount while holding rate and duration fixed.",
+        "No surface-different situation applies the shared relationship.",
+        "Calculations are correct; fixed-rate examples make no guaranteed-return claim."
+      ],
+      "evidence": [
+        "",
+        "compound interest pays on the running total",
+        "¥10,000 becomes ¥11,000, then ¥12,100",
+        "Over 30 years at 10%, both ¥10,000 and ¥1,000",
+        "",
+        "grow about 17.4×"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "101110",
+      "reasons": [
+        "房价预测问题连接到用未见数据判断模型可靠性。",
+        "未给出容易混淆的非过拟合模型案例。",
+        "正确解释拟合噪音导致训练好而新数据预测差。",
+        "增加房价数据，保持场景不变，解释噪音更易识别。",
+        "迁移到学生背题，指出记巧合而非规律的共同关系。",
+        "学生类比说明了映射，但未说明类比失效边界。"
+      ],
+      "evidence": [
+        "留一部分数据不让模型见，考它没背过的题",
+        "",
+        "连噪音都拟合了；看训练数据它近乎满分",
+        "见过的房子越多，急售的便宜越像噪音而非规律",
+        "这像学生把往年卷子逐题背下，模拟考满分，高考换个数字就懵。",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "101010",
+      "reasons": [
+        "Connects search-result errors to choosing which metric matters.",
+        "No confusable near-case with a deciding feature is provided.",
+        "Correct ratios distinguish returned results from all relevant papers.",
+        "Query tightening does not guarantee the claimed metric changes.",
+        "Transfers error-cost reasoning to spam filtering and disease screening.",
+        "Unconditionally claims query changes guarantee precision and recall tradeoffs."
+      ],
+      "evidence": [
+        "Which matters more depends on the cost of each error",
+        "",
+        "Precision = 8/10",
+        "",
+        "a disease screening test needs recall",
+        "precision rises while recall falls"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111010",
+      "reasons": [
+        "将主动努力的误解连接到识别自然选择的条件。",
+        "长颈鹿遗传差异与练出肌肉形成对照，关键是遗传性。",
+        "正确串联遗传差异、繁殖差异与跨代频率变化。",
+        "湿润条件可减弱选择，但未说明为何会反向。",
+        "将遗传条件应用于肌肉训练，解释为何不构成自然选择。",
+        "出生时携带并非必要条件，生殖系新突变也可遗传。"
+      ],
+      "evidence": [
+        "识别自然选择就看三件事：可遗传的差异、环境造成的繁殖差别、种群占比随之改变。",
+        "练出的肌肉传不给孩子",
+        "一代代过去，长脖基因在种群中占比升高",
+        "若气候转湿、矮叶充足，长脖优势消失，选择压力随之减弱甚至反向。",
+        "练出的肌肉传不给孩子",
+        "只有出生就携带的变异才有资格被选"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111011",
+      "reasons": [
+        "Connects uncertain network outcomes to deciding whether retries are safe.",
+        "Contrasts setting status with adding money; repeated effects decide.",
+        "Explains repeated state effects and server deduplication of logical operations.",
+        "No controlled change to an original case with fixed conditions.",
+        "Applies duplicate prevention to payments using keys per logical operation.",
+        "Correct state-based definition; no material factual errors or misleading analogy."
+      ],
+      "evidence": [
+        "Idempotency is what lets you retry boldly",
+        "'Add ¥100 to the balance' is not: one retry double-charges.",
+        "the server remembers processed keys",
+        "",
+        "a unique token per logical operation",
+        "leave the system in the same final state"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111111",
+      "reasons": [
+        "用偏硬币连接不确定性与预测正面的判断。",
+        "区分概率分布的熵与单次结果的属性。",
+        "解释惊奇度加权平均，给出正确比特计算。",
+        "保持硬币两种结果，改变概率并说明熵下降。",
+        "迁移到三面骰子，指出等可能选择数量关系。",
+        "计算正确，明确熵属于分布而非单次结果。"
+      ],
+      "evidence": [
+        "你早猜到多半是正面",
+        "熵是概率分布的属性，不是某次结果的属性",
+        "公平硬币：概率 1/2、1/2，熵正好 1 比特",
+        "偏硬币：正面 0.9、反面 0.1，熵约 0.47 比特",
+        "等可能的选择越多，越难猜",
+        "熵是概率分布的属性，不是某次结果的属性"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects frozen threads to choosing lock ordering as a fix.",
+        "Contrasts circular waiting with ordinary waiting at the first lock.",
+        "Correctly derives deadlock from exclusive holdings and circular waits.",
+        "Changes lock order with the same threads and resources, preventing cycles.",
+        "No surface-different situation applies the shared relationship.",
+        "Correct mechanism and boundaries; resource example introduces no misleading analogy."
+      ],
+      "evidence": [
+        "The standard fix is lock ordering",
+        "instead of grabbing the second — the circle never forms",
+        "A waits for B to release the log; B waits for A",
+        "every thread must take the account lock before the log lock",
+        "",
+        "resources cannot be forcibly taken away"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "100000",
+      "reasons": [
+        "把楼道照明筹资问题连接到判断供给不足。",
+        "冰淇淋是鲜明反例，未提供易混淆的近例。",
+        "把搭便车激励直接推成无人供给，结论过强。",
+        "未改变原案例的关键条件并解释结果变化。",
+        "列举税收和物业费，未解释共同作用关系。",
+        "断言人人搭便车导致零供给，与事实边界冲突。"
+      ],
+      "evidence": [
+        "判断一件东西会不会供给不足，先看它是否兼具这两个特征",
+        "对比私人物品就清楚：一支冰淇淋",
+        "结果人人这么算，钱凑不齐，灯就装不成",
+        "",
+        "",
+        "却没有谁愿意单独供给"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101100",
+      "reasons": [
+        "Connects occupancy estimation to two easier measurements.",
+        "No confusable near-case with a deciding feature.",
+        "Correct formula, calculation, units, and matching system-time scope.",
+        "Doubles visit duration while holding arrivals fixed; occupancy correctly doubles.",
+        "No surface-different application identifying the shared relationship.",
+        "Stability alone omits required matching boundaries and finite averages."
+      ],
+      "evidence": [
+        "compute how full a system gets from two easier measurements",
+        "",
+        "customers/minute × minutes = customers",
+        "L doubles to 40 with unchanged arrivals",
+        "",
+        "stability being the only requirement"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-7/0.call.json",
+  "prompt_sha256": "b95d46d976d41650f5e86b180e23bc33b6e912fcc98ce8b5b3c006196d0bdfc7",
+  "isolated_repair_calls": [
+    "0.call.repair-d01-0.call.json",
+    "0.call.repair-d02-0.call.json",
+    "0.call.repair-d03-0.call.json",
+    "0.call.repair-d04-0.call.json",
+    "0.call.repair-d05-0.call.json",
+    "0.call.repair-d06-0.call.json",
+    "0.call.repair-d07-0.call.json",
+    "0.call.repair-d08-0.call.json",
+    "0.call.repair-v01-0.call.json",
+    "0.call.repair-v02-0.call.json",
+    "0.call.repair-v03-0.call.json",
+    "0.call.repair-v04-0.call.json",
+    "0.call.repair-v05-0.call.json",
+    "0.call.repair-v06-0.call.json",
+    "0.call.repair-v07-0.call.json",
+    "0.call.repair-v08-0.call.json"
+  ]
+}

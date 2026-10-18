@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "e699f82387cd098d18263f9355d71830d901289e58369445bc2a7749869dfd0f",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"011101\",\"reasons\":[\"Explains outcomes but connects no concrete problem to a decision.\",\"Contrasts compound and simple interest by the amount earning interest.\",\"Correct formula, annual units, and two-year calculation demonstrate reinvested gains.\",\"Changes starting amount while holding rate and duration fixed.\",\"No surface-different situation applies the shared relationship.\",\"Calculations are correct; fixed-rate examples make no guaranteed-return claim.\"],\"evidence\":[\"\",\"compound interest pays on the running total\",\"¥10,000 becomes ¥11,000, then ¥12,100\",\"Over 30 years at 10%, both ¥10,000 and ¥1,000\",\"\",\"grow about 17.4×\"]}]}",
+  "usage": {
+    "input_tokens": 23478,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 295,
+    "reasoning_output_tokens": 139
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 45.357
+}

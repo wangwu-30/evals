@@ -1,0 +1,348 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-3",
+  "rep": 1,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110101",
+      "reasons": [
+        "固定已观察数据，用似然比较哪个假设更支持数据。",
+        "给出似然案例，并以条件方向区分易混的后验。",
+        "缺少公式任务要求的简单数值计算。",
+        "保持数据和似然比较，改变先验可改变后验排序。",
+        "没有应用到表面不同的新情境并说明共同关系。",
+        "正确区分似然、后验和证实，未见实质错误。"
+      ],
+      "evidence": [
+        "这两个数就是似然，用来比较假设",
+        "注意它不是「假设为真的概率」，那才归后验概率管。",
+        "",
+        "两个假设先验相同时，似然大者后验也大；先验悬殊时，高似然未必赢。",
+        "",
+        "后验 = 似然 × 先验 ÷ 数据总概率"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "110000",
+      "reasons": [
+        "Connects identical averages to deciding how widely scores vary.",
+        "Contrasts variance with standard deviation using squared versus original units.",
+        "Incorrect variance calculation; omits population versus unbiased sample distinction.",
+        "Mean shifts substantially, contradicting the claimed minimal shift.",
+        "No surface-different situation applies the same relationship.",
+        "Variance 2500 is incorrect; the mean-shift claim is misleading."
+      ],
+      "evidence": [
+        "The average alone can't tell them apart",
+        "the standard deviation — back in original units",
+        "{0,50,100} gives variance 2500",
+        "the mean barely shifts",
+        "",
+        "{0,50,100} gives variance 2500"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111010",
+      "reasons": [
+        "以啸叫连接具体问题和回路方向判断。",
+        "对比啸叫与恒温，区分加强和抵消变化。",
+        "正确解释输出回输、同向增强及增益条件。",
+        "话筒拿远未必立即停止，取决于增益变化。",
+        "复利应用同一关系：结果继续加强原因。",
+        "将拿远话筒必然立即止啸说成事实，过强。"
+      ],
+      "evidence": [
+        "判断任何回路只问一句：这个结果会不会加强原因本身？",
+        "负反馈把系统拉回原位，比如空调恒温。",
+        "输出绕回输入，且方向与原变化相同",
+        "断电或把话筒拿远，啸叫立刻停止。",
+        "存款复利也是正反馈——利息生出利息。",
+        "断电或把话筒拿远，啸叫立刻停止。"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111111",
+      "reasons": [
+        "Connects afternoon choices to comparing value against opportunity cost.",
+        "Contrasts best forgone option with counting all forgone options.",
+        "Correctly identifies the single best forgone alternative and applies it.",
+        "Changes exam timing while keeping the hike fixed; cost rises.",
+        "Transfers next-best forgone use of time to evening scrolling.",
+        "Accurate beginner explanation; examples are hypothetical and contain no analogy."
+      ],
+      "evidence": [
+        "This turns decisions into comparisons",
+        "the single best option you gave up — not all of them",
+        "whichever of nap or study you would most have wanted",
+        "the same hike now costs much more",
+        "scrolling costs whatever you'd second-most have done",
+        "You have a free afternoon: nap, hike, or study"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "用阳性是否代表患病的问题引出后验概率判断。",
+        "对比真阳性与假阳性，以实际患病状态区分。",
+        "人数计算正确，解释公式及两种条件概率的区别。",
+        "固定检测性能，降低患病率，正确得到约9%。",
+        "没有迁移到表面不同的新情境。",
+        "教学假设清楚，计算正确，无实质事实错误。"
+      ],
+      "evidence": [
+        "阳性等于患病吗？",
+        "健康的9900人按1%也有约99人假阳性",
+        "阳性共约198人，其中真患病的99人，约占一半",
+        "检测没变，结论大变",
+        "",
+        "一项检测：患病的人99%显阳性，健康的人也有1%误显阳性。"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101001",
+      "reasons": [
+        "Connects stale profile data to deciding when to discard cached copies.",
+        "No confusable near-case with a deciding feature is provided.",
+        "Explains stale copies, TTL expiration, and explicit invalidation correctly.",
+        "No controlled change to the original case holds other conditions fixed.",
+        "No surface-different situation applies the same deciding relationship.",
+        "Mechanism is accurate; acknowledges staleness and race conditions."
+      ],
+      "evidence": [
+        "deciding when to throw away or refresh the copy",
+        "",
+        "delete the cache key so the next read refetches",
+        "",
+        "",
+        "fresher, but more wiring and race conditions to handle"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110010",
+      "reasons": [
+        "Concrete misleading association motivates checking common causes before causal attribution.",
+        "Contrasts association with causation using a shared temperature cause.",
+        "Controlling temperature alone cannot establish the claimed causal explanation.",
+        "Winter promotion changes multiple conditions without specifying what stays fixed.",
+        "Transfers the common-cause relationship to shoe size and reading ability.",
+        "Presents hypothetical statistics as observations and overstates what comparisons prove."
+      ],
+      "evidence": [
+        "看到相关先问：有没有第三个因素在背后同时推动两者？",
+        "共同原因（此处是气温）",
+        "说明关联是气温带来的",
+        "若冬天促销冰淇淋而溺水不涨",
+        "儿童鞋码与阅读能力相关，共同原因是年龄",
+        "某城市统计发现：冰淇淋卖得越多，溺水的人越多"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects investment growth to choosing earlier versus larger starting investments.",
+        "Contrasts compounding with unchanged earnings; gains enlarge the earning base.",
+        "Correctly calculates yearly earnings using annual percentages and enlarged principal.",
+        "Changes principal while fixing rate and period; absolute earnings increase.",
+        "No surface-different situation explicitly applies the shared relationship.",
+        "Calculations and recovery claim are correct; returns are framed conditionally."
+      ],
+      "evidence": [
+        "starting earlier can beat starting bigger",
+        "year two earns 10% of 1100 — 110, not 100",
+        "year one earns 100",
+        "both at 10% gain 100 versus 10,000 in year one",
+        "",
+        "a 50% drop needs a 100% gain to recover"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "101000",
+      "reasons": [
+        "用背题失效说明为何必须检查新数据表现。",
+        "没有给出易混淆的近似情形及区分特征。",
+        "正确解释记住细节和噪声导致泛化落差。",
+        "增加数据不必然迫使模型抓规律或缩小落差。",
+        "没有迁移到新的不同情境并指出共同关系。",
+        "把增加数据必然改善泛化说成确定因果。"
+      ],
+      "evidence": [
+        "不能只看训练成绩",
+        "",
+        "记住了这批数据的细节和噪声，而不是掌握了普遍规律",
+        "数据多了以后，细节记不过来，模型被迫抓规律，落差随之缩小。",
+        "",
+        "数据多了以后，细节记不过来，模型被迫抓规律，落差随之缩小。"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111010",
+      "reasons": [
+        "Connects search reliability and missed results to metric choice.",
+        "Contrasts returned-result correctness with coverage, distinguished by denominators.",
+        "Correct calculations explain both denominators and their meanings.",
+        "Query changes do not guarantee the claimed performance changes.",
+        "Screening transfers recall's missed-relevant-item relationship to missed cancer cases.",
+        "Asserts unjustified query effects and an inevitable precision-recall tradeoff."
+      ],
+      "evidence": [
+        "it answers \"can I trust this list?\"",
+        "of everything relevant out there, how much was found",
+        "Precision = 12/20 = 60%",
+        "searching only \"cat\" raises precision",
+        "better a follow-up test than a missed case",
+        "The two push against each other"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "以长颈鹿脖长问题区分环境筛选与主动努力解释。",
+        "对比自然选择与用进废退，指出种群而非个体改变。",
+        "串联原有变异、存活繁殖差异及后代基因比例变化。",
+        "保持长颈鹿差异，改为低处食物并解释优势变化。",
+        "迁移到抗药细菌，明确原有变异经存活繁殖被筛选。",
+        "将未经确证的干旱筛选故事陈述为长颈鹿演化历史。"
+      ],
+      "evidence": [
+        "方向来自环境的筛选，不是生物的意愿或努力",
+        "个体从未改变自己，被改变的是种群的基因构成",
+        "幸存者留下更多后代，长脖基因在下一代的比例升高",
+        "食物都在低处时，长脖失去优势",
+        "本来携带抗药基因的少数个体存活并繁殖",
+        "干旱时低处叶子吃光，只有长脖个体够得着高处，活得更久"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111101",
+      "reasons": [
+        "Connects uncertain timeout outcomes to deciding how to handle retries.",
+        "Contrasts setting status with incrementing balance; repeated effects decide.",
+        "Explains retries, unchanged state, duplicate increments, and key-based deduplication.",
+        "Changes retry frequency while retaining the distributed-request setting.",
+        "Lists HTTP applications without explaining their shared deciding relationship.",
+        "Examples and retry reasoning contain no material factual errors."
+      ],
+      "evidence": [
+        "so clients and frameworks retry",
+        "\"Add 100 to the balance\" is not: a retry pays twice.",
+        "\"Set order status to paid\" is idempotent",
+        "on a zero-retry network you'd need none of this",
+        "",
+        "the request may have succeeded after the sender gave up"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110100",
+      "reasons": [
+        "用猜硬币的具体问题说明熵可比较事前不确定性。",
+        "对比正常与确定硬币，概率是否集中是判别依据。",
+        "缺少公式、数值计算及分布与单个序列的区别。",
+        "固定结果集合，概率从二分之一趋零使熵下降。",
+        "没有迁移到表面不同的新情境。",
+        "熵不等于指明结果实际所需的是非问题个数。"
+      ],
+      "evidence": [
+        "信息熵把这种「事前不确定」变成数",
+        "概率越摊得平，熵越大；概率全押在一个结果上，熵为零",
+        "",
+        "概率从1/2推向0时熵同样下降——全押反面也是确定",
+        "",
+        "含义是「用是/否问题指明结果所需的个数」"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101111",
+      "reasons": [
+        "Connects a concrete lock hang to choosing an ordering fix.",
+        "No concrete confusable near-case with a deciding feature.",
+        "Correctly explains circular waiting and the four necessary conditions.",
+        "Changes acquisition order, preserving resources, and explains cycle prevention.",
+        "Transfers the same waiting relationship to database row locks.",
+        "Resource example and prevention mechanism are factually sound."
+      ],
+      "evidence": [
+        "the usual fix is a global ordering",
+        "",
+        "Each holds what the other needs and waits forever",
+        "everyone acquires file 1 before file 2 — so no circle can form",
+        "The same picture is two database transactions",
+        "exclusive resources, holders keeping them while waiting"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "110010",
+      "reasons": [
+        "将照明供给不足连接到税收分摊决策。",
+        "路灯与收费公路对照，明确排他性差异。",
+        "将搭便车错误推导为必然无人建设。",
+        "未改变原路灯案例的条件并说明其余固定。",
+        "将排他性关系迁移到广播电视加密收费。",
+        "断言无人建设，混淆供给不足与零供给。"
+      ],
+      "evidence": [
+        "这解释了为什么路灯、国防常由税收统一提供",
+        "收费公路能设闸拦人，就不是公共物品",
+        "人人都这么算，结果路灯没人建",
+        "",
+        "广播电视加上加密收费后，就从公共物品变成了可以收费的商品",
+        "人人都这么算，结果路灯没人建"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111011",
+      "reasons": [
+        "Connects difficult cycle-time measurement to calculating it from observable quantities.",
+        "Contrasts stable systems with overloaded queues; stability decides applicability.",
+        "Correct calculation, units, system boundaries, and distribution-independent steady-state conditions.",
+        "No explicit change to the coffee-shop case with other conditions fixed.",
+        "Factory example applies the same inventory-throughput-time relationship.",
+        "Claims and arithmetic are correct; examples have clear illustrative framing."
+      ],
+      "evidence": [
+        "cycle time W is often hard to instrument",
+        "if arrivals outrun service, the queue grows without bound",
+        "so about 30 people are inside on average",
+        "",
+        "a factory computes it from work-in-progress and throughput",
+        "as long as the system is stable"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-3/1.call.json",
+  "prompt_sha256": "6ceb30e85b144fb49e5fd5e7ea6281875c892c797258fe85517cff8d349f090f",
+  "isolated_repair_calls": [
+    "1.call.repair-d01-0.call.json",
+    "1.call.repair-d02-0.call.json",
+    "1.call.repair-d03-0.call.json",
+    "1.call.repair-d04-0.call.json",
+    "1.call.repair-d05-0.call.json",
+    "1.call.repair-d06-0.call.json",
+    "1.call.repair-d07-0.call.json",
+    "1.call.repair-d08-0.call.json",
+    "1.call.repair-v01-0.call.json",
+    "1.call.repair-v02-0.call.json",
+    "1.call.repair-v03-0.call.json",
+    "1.call.repair-v04-0.call.json",
+    "1.call.repair-v05-0.call.json",
+    "1.call.repair-v06-0.call.json",
+    "1.call.repair-v07-0.call.json",
+    "1.call.repair-v08-0.call.json"
+  ]
+}

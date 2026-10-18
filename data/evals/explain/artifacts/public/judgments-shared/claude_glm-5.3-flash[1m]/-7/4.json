@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-7",
+  "rep": 4,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "100000",
+      "reasons": [
+        "Uses coin evidence to discuss which hypothesis deserves belief.",
+        "Misstates likelihood's defining fixed-data viewpoint.",
+        "Reverses likelihood viewpoint; double-headed coin cannot produce seven heads.",
+        "No explicit controlled change to the original case.",
+        "No surface-different application of the relationship.",
+        "Likelihood direction and double-headed example contain material errors."
+      ],
+      "evidence": [
+        "不单独决定该信哪个",
+        "似然固定假设看数据",
+        "似然固定假设看数据",
+        "",
+        "",
+        "若「双面都是正面」的似然更高"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100101",
+      "reasons": [
+        "Shows why equal averages cannot distinguish different spreads.",
+        "No confusable near-case with a deciding distinction.",
+        "Correct calculation, but population versus sample divisor distinction is missing.",
+        "Changes one observation; other observations remain fixed; variance is correct.",
+        "No surface-different application.",
+        "Arithmetic and squared units are correct; squaring is not claimed unique."
+      ],
+      "evidence": [
+        "平均数看不出差别，方差就是补上这一点的量。",
+        "",
+        "",
+        "把 6 换成 20",
+        "",
+        "代价是单位变成「分的平方」"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111010",
+      "reasons": [
+        "Connects escalating noise to identifying an amplifying feedback loop.",
+        "Contrasts reinforcing feedback with corrective thermostat feedback.",
+        "Explains repeated amplification above unity and limiting saturation.",
+        "No explicit change to a condition in either original case.",
+        "Applies the reinforcing loop to falling prices and selling.",
+        "The recognition shortcut incorrectly treats any escalating phrase as feedback."
+      ],
+      "evidence": [
+        "麦克风对准音箱",
+        "负反馈把偏差往回拉",
+        "每绕一圈，偏差被乘上一个大于 1 的系数",
+        "",
+        "价格跌 → 触发抛售 → 价格更跌",
+        "看到「越……就越……」的句式，就找到了正反馈的环。"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111000",
+      "reasons": [
+        "Connects afternoon choices to valuing the best sacrificed option.",
+        "Distinguishes the best forgone alternative from summing alternatives.",
+        "Correctly derives costs from explicitly ranked alternatives.",
+        "Removing the gig does not establish studying has negligible value.",
+        "No surface-different application.",
+        "The negligible-cost conclusion lacks support from remaining alternatives."
+      ],
+      "evidence": [
+        "its opportunity cost is the value",
+        "not all the others added together",
+        "since the shift beats studying for you today",
+        "If the paid gig disappears, napping suddenly costs almost nothing.",
+        "",
+        "If the paid gig disappears, napping suddenly costs almost nothing."
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111000",
+      "reasons": [
+        "Connects a positive result to deciding actual disease probability.",
+        "Distinguishes sensitivity from disease probability after a positive result.",
+        "Correct hypothetical counts, normalization, conditional meanings, and posterior calculation.",
+        "Repeat-test calculation requires unstated conditional independence and unchanged accuracy.",
+        "No surface-different application.",
+        "Repeat-test posterior is asserted without necessary dependence assumptions."
+      ],
+      "evidence": [
+        "你查出阳性，真患病的概率是多少？",
+        "直觉说 99%，但要用贝叶斯公式把两类人数都算上。",
+        "99/5094 ≈ 1.9%",
+        "复检一次，先验换成 1.9%",
+        "",
+        "再得阳性会把概率推到约 28%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101000",
+      "reasons": [
+        "Connects stale prices to choosing cache freshness strategies.",
+        "No confusable near-case with an explicit deciding feature.",
+        "Explains source mutation, stale copies, expiry, and rebuilding.",
+        "No controlled condition change applied to the product-price case.",
+        "No surface-different application.",
+        "TTL alone does not guarantee the stated maximum staleness."
+      ],
+      "evidence": [
+        "customers see a stale price",
+        "",
+        "delete the cached entry so the next request rebuilds it",
+        "",
+        "",
+        "accept staleness for at most, say, 60 seconds"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects observed association to evaluating an intervention's causal effect.",
+        "Contrasts shared-temperature association with an actual causal change.",
+        "Correctly explains common causes and the intervention distinction.",
+        "Adding winter does not control temperature or necessarily weaken correlation.",
+        "No surface-different application.",
+        "Seasonal-control claim is incorrect; illustrative observations are presented as facts."
+      ],
+      "evidence": [
+        "如果禁止卖冰淇淋，溺水会减少吗？",
+        "共同原因（高温同时推高两者）",
+        "高温同时推高两者",
+        "把冬天数据也放进来，相关明显减弱",
+        "",
+        "混杂因素被部分控制了"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Explains how starting capital determines future amounts and widening gaps.",
+        "Contrasts compounding with the simple-growth numerical outcome.",
+        "Correct formula, reinvestment mechanism, period units, and numerical calculation.",
+        "Changes rate while retaining the ten-year horizon and growth relationship.",
+        "No surface-different application beyond money growth.",
+        "Hypothetical fixed-rate calculations and approximate doubling time are correct."
+      ],
+      "evidence": [
+        "exactly double the outcome",
+        "not $2,000",
+        "$1,000 growing at 10% a year becomes $2,594 in ten years",
+        "raise r from 10% to 15%",
+        "",
+        "at 10%, money doubles roughly every 7 years"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "101111",
+      "reasons": [
+        "Connects training success to deciding whether new-data performance is reliable.",
+        "No concrete confusable near-case distinguished from overfitting.",
+        "Explains fitting accidental patterns that fail to recur.",
+        "Increasing data implicitly retains the model and reduces accidental-pattern fitting.",
+        "Student example maps memorization to failure on changed questions.",
+        "Explains the analogy's mapping and limitation; core mechanism is correct."
+      ],
+      "evidence": [
+        "训练数据上表现极好，遇到新数据错误率猛增",
+        "",
+        "这些波动在新数据里并不重现",
+        "数据量增大，偶然模式难以普遍成立，过拟合自然减轻",
+        "练习册上 100 分，考试换个数字就不会做",
+        "类比有失效处：学生发现背错了会主动改"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111101",
+      "reasons": [
+        "Connects retrieval errors to choosing which metric matters.",
+        "Distinguishes precision and recall by their respective denominators.",
+        "Correctly calculates both metrics and explains their failure types.",
+        "Broadens retrieval with the corpus fixed and explains changed metrics.",
+        "Application examples do not actually apply the quantitative relationship.",
+        "Calculations are correct; precision decline is explicitly conditional."
+      ],
+      "evidence": [
+        "Which matters more depends on cost",
+        "precision is counted over what was returned",
+        "6/10 = 60%",
+        "you pull in the 2 missing relevant docs",
+        "",
+        "precision may drop to 50%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111100",
+      "reasons": [
+        "Enables recognizing population selection rather than purposeful individual improvement.",
+        "Contrasts existing resistance variation with purposeful acquisition.",
+        "Connects genetic variation, survival, reproduction, and changed population frequencies.",
+        "Removes pesticide while retaining costly resistance; explains possible reversal.",
+        "No surface-different application.",
+        "Unqualified lifelong genetic constancy and unsupported frequency figures are inaccurate."
+      ],
+      "evidence": [
+        "机制是差异繁殖，不是意愿",
+        "不是为对付农药而产生的",
+        "抗药个体存活并留下更多后代",
+        "停用农药后，维持抗性的代谢成本更高",
+        "",
+        "单只虫子的基因终生不变"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111000",
+      "reasons": [
+        "Connects lost responses and retries to avoiding duplicate charges.",
+        "Contrasts setting state with repeatedly incrementing a balance.",
+        "Explains repeated effects and remembered operation identifiers.",
+        "No explicit condition change applied to the retry case.",
+        "HTTP examples are a list, without a new worked application.",
+        "Deduplication is presented as sufficient without atomicity or retention boundaries."
+      ],
+      "evidence": [
+        "every retry risks a double charge",
+        "five calls add $50",
+        "the server remembers processed IDs",
+        "",
+        "",
+        "returns the stored result instead of executing again"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "101101",
+      "reasons": [
+        "Connects probability concentration to predicting unseen outcomes.",
+        "No confusable near-case distinguishing entropy from another quantity.",
+        "Correct entropy formula, bits, calculations, and distribution interpretation.",
+        "Changes coin probabilities while keeping the two outcomes fixed.",
+        "No surface-different application.",
+        "Distribution claims and entropy calculations are correct in the stated setting."
+      ],
+      "evidence": [
+        "看到结果之前有多难猜",
+        "",
+        "0.5×1+0.5×1=1 比特",
+        "把 90/10 逐渐挪向 50/50，熵单调上升",
+        "",
+        "概率分布越把质量集中在一处，越可预测"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111111",
+      "reasons": [
+        "Connects mutual lock waiting to deciding how acquisition ordering prevents deadlock.",
+        "Contrasts circular waiting with ordered acquisition that permits progress.",
+        "Explains exclusive holding, waiting, no preemption, and circular dependence.",
+        "Changes acquisition order while keeping the threads and locks fixed.",
+        "Applies cycle detection to database and operating-system resource graphs.",
+        "Conditions and prevention mechanism are correct for the stated lock example."
+      ],
+      "evidence": [
+        "the cheapest break is the circle",
+        "B can never hold what A needs while needing what A holds",
+        "holders keep them while waiting",
+        "always Lock 1, then Lock 2",
+        "build resource-allocation graphs and check for such cycles",
+        "Four conditions must hold at once"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "110000",
+      "reasons": [
+        "Connects shared lighting benefits to understanding contribution incentives.",
+        "Contrasts open lighting with access restricted by payment.",
+        "Misdefines nonrivalry through cost and asserts inevitable zero provision.",
+        "Replaces lighting with a different good instead of changing one condition.",
+        "National defense is listed without applying the deciding relationship.",
+        "Nonrivalry definition and automatic nonprovision claim contradict the oracle."
+      ],
+      "evidence": [
+        "每家都想「别人出钱，我照样享受」",
+        "刷卡才能进的小区门禁",
+        "多用一份不增加成本（非竞争）",
+        "改成刷卡才能进的小区门禁",
+        "",
+        "却谁都不装"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "100000",
+      "reasons": [
+        "Connects rate and duration measurements to inferring occupancy.",
+        "No confusable near-case distinguishing queue time from total system time.",
+        "Correct calculation, but later reasoning confuses system and queue boundaries.",
+        "Halving waiting time need not halve total occupancy or queue length.",
+        "Backlog and server examples are listed without applying matching boundaries.",
+        "Switches from total shop occupancy to queue length without justification."
+      ],
+      "evidence": [
+        "infer occupancy without counting",
+        "",
+        "cut wait time in half",
+        "the queue halves, from 5 to 2.5",
+        "",
+        "the queue halves, from 5 to 2.5"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-7/4.call.json",
+  "prompt_sha256": "c7580f6816a6f02540281d214be0556b128b45a6fd7e07e1634a9c55989e3c61",
+  "isolated_repair_calls": []
+}

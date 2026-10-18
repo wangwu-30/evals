@@ -1,0 +1,646 @@
+{
+  "judge_requested": "claude:glm-5.3-flash[1m]",
+  "judgments": [
+    {
+      "id": "d01-good",
+      "bits": "111111",
+      "reasons": [
+        "Ties likelihood to comparing hypotheses on fixed observed data.",
+        "Coin case plus posterior contrast; deciding feature is direction.",
+        "0.5²=0.25, 0.8²=0.64 correct; distinction from posterior stated.",
+        "Holds data fixed, changes p to 0.2, 0.04 reverses ranking correctly.",
+        "Defect detection reuses fixed-data hypothesis comparison with prior.",
+        "No errors; coins explicitly hypothetical."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "似然为0.25和0.64",
+        "似然变为0.04",
+        "固定同一批测试结果比较两种故障假设",
+        "假设两枚硬币正面率分别为0.5和0.8"
+      ]
+    },
+    {
+      "id": "d01-bad",
+      "bits": "000000",
+      "reasons": [
+        "No problem or decision linked to likelihood.",
+        "No case, near-case, or deciding feature given.",
+        "No derivation or any calculation present.",
+        "No condition changed or result explained.",
+        "No transfer to a new situation.",
+        "No evidence or boundaries; empty content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d02-good",
+      "bits": "111111",
+      "reasons": [
+        "Variance answers what a mean hides: which population spreads.",
+        "[1,3] vs [2,2] near-case; deciding feature is spread.",
+        "Deviations, squaring, /n averaging give 1 in squared units.",
+        "Mean and size fixed; [0,4] yields 4, correctly computed.",
+        "Machine consistency comparison shares the spread-of-records relation.",
+        "Sample n-1 and squaring-not-unique boundaries correct; no errors."
+      ],
+      "evidence": [
+        "measures spread that an average alone hides",
+        "just like [2,2], but only the first pair is spread out",
+        "squared deviations average to (1+1)/2=1",
+        "[0,4] gives (4+4)/2=4",
+        "comparing squared deviations of their complete delivery records",
+        "rather than being the only possible spread measure"
+      ]
+    },
+    {
+      "id": "d02-bad",
+      "bits": "000000",
+      "reasons": [
+        "No problem connected to variance's use.",
+        "No typical or confusable case.",
+        "No calculation, units, or distinction.",
+        "No changed condition or effect.",
+        "No transferred situation.",
+        "No content to be factually correct."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d03-good",
+      "bits": "111111",
+      "reasons": [
+        "Loop returning change explains amplification question directly.",
+        "Microphone loop vs air-conditioner reversal; direction not valence.",
+        "Growth needs per-loop gain condition; saturation caps increase.",
+        "Gain lowered with input fixed; squeal decays, correctly.",
+        "Rumor loop shares same-direction amplification with limits.",
+        "Labeled teaching hypothesis; direction-not-goodness boundary correct."
+      ],
+      "evidence": [
+        "正反馈会把初始变化沿回路送回来继续增强",
+        "温度升高后空调加强降温则是反向作用",
+        "若每圈回来的增量更大就增长；设备饱和会限制增长",
+        "只降低环路增益到衰减区，啸叫会减弱",
+        "传言引来关注、关注又扩大传言传播",
+        "教学假设：麦克风拾取扬声器声音后再次放大"
+      ]
+    },
+    {
+      "id": "d03-bad",
+      "bits": "000000",
+      "reasons": [
+        "No problem or amplification question addressed.",
+        "No cases or deciding feature.",
+        "No causal loop steps.",
+        "No sensitivity change.",
+        "No transfer.",
+        "No checkable content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d04-good",
+      "bits": "111111",
+      "reasons": [
+        "Names what choosing the walk costs for the afternoon.",
+        "Forgone $40 vs summed $65 and sunk fee; feature is best forgone.",
+        "Next-best feasible alternative sets cost, not cash spent.",
+        "Tutoring drops to $10 with walk fixed; cost falls correctly.",
+        "Factory reuses best-feasible-alternative relation; idle machine lacks it.",
+        "Hypothetical assumption flagged; sunk cost excluded; no errors."
+      ],
+      "evidence": [
+        "the best alternative you give up when choosing",
+        "choosing the walk forgoes $40, not $65",
+        "the feasible next-best choice sets the cost",
+        "the walk now has a lower opportunity cost",
+        "also sacrifices its best feasible alternative output",
+        "A non-refundable fee paid yesterday is a sunk cost"
+      ]
+    },
+    {
+      "id": "d04-bad",
+      "bits": "000000",
+      "reasons": [
+        "No decision context connected.",
+        "No case or near-case.",
+        "No derivation of the concept.",
+        "No sensitivity analysis.",
+        "No transfer.",
+        "Nothing to verify."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d05-good",
+      "bits": "111111",
+      "reasons": [
+        "Bayes answers how many positives are truly sick.",
+        "Direction contrast P(sick|+) vs P(+|sick) is deciding feature.",
+        "9 and 99 positives, 9/(9+99)≈8.3% matches oracle counts.",
+        "Performance fixed, prior to 50%; 90% recomputed correctly.",
+        "Spam filtering shares prior-plus-likelihood combination with caution.",
+        "Scenario explicitly hypothetical; no arithmetic or factual errors."
+      ],
+      "evidence": [
+        "回答阳性者中有多少真正患病",
+        "与“阳性者患病的概率”方向不同",
+        "9/(9+99)≈8.3%",
+        "450个真阳性和50个假阳性，后验变为90%",
+        "垃圾邮件过滤也把某个词在垃圾与正常邮件中的出现率",
+        "假设1000人中10人患病"
+      ]
+    },
+    {
+      "id": "d05-bad",
+      "bits": "000000",
+      "reasons": [
+        "No testing problem linked to Bayes.",
+        "No example or contrast.",
+        "No calculation or formula use.",
+        "No changed condition.",
+        "No transfer.",
+        "No substantive claims."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d06-good",
+      "bits": "111111",
+      "reasons": [
+        "Stale-cache problem tied to serving outdated prices.",
+        "Valid hit vs hit after origin change; mutation decides.",
+        "Invalidation forces fresh read; TTL only bounds staleness.",
+        "Traffic fixed, TTL shortened; stale window and reads trade off.",
+        "DNS shares origin-change/copy-lifetime relation; protocol differs.",
+        "No perfect-TTL claim; shop case explicitly imagined."
+      ],
+      "evidence": [
+        "prevents an old saved result from outliving the change",
+        "after the database price changes can return stale data",
+        "only bounds staleness and does not synchronize",
+        "reducing the stale window while increasing database reads",
+        "the same origin-change/copy-lifetime relation explains",
+        "Imagine a shop caching a product price"
+      ]
+    },
+    {
+      "id": "d06-bad",
+      "bits": "000000",
+      "reasons": [
+        "No invalidation problem connected.",
+        "No cases or deciding feature.",
+        "No mechanism steps.",
+        "No sensitivity change.",
+        "No transfer.",
+        "No factual content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07-good",
+      "bits": "111111",
+      "reasons": [
+        "Causation framed as intervention question for association.",
+        "Ice cream vs heat common cause; shared-driver path decides.",
+        "Two heat paths fully explain co-rise without causal link.",
+        "Weather and swimmers fixed; cutting ice cream sales won't cut drowning.",
+        "Reading/grades case reuses common-cause check before causal claim.",
+        "Explicitly hypothetical toy; matches oracle caution on inspection."
+      ],
+      "evidence": [
+        "因果还要求一个变化能在合适条件下改变另一个",
+        "共同的炎热天气可同时增加销量和游泳人数",
+        "两条路径足以产生一起上升，不需要冰淇淋导致溺水",
+        "保持天气和下水人数固定，只减少冰淇淋销售",
+        "也需检查家庭支持等共同原因",
+        "假设夏天冰淇淋销量和溺水事件同时增加"
+      ]
+    },
+    {
+      "id": "d07-bad",
+      "bits": "000000",
+      "reasons": [
+        "No distinction problem set up.",
+        "No example or confusable case.",
+        "No reasoning about confounding.",
+        "No condition change.",
+        "No new situation.",
+        "No content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08-good",
+      "bits": "111111",
+      "reasons": [
+        "Growth on accumulated amount answers why start matters.",
+        "Compound vs simple-growth contrast; feature is changing balance.",
+        "Formula with meanings; 100→110→121, second gain $11 correct.",
+        "Principal and periods fixed; 20% yields $144 correctly.",
+        "Bacteria share per-period multiplication; limits break assumption.",
+        "Labeled hypothetical, not promised return; no arithmetic errors."
+      ],
+      "evidence": [
+        "growth to the amount already accumulated",
+        "while compounding uses the changing balance",
+        "then $121 because the second gain is $11, not $10",
+        "changing the rate to 20% yields 100×1.2²=$144",
+        "also multiplies its current size each period",
+        "not a promised return"
+      ]
+    },
+    {
+      "id": "d08-bad",
+      "bits": "000000",
+      "reasons": [
+        "No growth problem addressed.",
+        "No comparison case.",
+        "No formula or numbers.",
+        "No sensitivity change.",
+        "No transfer.",
+        "Nothing factual."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v01-good",
+      "bits": "111111",
+      "reasons": [
+        "Training-good/new-bad contrast defines the generalization decision.",
+        "Memorizing prices vs stable relations; zero error insufficient.",
+        "Noise memorized on training samples fails to transfer to new ones.",
+        "Model and evaluation fixed; more samples lowers but not zeroes risk.",
+        "Student memorization shares memory-vs-application gap; analogy limits stated.",
+        "Held-out evaluation boundary; no overclaim; no factual errors."
+      ],
+      "evidence": [
+        "旧题表现好，新题可能变差",
+        "零误差本身不能判定过拟合",
+        "模型用它减少训练误差时，新房不再有相同细节，预测便偏离",
+        "只增加来自同一分布的独立训练样本，偶然细节更难支撑规则",
+        "学生背答案而不会解新题也体现旧样本记忆和新情境应用的差别",
+        "这个类比不代表机器像人一样理解，新房评估仍要独立留出数据"
+      ]
+    },
+    {
+      "id": "v01-bad",
+      "bits": "000000",
+      "reasons": [
+        "No overfitting problem explained.",
+        "No example or contrast case.",
+        "No mechanism given.",
+        "No condition varied.",
+        "No transfer.",
+        "No evidence."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02-good",
+      "bits": "111111",
+      "reasons": [
+        "Precision/recall answer trust and coverage questions for search.",
+        "Returned-set vs relevant-set denominators are the deciding difference.",
+        "TP3/FP1/FN2 gives 3/4 and 3/5, matching oracle.",
+        "Collection fixed, one relevant added: 4/5 and 4/5 correct.",
+        "Defect detector reuses both denominators for flagged and defective.",
+        "Recall needs missed defects; no performance guarantee claimed."
+      ],
+      "evidence": [
+        "recall asks how many relevant results were found",
+        "the full relevant set are different denominators",
+        "Precision is TP/(TP+FP)=3/4; recall is TP/(TP+FN)=3/5",
+        "precision becomes 4/5 and recall 4/5",
+        "same ratios for flagged items and all truly defective items",
+        "evaluating recall still requires knowing missed defects"
+      ]
+    },
+    {
+      "id": "v02-bad",
+      "bits": "000000",
+      "reasons": [
+        "No search problem or question set.",
+        "No example, near-case, or feature.",
+        "No ratios or denominators computed.",
+        "No changed condition.",
+        "No transfer.",
+        "No substance."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v03-good",
+      "bits": "111111",
+      "reasons": [
+        "Explains how heritable differential reproduction shifts a population.",
+        "Dyed beetle near-case; heritability is deciding feature.",
+        "Dark beetles leave more offspring; next generation share may rise.",
+        "Genetics and predator fixed; light background flips advantage correctly.",
+        "Bacteria reuse heritable-variation plus differential-reproduction conditions.",
+        "No goal or individual effort; case explicitly hypothetical."
+      ],
+      "evidence": [
+        "能遗传且有利于繁殖的差异在多代种群中逐渐增多",
+        "甲虫临时染黑虽相似，却不一定把改变传给后代",
+        "深色个体留下更多后代，于是下一代深色比例可能提高",
+        "只把背景改成浅色，隐蔽优势可能转向浅色",
+        "药物环境会改变不同变体留下后代的机会",
+        "过程没有预定目标，也不是个体主动改变基因"
+      ]
+    },
+    {
+      "id": "v03-bad",
+      "bits": "000000",
+      "reasons": [
+        "No mechanism problem addressed.",
+        "No case or near-case.",
+        "No selection steps.",
+        "No sensitivity change.",
+        "No transfer.",
+        "No content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v04-good",
+      "bits": "111111",
+      "reasons": [
+        "Retry-safety problem connected to what idempotency guarantees.",
+        "Set vs increment near-cases; effect, not response, decides.",
+        "Fixed assignment converges; increment reuses state; atomicity required.",
+        "Request fixed, key expires; dedup bounded by retention and scope.",
+        "Payment endpoint shares identity-plus-atomic-record relation with limits.",
+        "Retries hypothetical; no factual errors or overclaims."
+      ],
+      "evidence": [
+        "repeating an operation has the same intended effect",
+        "incrementing its counter twice is not",
+        "A fixed assignment reaches the same state after repetition",
+        "deduplication only works within its retention and scope",
+        "the same identity/atomic-record relation applies",
+        "identical text alone does not identify the same payment"
+      ]
+    },
+    {
+      "id": "v04-bad",
+      "bits": "000000",
+      "reasons": [
+        "No developer problem connected.",
+        "No contrasting operations.",
+        "No mechanism reasoning.",
+        "No condition changed.",
+        "No transfer.",
+        "No verifiable content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v05-good",
+      "bits": "111111",
+      "reasons": [
+        "Entropy quantifies average pre-outcome uncertainty for prediction.",
+        "Fair vs always-heads coin; distribution, not single outcome, decides.",
+        "Formula with units; 1 bit and 0 computed correctly.",
+        "Outcomes fixed, probabilities 0.9/0.1; 0.469 bits correct.",
+        "Weather case reuses distribution-level uncertainty with limits.",
+        "Entropy not quality/truth boundary; teaching case flagged."
+      ],
+      "evidence": [
+        "结果尚未出现时平均有多不确定",
+        "熵描述分布而非某一次结果的意义",
+        "公平硬币算得-2×0.5×(-1)=1比特",
+        "只把概率改成0.9和0.1，熵约0.469比特",
+        "也可用概率分布算预测不确定性",
+        "熵不衡量天气好坏或信息真假"
+      ]
+    },
+    {
+      "id": "v05-bad",
+      "bits": "000000",
+      "reasons": [
+        "No uncertainty question explained.",
+        "No cases compared.",
+        "No formula or computation.",
+        "No varied condition.",
+        "No transfer.",
+        "No evidence."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v06-good",
+      "bits": "111111",
+      "reasons": [
+        "Mutual blocking of progress defines the deadlock problem.",
+        "Two-task cycle vs ordinary contention; circularity decides.",
+        "Exclusive locks plus hold-and-wait sustain the cycle correctly.",
+        "Ordering fixed to X-then-Y; cycle broken, contention remains.",
+        "Trains share the exclusive-resource waiting-cycle relation with caveats.",
+        "Railway rules gate the analogy; case explicitly assumed."
+      ],
+      "evidence": [
+        "prevent one another from making the progress needed",
+        "is ordinary contention, not this cycle",
+        "exclusive locks and hold-while-waiting rule sustain",
+        "B cannot hold Y while waiting for X, breaking this cycle",
+        "can share the same exclusive-resource waiting cycle",
+        "actual railway rules determine whether that model applies"
+      ]
+    },
+    {
+      "id": "v06-bad",
+      "bits": "000000",
+      "reasons": [
+        "No deadlock problem explained.",
+        "No example or contrast.",
+        "No mechanism steps.",
+        "No sensitivity change.",
+        "No transfer.",
+        "No content."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v07-good",
+      "bits": "111111",
+      "reasons": [
+        "Nonrival, nonexcludable features define classification question.",
+        "Streetlight vs free bread; free goods fail the tests.",
+        "Free-riding incentive yields underprovision without zero-provision claim.",
+        "Lighting fixed; gating adds excludability, shifting toward club good.",
+        "Disaster alert reuses both conditions; paid devices change them.",
+        "Voluntary contribution not denied; scenario explicitly simplified."
+      ],
+      "evidence": [
+        "使用通常不减少别人可用的份额，也难把未付费者排除",
+        "免费发的一份面包会被吃掉，不能因此算公共物品",
+        "有人便可能等待别人出钱，导致私人筹资不足",
+        "只让街区可通过门禁排除未付费者，就改变了排他性",
+        "若系统只向付费设备发送，排他条件便不同",
+        "这并不证明无人会自愿贡献"
+      ]
+    },
+    {
+      "id": "v07-bad",
+      "bits": "000000",
+      "reasons": [
+        "No concept problem addressed.",
+        "No cases or features.",
+        "No reasoning about incentives.",
+        "No varied condition.",
+        "No transfer.",
+        "No evidence."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v08-good",
+      "bits": "111111",
+      "reasons": [
+        "Law connects occupancy to arrival rate and time for planning.",
+        "In-system vs only-waiting boundaries are the deciding distinction.",
+        "2/min × 3 min = 6; units, stability, no-Poisson correct.",
+        "Arrival and boundary fixed; 2-minute residence gives four, correct.",
+        "Requests-in-flight share rate-times-latency with matching-boundary condition.",
+        "No distribution assumption claimed; no arithmetic errors."
+      ],
+      "evidence": [
+        "average number in a stable system to the arrival rate",
+        "waiting in line are different system boundaries",
+        "2 customers/minute × 3 minutes = 6 customers",
+        "L becomes four customers",
+        "obey the same rate-times-latency relation",
+        "no Poisson assumption is required"
+      ]
+    },
+    {
+      "id": "v08-bad",
+      "bits": "000000",
+      "reasons": [
+        "No queueing problem connected.",
+        "No example or boundary distinction.",
+        "No formula or calculation.",
+        "No changed condition.",
+        "No transfer.",
+        "No substance."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "call_file": "reference-validation/claude_glm-5.3-flash[1m].call.json"
+}

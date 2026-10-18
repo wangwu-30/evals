@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "0cdb8c2e8238cace43ef98ff5f77aee9dd7163a3bb75ed3bb263a4b1192dcf2f",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"101010\",\"reasons\":[\"将新题表现差的问题连接到验证和模型调整。\",\"没有提供可混淆的近例及区分特征。\",\"正确解释记住偶然噪声为何损害泛化。\",\"仅给出泛泛风险条件，未固定原例其他条件。\",\"学生背答案的例子体现相同的记忆与泛化关系。\",\"使用学生类比，但未说明类比失效的边界。\"],\"evidence\":[\"增加独立验证数据、减少模型复杂度或加入正则化，通常能缓解过拟合\",\"\",\"过拟合是模型把训练材料中的规律和偶然噪声都记住了，导致训练题做得很好，却不会处理新题。\",\"\",\"比如学生背下练习册答案，考试换一种问法就不会\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 23382,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 369,
+    "reasoning_output_tokens": 167
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.29
+}

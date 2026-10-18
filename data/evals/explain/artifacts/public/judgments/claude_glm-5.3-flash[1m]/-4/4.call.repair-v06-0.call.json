@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "ba686a234d1603ee9e8d5b287d13d737b49bd29949b6508fe915e5f48aacd646",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v06\",\"bits\":\"101010\",\"reasons\":[\"Connects mutual waiting to choosing a global lock order.\",\"No confusable near-case or deciding comparison is provided.\",\"Correctly explains circular waiting and how ordering prevents it.\",\"Proposed preemption releases Lock 2 from A, which holds Lock 1.\",\"Database transactions reproduce the same hold-and-request cycle.\",\"Misidentifies lock ownership and falsely generalizes stoppage and CPU idleness.\"],\"evidence\":[\"impose a global lock order\",\"\", \"Each waits forever for the other\", \"forcibly release Lock 2 from A\", \"each hold a row lock and request the other's\", \"everything stops while the CPU sits idle\"]}]}",
+  "usage": {
+    "input_tokens": 20215,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 234,
+    "reasoning_output_tokens": 81
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 30.24
+}

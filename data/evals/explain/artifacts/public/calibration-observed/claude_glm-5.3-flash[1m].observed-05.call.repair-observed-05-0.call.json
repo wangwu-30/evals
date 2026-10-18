@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "eac0ecf87a02d66c16292a462c56c41a56bdc219878d042613b4074e6d10e2f2",
+  "rc": 0,
+  "cost_usd_reported": 0.10837999999999999,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-05\",\"bits\":\"101001\",\"reasons\":[\"Concrete problem of predicting next score tied to concept's decision value\",\"Typical case present but no explicit confusable near-case provided\",\"Correct causal chain from memorizing noise to poor new-data performance\",\"Only generic remedy list, no changed original case with fixed elements\",\"No application to a new surface-different situation identifying shared relation\",\"Hedged claims, hypothetical marked with 比如, no oracle contradiction\"],\"evidence\":[\"它可能完美贴合这些点，却无法预测下一次成绩\",\"\",\"规律和偶然噪声一起记住，导致训练题做得很好，没见过的新数据却表现差\",\"\",\"\",\"模型太复杂、数据太少或训练过度，都可能加重过拟合\"]}]}",
+  "usage": {
+    "input_tokens": 1196,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 4096,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1196,
+      "outputTokens": 4096,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.10837999999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 76.441
+}

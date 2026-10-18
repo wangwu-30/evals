@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "2b470232c6706a7b6013fb5e2d735fa751df4a8453ea7323ab47fc31a394f9e3",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d04\",\"bits\":\"111100\",\"reasons\":[\"Connects afternoon choices to comparing the best available alternative.\",\"Contrasts forgone earnings with summing all rejected alternatives.\",\"Correctly derives opportunity cost from the best forgone available option.\",\"Removes the job option while retaining reading, changing opportunity cost.\",\"No surface-different situation applies the same deciding relationship.\",\"Basketball example incorrectly assigns reading’s opportunity cost after switching activities.\"],\"evidence\":[\"而是它和你能做的最好替代相比哪个更好\",\"机会成本不是三项加起来，而只是次优选择的价值\",\"如果你本来最想接那单活，代价就是300元\",\"如果兼职根本不可得，成本就只是锻炼或休息能带给你的好处\",\"\",\"你若改去打球，看书的机会成本就换成了球赛的乐趣\"]}]}",
+  "usage": {
+    "input_tokens": 20252,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 300,
+    "reasoning_output_tokens": 105
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.843
+}

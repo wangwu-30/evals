@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-4",
+  "rep": 3,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "Connects fixed data comparison to choosing candidate explanations.",
+        "Distinguishes likelihood from posterior by conditioning direction.",
+        "No simple numerical likelihood or posterior calculation.",
+        "No explicit condition change and resulting comparison.",
+        "No application to a surface-different situation.",
+        "Correctly requires prior and normalization for posterior."
+      ],
+      "evidence": [
+        "比较不同 θ 对同一数据的支持程度",
+        "后验概率回答",
+        "",
+        "",
+        "",
+        "要得到后验，还必须加入先验和归一化"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100101",
+      "reasons": [
+        "Connects variance to assessing dispersion around the mean.",
+        "No confusable sample-variance case with deciding feature.",
+        "Correct calculation, but squared units and sample distinction missing.",
+        "Adding ten preserves dispersion; doubling deviations quadruples variance.",
+        "No surface-different application of the same relationship.",
+        "Formula and arithmetic are correct; squaring rationale is qualified."
+      ],
+      "evidence": [
+        "围绕总体平均数分散得多不多",
+        "",
+        "",
+        "若所有数都加 10，方差不变",
+        "",
+        "平方偏差是 4、0、4，方差为 8/3"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "Explains amplification and why it cannot establish beneficial outcomes.",
+        "Distinguishes reinforcing direction from beneficial value.",
+        "Correctly traces repeated sound amplification through a feedback loop.",
+        "Generic stopping mechanisms do not change a specified case condition.",
+        "Applies reinforcing feedback to panic, selling, and falling prices.",
+        "Direction distinction and finite amplification boundaries are correct."
+      ],
+      "evidence": [
+        "不说明方向有益",
+        "“放大”只说明偏离原状态的变化被增强",
+        "音箱声被麦克风再次放大并播放，声音又被收回",
+        "",
+        "投资恐慌会造成抛售、价格下跌、更多恐慌",
+        "资源有限或保护机制会使放大停止"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choices to evaluating the best forgone option.",
+        "Distinguishes best alternative from summing all forgone alternatives.",
+        "Correctly derives cost from the most valued unchosen activity.",
+        "Changes best alternative while retaining the afternoon choice context.",
+        "No surface-different situation applies the relationship.",
+        "Hypothetical valuation is explicit and definition is correct."
+      ],
+      "evidence": [
+        "我选择 A 后，最有价值的未选方案是什么",
+        "不是所有放弃选项的总和",
+        "若你选择休息，而本来最看重的是兼职赚 100 元",
+        "若当天最重要的替代方案变成备考而非兼职",
+        "",
+        "比如一个免费下午可以复习、兼职或休息"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Connects positive tests to estimating actual disease probability.",
+        "Distinguishes sensitivity from disease probability after a positive test.",
+        "Correctly calculates both positive sources and normalizes their probabilities.",
+        "Lower false-positive rate increases posterior with other assumptions retained.",
+        "No application outside the original diagnostic situation.",
+        "Explicit hypothetical parameters and posterior arithmetic are correct."
+      ],
+      "evidence": [
+        "问“检测阳性后患病概率”",
+        "不是 99%，而是比较两条来源",
+        "0.0099/0.0594≈16.7%",
+        "若误报率下降，也会升高",
+        "",
+        "设患病率为 1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101101",
+      "reasons": [
+        "Connects changed prices and stale copies to invalidation decisions.",
+        "Lists techniques without distinguishing a confusable near-case.",
+        "Explains origin changes leaving cached values outdated.",
+        "Longer caching changes stale-data risk for the same application.",
+        "Examples of assets and inventory lack a developed transfer.",
+        "Claims about expiration and stale-data risk are correct."
+      ],
+      "evidence": [
+        "用户就会看到过期信息",
+        "",
+        "商品价格从 100 改成 80，但浏览器或 CDN 仍缓存着 100",
+        "缓存越久，速度和负载通常越好，但旧数据风险越大",
+        "",
+        "更新数据时删除缓存"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects observed association to deciding whether causation is supported.",
+        "Contrasts co-movement with causal change using a common cause.",
+        "Correctly explains temperature causing both purchases and swimming exposure.",
+        "No controlled change to an explicit original-case condition.",
+        "No surface-different application of the causal distinction.",
+        "Presents the seasonal toy example as observed empirical fact."
+      ],
+      "evidence": [
+        "不能断定冰淇淋导致溺水",
+        "因果表示一个变量的变化会造成另一个变量变化",
+        "天气热使人买更多冰淇淋，也使更多人下水",
+        "",
+        "",
+        "冰淇淋销量和溺水人数在夏天都上升，因此相关"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects initial principal to predicting final accumulated amounts.",
+        "Distinguishes compound growth from growth on original principal.",
+        "Correct formula, annual rate meanings, currency units, and numerical example.",
+        "Changes principal while explicitly holding rate and duration fixed.",
+        "No surface-different application of compound growth.",
+        "Hypothetical growth and arithmetic are correct."
+      ],
+      "evidence": [
+        "最终金额与 P 成正比",
+        "只是每年按原本金计算",
+        "100 元按 10% 增长 2 年为 121 元",
+        "增长率和年数相同",
+        "",
+        "若初始金额为 P，年增长率为 r"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111001",
+      "reasons": [
+        "Connects excellent training performance to assessing new-data reliability.",
+        "Distinguishes overfitting from poor training and validation performance.",
+        "Explains learning noise causing inaccurate predictions on new observations.",
+        "Generic risk factors do not modify the concrete curve example.",
+        "No surface-different application with shared deciding relation.",
+        "Complexity is described as a risk rather than universally bad."
+      ],
+      "evidence": [
+        "遇到新数据反而变差",
+        "若训练和验证表现都差，通常不是过拟合",
+        "它可能也穿过测量误差；新实验点就预测不准",
+        "",
+        "",
+        "模型越复杂、数据越少，风险通常越高"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111100",
+      "reasons": [
+        "Connects search metrics to judging accuracy and completeness.",
+        "Distinguishes returned-result accuracy from coverage of all relevant results.",
+        "Both denominator meanings and numerical calculations are correct.",
+        "Changes returned results while retaining twenty total relevant results.",
+        "No surface-different application of the metrics.",
+        "Changed example necessarily raises precision, contradicting its stated uncertainty."
+      ],
+      "evidence": [
+        "回答“你找出来的有多准”",
+        "回答“真正相关的找全了多少”",
+        "6/10=60%",
+        "扩大搜索结果到 18 条并找到 15 条相关",
+        "",
+        "精确率未必上升"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "Connects inherited differences to predicting population trait frequencies.",
+        "Distinguishes population selection from purposeful individual acquired changes.",
+        "Correctly traces heritable variation through differential survival and reproduction.",
+        "Changes tree environment while preserving the moth selection mechanism.",
+        "No surface-different application beyond the moth situation.",
+        "Hypothetical moth mechanism and inheritance boundary are appropriately qualified."
+      ],
+      "evidence": [
+        "这些特征在下一代比例上升",
+        "不是动物为了适应而主动改变",
+        "更容易存活并繁殖，于是这些特征在下一代比例上升",
+        "若环境变清洁，优势可能反转",
+        "",
+        "若因此少被捕食，深色基因可能逐代增多"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111001",
+      "reasons": [
+        "Connects uncertain network outcomes to deciding whether retries are safe.",
+        "Contrasts repeated assignment with repeated balance increments.",
+        "Explains timeout uncertainty, retries, and repeated-operation effects correctly.",
+        "No explicit condition change within the original retry case.",
+        "Order creation is mentioned without applying the deciding relationship.",
+        "Correctly distinguishes operation effects from identical responses."
+      ],
+      "evidence": [
+        "幂等接口可安全重试",
+        "重复执行会加两次，因此不是幂等的",
+        "网络超时可能让客户端不知道请求是否已成功",
+        "",
+        "",
+        "不等于每次响应完全相同"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111101",
+      "reasons": [
+        "Connects probability structure to assessing advance prediction uncertainty.",
+        "Contrasts distribution uncertainty with importance of information content.",
+        "Correct entropy formula, bit units, and fair-coin numerical value.",
+        "Changes coin probabilities while preserving the two possible outcomes.",
+        "No surface-different application of the entropy relationship.",
+        "Correctly limits entropy to probability structure and uncertainty."
+      ],
+      "evidence": [
+        "衡量一个随机结果在出现前有多不确定",
+        "不是“信息内容有多重要”",
+        "公平硬币两种结果各 1/2，熵为 1 比特",
+        "若正面概率 0.99、反面 0.01，结果几乎确定",
+        "",
+        "熵衡量的是概率结构"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects cyclic resource waiting to diagnosing inability to progress.",
+        "Distinguishes temporary slowness from an unbreakable waiting cycle.",
+        "Traces exclusive resource holding and reciprocal waiting correctly.",
+        "Changing acquisition order breaks the same resource-waiting cycle.",
+        "No surface-different application of the deadlock relationship.",
+        "Small hypothetical example and proposed cycle-breaking mechanisms are correct."
+      ],
+      "evidence": [
+        "结果谁都无法继续",
+        "暂时变慢不一定是死锁",
+        "A 不释放打印机，因为还没拿到扫描仪",
+        "规定统一的获取顺序",
+        "",
+        "关键是等待关系形成闭环且无法推进"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "101001",
+      "reasons": [
+        "Connects free-riding incentives to predicting insufficient collective provision.",
+        "No concrete confusable near-case with a deciding feature.",
+        "Explains shared benefits, exclusion difficulty, and contribution incentives.",
+        "Generic imperfect properties do not change the flood-protection case.",
+        "No surface-different application of the public-good relationship.",
+        "Definition and possible underprovision are correctly qualified."
+      ],
+      "evidence": [
+        "供给可能不足，即使整体收益很大",
+        "",
+        "希望别人出钱，自己仍享受好处",
+        "",
+        "",
+        "一个人使用不太减少别人使用的机会"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101000",
+      "reasons": [
+        "Connects arrival rate and duration to estimating average occupancy.",
+        "No near-case distinguishes waiting time from total system time.",
+        "Correct calculation, units, stability requirement, and matching original boundaries.",
+        "Doubles waiting time rather than total time used by L.",
+        "No surface-different application of the occupancy relationship.",
+        "Sensitivity claim confuses queue waiting with total system duration."
+      ],
+      "evidence": [
+        "则店内平均有 L=10×0.5=5 人",
+        "",
+        "每小时到达 10 位顾客，每位从进店到离开平均 0.5 小时",
+        "",
+        "",
+        "等待时间翻倍，系统内平均人数也翻倍"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/-4/3.call.json",
+  "prompt_sha256": "23369276d28521f2667b343a461d227a87d4047a07589f43fc87d224eabe88e1",
+  "isolated_repair_calls": []
+}

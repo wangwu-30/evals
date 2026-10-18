@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "9598d13268afb03d872d252f37b85f6382d123e4e8de687c689ab00980de21d9",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111010\",\"reasons\":[\"Payment timeout connects duplicate charges to choosing retry-safe processing.\",\"SET versus ADD distinguishes repeated effects using concrete operations.\",\"Ambiguous timeout, retry, and key deduplication explain avoiding duplicate charges.\",\"At-least-once delivery does not guarantee retries; fixed conditions are unclear.\",\"Queue consumers apply request deduplication through message IDs.\",\"Incorrectly claims at-least-once delivery guarantees retries.\"],\"evidence\":[\"without idempotency the customer is charged twice\",\"ADD 10 to a balance applied twice adds 20\",\"returns the stored result for repeats\",\"retries are guaranteed\",\"consumers must dedupe by message ID\",\"retries are guaranteed\"]}]}",
+  "usage": {
+    "input_tokens": 20219,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 300,
+    "reasoning_output_tokens": 146
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.716
+}

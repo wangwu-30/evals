@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "8dd87e0fed0ea4aceb7d0773a42a157ff30852233ee48f61478bb85cfee90926",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v04\",\"bits\":\"111010\",\"reasons\":[\"Connects ambiguous payment timeouts to deciding how to retry safely.\",\"Contrasts setting status with incrementing balance; repeated effects decide.\",\"Correctly explains timeout ambiguity, duplicate charges, and key-based suppression.\",\"Gives a generic condition, without changing a concrete case.\",\"Transfers duplicate suppression to message consumers using message IDs.\",\"Categorically claims POST is non-idempotent; implementations can be idempotent.\"],\"evidence\":[\"The client retries\",\"`set status = paid` is idempotent; `add 10 to balance`\",\"a repeat returns the stored result instead of executing again\",\"\",\"message consumers dedupe on message IDs for the same reason\",\"POST is not\"]}]}",
+  "usage": {
+    "input_tokens": 20225,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 347,
+    "reasoning_output_tokens": 188
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 34.754
+}

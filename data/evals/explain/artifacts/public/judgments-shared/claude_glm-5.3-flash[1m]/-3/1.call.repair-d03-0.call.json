@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "0ad654bec8d7a7a62deb87359fe978b123e25db14223af9658ff9217b0b0c71c",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d03\",\"bits\":\"111010\",\"reasons\":[\"以啸叫连接具体问题和回路方向判断。\",\"对比啸叫与恒温，区分加强和抵消变化。\",\"正确解释输出回输、同向增强及增益条件。\",\"话筒拿远未必立即停止，取决于增益变化。\",\"复利应用同一关系：结果继续加强原因。\",\"将拿远话筒必然立即止啸说成事实，过强。\"],\"evidence\":[\"判断任何回路只问一句：这个结果会不会加强原因本身？\",\"负反馈把系统拉回原位，比如空调恒温。\",\"输出绕回输入，且方向与原变化相同\",\"断电或把话筒拿远，啸叫立刻停止。\",\"存款复利也是正反馈——利息生出利息。\",\"断电或把话筒拿远，啸叫立刻停止。\"]}]}",
+  "usage": {
+    "input_tokens": 20256,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 406,
+    "reasoning_output_tokens": 180
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 36.999
+}

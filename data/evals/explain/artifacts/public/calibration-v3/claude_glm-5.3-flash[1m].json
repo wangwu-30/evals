@@ -1,0 +1,266 @@
+{
+  "judge_requested": "claude:glm-5.3-flash[1m]",
+  "judgments": [
+    {
+      "id": "cal-00",
+      "bits": "111111",
+      "reasons": [
+        "Links likelihood to deciding which hypothesis explains observed data",
+        "Contrasts likelihood data-probability with posterior needing prior",
+        "Correct 0.5x0.5=.25 and 0.8x0.8=.64 with data-given-hypothesis meaning",
+        "Keeps HH fixed, changes p=.8 to .2, likelihood .04 reverses ranking",
+        "Transfers fixed-data comparison to fault hypotheses, prior still needed",
+        "Arithmetic correct, no invented facts, prior boundary stated"
+      ],
+      "evidence": [
+        "比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "似然变为0.04，支持次序反转",
+        "固定同一批测试结果比较两种故障假设",
+        "决定故障后验仍要故障先验"
+      ]
+    },
+    {
+      "id": "cal-01",
+      "bits": "000001",
+      "reasons": [
+        "No concrete problem or decision is connected to likelihood.",
+        "No typical case, near-case, or deciding feature given.",
+        "No calculation, units, or derivation of the distinction.",
+        "No changed condition or resulting effect discussed.",
+        "No transfer to a new situation identifying a shared relation.",
+        "Definition direction is correct and matches oracle; no errors."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "似然是P(D|H)"
+      ]
+    },
+    {
+      "id": "cal-02",
+      "bits": "100111",
+      "reasons": [
+        "States likelihood's purpose: compare hypotheses' explanatory power on fixed data.",
+        "No mention of posterior or any confusable near-case with deciding feature.",
+        "Correct .25/.64 math but omits P(data|theta) vs P(theta|data) distinction.",
+        "Fixes HH data, changes p to .2, .04 correctly flips support ranking.",
+        "Defect detection reuses fix-data-compare-hypotheses relation, states required conditions.",
+        "All arithmetic (.25, .64, .04, reversal) correct; examples clearly hypothetical."
+      ],
+      "evidence": [
+        "似然用固定数据比较假设的解释能力",
+        "",
+        "",
+        "保持HH固定，把H2的p改成.2，似然为.04",
+        "缺陷检测也可固定结果比较故障假设，需要独立性和合适概率模型",
+        "指定顺序HH的概率分别为.25和.64"
+      ]
+    },
+    {
+      "id": "cal-03",
+      "bits": "110111",
+      "reasons": [
+        "Connects coin problem to deciding which hypothesis better explains fixed data.",
+        "Gives coin case plus posterior near-case with deciding conditioning direction.",
+        "No numerical likelihood calculation (e.g. .25/.64) given for formula task.",
+        "Fixes HH data, changes p=.8 to .2, correctly concludes less support.",
+        "Applies fix-data-compare-hypotheses relation to defect detection with required model condition.",
+        "Statements factually correct, matches oracle distinction, no invented causality."
+      ],
+      "evidence": [
+        "似然用固定数据比较假设的解释能力",
+        "似然问数据在假设下的概率，后验问假设在数据后的概率且需要先验",
+        "",
+        "保持数据HH固定，把H2的p改成.2，就比p=.8更不支持H2",
+        "缺陷检测也可固定测试结果比较故障假设，需要相同观测和合适概率模型",
+        "需要相同观测和合适概率模型"
+      ]
+    },
+    {
+      "id": "cal-04",
+      "bits": "111011",
+      "reasons": [
+        "Connects fixed data to deciding which hypothesis explains it better",
+        "Contrasts likelihood (data prob) with posterior needing prior",
+        "Correct HH calculation 0.25/0.64 with meaning and data-vs-posterior distinction",
+        "No condition changed in original case to show altered result",
+        "Same fixed-data comparison transferred to defect detection with prior requirement",
+        "Factually correct, hypothetical examples marked, no invented causality"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        "这是数据在各假设下的概率，不是硬币的后验"
+      ]
+    },
+    {
+      "id": "cal-05",
+      "bits": "111101",
+      "reasons": [
+        "States likelihood compares hypotheses' power to explain observed data.",
+        "Contrasts P(data|H) with posterior, which needs a prior.",
+        "Independence multiplication yields correct 0.25 and 0.64 with distinction.",
+        "Keeps data HH fixed, changes p to 0.2, correctly gets 0.04 and reversal.",
+        "No transfer to a surface-different new situation.",
+        "Example marked hypothetical, calculations correct, no invented facts."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "",
+        "假设两枚硬币正面率分别为0.5和0.8，已观察指定顺序HH"
+      ]
+    },
+    {
+      "id": "cal-06",
+      "bits": "110110",
+      "reasons": [
+        "Connects comparing hypotheses on fixed observed data to choosing explanation.",
+        "Coin case plus posterior near-case; deciding feature P(data|theta) not P(theta|data).",
+        "0.8 squared computed as 0.16 instead of 0.64; calculation wrong.",
+        "Keeps HH fixed, changes p to 0.2, correctly gets 0.04 and reversal.",
+        "Applies fixed-data comparison and prior-need to fault diagnosis.",
+        "Material arithmetic error in likelihood; initial ranking claim inconsistent."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验",
+        ""
+      ]
+    },
+    {
+      "id": "cal-07",
+      "bits": "111110",
+      "reasons": [
+        "Connects fixed-data coin comparison to what likelihood decides.",
+        "Gives coin case plus posterior near-case; prior is deciding feature.",
+        "Correct 0.25/0.64 multiplication, data-probability meaning, likelihood-vs-posterior distinction.",
+        "Fixes HH, changes p 0.8→0.2, correctly recomputes 0.04 and reversal.",
+        "Defect detection shares fixed-data comparison; posterior needs prior.",
+        "Final sentence equates likelihoods with posteriors, contradicting oracle."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        ""
+      ]
+    },
+    {
+      "id": "cal-08",
+      "bits": "111110",
+      "reasons": [
+        "Ties the two-coin problem to likelihood's role: compare hypotheses on fixed data.",
+        "Gives coin case plus confusable posterior case; deciding feature is needing prior.",
+        "Correctly multiplies 0.5×0.5 and 0.8×0.8, states meaning and not-posterior distinction.",
+        "Fixes HH, changes 0.8 to 0.2, correct 0.04 and reversed support.",
+        "Reuses fix-data-compare-hypotheses relation in defect detection, noting prior requirement.",
+        "Uses suspect-scoring analogy but never explains where that analogy fails."
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转",
+        "固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验",
+        ""
+      ]
+    },
+    {
+      "id": "cal-09",
+      "bits": "111111",
+      "reasons": [
+        "Connects comparing hypotheses' fit to observed data as the purpose",
+        "Contrasts likelihood P(data|theta) with posterior, stating deciding feature",
+        "Correct 0.25/0.64 via independence multiplication with meaning stated",
+        "Fixes HH data, changes p to 0.2, 0.04 correctly, ordering flips",
+        "Transfers to defect detection, naming shared fixed-data relation and prior need",
+        "Arithmetic 0.25/0.64/0.04 correct; likelihood vs posterior consistently distinguished"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是硬币的后验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验",
+        "这是数据在各假设下的概率，不是硬币的后验"
+      ]
+    },
+    {
+      "id": "cal-10",
+      "bits": "111111",
+      "reasons": [
+        "States purpose: compare hypotheses' explanatory power for seen data",
+        "Typical case HH plus near-case posterior with deciding feature prior",
+        "Correct 0.25/0.64 via independence multiplication, states non-posterior distinction",
+        "Changes p .8 to .2, HH fixed, 0.04 reverses ranking correctly",
+        "Defect detection shares fixed-data comparison plus prior requirement",
+        "Hypotheticals flagged, values match oracle, no material errors"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "比较这份数据的概率是似然，问哪枚硬币更可能还需要先验",
+        "独立抛掷时两次概率相乘，似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        "假设两枚硬币正面率分别为0.5和0.8"
+      ]
+    },
+    {
+      "id": "cal-11",
+      "bits": "111111",
+      "reasons": [
+        "Connects observed data to deciding between coin hypotheses",
+        "Typical HH case plus posterior near-case with deciding feature stated",
+        "Correct 0.5²=.25 and 0.8²=.64 with P(data|theta) distinction",
+        "Keeps HH fixed, changes p=.8→.2, correctly derives .04 and reversal",
+        "Defect detection transfer names shared fix-data relation and prior requirement",
+        "Arithmetic all correct, no invented facts, matches oracle"
+      ],
+      "evidence": [
+        "似然用已经看到的数据比较不同假设对这批数据的解释能力",
+        "这是数据在各假设下的概率，不是后验概率",
+        "似然为0.25和0.64",
+        "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04",
+        "在缺陷检测中，也可固定同一批测试结果比较两种故障假设",
+        "似然为0.25和0.64"
+      ]
+    }
+  ],
+  "call_files": [
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-00.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-01.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-02.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-03.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-04.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-05.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-06.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-07.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-08.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-09.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-10.call.json",
+    "calibration-v3/claude_glm-5.3-flash[1m].cal-11.call.json"
+  ],
+  "isolated_repair_calls": [
+    "claude_glm-5.3-flash[1m].cal-02.call.repair-cal-02-0.call.json",
+    "claude_glm-5.3-flash[1m].cal-02.call.repair-cal-02-1.call.json",
+    "claude_glm-5.3-flash[1m].cal-04.call.repair-cal-04-0.call.json",
+    "claude_glm-5.3-flash[1m].cal-04.call.repair-cal-04-1.call.json",
+    "claude_glm-5.3-flash[1m].cal-07.call.repair-cal-07-0.call.json"
+  ]
+}

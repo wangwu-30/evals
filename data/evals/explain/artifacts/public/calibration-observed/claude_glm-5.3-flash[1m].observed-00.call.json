@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "024c2ef4bfe6668c845a2beca0303a55c2d3d3a06011fcd38d78bf8d63b11c13",
+  "rc": 0,
+  "cost_usd_reported": 0.047964999999999994,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-00\",\"bits\":\"100001\",\"reasons\":[\"States purpose: quantifies dispersion from mean, larger variance means less concentrated.\",\"Only one straightforward example; no confusable near-case or deciding feature given.\",\"Calculation correct, but squared units and population-vs-sample distinction absent.\",\"No key condition changed or sensitivity discussed.\",\"No transfer to a surface-different new situation.\",\"Arithmetic 8/3 correct; claims about squaring are accurate and consistent.\"],\"evidence\":[\"总体方差衡量一组数据离平均值有多分散\",\"\",\"平方为4、0、4，人口方差为8/3\",\"\",\"\",\"\"]}]}",
+  "usage": {
+    "input_tokens": 1183,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1682,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1183,
+      "outputTokens": 1682,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.047964999999999994,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 29.533
+}

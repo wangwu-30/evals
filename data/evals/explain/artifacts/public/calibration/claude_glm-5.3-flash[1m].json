@@ -1,0 +1,150 @@
+{
+  "judge_requested": "claude:glm-5.3-flash[1m]",
+  "judgments": [
+    {
+      "id": "cal-00",
+      "bits": "111111",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-01",
+      "bits": "000001",
+      "reasons": [
+        "No concrete problem or decision connected",
+        "No typical case or confusable near-case with deciding feature",
+        "Formula only; no numerical calculation or distinction",
+        "No condition changed",
+        "No transferred new situation",
+        "P(D|H) statement itself is correct"
+      ]
+    },
+    {
+      "id": "cal-02",
+      "bits": "100111",
+      "reasons": [
+        "Fixed data compares hypotheses; concrete coin case given",
+        "No posterior near-case or deciding contrast given",
+        "Numbers correct but likelihood-vs-posterior distinction missing",
+        "Fixes HH, p 0.8 to 0.2, likelihood 0.04, reversal",
+        "Defect detection shares fix-results-compare-hypotheses relation",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-03",
+      "bits": "110111",
+      "reasons": [
+        "Fixed data comparing hypotheses gives purpose",
+        "Contrasts data-given-hypothesis vs hypothesis-given-data plus prior",
+        "No numerical likelihoods 0.25/0.64 computed",
+        "Fixes HH; p 0.2 supports H2 less than 0.8",
+        "Defect detection shares fixed-observation comparison relation",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-04",
+      "bits": "111111",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-05",
+      "bits": "111110",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "No transfer to a surface-different new situation",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-06",
+      "bits": "110110",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.16 wrong; 0.8 times 0.8 equals 0.64",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "Arithmetic error: 0.16 instead of 0.64"
+      ]
+    },
+    {
+      "id": "cal-07",
+      "bits": "111110",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; distinction stated",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "Final claim equates likelihoods with posteriors, contradicting oracle"
+      ]
+    },
+    {
+      "id": "cal-08",
+      "bits": "111110",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "Suspect-score analogy lacks where-the-analogy-fails explanation"
+      ]
+    },
+    {
+      "id": "cal-09",
+      "bits": "111111",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "No factual or arithmetic errors"
+      ]
+    },
+    {
+      "id": "cal-10",
+      "bits": "111111",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "Content factually correct; self-praise is not factual error"
+      ]
+    },
+    {
+      "id": "cal-11",
+      "bits": "111111",
+      "reasons": [
+        "Likelihood compares hypotheses' explanatory power for seen coin data",
+        "Contrasts data-probability under hypothesis with posterior needing prior",
+        "0.25 and 0.64 via independent multiplication; explicitly not posterior",
+        "Fixes HH, changes p 0.8 to 0.2, likelihood 0.04 flips ranking",
+        "Defect detection reuses fixed-results hypothesis comparison plus prior need",
+        "No factual or arithmetic errors"
+      ]
+    }
+  ],
+  "call_file": "calibration/claude_glm-5.3-flash[1m].call.json"
+}

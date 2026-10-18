@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "6c53a278c5f99bff0a6f34ca486ff18ea8cd41313b430358ed87f396f1b7e4ab",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"cal-07\",\"bits\":\"110110\",\"reasons\":[\"用已观察数据比较假设，说明似然的决策用途。\",\"区分数据在假设下的概率与需要先验的后验。\",\"计算正确，但缺少后验归一化且最终混淆概念。\",\"固定HH改变正面率，正确计算并解释支持次序反转。\",\"迁移到缺陷检测，明确固定结果比较故障假设。\",\"最后将似然等同后验，违反核心概率区别。\"],\"evidence\":[\"似然用已经看到的数据比较不同假设对这批数据的解释能力。\",\"比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。\",\"这些似然就是两枚硬币的后验概率。\",\"保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。\",\"在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。\",\"这些似然就是两枚硬币的后验概率。\"]}]}",
+  "usage": {
+    "input_tokens": 20279,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 390,
+    "reasoning_output_tokens": 113
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 42.786
+}

@@ -1,0 +1,12 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "450281da1a7106bc7e20448282924066dd99c41fa1c0f7dcc0b6d21b475120fc",
+  "rc": -9,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "error": "timeout; no stderr/event stream retained",
+  "output": "",
+  "usage": {},
+  "latency_s": 600.025
+}

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "44d98b2643c85f4f478a1055ccca50611ea90dfc78482be089e6e9aa8d2b1eb2",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-07\",\"bits\":\"110101\",\"reasons\":[\"Connects uncertainty to deciding which outcome to bet on.\",\"Contrasts fair and biased coins through unequal outcome probabilities.\",\"Does not distinguish distribution entropy from individual sequence meaning or quality.\",\"Changes coin bias while retaining two outcomes; entropy decreases.\",\"No surface-different situation applies the same deciding relationship.\",\"Formula, units, and coin examples are factually correct.\"],\"evidence\":[\"没有一个结果特别值得押注\",\"若硬币几乎总是正面，观察结果前就容易猜中，熵较低。\",\"\",\"两面公平硬币的结果各为1/2，熵为1比特；若硬币几乎总是正面，观察结果前就容易猜中，熵较低。\",\"\",\"熵为 H=-Σp_i log₂p_i，单位通常是比特。\"]}]}",
+  "usage": {
+    "input_tokens": 20171,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 345,
+    "reasoning_output_tokens": 149
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.602
+}

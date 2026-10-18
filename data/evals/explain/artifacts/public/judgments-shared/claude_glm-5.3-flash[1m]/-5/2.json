@@ -1,0 +1,334 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-5",
+  "rep": 2,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111001",
+      "reasons": [
+        "Connects coin observations to confidence in hypotheses.",
+        "Distinguishes likelihood from posterior by conditional direction.",
+        "Correct likelihood calculation, prior weighting, and normalization.",
+        "No explicit change to a condition in the example.",
+        "No application to a surface-different situation.",
+        "Calculation and probability distinctions are correct."
+      ],
+      "evidence": [
+        "后验回答「看到数据后，对假设该有多大信心」",
+        "似然是P(数据|假设)，后验是P(假设|数据)",
+        "(1/2)^10≈千分之一",
+        "直接缺失",
+        "",
+        "后验 ∝ 似然×先验，再归一"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100001",
+      "reasons": [
+        "Explains why identical averages conceal different spreads.",
+        "No confusable near-case distinguishing population from sample variance.",
+        "No numerical population variance calculation.",
+        "No controlled change to an explicit example condition.",
+        "No surface-different application of the same relationship.",
+        "Procedure, squared units, and population denominator are correct."
+      ],
+      "evidence": [
+        "平均数告诉你中心在哪，却藏起数据的散开程度。",
+        "",
+        "",
+        "",
+        "",
+        "总体方差是对全部数据而言，分母用总数N。"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111001",
+      "reasons": [
+        "Connects escalating sound to evaluating amplification and its consequences.",
+        "Distinguishes positive feedback direction from beneficial outcomes.",
+        "Explains how amplified output becomes reinforcing input.",
+        "No explicit controlled change to the microphone example.",
+        "Lists other examples without explaining their shared feedback relationship.",
+        "Feedback direction and finite amplification boundaries are correctly distinguished."
+      ],
+      "evidence": [
+        "判断好坏要看放大的是什么，以及有没有上限",
+        "「正」只指同向加强，不是评价",
+        "又被拾取再放大，几轮就啸叫",
+        "",
+        "",
+        "碰到边界会停，或直接崩溃。"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111001",
+      "reasons": [
+        "Uses afternoon choices to expose the relevant trade-off.",
+        "Distinguishes best forgone alternative from adding all alternatives.",
+        "Explains mutually exclusive choices and ranking the forgone options.",
+        "No controlled change to an explicit condition.",
+        "No application outside the afternoon-choice situation.",
+        "Correctly defines opportunity cost through subjective alternative value."
+      ],
+      "evidence": [
+        "makes the trade-off visible before you commit",
+        "not all the other options added together",
+        "You couldn't have done all three anyway",
+        "",
+        "",
+        "it's the value of the single best thing you gave up"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "Connects positive tests to estimating actual disease probability.",
+        "Distinguishes test accuracy from disease probability after a positive.",
+        "Correct hypothetical counts, posterior calculation, and conditional formula.",
+        "Generic prevalence and accuracy changes lack a controlled example.",
+        "No surface-different application of the Bayesian relationship.",
+        "Hypothetical counts and posterior arithmetic are correct."
+      ],
+      "evidence": [
+        "阳性者的患病概率是50%，不是99%",
+        "两者不是一回事",
+        "阳性共198人，其中真患者99人",
+        "",
+        "",
+        "设10000人普查，患病率1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101001",
+      "reasons": [
+        "Connects stale prices to deciding when copies need refreshing.",
+        "No confusable near-case with a deciding feature.",
+        "Explains origin changes, stale copies, TTL, and explicit deletion.",
+        "No controlled variation of the product-price example.",
+        "No surface-different application with a shared deciding relationship.",
+        "Acknowledges TTL staleness and missed distributed copies."
+      ],
+      "evidence": [
+        "deciding when that copy is no longer trustworthy",
+        "",
+        "the original can change while the copy stays old",
+        "",
+        "",
+        "expire the copy after a fixed time (TTL)"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110000",
+      "reasons": [
+        "Connects observed co-movement to deciding whether causation is established.",
+        "Distinguishes association from causation using common causes and intervention.",
+        "A null intervention result cannot categorically eliminate causal effects.",
+        "Intervention omits assumptions needed to justify its categorical result.",
+        "No surface-different application.",
+        "Presents toy association as fact and overclaims causal exoneration."
+      ],
+      "evidence": [
+        "单凭统计上的同步分不清是哪一种",
+        "第三个因素C同时推动两者",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "101100",
+      "reasons": [
+        "Connects starting amounts to differences in accumulated money.",
+        "No confusable near-case with a deciding feature.",
+        "Correct yearly calculation shows gains growing with the expanding base.",
+        "Changes starting amount, fixes rate, correctly predicts widening absolute gap.",
+        "No surface-different situation applies the same relationship.",
+        "Ten-year annual-gain claim is incorrect for the stated amounts."
+      ],
+      "evidence": [
+        "Same percentage, different base, different money",
+        "",
+        "year 2 gives 110×1.1 = ¥121",
+        "at the same 10%, ¥100 and ¥10,000 both multiply by 1.1",
+        "",
+        "¥1,000 extra per year after ten"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects misleading training performance to evaluating unseen data.",
+        "Contrasts memorized training success with failure on changed questions.",
+        "Explains noise memorization and why training scores cannot establish generalization.",
+        "Lists remedies without a controlled change to the original example.",
+        "Analogy maps memorization and unfamiliar tests to model generalization.",
+        "Student analogy gives no limits to its mapping."
+      ],
+      "evidence": [
+        "a training score alone proves nothing",
+        "It looks brilliant on data it has seen",
+        "starts memorizing details, including pure noise",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "101100",
+      "reasons": [
+        "Connects search quality to trusting results and finding all relevant pages.",
+        "No confusable near-case with an explicit deciding feature.",
+        "Correct fractions distinguish returned results from all relevant pages.",
+        "Three relevant results increase precision and decrease recall, corpus fixed.",
+        "No surface-different situation applies the same relationship.",
+        "Returning everything guarantees recall, but need not reduce precision."
+      ],
+      "evidence": [
+        "'can I trust each result?'",
+        "",
+        "Precision = 6/10",
+        "return only 3 sure-fire results",
+        "",
+        "recall is perfect while precision sinks"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "110000",
+      "reasons": [
+        "Connects neck-length changes to identifying population-level selection.",
+        "Distinguishes population composition changes from purposeful individual bodily changes.",
+        "Does not establish heritability connecting variation to offspring traits.",
+        "No explicit environmental change with other conditions fixed.",
+        "Sieve analogy does not establish a separate substantive application.",
+        "Historical neck explanation is asserted; sieve analogy lacks limits."
+      ],
+      "evidence": [
+        "变的是种群里的比例，不是某个个体的身体",
+        "不是某个个体的身体",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111011",
+      "reasons": [
+        "Connects uncertain payment retries to preventing duplicate charges.",
+        "Contrasts setting status with incrementing quantity by repeated effects.",
+        "Explains duplicate detection through logical request identifiers and stored results.",
+        "No controlled change to the payment example.",
+        "Applies repeated-effect criterion to status setting and quantity increments.",
+        "State-based definition and conditional retry explanation are correct."
+      ],
+      "evidence": [
+        "without idempotency the customer is charged twice",
+        "'add 1 to quantity' is not",
+        "returns the stored result instead of re-executing",
+        "",
+        "setting status to 'shipped' is idempotent",
+        "leave the system in the same state"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110101",
+      "reasons": [
+        "Connects outcome uncertainty to information needed to identify results.",
+        "Contrasts deterministic and fair coins using outcome probabilities.",
+        "States entropy values without showing the required numerical calculation.",
+        "Changes coin probabilities while retaining the binary outcome space.",
+        "No surface-different application.",
+        "Entropy formula, distribution interpretation, and bit units are correct."
+      ],
+      "evidence": [
+        "平均需要多少信息才能确定结果",
+        "一枚永远正面的硬币不用猜，熵为零",
+        "",
+        "一枚公平硬币正反各半",
+        "",
+        "对数以2为底时单位是比特"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101101",
+      "reasons": [
+        "Connects stalled transfers to selecting cycle-breaking lock policies.",
+        "No explicit confusable contention case identified as non-deadlock.",
+        "Explains exclusive ownership, hold-and-wait, and circular blocking.",
+        "Changes acquisition order while keeping threads and locks fixed.",
+        "No surface-different application.",
+        "Ordering explanation correctly prevents this circular wait."
+      ],
+      "evidence": [
+        "Prevention attacks the cycle",
+        "",
+        "Now A holds X and waits for Y",
+        "B must take X before Y",
+        "",
+        "so it can never hold Y while waiting on X"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111000",
+      "reasons": [
+        "Connects shared benefits to understanding funding and provision incentives.",
+        "Distinguishes public goods from goods merely provided by government.",
+        "Explains non-exclusion and incentives to avoid contributing.",
+        "No controlled variation of the hallway-light example.",
+        "Examples are listed without applying both deciding properties.",
+        "Categorically claims no provision rather than possible underprovision."
+      ],
+      "evidence": [
+        "公共物品常靠税收统一出资",
+        "而不是看它由谁提供",
+        "让别人出钱，我白享",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101001",
+      "reasons": [
+        "Connects crowding measurements to deriving customer residence time.",
+        "No confusable waiting-time versus system-time case.",
+        "Correct calculation, matching system boundaries, units, and stability requirement.",
+        "Rearranging the same example does not change a condition.",
+        "Lists applications without explaining a transferred relationship.",
+        "Stable averages and matching inside-system measurements are correct."
+      ],
+      "evidence": [
+        "measure any two, derive the third",
+        "",
+        "10 customers arrive per minute and each stays 3 minutes",
+        "",
+        "",
+        "the average time each one spends inside (W)"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-5/2.call.json",
+  "prompt_sha256": "1545b1fbfbe028fe823e74fd99c0a259565d3d17f46296563011587d9700e2cf",
+  "isolated_repair_calls": [
+    "2.call.repair-d08-0.call.json",
+    "2.call.repair-v02-0.call.json"
+  ]
+}

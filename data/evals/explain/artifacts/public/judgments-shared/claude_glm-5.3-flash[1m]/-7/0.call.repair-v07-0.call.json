@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "d50bcf2b3623c1648c2fea3167b1e6eb15b62aa6617f56df78876e314b796555",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v07\",\"bits\":\"100000\",\"reasons\":[\"把楼道照明筹资问题连接到判断供给不足。\",\"冰淇淋是鲜明反例，未提供易混淆的近例。\",\"把搭便车激励直接推成无人供给，结论过强。\",\"未改变原案例的关键条件并解释结果变化。\",\"列举税收和物业费，未解释共同作用关系。\",\"断言人人搭便车导致零供给，与事实边界冲突。\"],\"evidence\":[\"判断一件东西会不会供给不足，先看它是否兼具这两个特征\",\"对比私人物品就清楚：一支冰淇淋\",\"结果人人这么算，钱凑不齐，灯就装不成\",\"\",\"\",\"却没有谁愿意单独供给\"]}]}",
+  "usage": {
+    "input_tokens": 20289,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 354,
+    "reasoning_output_tokens": 155
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.693
+}

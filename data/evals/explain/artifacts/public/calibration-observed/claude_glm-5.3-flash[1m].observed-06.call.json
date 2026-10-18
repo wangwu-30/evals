@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "6e8611e67d757d8333c005049c5e95fc04f8be1f637ba3c34da34add335b2640",
+  "rc": 0,
+  "cost_usd_reported": 0.06278,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-06\",\"bits\":\"111001\",\"reasons\":[\"Giraffe case tied to what selection decides: differential survival/reproduction\",\"Typical case plus Lamarckian near-case; deciding feature inherited vs acquired\",\"Correct causal chain: variation, screening, differential reproduction, gene-frequency rise\",\"No key condition varied with fixed elements and changed outcome\",\"Only giraffe example; no transfer to a surface-different situation\",\"Factually correct, no invented history, corrects misconception explicitly\"],\"evidence\":[\"天生脖子较长的个体能吃到更多食物、存活和繁殖更成功\",\"长颈鹿不是使劲伸脖子够高树才让脖子变长,而是天生脖子较长的个体\",\"更适应的个体留下更多后代,相关基因在下一代中比例上升\",\"\",\"\",\"变异是随机的,选择是环境施加的\"]}]}",
+  "usage": {
+    "input_tokens": 1206,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2270,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1206,
+      "outputTokens": 2270,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.06278,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 35.137
+}
