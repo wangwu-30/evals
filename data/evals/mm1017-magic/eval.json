@@ -1,0 +1,227 @@
+{
+  "id": "mm1017-magic",
+  "title": "MiniMax 加一句话",
+  "kind": "matrix",
+  "order": 5,
+  "baseline": "none",
+  "description": "公开合成题，比较同一道题加不同的话后的回答。",
+  "cond_labels": {
+    "none": "不加话",
+    "en_breath@prefix": "英文·深呼吸·题前",
+    "en_breath@suffix": "英文·深呼吸·题末",
+    "en_career@prefix": "英文·职业生涯·题前",
+    "en_career@suffix": "英文·职业生涯·题末",
+    "en_expert@prefix": "英文·顶级专家·题前",
+    "en_expert@suffix": "英文·顶级专家·题末",
+    "en_lets@prefix": "英文·一起逐步思考·题前",
+    "en_lets@suffix": "英文·一起逐步思考·题末",
+    "en_step@prefix": "英文·一步一步思考·题前",
+    "en_step@suffix": "英文·一步一步思考·题末",
+    "en_threat@prefix": "英文·答错的后果·题前",
+    "en_threat@suffix": "英文·答错的后果·题末",
+    "en_tip@prefix": "英文·小费·题前",
+    "en_tip@suffix": "英文·小费·题末",
+    "zh_breath@prefix": "中文·深呼吸·题前",
+    "zh_breath@suffix": "中文·深呼吸·题末",
+    "zh_career@prefix": "中文·职业生涯·题前",
+    "zh_career@suffix": "中文·职业生涯·题末",
+    "zh_expert@prefix": "中文·顶级专家·题前",
+    "zh_expert@suffix": "中文·顶级专家·题末",
+    "zh_step@prefix": "中文·一步一步思考·题前",
+    "zh_step@suffix": "中文·一步一步思考·题末",
+    "zh_think@prefix": "中文·仔细思考·题前",
+    "zh_think@suffix": "中文·仔细思考·题末",
+    "zh_threat@prefix": "中文·答错的后果·题前",
+    "zh_threat@suffix": "中文·答错的后果·题末",
+    "zh_tip@prefix": "中文·小费·题前",
+    "zh_tip@suffix": "中文·小费·题末"
+  },
+  "conditions": {
+    "none": {
+      "family": "不加话",
+      "place": "none",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_breath@prefix": {
+      "family": "深呼吸",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_threat@prefix": {
+      "family": "答错的后果",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_lets@suffix": {
+      "family": "一起逐步思考",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_think@prefix": {
+      "family": "仔细思考",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_career@suffix": {
+      "family": "职业生涯",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_expert@suffix": {
+      "family": "顶级专家",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_threat@prefix": {
+      "family": "答错的后果",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_threat@suffix": {
+      "family": "答错的后果",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_step@suffix": {
+      "family": "一步一步思考",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_expert@suffix": {
+      "family": "顶级专家",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_expert@prefix": {
+      "family": "顶级专家",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_breath@suffix": {
+      "family": "深呼吸",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_lets@prefix": {
+      "family": "一起逐步思考",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_breath@prefix": {
+      "family": "深呼吸",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_career@prefix": {
+      "family": "职业生涯",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_tip@suffix": {
+      "family": "小费",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_career@suffix": {
+      "family": "职业生涯",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_tip@prefix": {
+      "family": "小费",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_career@prefix": {
+      "family": "职业生涯",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_step@suffix": {
+      "family": "一步一步思考",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_tip@suffix": {
+      "family": "小费",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_tip@prefix": {
+      "family": "小费",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_step@prefix": {
+      "family": "一步一步思考",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_expert@prefix": {
+      "family": "顶级专家",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_breath@suffix": {
+      "family": "深呼吸",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_think@suffix": {
+      "family": "仔细思考",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "en_step@prefix": {
+      "family": "一步一步思考",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "zh_threat@suffix": {
+      "family": "答错的后果",
+      "place": "suffix",
+      "temp": 1.0,
+      "arm": "t1"
+    }
+  },
+  "presets": [
+    {
+      "label": "一步一步思考",
+      "conds": [
+        "zh_step@suffix",
+        "zh_step@prefix"
+      ]
+    }
+  ],
+  "model_labels": {},
+  "check_labels": {},
+  "conclusion": "中文「一步一步思考」放在题末，回答长度有变化；正确率差异未通过多重比较校正。"
+}

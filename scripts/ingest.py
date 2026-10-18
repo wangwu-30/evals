@@ -10,6 +10,7 @@
   teamrecall-score 一个或多个 score.json（--src 可用逗号分隔），每个记一条 metrics 记录
 """
 import argparse, json, os, sys, glob, pathlib
+from viewer_data import infer_failure, output_of
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 def score_of(checks):
@@ -62,8 +63,10 @@ def main():
     a.add_argument("--src", required=True); a.add_argument("--date", required=True)
     a.add_argument("--env", default=""); a.add_argument("--notes", default="")
     a.add_argument("--wall-min", type=float, default=None, help="墙钟耗时（分钟），不填则不显示")
-    a.add_argument("--strip-output", action="store_true", help="丢掉 raw.output 以减小体积")
+    a.add_argument("--strip-output", action="store_true", help="已停用：新批次必须保留回答原文")
     x = a.parse_args()
+    if x.strip_output:
+        a.error('--strip-output 已停用：新批次必须保留回答原文')
     ed = ROOT / "data" / "evals" / x.eval
     if not (ed / "eval.json").exists(): sys.exit(f"先建 {ed}/eval.json（见 README）")
     bd = ed / "batches"; bd.mkdir(exist_ok=True)
@@ -72,8 +75,10 @@ def main():
     if x.format == "prompt-eval": recs = from_prompt_eval(src, x.eval, x.batch)
     elif x.format == "teamrecall-score": recs = from_teamrecall([os.path.expanduser(s) for s in src.split(",")], x.eval, x.batch)
     else: recs = [json.loads(l) | {"eval": x.eval, "batch": x.batch} for l in open(src) if l.strip()]
-    if x.strip_output:
-        for r in recs: (r.get("raw") or {}).pop("output", None)
+    for r in recs:
+        text, present = output_of(r)
+        r['fail_type'] = infer_failure(r, text, present)[0]
+        r.setdefault('text_source', '')
     if not recs: sys.exit("没有找到记录")
     with open(bd / f"{x.batch}.jsonl", "w") as f:
         for r in recs: f.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -85,4 +90,5 @@ def main():
             "wall_min": x.wall_min}
     json.dump(meta, open(bd / f"{x.batch}.meta.json", "w"), ensure_ascii=False, indent=1)
     print(f"写入 {len(recs)} 条 → {bd}/{x.batch}.jsonl；接着运行 python3 scripts/build_site.py")
-main()
+if __name__ == '__main__':
+    main()
