@@ -5,6 +5,8 @@ import hashlib
 from pathlib import Path
 import tempfile
 import unittest
+from html.parser import HTMLParser
+from unittest.mock import patch
 import viewer_data as v
 import build_site as build
 
@@ -132,7 +134,7 @@ class SafetyTests(unittest.TestCase):
 
     def test_noindex_and_public_scope(self):
         self.assertIn('name="robots" content="noindex',build.page('x','x'))
-        self.assertIn('name="robots" content="noindex"',(ROOT/'scripts/viewer/shell.html').read_text())
+        self.assertIn('name="robots" content="noindex,nofollow"',(ROOT/'scripts/viewer/shell.html').read_text())
         if (ROOT/'site').exists():
             for path in (ROOT/'site').rglob('*.html'):
                 self.assertIn('name="robots" content="noindex',path.read_text())
@@ -140,6 +142,34 @@ class SafetyTests(unittest.TestCase):
             self.assertFalse((ROOT/'site/data/splits.json').exists())
             self.assertFalse(any((ROOT/'site/data').rglob('artifacts')))
             self.assertFalse(any((ROOT/'site/c').glob('company*')))
+
+
+class RobotsBuildTests(unittest.TestCase):
+    def test_every_generated_html_disallows_indexing_and_following(self):
+        class RobotsParser(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.robots = []
+
+            def handle_starttag(self, tag, attrs):
+                attrs = dict(attrs)
+                if tag == 'meta' and attrs.get('name', '').lower() == 'robots':
+                    self.robots.append(attrs.get('content'))
+
+        with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
+            output = Path(tmp) / 'site'
+            with patch.object(build, 'OUT', output), patch.object(build, 'VIEWERS', {}):
+                build.main()
+            pages = list(output.rglob('*.html'))
+            self.assertTrue(pages)
+            for name in ('daily-skill', 'daily-skill-agentic', 'mm1017-prefix', 'mm1017-magic'):
+                self.assertIn(output / 'c' / (name + '.html'), pages)
+            for path in pages:
+                with self.subTest(page=str(path.relative_to(output))):
+                    parser = RobotsParser()
+                    parser.feed(path.read_text())
+                    self.assertEqual(parser.robots, ['noindex,nofollow'])
+            self.assertEqual((output / 'robots.txt').read_text(), 'User-agent: *\nDisallow: /\n')
 
 
 if __name__=='__main__':unittest.main()
