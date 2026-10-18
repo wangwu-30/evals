@@ -1,0 +1,479 @@
+{
+  "id": "mm1017-prefix",
+  "title": "MiniMax 前缀",
+  "kind": "matrix",
+  "order": 4,
+  "baseline": "none",
+  "description": "公开合成题，比较同一道题加不同的话后的回答。",
+  "cond_labels": {
+    "none": "不加话",
+    "emoji1": "表情1",
+    "emoji2": "表情2",
+    "emoji3": "表情3",
+    "emoji4": "表情4",
+    "emoji5": "表情5",
+    "emoji6": "表情6",
+    "famous1": "名人1",
+    "famous2": "名人2",
+    "famous3": "名人3",
+    "famous4": "名人4",
+    "famous5": "名人5",
+    "garbage1": "不可见与特殊字符1",
+    "garbage2": "不可见与特殊字符2",
+    "garbage3": "不可见与特殊字符3",
+    "garbage4": "不可见与特殊字符4",
+    "garbage5": "不可见与特殊字符5",
+    "idcard1": "虚构号码1",
+    "idcard2": "虚构号码2",
+    "idcard3": "虚构号码3",
+    "idcard4": "虚构号码4",
+    "idcard5": "虚构号码5",
+    "name1": "姓名1",
+    "name2": "姓名2",
+    "name3": "姓名3",
+    "name4": "姓名4",
+    "name5": "姓名5",
+    "name6": "姓名6",
+    "personality1": "性格1",
+    "personality2": "性格2",
+    "personality3": "性格3",
+    "personality4": "性格4",
+    "personality5": "性格5",
+    "personality6": "性格6",
+    "rare_cjk1": "生僻字1",
+    "rare_cjk2": "生僻字2",
+    "rare_cjk3": "生僻字3",
+    "rare_cjk4": "生僻字4",
+    "rare_cjk5": "生僻字5",
+    "repeat1": "重复文字1",
+    "repeat2": "重复文字2",
+    "repeat3": "重复文字3",
+    "repeat4": "重复文字4",
+    "role1": "角色1",
+    "role2": "角色2",
+    "role3": "角色3",
+    "role4": "角色4",
+    "role5": "角色5",
+    "special1": "特殊符号1",
+    "special2": "特殊符号2",
+    "special3": "特殊符号3",
+    "special4": "特殊符号4",
+    "special5": "特殊符号5",
+    "special6": "特殊符号6",
+    "emoji1@t0": "表情1 · 温度 0",
+    "famous1@t0": "名人1 · 温度 0",
+    "garbage1@t0": "不可见与特殊字符1 · 温度 0",
+    "idcard1@t0": "虚构号码1 · 温度 0",
+    "name1@t0": "姓名1 · 温度 0",
+    "none@t0": "不加话 · 温度 0",
+    "personality1@t0": "性格1 · 温度 0",
+    "rare_cjk1@t0": "生僻字1 · 温度 0",
+    "repeat1@t0": "重复文字1 · 温度 0",
+    "role1@t0": "角色1 · 温度 0",
+    "special1@t0": "特殊符号1 · 温度 0"
+  },
+  "conditions": {
+    "personality4": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "famous1": {
+      "family": "名人",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "none": {
+      "family": "不加话",
+      "place": "none",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name2": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special6": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "garbage1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "personality2": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "emoji1": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "repeat4": {
+      "family": "重复文字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "role1": {
+      "family": "角色",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name3": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "emoji1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "role4": {
+      "family": "角色",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "repeat3": {
+      "family": "重复文字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "personality3": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special2": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "personality5": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "role5": {
+      "family": "角色",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name6": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "famous3": {
+      "family": "名人",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special5": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "famous5": {
+      "family": "名人",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk5": {
+      "family": "生僻字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "repeat1": {
+      "family": "重复文字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name5": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name4": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard4": {
+      "family": "虚构号码",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard5": {
+      "family": "虚构号码",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "garbage1": {
+      "family": "不可见与特殊字符",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "role3": {
+      "family": "角色",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk3": {
+      "family": "生僻字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "famous2": {
+      "family": "名人",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "garbage3": {
+      "family": "不可见与特殊字符",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "role2": {
+      "family": "角色",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard2": {
+      "family": "虚构号码",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "emoji3": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "famous4": {
+      "family": "名人",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "emoji2": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "personality1": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk1": {
+      "family": "生僻字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "none@t0": {
+      "family": "温度 0",
+      "place": "none",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "emoji4": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "name1": {
+      "family": "姓名",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk4": {
+      "family": "生僻字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special1": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "garbage5": {
+      "family": "不可见与特殊字符",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "garbage2": {
+      "family": "不可见与特殊字符",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard3": {
+      "family": "虚构号码",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "role1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "emoji5": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "idcard1": {
+      "family": "虚构号码",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "personality1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "garbage4": {
+      "family": "不可见与特殊字符",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "repeat2": {
+      "family": "重复文字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "rare_cjk2": {
+      "family": "生僻字",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special3": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "special1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "special4": {
+      "family": "特殊符号",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "famous1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "personality6": {
+      "family": "性格",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    },
+    "repeat1@t0": {
+      "family": "温度 0",
+      "place": "prefix",
+      "temp": 0.0,
+      "arm": "t0"
+    },
+    "emoji6": {
+      "family": "表情",
+      "place": "prefix",
+      "temp": 1.0,
+      "arm": "t1"
+    }
+  },
+  "presets": [
+    {
+      "label": "名人",
+      "conds": [
+        "famous1",
+        "famous2"
+      ]
+    }
+  ],
+  "model_labels": {},
+  "check_labels": {},
+  "conclusion": "名人条件的回答长度有变化；各条件组的正确率差异未通过多重比较校正。"
+}

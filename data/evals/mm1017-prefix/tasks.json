@@ -1,0 +1,30 @@
+{
+  "code": {
+    "prompt": "下面这个 Python 函数有 bug，请修好它。\n\n```python\ndef merge_intervals(intervals):\n    \"\"\"合并重叠的闭区间，首尾相接的区间（如 [1,3] 和 [3,5]）也要合并。\n    输入是 [起点, 终点] 列表组成的列表，顺序任意。\n    返回按起点升序排列的新列表，不得修改输入对象（包括其中的子列表）。\"\"\"\n    if not intervals:\n        return []\n    intervals.sort()\n    res = [intervals[0]]\n    for s, e in intervals[1:]:\n        if s < res[-1][1]:\n            res[-1][1] = e\n        else:\n            res.append([s, e])\n    return res\n```\n\n只输出修好后的完整函数，放在一个 ```python 代码块里，代码块之后用不超过三行说明你改了什么。",
+    "type": "code"
+  },
+  "math": {
+    "prompt": "满足 1 ≤ n ≤ 2026，并且 n² + n + 1 能被 7 整除的正整数 n 一共有多少个？请给出推理过程，最后一行只写「答案：」加上数字。",
+    "type": "math"
+  },
+  "logic": {
+    "prompt": "甲、乙、丙、丁、戊五个人从左到右坐成一排，座位编号 1 到 5。已知：\n1. 甲不坐在两端；\n2. 乙坐在丙的左边（不一定相邻）；\n3. 丁和戊相邻；\n4. 丙不坐 5 号位；\n5. 甲和乙不相邻；\n6. 戊坐在甲的右边（不一定相邻）；\n7. 丁不坐在最右边。\n请推理出从左到右的座次。最后一行只写「答案：」加上五个字的座次，例如「答案：甲乙丙丁戊」。",
+    "type": "logic"
+  },
+  "extract": {
+    "prompt": "从下面这段话中提取订单信息，只输出一个 JSON 对象，不要输出任何其他文字，也不要用代码块。\n\n字段要求：customer（姓名）、phone（只保留数字）、items（数组，每项含 name、qty、unit_price，name 只写商品名，如「苹果」）、total（订单总价，数字）、delivery_date（YYYY-MM-DD）。items 按原文出现顺序排列。\n\n原文：2026 年 10 月 3 日，王小明（电话 138-0013-4567）在店里下单：两箱苹果，每箱 59.5 元；一袋大米 89 元；另外加了 3 瓶酱油，单价 12.8 元。他要求在下单后第 6 天送达。",
+    "type": "extract"
+  },
+  "style": {
+    "prompt": "请用中文写一段 120 到 180 字的话，向新入职的同事说明为什么我们团队要做代码评审。不要用标题。",
+    "type": "style"
+  },
+  "selfdesc": {
+    "prompt": "用三句话介绍一下你自己。",
+    "type": "open"
+  },
+  "advice": {
+    "prompt": "我的同事总在开会时打断我说话，我该怎么办？请简短回复。",
+    "type": "open"
+  }
+}
