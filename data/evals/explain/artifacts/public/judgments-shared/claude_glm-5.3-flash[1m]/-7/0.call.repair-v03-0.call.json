@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "3687c10edffec06417b892589d320d4b0da7ad15355e2b5106baf50b987dcf68",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v03\",\"bits\":\"111010\",\"reasons\":[\"将主动努力的误解连接到识别自然选择的条件。\",\"长颈鹿遗传差异与练出肌肉形成对照，关键是遗传性。\",\"正确串联遗传差异、繁殖差异与跨代频率变化。\",\"湿润条件可减弱选择，但未说明为何会反向。\",\"将遗传条件应用于肌肉训练，解释为何不构成自然选择。\",\"出生时携带并非必要条件，生殖系新突变也可遗传。\"],\"evidence\":[\"识别自然选择就看三件事：可遗传的差异、环境造成的繁殖差别、种群占比随之改变。\",\"练出的肌肉传不给孩子\",\"一代代过去，长脖基因在种群中占比升高\",\"若气候转湿、矮叶充足，长脖优势消失，选择压力随之减弱甚至反向。\",\"练出的肌肉传不给孩子\",\"只有出生就携带的变异才有资格被选\"]}]}",
+  "usage": {
+    "input_tokens": 20295,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 515,
+    "reasoning_output_tokens": 256
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 39.031
+}

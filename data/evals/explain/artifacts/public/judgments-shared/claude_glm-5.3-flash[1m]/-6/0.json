@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-6",
+  "rep": 0,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110000",
+      "reasons": [
+        "用硬币数据连接假设比较与可信度判断。",
+        "区分似然与后验，指出条件方向不同。",
+        "九次正面的概率计算错误，且未说明归一化。",
+        "未明确改变原案例的一项条件。",
+        "没有应用到表面不同的新情境。",
+        "九次正面的计算遗漏组合数且公平情形也算错。"
+      ],
+      "evidence": [
+        "哪个假设让这批数据更可能出现？",
+        "不等于「它更可信」",
+        "这个结果的概率约0.5¹⁰≈0.001",
+        "",
+        "",
+        "若正面率是0.9，概率≈0.9⁹×0.1≈0.039"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100101",
+      "reasons": [
+        "同均值课堂展示衡量离散程度的用途。",
+        "未提供总体方差与易混概念的辨别案例。",
+        "计算和单位正确，但缺少总体与样本区别。",
+        "同一数据伸展两倍，正确指出方差四倍。",
+        "没有跨情境应用并说明共同关系。",
+        "计算正确，未声称平方是唯一选择。"
+      ],
+      "evidence": [
+        "Same mean, very different classrooms.",
+        "",
+        "variance = 8/3 ≈ 2.7",
+        "Stretch the data twice as wide and variance grows fourfold.",
+        "",
+        "units get squared (points squared)"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "110010",
+      "reasons": [
+        "啸叫案例连接反馈方向与后果判断。",
+        "正反馈与恒温负反馈按作用方向区分。",
+        "没有说明环路增益决定变化是否放大。",
+        "未改变原案例的明确条件并比较结果。",
+        "挤兑案例应用同向增强关系。",
+        "断言增长后期总放缓，边界表述过强。"
+      ],
+      "evidence": [
+        "同一个结构，结果取决于它放大的是什么。",
+        "温度高了就制冷，把系统拉回原状",
+        "每循环一次都比上次更大",
+        "",
+        "越恐慌越取钱",
+        "所以增长曲线后期总会放缓"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "下午选择连接最佳替代价值与决策。",
+        "明确比较最佳替代成本与所有替代相加。",
+        "正确计算最佳放弃选项价值为一百。",
+        "下午不变，考试临近改变最佳替代及成本。",
+        "仍是同一下午选择，没有跨情境应用。",
+        "假设价值明确，成本定义与计算正确。"
+      ],
+      "evidence": [
+        "So a choice is worth it only if its value beats",
+        "the movie does not add to the cost",
+        "the opportunity cost is 100",
+        "if an exam is tomorrow, studying becomes the top alternative",
+        "",
+        "Your free afternoon has three options"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "连接阳性结果与实际患病概率判断。",
+        "区分真阳性与健康误报，按患病状态判断。",
+        "人数、条件概率公式及后验计算正确。",
+        "保持检测性能，降低患病率使后验降低。",
+        "未迁移到表面不同的新情境。",
+        "明确假设案例，数值与解释正确。"
+      ],
+      "evidence": [
+        "「检测出阳性，到底有多可能真生病？」",
+        "阳性的人里既有病人也有健康人",
+        "阳性者患病概率≈99/594≈17%",
+        "若病更罕见，同样的检测下阳性可信度更低。",
+        "",
+        "设某病在人群中每万人有100个病人。"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "100000",
+      "reasons": [
+        "旧价格问题连接缓存刷新时机判断。",
+        "没有缓存失效与易混近例的判别。",
+        "将更新数据库同时更新缓存误称始终新鲜。",
+        "策略改变后的始终新鲜结论不正确。",
+        "没有不同情境的关系迁移。",
+        "始终新鲜忽略失败与并发竞态。"
+      ],
+      "evidence": [
+        "customers see stale prices.",
+        "",
+        "always fresh, but more code",
+        "whenever the database is updated, also update",
+        "",
+        "always fresh, but more code and more failure modes"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111100",
+      "reasons": [
+        "销量与溺水案例连接相关与因果判断。",
+        "共同原因造成相关与直接因果形成对照。",
+        "正确解释共同原因及随机化的作用。",
+        "固定炎热程度，关系消失降低直接因果信心。",
+        "没有应用到表面不同的新情境。",
+        "将季节性教学案例直接表述为观察事实。"
+      ],
+      "evidence": [
+        "所以看到相关先追问一句",
+        "背后是同一个原因：夏天",
+        "天热既让人多买冰淇淋，也让更多人下水",
+        "只比较同样炎热的那些天",
+        "",
+        "冰淇淋销量和溺水人数同涨同跌"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "100100",
+      "reasons": [
+        "连接起始金额与最终增长规模判断。",
+        "未给出与复利易混的具体近例。",
+        "金额序列正确，但年度增量算错。",
+        "保持利率，起始金额翻倍使终值翻倍。",
+        "没有表面不同情境的应用。",
+        "年度增量错误，时间优势也缺少利率条件。"
+      ],
+      "evidence": [
+        "Why the starting amount matters",
+        "",
+        "the yearly increase itself grows from 100 to 121 to 133",
+        "twice the starting money means twice the final amount",
+        "",
+        "the yearly increase itself grows from 100 to 121 to 133"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111010",
+      "reasons": [
+        "连接旧题高分与新数据评估的必要性。",
+        "背题与学习规律按新题表现区分。",
+        "正确解释噪声拟合导致泛化差。",
+        "仅列通用办法，未控制条件比较具体结果。",
+        "学生背题迁移到模型记忆噪声。",
+        "使用学生类比但未解释类比失效边界。"
+      ],
+      "evidence": [
+        "不能只看它在训练数据上的成绩",
+        "换一套新题就垮",
+        "它会把训练数据里的噪声和巧合也当成规律拟合进去",
+        "",
+        "机器学习模型也一样",
+        "办法也和「别死记硬背」一样"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111110",
+      "reasons": [
+        "检索案例连接结果纯净度与覆盖度选择。",
+        "精确率与召回率由不同分母明确区分。",
+        "两个比例正确且分母意义清楚。",
+        "固定语料，新增结果覆盖全部相关文档改变两率。",
+        "律师检索应用找全相关文档的召回关系。",
+        "断言收紧规则必然提升精确率不成立。"
+      ],
+      "evidence": [
+        "Which to optimize depends on the task",
+        "of everything relevant, how much did we find?",
+        "8/20",
+        "return 30 documents covering all 20 relevant ones",
+        "a lawyer who must find every relevant document needs recall",
+        "Tighten the rules and precision rises while recall falls."
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "耐药比例变化连接选择机制与主动努力辨别。",
+        "区分既存遗传变异与目的性个体改变。",
+        "遗传差异和差异繁殖正确解释跨代变化。",
+        "停药且耐药有代价时优势转向非耐药菌。",
+        "育种将差异繁殖机制迁移到人工挑选。",
+        "筛子类比说明映射但未交代失效边界。"
+      ],
+      "evidence": [
+        "下一代种群里耐药菌比例大增",
+        "细菌没有「想」变强",
+        "差异能遗传，不同差异留下后代的数量不同",
+        "停用抗生素后，如果耐药有代价",
+        "只是把「环境筛选」换成了「人的挑选」",
+        "是药物像筛子一样留下了碰巧合适的个体"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111010",
+      "reasons": [
+        "付款超时连接安全重试的设计需求。",
+        "设置状态与累加按重复效果明确区分。",
+        "正确说明同一逻辑操作复用键以去重。",
+        "未改变具体案例条件并解释结果。",
+        "付款去重应用重复执行不增加效果的关系。",
+        "唯一安全选择及必然重复扣款表述错误。"
+      ],
+      "evidence": [
+        "a payment call times out",
+        "SET status = 'paid' is idempotent; ADD 1 TO total is not.",
+        "a unique ID per logical operation",
+        "",
+        "returns the stored result for duplicates",
+        "The only safe move is to retry"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110100",
+      "reasons": [
+        "硬币案例连接分布与结果可预测程度。",
+        "公平、偏置和确定结果按概率分布区分。",
+        "缺少分布熵与单个序列意义的区别。",
+        "固定二元结果，将概率改为六成使熵增加。",
+        "密码迁移依赖必须遍历每种可能的错误推理。",
+        "均匀密码并不要求逐一尝试所有可能。"
+      ],
+      "evidence": [
+        "你多少能预料它，不确定性就下降了",
+        "某个结果必然发生时H=0",
+        "H = −Σ p·log p",
+        "把99%调成60%，熵回升",
+        "因为每种可能都得老老实实挨个试",
+        "每种可能都得老老实实挨个试"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101101",
+      "reasons": [
+        "锁等待案例连接统一获取顺序的决策。",
+        "未展示普通等待等易混近例及辨别。",
+        "正确解释持锁循环等待及四项条件。",
+        "同样锁资源改为统一顺序，正确打破循环。",
+        "没有不同情境的应用。",
+        "机制、必要条件和排序解法准确。"
+      ],
+      "evidence": [
+        "make every thread acquire locks in the same global order",
+        "",
+        "Each holds one resource and waits for the other's",
+        "then the cycle cannot close",
+        "",
+        "resources are exclusive"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "110100",
+      "reasons": [
+        "烟花免费受益连接供给和筹资问题。",
+        "付费频道按排他性与公共物品区分。",
+        "搭便车激励不必导致无人出资。",
+        "保持消费特性，增加排他性改变物品分类。",
+        "开源软件仅列举，未说明共同判定关系。",
+        "断言人人不出钱及收费公司不建路灯过强。"
+      ],
+      "evidence": [
+        "既然不花钱也能享受",
+        "付费频道能把没交钱的人挡在门外",
+        "人人这么想，就没人出钱",
+        "一旦加上排他性",
+        "用捐赠和基金会维持开源软件这类公共物品",
+        "路灯不会由一家向路人收费的公司来建"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "100000",
+      "reasons": [
+        "咖啡店拥挤连接由人数和停留时间推算流率。",
+        "未区分系统时间与等待时间近例。",
+        "后文将等待时间混入原系统时间边界。",
+        "等待时间翻倍不保证原系统人数翻倍。",
+        "没有不同情境的应用。",
+        "等待时间与店内停留时间混淆造成错误结论。"
+      ],
+      "evidence": [
+        "Use it to infer one quantity from the other two",
+        "",
+        "If waiting time W doubles",
+        "If waiting time W doubles while λ is fixed",
+        "",
+        "If waiting time W doubles while λ is fixed"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-6/0.call.json",
+  "prompt_sha256": "59781fffbecee0f8e078472984c0e1baac4781932ba28f353d5c19f8cad59a11",
+  "isolated_repair_calls": []
+}

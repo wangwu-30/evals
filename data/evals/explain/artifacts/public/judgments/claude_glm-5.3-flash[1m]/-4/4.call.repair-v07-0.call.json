@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "7e0d95d915ced69df72b9f8f083854f2b92458e963209a5985c50b2d6aa78305",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v07\",\"bits\":\"110010\",\"reasons\":[\"将不付费激励连接到是否担心搭便车的判断。\",\"对照路灯与可收费的俱乐部物品，指出排他性差别。\",\"把搭便车必然推成无人付费、零供给，推导错误。\",\"改变排他条件，但断言供给恢复缺乏充分条件。\",\"将收费排他关系迁移到收费频道的私营供给。\",\"断言所有理性人搭便车并导致零供给，违背事实边界。\"],\"evidence\":[\"判断某物品要不要担心搭便车，就看这两条\",\"若能低成本收费（小区路灯只对缴费住户亮），就变成俱乐部物品\",\"合起来却是没人付钱、路灯建不出来\",\"搭便车被排除，供给恢复\",\"这解释了为什么国防、基础研究常由税收公共提供，而收费频道可以私营\",\"于是每个理性人都想「让别人付钱，我白享」\"]}]}",
+  "usage": {
+    "input_tokens": 20269,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 444,
+    "reasoning_output_tokens": 188
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 44.214
+}

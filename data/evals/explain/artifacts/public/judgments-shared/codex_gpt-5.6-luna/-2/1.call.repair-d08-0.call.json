@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "81b2050b3708017a7377c1151ebfff22f1c77fce80bdc10a2afeda01132c6443",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"011101\",\"reasons\":[\"No concrete problem is connected to a decision.\",\"Contrasts compound growth with simple growth using interest on increases.\",\"Correct calculation, variable meanings, periods, and compound-versus-simple distinction.\",\"Doubles starting amount while holding rate and time unchanged.\",\"No surface-different situation applies the same relationship.\",\"Accurate hypothetical example; no unsupported return guarantees.\"],\"evidence\":[\"\",\"the second year also earns on the first year’s increase\",\"$100×1.1²=$121, not $120\",\"when the rate and time are unchanged\",\"\",\"If $100 grows by 10% yearly\"]}]}",
+  "usage": {
+    "input_tokens": 20334,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 230,
+    "reasoning_output_tokens": 88
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 30.349
+}

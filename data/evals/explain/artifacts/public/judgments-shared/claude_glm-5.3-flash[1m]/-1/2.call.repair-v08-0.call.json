@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "d1e960689447451abdbfff98fba2de46f8bb2b72855b27be7c97f8e0a9170119",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"101010\",\"reasons\":[\"Connects request throughput and duration to required in-flight capacity.\",\"No confusable near-case or deciding distinction is provided.\",\"Correct calculation, units, system boundaries, and distribution independence.\",\"Halving service time need not halve total system time.\",\"Applies arrival-rate-times-duration relationship to server requests.\",\"Incorrectly equates reduced service time with reduced system time.\"],\"evidence\":[\"needs about 200 in flight\",\"\",\"so on average 30 people are inside.\",\"cut service time to 0.1 s at the same arrival rate\",\"a server handling 1000 requests/s with 0.2 s each\",\"the crowd halves to 100\"]}]}",
+  "usage": {
+    "input_tokens": 20388,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 226,
+    "reasoning_output_tokens": 73
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 32.316
+}

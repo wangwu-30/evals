@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "a71771ffc7886da200052c3ecfc038347d2cc55f15ec3ed4e35f3b5a231ae217",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v07\",\"bits\":\"100000\",\"reasons\":[\"将供给不足连接到税收或组织供给的选择。\",\"收费电视可排他但通常非竞争，误称私人物品。\",\"把搭便车推成必然无人供给，违背激励机制。\",\"同时改变人数和监督条件，未隔离单一条件。\",\"仅列迁移对象，未解释共享的决定关系。\",\"必然零供给及收费电视分类存在实质错误。\"],\"evidence\":[\"这类东西为何常需要税收或组织来供给\",\"收费电视能设密码排他，就从公共物品变成可收费的私人物品\",\"人人都这样想，路灯就没人建\",\"人数少、可监督，搭便车被抑制\",\"开源软件、防洪堤面临同样困境\",\"人人都这样想，路灯就没人建\"]}]}",
+  "usage": {
+    "input_tokens": 20275,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 380,
+    "reasoning_output_tokens": 169
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.426
+}

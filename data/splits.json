@@ -15,6 +15,21 @@
    "holdout": [
     "h1"
    ]
+  },
+  {
+   "skill": "ljg-explain",
+   "dev": [
+    "explain · 8题"
+   ],
+   "validation": [
+    "explain-validation · 8题"
+   ],
+   "holdout": [
+    "explain-h1",
+    "explain-h2",
+    "explain-h3",
+    "explain-h4"
+   ]
   }
  ],
  "rules": [

@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "ba6c2b0d726c5aa1220b4fab05dc4639f3ac98579a06d324881e6c139e52f6ca",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"110010\",\"reasons\":[\"用猜硬币的具体问题连接熵与预测难度。\",\"对比均匀与近乎确定情形，以概率偏斜程度区分。\",\"缺少数值计算、对数底数、单位及分布与序列的区别。\",\"未保持原情境固定并明确改变一个条件。\",\"将相同概率关系迁移到天亮事件。\",\"误将均匀分布的最大平均信息量说成每次信息量最大。\"],\"evidence\":[\"猜硬币或掷骰子时，你完全无法预测哪个面出现\",\"若某个结果的概率接近1（比如明天天亮）\",\"\",\"\",\"结果几乎确定，平均意外很小，熵接近0\",\"每次结果都带来最多新信息\"]}]}",
+  "usage": {
+    "input_tokens": 20396,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 417,
+    "reasoning_output_tokens": 220
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 38.146
+}

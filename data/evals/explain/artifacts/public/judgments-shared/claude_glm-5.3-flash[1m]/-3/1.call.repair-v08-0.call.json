@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "854406c5ff24ea2e3ba54a3688122d0cfc645d2480fe35011d47ae026c15fddd",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v08\",\"bits\":\"111011\",\"reasons\":[\"Connects difficult cycle-time measurement to calculating it from observable quantities.\",\"Contrasts stable systems with overloaded queues; stability decides applicability.\",\"Correct calculation, units, system boundaries, and distribution-independent steady-state conditions.\",\"No explicit change to the coffee-shop case with other conditions fixed.\",\"Factory example applies the same inventory-throughput-time relationship.\",\"Claims and arithmetic are correct; examples have clear illustrative framing.\"],\"evidence\":[\"cycle time W is often hard to instrument\",\"if arrivals outrun service, the queue grows without bound\",\"so about 30 people are inside on average\",\"\",\"a factory computes it from work-in-progress and throughput\",\"as long as the system is stable\"]}]}",
+  "usage": {
+    "input_tokens": 20250,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 290,
+    "reasoning_output_tokens": 134
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.199
+}

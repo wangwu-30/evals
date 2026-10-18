@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "c9ef605acb8481f4ea2d19885c77c0309783fcf0e696b1f2efee4b6007fcf002",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"110100\",\"reasons\":[\"用猜硬币的具体问题说明熵可比较事前不确定性。\",\"对比正常与确定硬币，概率是否集中是判别依据。\",\"缺少公式、数值计算及分布与单个序列的区别。\",\"固定结果集合，概率从二分之一趋零使熵下降。\",\"没有迁移到表面不同的新情境。\",\"熵不等于指明结果实际所需的是非问题个数。\"],\"evidence\":[\"信息熵把这种「事前不确定」变成数\",\"概率越摊得平，熵越大；概率全押在一个结果上，熵为零\",\"\",\"概率从1/2推向0时熵同样下降——全押反面也是确定\",\"\",\"含义是「用是/否问题指明结果所需的个数」\"]}]}",
+  "usage": {
+    "input_tokens": 20258,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 370,
+    "reasoning_output_tokens": 157
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 38.203
+}

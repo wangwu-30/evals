@@ -1,0 +1,61 @@
+{
+  "batch": "2026-10-13-explain-v1",
+  "source": {
+    "repository": "https://github.com/lijigang/ljg-skills",
+    "commit": "2c82b3d06a2d84405ec971d21c64f71b6a8dd900",
+    "path": "skills/ljg-explain/SKILL.md",
+    "version": "1.0.2",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "skill_sha256": "991c537eea77960460c7c48772a0cd562d485afd5f4fb589d637509117de2a63",
+    "sections": [
+      "读者与交付",
+      "理解标准",
+      "公式与原理",
+      "中文表达",
+      "证据与版式",
+      "Gotchas",
+      "Examples"
+    ],
+    "license_sha256": "24807dd5a0d4ef9f3c94e197e80ad2b6198b3381339b9bc3ab78cfc36eee4502"
+  },
+  "models": [
+    "codex:gpt-5.6-luna",
+    "claude:glm-5.3-flash[1m]"
+  ],
+  "judges": {
+    "codex:gpt-5.6-luna": "codex:gpt-6.1-sol",
+    "claude:glm-5.3-flash[1m]": "codex:gpt-6.1-sol"
+  },
+  "conditions": [
+    "none",
+    "full",
+    "-1",
+    "-2",
+    "-3",
+    "-4",
+    "-5",
+    "-6",
+    "-7"
+  ],
+  "reps": 5,
+  "public_tasks": 16,
+  "private_tasks": 4,
+  "public_answer_attempts": 1440,
+  "private_answer_attempts": 360,
+  "score": "passed checks / 10 per task, equal task mean per round, trim one min and max of five rounds",
+  "ci": "10000 paired crossed task/repetition bootstrap; Bonferroni public ablations family=28",
+  "hashes": {
+    "run.py": "83bce00b61b3a2454030dfabcac833968b9feb08d352d3d2082d30dcd0869d11",
+    "checks.py": "bf49d3504d61b38a1dba60081a6adda133c5a65f265b4b8f57cfc0274a8c16df",
+    "summarize.py": "8140069e39cd427841201c5aafc046994662f7cdd017b2759c95dd31465ec3ce"
+  },
+  "private_design_hash": "a82a48856949e8f65b90d66d18ac686de2c3cc7c0bec467a8518b3b5fe91f490",
+  "known_reported_cap_usd": 29.5,
+  "cost_unknown_policy": "missing USD is null, never zero; CLI report not invoice verified",
+  "holdout_use_entries": 1,
+  "recorded_utc": "2026-10-13T17:57:43Z",
+  "cross_vendor_pilot": "archived and billed; final common OpenAI-requested judge due reported-cost budget",
+  "skill_edits": false,
+  "holdout_optimization": false
+}

@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "ffdd8cb778c7a477645db0f821627776e8ea5d7f16d897e97770c61795d73b9b",
+  "rc": 0,
+  "cost_usd_reported": 0.040825,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"observed-03\",\"bits\":\"101001\",\"reasons\":[\"Links concept to deciding when amplification is useful and needs limits\",\"Typical case given but no confusable near-case with deciding feature\",\"Causal chain of repeated re-amplification to howling is correct\",\"No key condition changed in the original case\",\"No application to a surface-different new situation\",\"Factually correct; notes boundary that limiting mechanism prevents overshoot\"],\"evidence\":[\"positive feedback is suited to processes that need rapid amplification, but must have a limiting mechanism\",\"the speaker's sound is picked up by the microphone again and amplified, the sound grows louder and louder, finally producing howling\",\"otherwise it will exceed the safe range\"]}]}",
+  "usage": {
+    "input_tokens": 1155,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1402,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1155,
+      "outputTokens": 1402,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.040825,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 32.568
+}

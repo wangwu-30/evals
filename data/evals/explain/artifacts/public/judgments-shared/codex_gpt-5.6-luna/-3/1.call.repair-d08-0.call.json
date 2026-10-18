@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "9e0b07b6ebcd8a524ca09b00b90c741b08fe5433f4734a92e066c5301381eba5",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"011001\",\"reasons\":[\"未将具体问题连接到可据此作出的决定。\",\"用121元与120元区分复利和单利，并指出原因。\",\"计算正确，解释了公式变量、周期和增长基数。\",\"负增长仅作泛泛提醒，未明确改变原例并保持其他条件。\",\"没有迁移到表面不同的新情境。\",\"无实质事实或算术错误，示例使用假设措辞。\"],\"evidence\":[\"\",\"而不是120元，因为第一年的10元也会继续增长\",\"100×1.1²=121元\",\"\",\"\",\"若本金100元，年增长10%，两年后是100×1.1²=121元\"]}]}",
+  "usage": {
+    "input_tokens": 20166,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 307,
+    "reasoning_output_tokens": 132
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 41.783
+}

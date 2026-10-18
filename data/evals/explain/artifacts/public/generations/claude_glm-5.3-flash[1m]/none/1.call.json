@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "f1e838d72a948f5b845f26bea48baf8a389388b477b073f1559e57465391af71",
+  "rc": 0,
+  "cost_usd_reported": 0.14512999999999998,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "```json\n{\n  \"d01\": \"似然是\\\"固定已看到的数据，问哪个参数最可能产生它\\\"。例：抛硬币10次得7次正面，若正面概率为θ，则P(7正|θ)∝θ⁷(1-θ)³。把它看成θ的函数就叫似然函数——数据不变，θ在变；而普通概率是θ不变、数据在变。最大似然估计就是挑让数据\\\"最像\\\"的θ（此处0.7）。它与后验的关系由贝叶斯公式给出：后验∝似然×先验。即似然是数据传递信息的桥梁：先把你对参数的旧信念（先验，比如\\\"硬币多半均匀\\\"）与似然相乘，归一化后得到看到数据后的新信念（后验）。数据越多，似然的作用越大，后验越集中在使数据最可能的参数附近。\",\n  \"d02\": \"方差衡量数据平均而言离均值有多远。三步：①算均值μ；②每个数减μ得到偏差；③把偏差平方后取平均。公式σ²=Σ(xᵢ-μ)²/N。例：{2,4,6}均值4，偏差是-2,0,2，平方后4,0,4，方差=(4+0+4)/3≈2.67。为什么平方？因为不平方时正负偏差会相互抵消（上例偏差和为0），看起来\\\"毫无波动\\\"；平方让所有偏差都变成正数，且离得越远的点惩罚越重。方差小=数据紧密聚在均值附近；方差大=数据散得开。因为单位被平方了（如\\\"公斤²\\\"），实际中常开平方得到标准差，单位和原数据一致，更直观。\",\n  \"d03\": \"正反馈是\\\"结果反过来加强原因\\\"的循环：A推高B，B又进一步推高A。麦克风对准音箱：声音被拾取、放大、再播出、再拾取，瞬间啸叫；传染病中感染者越多，新感染越快；冰川融化后露出深色海面，吸收更多热量，融化更快。其数学特征是小扰动被指数放大，系统离平衡越来越远。但正反馈本身是中性的机制，不等于好事：\\\"越学越有兴趣，越有兴趣越学\\\"是良性循环；恐慌抛售导致下跌、下跌引发更大恐慌则是恶性循环。关键看被放大的是什么方向的变化。稳定系统通常需要负反馈（偏差越大、修正力越强）来制衡，否则小裂缝可能雪崩成崩溃。\",\n  \"d05\": \"假设某病患病率1%，检测灵敏度99%（病人99%呈阳性），误报率5%（健康人也有5%呈阳性）。某天你检测阳性，患病概率是多少？直觉说99%，实际只有约16.7%。用贝叶斯公式算：P(病|阳)=P(阳|病)×P(病)/P(阳)。看10000人：病人100个，其中99人阳性；健康9900人，其中495人假阳性。阳性共594人，真正的病人只占99/594≈16.7%。为什么这么低？因为健康人基数远大于病人，5%的误报也制造出大量假阳性。贝叶斯公式的本质是\\\"用新证据更新旧信念\\\"：先验1%经\\\"检测阳性\\\"这条证据修正为后验16.7%。若再复查一次仍阳性，概率会大幅跳升。\",\n  \"d07\": \"冰淇淋销量与溺水人数在每年夏天同步上涨，相关性很强。但吃冰淇淋并不会让人溺水，把冰淇淋店关掉也不会减少溺水——两者都由同一个隐藏原因（夏季高温：天热多买冰淇淋，也多人下游泳）驱动，这叫混淆变量。相关只说明\\\"两个数字一起变\\\"，因果则断言\\\"改变一个会真正改变另一个\\\"。还有反向因果的可能（是焦虑导致刷手机，还是刷手机导致焦虑？）。区分方法：①随机对照实验——随机分组能抹平混淆变量；②控制混杂因素后再看相关是否消失；③找到合理机制和时间先后。记住口诀：相关是因果的必要线索，但绝非充分证据。\",\n  \"v01\": \"过拟合就是\\\"把练习册的答案背下来了，却没学会解题\\\"。一个学生刷了某本题库，测验时原题全对、新题全错——他记住的是题目细节和噪声，而不是规律。机器学习同理：模型太复杂或数据太少时，会把训练数据里的偶然波动也当成模式硬记，于是训练成绩极好，遇到没见过的新数据就崩。判断信号：训练误差很低、新数据误差明显更高。 analogous：只见过10只白色天鹅就断言\\\"天鹅皆白\\\"，见了黑天鹅立刻出错。常见对策：用更多数据、换更简单的模型、加正则化（惩罚过于复杂的记忆）、留出验证集提前发现、训练时随机丢弃部分信息。\",\n  \"v03\": \"自然选择不需要任何个体\\\"努力进化\\\"。以细菌抗药性为例：细菌繁殖时随机产生突变，其中极少数碰巧能抵抗某种抗生素——这些变异是随机的，不是细菌\\\"想活下来\\\"而练出来的。投放抗生素后，敏感的个体被杀死，碰巧抗药的那些存活并大量繁殖，把抗药基因传给后代。几代之后，整个种群的基因频率改变了：抗药性从罕见变成普遍。要点：①变异随机产生，选择非随机地筛选；②选择作用于已有变异，不能凭空造出需要的新性状；③没有目标，也不产生\\\"完美\\\"，只是\\\"当下环境里谁留下更多后代\\\"；④被淘汰不是个体不努力，环境一变，\\\"适应\\\"的标准也会变。长颈鹿的脖子同理：不是伸出来的，是短颈个体留下更少后代。\",\n  \"v05\": \"信息熵H=-Σp·log p度量\\\"平均不确定性\\\"：结果越难提前猜中，熵越大。两种极端：①某个结果概率为1（必然事件），H=0，毫无悬念；②所有结果等概率（如均匀硬币p=0.5，或骰子p=1/6），熵最大。为什么均匀最不确定？因为熵对概率\\\"平均化\\\"最敏感：只要分布偏向某一结果，你就有了押注依据——99%正面的硬币，你连猜对，平均不确定性自然低；而均匀硬币每面机会均等，任何猜测都没有优势，等于完全抓瞎。数学上，在概率总和为1的约束下，-p·log p的和在p=1/n时取最大值；任何倾斜都会拉低总和。直观记法：熵衡量\\\"你有多难押中\\\"，越均匀越难押中，熵越大。\",\n  \"v07\": \"公共物品是同时满足\\\"非排他\\\"和\\\"非竞争\\\"的物品：无法阻止不付钱的人享用（非排他），且我多用一点不减你的份额（非竞争）。典型如路灯、国防、防洪堤、空气质量。问题在于搭便车：路灯照亮所有路人，你不交钱我也拦不住你享受，于是每个理性人都想\\\"让别人出钱，我白蹭\\\"。结果人人都这么想，路灯根本建不起来——即使所有人总收益远大于成本。这是市场失灵，类似囚徒困境：个体理性导致集体次优。常见解决：政府用税收强制筹资（国防、路灯）；对受益者清晰的小场景用社区监督、声誉机制或清晰界定产权。判断某物该不该公共供给，先看它是否同时具备这两个特性。\",\n  \"v02\": \"想象你搜索\\\"猫\\\"，引擎返回20张图，其中16张真是猫、4张是狗。精确率(precision)=16/20=80%：我返回的结果里有多少是对的？它回答\\\"结果有多干净\\\"。假设图库里总共有40张真猫图，你只找回了16张，召回率(recall)=16/40=40%：该找到的我找到了多少？它回答\\\"漏了多少\\\"。二者刻画不同的失败：精确率低=误报多（把狗当猫），召回率低=漏报多（漏掉真猫）。二者常此消彼长：只返回1张最有把握的图，精确率可能100%但召回极低；返回所有图，召回100%但精确率惨淡。取舍得看错误代价：垃圾邮件过滤宁可漏放不可误删（重精确率）；癌症筛查宁可复查也不可漏诊（重召回率）。F1分数是二者的调和平均。\",\n  \"v04\": \"幂等指同一操作执行一次和执行多次的效果完全相同。为什么分布式系统离不开它：网络不可靠，客户端发出请求后超时，它不知道服务端是否已执行，唯一安全的做法是重试——但如果\\\"扣款100元\\\"被重试三次，用户就被扣了三次。解决方案是幂等键：客户端为每笔业务操作生成唯一ID（如订单号），服务端记录已处理过的ID，重复请求直接返回第一次的结果，而不重复执行。一些操作天然幂等：\\\"把余额设为100\\\"执行多次无副作用（\\\"余额加100\\\"则不幂等）；HTTP中PUT幂等而POST不幂等。消息队列的去重、微服务间重试、支付回调，都依赖这一性质。设计准则：任何可能被重试的写操作，都应带唯一标识并在服务端去重。\",\n  \"v06\": \"死锁是一组线程互相等待对方释放资源，永远卡住。经典例子——银行转账：线程1想把账户A转给B，先锁A、再要锁B；同时线程2想把B转给A，先锁B、再要锁A。于是线程1握着A等B，线程2握着B等A，形成循环等待，谁也无法前进。死锁需要四个条件同时成立：互斥（锁一次一人）、持有并等待（拿着A还要B）、不可抢占（不能强行夺走对方的锁）、循环等待（1等2、2等1）。破坏任意一个即可预防：最常用是全局固定加锁顺序（所有人先锁编号小的账户，线程2就会先锁A，不再成环）；其他手段有一次性申请所有资源、加锁超时自动回滚、数据库死锁检测并牺牲一个事务。\",\n  \"v08\": \"利特尔法则：L = λ × W。系统中平均顾客数 = 到达速率 × 平均逗留时间。例：咖啡店平均每分钟来2位客人（λ=2/分钟），每位平均停留5分钟（W=5分钟），则店内平均人数 L = 2×5 = 10人。直觉：你平均待5分钟，这5分钟里会来10个新客人，他们恰好就是此刻店里的那批人。妙处在于它与排队规则无关（先来后到还是随机都行），只要系统稳定（到达率不超过服务能力）就成立。在计算机系统里同样适用：若一个服务每秒处理100个请求（吞吐量λ），每个请求平均耗时0.2秒（W），则同时处理中的请求数 L=20——这就是平均并发量。反过来常用于估算：想要响应时间0.1秒且并发100，就需要吞吐量1000/秒。\",\n  \"d08\": \"复利是\\\"利滚利\\\"：每期利息并入本金，下一期按更大本金增长，结果呈指数式。公式A=P(1+r)ᵗ。例：1000元、年利率7%：10年后约1967元，30年后约7612元，40年后约14974元。注意增速：前10年只赚了约967元，最后10年却赚了7000多元——增长越来越快，因为计息基数不断变大。\\\"起始金额重要\\\"有两层：①本金P线性缩放一切：本金翻倍，任意时刻的结果都翻倍；②更关键的是起始时间：复利的力量藏在指数ᵗ里，早10年开始，相当于把最陡峭的指数段收入囊中。25岁存1万和35岁存1万，到65岁可能相差近一倍。所以时间是复利最大的杠杆，钱小可以，开始晚才真正吃亏。\",\n  \"d06\": \"缓存是把一份数据的副本放在更快的地方（如内存），避免每次都查数据库。网页应用中典型场景：用户改了头像，但页面仍显示旧图——因为缓存的副本没同步。缓存失效就是让这些过时副本作废或更新。常见策略：①TTL过期：给缓存设存活时间，到期自动丢弃，下次读回源。简单可靠，但到期前可能一直展示旧数据。②写时删除：更新数据库的同一事务里删掉对应缓存键，下次读取自然从数据库取最新（cache-aside模式）。③事件驱动：数据变更时发布消息（\\\"用户123已更新\\\"），各处缓存订阅并失效。难点在于分布式：同一数据存在多层缓存（CDN、网关、本地内存）时如何都更新到？并发写入顺序错乱怎么办？还有失效风暴——大量键同时过期，数据库瞬间被打垮。所以有名言：计算机科学只有两大难题——缓存失效和命名。\",\n  \"v04\": \"Idempotency means performing the same operation once has the same effect as performing it many times. This matters in distributed systems because networks are unreliable: a client sends a request, times out, and doesn't know if the server processed it. The only safe move is to retry — but retrying a non-idempotent \\\"charge $100\\\" could triple-charge the customer. The standard fix is an idempotency key: the client attaches a unique ID to each logical operation (e.g., an order ID); the server records processed IDs and returns the original result for duplicates instead of re-executing. Some operations are naturally idempotent: \\\"set balance to 100\\\" is safe to repeat, while \\\"add 100 to balance\\\" is not; HTTP PUT is idempotent, POST is not. Rule of thumb: any write operation that can be retried — payment callbacks, message queue consumers, RPC calls — should carry a unique identifier and be deduplicated server-side.\",\n  \"d08\": \"Compound growth means each period's gain is computed on the principal plus all previous gains, so the total grows exponentially: A = P(1+r)^t. Example: $1,000 at 7% per year becomes about $1,967 in 10 years, $7,612 in 30, and $14,974 in 40. Notice the shape: the first decade earns ~$967, but the last decade earns over $7,000 — because the base keeps getting bigger. Why the starting amount matters, two ways: (1) the principal scales everything linearly — start with twice as much, and you have twice as much at every point in time; (2) more importantly, the starting time matters, because time sits in the exponent t. Starting 10 years earlier captures the steepest part of the curve. $1,000 invested at 25 versus 35 can differ by nearly double at retirement. With compounding, a small principal is forgivable; a late start is the expensive mistake.\",\n  \"v06\": \"Deadlock is when a group of threads each hold some resources and wait for resources the others hold — so none can ever proceed. Small example: transferring money between bank accounts. Thread 1 locks account A, then asks for the lock on B; meanwhile thread 2 locks B, then asks for A. Now thread 1 holds A and waits for B; thread 2 holds B and waits for A. It's a cycle: both wait forever, and neither releases what it holds. Deadlock requires four conditions at once: mutual exclusion (a lock has one owner), hold-and-wait (keeping A while requesting B), no preemption (you can't forcibly take another thread's lock), and circular waiting. Break any one to prevent it. The most practical fix is a global lock ordering — everyone locks the lower-numbered account first, so thread 2 would grab A first and no cycle forms. Alternatives: acquire all locks up front, use timeouts with rollback, or let the database detect and abort one transaction.\",\n  \"v08\": \"Little's Law: L = λ × W. The average number of items in a system equals the arrival rate times the average time each item spends there. Example: a coffee shop gets 2 customers per minute (λ = 2/min) and each customer stays 5 minutes on average (W = 5). Then the average number of people in the shop is L = 2 × 5 = 10. Intuition: during the 5 minutes you spend inside, 10 new customers arrive — and those arrivals are exactly the people you see around you. The law is powerful because it holds regardless of the queue discipline (FIFO or not) and service distribution, as long as the system is stable (arrival rate below capacity). In computing it works identically: if a service handles 100 requests per second and each takes 0.2 seconds on average, the average number of in-flight requests is 20 — that is your average concurrency. Rearranged, it estimates required throughput: to serve 100 concurrent users at 0.1s response time, you need 1,000 requests/second.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1031,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 5599,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1031,
+      "outputTokens": 5599,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.14512999999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 136.213
+}

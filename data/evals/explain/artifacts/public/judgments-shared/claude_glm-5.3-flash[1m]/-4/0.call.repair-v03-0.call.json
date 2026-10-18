@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "44fe8fdf3a11a095279cdfbb7989cf492c9682cb34f252662e3edbbc1e8309d2",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v03\",\"bits\":\"111110\",\"reasons\":[\"用长颈鹿误解说明如何判断种群进化与个体努力。\",\"对比天生脖长与伸脖训练，指出变异先于选择。\",\"正确连接原有变异、繁殖差异与跨代基因比例变化。\",\"保留脖长差异，改变树叶供应，说明选择压力变化。\",\"迁移到细菌耐药，指出原有变异经存活繁殖保留。\",\"个体身体终生不变和后代全耐药均属错误绝对化。\"],\"evidence\":[\"进化改变的是种群的比例构成\",\"变异先于选择、随机产生、非随机保留\",\"留下更多后代\",\"若树叶充足，脖长差异不影响繁殖，选择压力消失\",\"用药后，碰巧耐药的少数个体存活并繁殖\",\"个体的身体一生不变\"]}]}",
+  "usage": {
+    "input_tokens": 20289,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 366,
+    "reasoning_output_tokens": 134
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.451
+}

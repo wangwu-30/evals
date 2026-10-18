@@ -1,0 +1,5 @@
+#!/bin/sh
+export LC_ALL=en_US.UTF-8
+set -eu
+repo_root="$(git rev-parse --show-toplevel)"
+exec python3 "${repo_root}/scripts/check_public.py" --pre-push

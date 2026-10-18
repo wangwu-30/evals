@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-6",
+  "rep": 3,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "Connects observed data to comparing hypotheses.",
+        "Distinguishes likelihood from parameter probability using the coin case.",
+        "No numerical likelihood or normalized posterior calculation.",
+        "No condition changed within the original case.",
+        "No surface-different application.",
+        "Correctly distinguishes likelihood, prior, and posterior."
+      ],
+      "evidence": [
+        "似然比较不同假设解释同一数据的能力",
+        "它不是“参数为0.7的概率”",
+        "",
+        "",
+        "",
+        "后验∝似然×先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "000001",
+      "reasons": [
+        "Describes dispersion without connecting a problem to a decision.",
+        "No confusable near-case or population versus sample distinction.",
+        "Correct calculation and units, but required sample distinction missing.",
+        "No original condition changed.",
+        "No surface-different application.",
+        "Calculation and squared units are correct."
+      ],
+      "evidence": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "方差=(4+0+4)/3=8/3"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "110010",
+      "reasons": [
+        "Explains amplification relevant to harmful message propagation.",
+        "Distinguishes reinforcing direction from beneficial consequences.",
+        "Incorrectly makes short feedback delay necessary for amplification.",
+        "Resource exhaustion is a generic caveat, not controlled variation.",
+        "Applies directional reinforcement to harmful phenomena.",
+        "Short delay is incorrectly presented as necessary."
+      ],
+      "evidence": [
+        "曝光增加，又带来更多转发，于是传播速度上升",
+        "它放大的是变化方向，不负责判断方向好坏",
+        "",
+        "",
+        "谣言、恐慌和价格泡沫也能被放大",
+        ""
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choice to forgone income.",
+        "Contrasts best forgone alternative with summing alternatives.",
+        "Correctly derives opportunity cost from the best available alternative.",
+        "Removes feasible employment while retaining the afternoon choice.",
+        "No surface-different situation.",
+        "Definition and hypothetical example are correct."
+      ],
+      "evidence": [
+        "机会成本就是放弃的100元收入",
+        "它不是所有放弃选项的总和",
+        "若你选择复习，而最佳替代是兼职",
+        "如果下午没有可行的兼职",
+        "",
+        "放弃的最佳替代方案的价值"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "Connects positive testing to assessing disease probability.",
+        "Distinguishes test accuracy from probability of disease after positivity.",
+        "Correct formula and approximate calculation include false positives.",
+        "No testing condition changed.",
+        "No surface-different application.",
+        "Hypothetical expected counts and rounded probability are acceptable."
+      ],
+      "evidence": [
+        "阳性检测后是否患病，不能只看检测准确率",
+        "即使检测很准，阳性也可能主要是假阳性",
+        "概率约9%",
+        "",
+        "",
+        "假设1000人中1人患病"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "100000",
+      "reasons": [
+        "Connects stale prices to choosing cache management.",
+        "No confusable near-case distinguished.",
+        "Does not explain TTL's delayed freshness versus explicit invalidation.",
+        "Generic duration tradeoff lacks a controlled original-case change.",
+        "No surface-different application.",
+        "Claims all methods solve staleness without qualifying TTL."
+      ],
+      "evidence": [
+        "商品价格从10元改成12元，但浏览器仍显示缓存的10元",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects co-occurrence to deciding whether causation is established.",
+        "Contrasts common-cause association with intervention-based causation.",
+        "Explains confounding and comparable intervention conditions.",
+        "No original condition changed with a stated result.",
+        "No surface-different application.",
+        "Presents illustrative seasonal association as observed fact."
+      ],
+      "evidence": [
+        "判断因果要进一步排除混杂因素",
+        "共同原因可能是高温",
+        "在相似天气、地点和人群中比较提高冰淇淋供应",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "001101",
+      "reasons": [
+        "Explains growth without a concrete decision problem.",
+        "No simple-growth near-case distinguished.",
+        "Correct calculation, formula, period meanings, and starting-amount dependence.",
+        "Setting growth rate to zero removes compounded additions.",
+        "No surface-different application.",
+        "Calculation and conditional growth claims are correct."
+      ],
+      "evidence": [
+        "",
+        "",
+        "第二年按110元算，变121元",
+        "若增长率或时间为零",
+        "",
+        "P是起始金额，r是每期增长率，n是期数"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "100000",
+      "reasons": [
+        "Connects training success to assessing transferable learning.",
+        "No concrete confusable successful-generalization case.",
+        "States noise memorization without explaining why new predictions fail.",
+        "Complexity and data remarks are generic, not controlled changes.",
+        "Student analogy lacks a shared deciding condition and limitation.",
+        "Student analogy gives no boundary where its mapping fails."
+      ],
+      "evidence": [
+        "判断它学到的是可迁移规律还是训练样本的细节",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111001",
+      "reasons": [
+        "Connects search evaluation to accuracy and coverage questions.",
+        "Distinguishes retrieved-result quality from relevant-result coverage.",
+        "Correct numerical calculations and both denominator meanings.",
+        "No specific original-case change with fixed relevant conditions.",
+        "No surface-different application.",
+        "Calculations and qualified tradeoff claim are correct."
+      ],
+      "evidence": [
+        "表示“该找的找到了多少”",
+        "表示“搜出来的有多准”",
+        "精确率=相关结果数/返回总数=6/10",
+        "",
+        "",
+        "召回率=6/12"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111001",
+      "reasons": [
+        "Connects population change to identifying selection rather than intention.",
+        "Distinguishes inherited selection from individual development or learning.",
+        "Explains survival, reproduction, inheritance, and changed offspring proportions.",
+        "Environmental change remains generic without specifying the altered environment.",
+        "No surface-different application.",
+        "Correctly conditions selection on inheritance and reproductive differences."
+      ],
+      "evidence": [
+        "不是个体主动决定变成什么",
+        "个体会发育或学习，但自然选择要求差异影响繁殖成功",
+        "若颜色差异可遗传，下一代棕色比例就会上升",
+        "",
+        "",
+        "这种差异能遗传"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111001",
+      "reasons": [
+        "Connects duplicate requests to safe network retries.",
+        "Contrasts setting an address with incrementing a balance.",
+        "Explains repeated state-setting and duplicate-request identification.",
+        "No controlled change to the original operation.",
+        "No surface-different application beyond the same request domain.",
+        "Correctly distinguishes final-state effects from absence of side effects."
+      ],
+      "evidence": [
+        "这类操作适合网络重试",
+        "“账户加100元”若重复执行会加200元",
+        "把重复请求识别为同一次操作",
+        "",
+        "",
+        "重复执行不会继续改变最终状态"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "100001",
+      "reasons": [
+        "Connects coin uncertainty to difficulty predicting outcomes.",
+        "Biased coin is another entropy case, not a confusable concept.",
+        "No numerical entropy calculation or specified logarithm units.",
+        "Coin probabilities change, but changed entropy is not derived.",
+        "No surface-different application.",
+        "Probability comparison and fixed-outcome-count boundary are correct."
+      ],
+      "evidence": [
+        "越难提前猜中",
+        "",
+        "",
+        "",
+        "",
+        "必须比较相同数量的可能结果"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "101001",
+      "reasons": [
+        "Connects blocked resource allocation to prevention choices.",
+        "No ordinary contention near-case distinguished.",
+        "Explains circular holding and waiting with required conditions.",
+        "Prevention suggestions do not instantiate a changed original case.",
+        "No surface-different application.",
+        "Resource cycle and necessary conditions are correctly described."
+      ],
+      "evidence": [
+        "打破任一条件",
+        "",
+        "两者都不释放手里的资源，于是永久卡住",
+        "",
+        "",
+        "互相排斥、占有并等待、不可强行夺取、循环等待"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "101001",
+      "reasons": [
+        "Connects unpaid benefits to provision and funding choices.",
+        "Roadlight example has no concrete confusable near-case.",
+        "Explains nonexclusion, unpaid benefits, and insufficient cost recovery.",
+        "No explicit original condition changed.",
+        "No surface-different application.",
+        "Correct features and qualified underprovision claim."
+      ],
+      "evidence": [
+        "私人企业可能收不回建设费用，导致供给不足",
+        "",
+        "若许多人都这样做，私人企业可能收不回建设费用",
+        "",
+        "",
+        "一个人使用不太妨碍别人使用（非竞争）"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101001",
+      "reasons": [
+        "Connects cafe occupancy to arrival and duration decisions.",
+        "No waiting-only versus system-time near-case distinguished.",
+        "Correct calculation, units, stability, and matching statistical boundaries.",
+        "Reduction suggestions do not hold another variable explicitly fixed.",
+        "No surface-different application.",
+        "Correct arithmetic and long-run boundary conditions."
+      ],
+      "evidence": [
+        "若想减少店内人数，可以降低到达率或缩短停留时间",
+        "",
+        "店内平均人数就是20×0.25=5人",
+        "",
+        "",
+        "需要统计口径一致"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/-6/3.call.json",
+  "prompt_sha256": "4849a4ff5e163db4372dac6c46e40684c7a179b997c107ad5e59f4954d0ef6d2",
+  "isolated_repair_calls": []
+}

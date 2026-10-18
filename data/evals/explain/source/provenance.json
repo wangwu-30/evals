@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/lijigang/ljg-skills",
+  "commit": "2c82b3d06a2d84405ec971d21c64f71b6a8dd900",
+  "path": "skills/ljg-explain/SKILL.md",
+  "version": "1.0.2",
+  "license": "MIT",
+  "license_path": "LICENSE",
+  "skill_sha256": "991c537eea77960460c7c48772a0cd562d485afd5f4fb589d637509117de2a63",
+  "sections": [
+    "读者与交付",
+    "理解标准",
+    "公式与原理",
+    "中文表达",
+    "证据与版式",
+    "Gotchas",
+    "Examples"
+  ],
+  "license_sha256": "24807dd5a0d4ef9f3c94e197e80ad2b6198b3381339b9bc3ab78cfc36eee4502"
+}

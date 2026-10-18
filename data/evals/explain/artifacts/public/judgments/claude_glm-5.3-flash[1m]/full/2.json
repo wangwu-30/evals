@@ -1,0 +1,333 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "full",
+  "rep": 2,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111101",
+      "reasons": [
+        "Connects observed tosses to comparing competing coin hypotheses.",
+        "Distinguishes likelihood from posterior by conditional direction.",
+        "Correct likelihoods and normalized posterior incorporate equal priors.",
+        "Changes prior preference while keeping the same observations.",
+        "No surface-different application is provided.",
+        "Calculations and conditional probability distinctions are correct."
+      ],
+      "evidence": [
+        "似然用来比较哪个假设让数据显得不奇怪",
+        "它不是'假设为真的概率'，那是后验",
+        "P(乙|三正)=(1×0.5)/(1×0.5+0.125×0.5)≈0.89",
+        "先验越偏向甲，同样的数据把后验拉向乙就越慢",
+        "",
+        "似然大只说明数据支持它，不等于它已经为真。"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "111101",
+      "reasons": [
+        "Shows why equal averages cannot determine dispersion.",
+        "Distinguishes population averaging from sample correction.",
+        "Correct squared deviations, calculations, units, and denominator distinction.",
+        "Changes spread while explicitly holding the mean fixed.",
+        "No application beyond the height comparison.",
+        "Calculations are correctly rounded; squaring is not claimed uniquely necessary."
+      ],
+      "evidence": [
+        "中心一样，乙组明显更散，方差就是把'散'变成一个数的办法",
+        "若手头只是一份样本、想推断更大的整体，通常改除以N-1",
+        "甲组：(1+0+1)/3≈0.67；乙组：(400+0+400)/3≈267",
+        "两组身高平均都是170：甲组169、170、171；乙组150、170、190",
+        "",
+        "注意单位变成了'厘米的平方'"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "101001",
+      "reasons": [
+        "Connects amplified outcomes to evaluating value and need for restraint.",
+        "Positive versus negative feedback lacks a concrete confusable comparison.",
+        "Explains reinforcing loop, amplification condition, and saturation.",
+        "Generic gain dependence does not modify a specific original case.",
+        "Additional applications do not explain their reinforcing causal loops.",
+        "Correctly separates feedback direction from value and unlimited growth."
+      ],
+      "evidence": [
+        "价值取决于它放大的是什么，以及有没有制衡。",
+        "",
+        "每轮循环把上一轮的偏差乘以一个大于1的倍数",
+        "",
+        "",
+        "'正'只描述方向——加强变化，并不评价好坏。"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choices to valuing the best forgone alternative.",
+        "Contrasts best alternative with summing alternatives and monetary price.",
+        "Correctly derives cost from the next-best feasible choice.",
+        "Raises studying's value while keeping the movie ticket fixed.",
+        "Sleeping remains within the same afternoon-choice situation.",
+        "Hypothetical examples correctly express opportunity cost."
+      ],
+      "evidence": [
+        "它把每个选择的代价，换算成'放弃的次优选项值多少'",
+        "不用把没选的都加起来",
+        "机会成本只算你放弃的选项里最好的那一个",
+        "复习的价值上升，同一张电影票的真实代价就变高了。",
+        "",
+        "比如你第二想做的就是复习"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111101",
+      "reasons": [
+        "Connects a positive result to estimating actual disease probability.",
+        "Distinguishes sensitivity from disease probability among positive results.",
+        "Correct counts, posterior calculation, and conditional probability meanings.",
+        "Changes prevalence while explicitly keeping the same test.",
+        "No application outside disease testing.",
+        "Hypothetical numbers and both posterior calculations are correct."
+      ],
+      "evidence": [
+        "检测报告'阳性'，你真患病的概率多大？",
+        "P(阳性|患病)是灵敏度",
+        "真病人只占99/1098≈9%",
+        "若换成患病率10%的高危人群，同一台检测",
+        "",
+        "设患病率0.1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111011",
+      "reasons": [
+        "Connects stale prices to deciding when copies require refresh.",
+        "Contrasts stale cached price with updated authoritative database value.",
+        "Explains copied data divergence and expiry versus write-triggered deletion.",
+        "Does not change one condition within the original price case.",
+        "Applies change frequency and freshness tradeoff to stock levels.",
+        "Acknowledges staleness windows and distributed invalidation failure modes."
+      ],
+      "evidence": [
+        "deciding when a cached copy is no longer trustworthy",
+        "the database updates, yet the cache still says $100",
+        "delete the cache entry whenever the data is written",
+        "",
+        "stock levels change every second, so cache them briefly",
+        "especially across many app servers"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects observed association to deciding whether intervention affects drowning.",
+        "Contrasts co-movement with causal influence using a common cause.",
+        "Correctly explains confounding and randomized balancing.",
+        "Winter low levels do not imply correlation disappears.",
+        "No surface-different causal application is provided.",
+        "Invents observational data and falsely claims winter eliminates correlation."
+      ],
+      "evidence": [
+        "能得出'吃冰淇淋导致溺水'吗？不能",
+        "两者是同一个原因结出的两个果",
+        "让高温这类混杂因素在两组间摊平",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111100",
+      "reasons": [
+        "Connects growth to evaluating starting capital and timing.",
+        "Contrasts compound growth with simple interest using reinvestment.",
+        "Correct formula and numerical example explain reinvested gains.",
+        "Doubles principal while explicitly holding the growth rate fixed.",
+        "No surface-different application is provided.",
+        "Categorical widening and catch-up claims omit required positive-rate conditions."
+      ],
+      "evidence": [
+        "Why the starting amount matters: it multiplies the entire curve.",
+        "not the $3,000 simple interest would give",
+        "1000 × 1.1^20 ≈ $6,727",
+        "Start with $2,000 at the same rate",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects training success and unseen failures to evaluating generalization.",
+        "Contrasts memorized accidental patterns with transferable predictive rules.",
+        "Explains fitting noise and checking performance on withheld data.",
+        "Lists remedies without changing a specific case and tracing results.",
+        "Student analogy lacks an explicit required generalization condition.",
+        "Student analogy lacks limits; monitored data are described as new."
+      ],
+      "evidence": [
+        "遇到新数据却频繁出错",
+        "它把数据里的噪声和巧合也当成了规律",
+        "留一部分数据不参加训练",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "100010",
+      "reasons": [
+        "Connects error costs to deciding which metric to prioritize.",
+        "No confusable near-case with a deciding feature is provided.",
+        "Correct calculations, but threshold changes incorrectly guarantee both metric directions.",
+        "Threshold change lacks fixed conditions and guarantees an unjustified precision decrease.",
+        "Spam filtering and screening transfer the relationship through differing error costs.",
+        "Claims loosening thresholds necessarily decreases precision, contradicting the oracle."
+      ],
+      "evidence": [
+        "Which to prioritize depends on the cost of each error",
+        "",
+        "",
+        "",
+        "missing a case is worse than a false alarm",
+        "precision falls"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111100",
+      "reasons": [
+        "Explains how population traits change without purposeful individual effort.",
+        "Contrasts reproductive sorting with an individual's attempted stretching.",
+        "Links existing variation, inherited traits, and differential reproduction.",
+        "Changes food height and explains reversal of selective advantage.",
+        "No surface-different example of the selection relationship.",
+        "Presents speculative giraffe evolutionary history as established fact."
+      ],
+      "evidence": [
+        "被改变的是种群的特征比例",
+        "短脖鹿再怎么拼命伸脖子，也改变不了传给后代的基因",
+        "留下更多后代，'长脖'特征在下一代中的占比就升高",
+        "若嫩叶都长在低处，长脖失去优势甚至碍事",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111011",
+      "reasons": [
+        "Connects uncertain timeout outcomes to preventing duplicate charges.",
+        "Contrasts setting a state with incrementing a balance.",
+        "Explains repeated effects and deduplication using retained operation keys.",
+        "No explicit change to the original retry scenario.",
+        "Transfers repeated-state criterion to status updates and balance increments.",
+        "Correctly defines state effects and acknowledges scope and retention."
+      ],
+      "evidence": [
+        "can charge a customer twice",
+        "'set status to shipped'",
+        "on a repeat, skips re-execution and returns the original",
+        "",
+        "each repeat changes the outcome",
+        "with a defined scope and expiry"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111100",
+      "reasons": [
+        "Connects entropy to judging uncertainty before observing an outcome.",
+        "Contrasts biased and fair coins by their probability distributions.",
+        "Correct formula, bit units, and coin entropy calculations.",
+        "Changes coin bias while keeping the two possible outcomes fixed.",
+        "Dice comparison remains another probability-outcome example without new application.",
+        "Falsely claims questions cannot shrink possibilities under uniform probabilities."
+      ],
+      "evidence": [
+        "信息熵度量'事前有多难猜'",
+        "正面概率0.99时，你几乎总能猜对",
+        "正反各半时没有任何线索偏向哪面，最难猜，熵=1比特",
+        "对比两种硬币：正面概率0.99时",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects frozen transfers to choosing a cycle-preventing lock policy.",
+        "Contrasts circular waiting with ordinary queuing under ordered locks.",
+        "Correctly explains exclusive holdings, mutual waiting, and cycle prevention.",
+        "Changes lock order while preserving the two-transfer scenario.",
+        "No surface-different resource allocation application is provided.",
+        "Correct conditions and distinction between deadlock and contention."
+      ],
+      "evidence": [
+        "the classic fix is a global lock order",
+        "simply queues behind Thread 1",
+        "Each keeps its own lock while waiting",
+        "Then Thread 2 also grabs A before B",
+        "",
+        "exclusive resources, holding resources while waiting for more"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111101",
+      "reasons": [
+        "Connects socially beneficial lighting to funding and provision decisions.",
+        "Contrasts nonexcludable lighting with excludable bread.",
+        "Explains individual incentives and correctly compares benefits with costs.",
+        "Changes group size and coordination while retaining shared funding.",
+        "Bread comparison supplies a near-case, not transferred free-rider analysis.",
+        "Uses bounded hypothetical incentives and avoids universal zero-provision claims."
+      ],
+      "evidence": [
+        "总收益1000元明明超过成本500元",
+        "面包不付钱就吃不到",
+        "若别人出钱装了，我不掏也能蹭光",
+        "人少、熟人之间还能商量分摊；人一多、谈不拢",
+        "",
+        "公共物品靠市场往往供给不足"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101101",
+      "reasons": [
+        "Connects residence time and arrivals to estimating crowd size.",
+        "No concrete comparison between queue-only and whole-system quantities.",
+        "Correct calculation, units, bookkeeping, stability, and boundary matching.",
+        "Doubles residence time while explicitly holding arrivals fixed.",
+        "No surface-different application is provided.",
+        "Correctly states stability and consistent boundaries without requiring Poisson arrivals."
+      ],
+      "evidence": [
+        "cutting W is often the only way to shrink a queue",
+        "",
+        "(people/min) × min = people",
+        "from 3 to 6 minutes at the same arrival rate",
+        "",
+        "L, λ, and W must all describe the same 'system.'"
+      ]
+    }
+  ],
+  "call_file": "judgments/claude_glm-5.3-flash[1m]/full/2.call.json",
+  "prompt_sha256": "e546bfe582ba6335da2f85bc795b441531a01454befcb34949c885730bf17980",
+  "isolated_repair_calls": [
+    "2.call.repair-v02-0.call.json"
+  ]
+}

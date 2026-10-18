@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "881a27fe459d7ce0382c1cde7b058ef0c19230315a7728989bfb609ac3330e34",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d06\",\"bits\":\"100100\",\"reasons\":[\"Connects stale data to choosing cache management strategies.\",\"No confusable near-case with a deciding feature.\",\"Confuses stale cached data with cache invalidation.\",\"Switching to long expiration prolongs staleness after the same update.\",\"No surface-different situation applies the shared relationship.\",\"Incorrectly identifies returning stale data as cache invalidation.\"],\"evidence\":[\"问题在于源数据更新后，缓存可能仍返回旧值\",\"旧值，这就是缓存失效。\",\"\",\"若只依赖长过期时间，性能好但旧数据更久\",\"\",\"旧值，这就是缓存失效。\"]}]}",
+  "usage": {
+    "input_tokens": 20137,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 375,
+    "reasoning_output_tokens": 229
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 40.989
+}

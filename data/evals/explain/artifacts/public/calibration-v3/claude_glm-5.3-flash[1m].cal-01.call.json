@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "83d0dcf63f9d37ffaa1dfd8321b70da67e01124378a77c064689f57fa1e7c586",
+  "rc": 0,
+  "cost_usd_reported": 0.025189999999999997,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"judgments\":[{\"id\":\"cal-01\",\"bits\":\"000001\",\"reasons\":[\"No concrete problem or decision is connected to likelihood.\",\"No typical case, near-case, or deciding feature given.\",\"No calculation, units, or derivation of the distinction.\",\"No changed condition or resulting effect discussed.\",\"No transfer to a new situation identifying a shared relation.\",\"Definition direction is correct and matches oracle; no errors.\"],\"evidence\":[\"\",\"\",\"\",\"\",\"\",\"似然是P(D|H)\"]}]}",
+  "usage": {
+    "input_tokens": 1123,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 783,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 1123,
+      "outputTokens": 783,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.025189999999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 18.686
+}

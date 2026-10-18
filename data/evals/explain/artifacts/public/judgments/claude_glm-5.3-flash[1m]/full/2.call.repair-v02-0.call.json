@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "2d1193c359db8f2a63b2a28fb73fe66922fe948cc0699ea9e315cb0ac97f8444",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v02\",\"bits\":\"100010\",\"reasons\":[\"Connects error costs to deciding which metric to prioritize.\",\"No confusable near-case with a deciding feature is provided.\",\"Correct calculations, but threshold changes incorrectly guarantee both metric directions.\",\"Threshold change lacks fixed conditions and guarantees an unjustified precision decrease.\",\"Spam filtering and screening transfer the relationship through differing error costs.\",\"Claims loosening thresholds necessarily decreases precision, contradicting the oracle.\"],\"evidence\":[\"Which to prioritize depends on the cost of each error\",\"\",\"\",\"\",\"missing a case is worse than a false alarm\",\"precision falls\"]}]}",
+  "usage": {
+    "input_tokens": 20217,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 353,
+    "reasoning_output_tokens": 225
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 35.006
+}

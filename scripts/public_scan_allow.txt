@@ -1,0 +1,198 @@
+README.md:33:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+README.md:33:word_hpo  # Existing main prohibition on publishing optimization or company material; contains no such material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:1:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:2:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:3:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:4:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:5:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:6:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:7:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:8:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:9:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:14:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:15:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:16:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:17:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:18:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:19:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:20:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill-agentic/batches/2026-10-12-macmini-agentic-partial.jsonl:21:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:5:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:8:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:11:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:12:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:13:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:14:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:15:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:22:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:23:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:35:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:36:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:37:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:38:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:56:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:57:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:59:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:61:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:63:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:65:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:66:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:69:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:73:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:74:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:75:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:88:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:92:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:96:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:99:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:103:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:104:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:105:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:114:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:116:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:118:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:119:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:120:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:121:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:123:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:125:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:126:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:128:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:129:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:130:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:136:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:137:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:139:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:140:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:143:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:144:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:145:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:148:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:151:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:157:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-box-pilot.jsonl:159:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:3:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:6:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:10:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:11:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:19:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:20:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:21:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:24:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:25:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:26:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:27:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:28:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:34:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:35:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:37:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:38:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:39:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:40:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:42:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:43:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:44:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:45:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:46:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:47:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:48:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:49:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:50:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:51:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:52:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:53:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:54:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:55:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:56:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:57:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:59:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:61:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:62:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:69:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:70:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:72:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/daily-skill/batches/2026-10-12-macmini-cli-partial.jsonl:73:word_private  # Existing main benchmark output: privacy setting or generic privacy commentary, not confidential material.
+data/evals/explain-validation/batches/2026-10-13-explain-v1.jsonl:7:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain-validation/batches/2026-10-13-explain-v1.jsonl:27:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain-validation/batches/2026-10-13-explain-v1.jsonl:32:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain-validation/batches/2026-10-13-explain-v1.jsonl:58:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain-validation/batches/2026-10-13-explain-v1.jsonl:60:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/generations/claude_glm-5.3-flash[1m]/-2/1.call.json:10:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/artifacts/public/generations/claude_glm-5.3-flash[1m]/-2/1.json:14:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/artifacts/public/generations/claude_glm-5.3-flash[1m]/-6/1.call.json:10:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/artifacts/public/generations/claude_glm-5.3-flash[1m]/-6/1.json:14:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/artifacts/public/generations/claude_glm-5.3-flash[1m]/none/1.call.json:10:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/artifacts/public/judgments-shared/claude_glm-5.3-flash[1m]/-1/2.call.json:8:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/claude_glm-5.3-flash[1m]/-7/1.call.json:8:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/claude_glm-5.3-flash[1m]/-7/1.json:293:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/codex_gpt-5.6-luna/-3/2.call.json:8:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/codex_gpt-5.6-luna/-3/2.json:292:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/codex_gpt-5.6-luna/-3/4.call.json:8:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/judgments-shared/codex_gpt-5.6-luna/-3/4.json:296:word_private  # Public economics answer/judge text about privately supplied goods or incentives; no confidential material.
+data/evals/explain/artifacts/public/reference-validation/claude_glm-5.3-flash[1m].call.json:10:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+data/evals/explain/batches/2026-10-13-explain-v1.private-costs.json:3:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+datasets/ljg-explain.md:6:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+docs/explain-eval-2026-10-13.md:251:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+docs/fairness-audit-2026-10-12.md:23:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/check_public.py:14:abs_path  # Detector pattern definition only; no actual sensitive value.
+scripts/check_public.py:14:word_private  # Detector pattern definition only; no actual sensitive value.
+scripts/check_public.py:15:holdout_location  # Detector pattern definition only; no actual sensitive value.
+scripts/check_public.py:18:deploy_secrets  # Detector pattern definition only; no actual sensitive value.
+scripts/check_public.py:19:word_private  # Detector pattern definition only; no actual sensitive value.
+scripts/check_public.py:21:hostname  # Detector pattern definition only; no actual sensitive value.
+scripts/explain/README.md:27:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/README.md:33:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/export.py:1:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/export.py:15:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/export.py:24:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/export.py:27:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/export.py:28:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/export.py:43:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup.py:3:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup.py:175:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup.py:176:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup.py:198:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup.py:202:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup_report.py:28:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup_report.py:39:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/followup_report.py:42:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/make_assets.py:1:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/make_assets.py:140:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/make_assets.py:150:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/make_assets.py:151:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/make_assets.py:204:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/replay.py:1:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/replay.py:12:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/replay.py:23:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/replay.py:24:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/replay.py:24:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/run.py:5:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/run.py:380:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/run.py:387:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/run.py:394:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/summarize.py:162:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/summarize.py:182:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/summarize.py:183:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/summarize.py:188:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/verify.py:42:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/write_report.py:156:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/write_report.py:159:holdout_location  # Generic split/privacy description or public code/answer with slash notation; no actual held-out storage location.
+scripts/explain/write_report.py:188:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/write_report.py:193:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/explain/write_report.py:196:word_private  # Generic CLI option, variable, receipt filename or privacy documentation; no concrete location or confidential value.
+scripts/test_check_public.py:9:abs_path  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:9:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:10:holdout_location  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:11:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:12:word_hpo  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:13:deploy_secrets  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:14:credential  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:14:word_private  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:15:private_ip  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+scripts/test_check_public.py:16:hostname  # Deliberately fictitious detector fixture; not a usable credential or actual data location.
+data/evals/explain/batches/2026-10-13-explain-v1.private-costs.json:0:word_private  # Generic cost receipt filename; contains anonymous usage and costs, no questions or scores.
+scripts/public_scan_allow.txt:133:word_private  # Names a reviewed public cost receipt or rule; no confidential value.
+scripts/public_scan_allow.txt:193:word_private  # Names a reviewed public cost receipt or rule; no confidential value.
+scripts/test_check_public.py:10:hostname  # Deliberately fictitious hostname in detector fixture.
+datasets/daily-skill-holdout.md:0:holdout_location  # Existing main public dataset-catalog filename, not a storage path for unpublished data.
+scripts/public_scan_allow.txt:197:holdout_location  # Names the reviewed public dataset-catalog file, not a data storage location.

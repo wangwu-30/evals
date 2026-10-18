@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "b95ddb81a4af0db7418ff9fc4febd9aaa8176f5389b01b6aa8a34b46d3e67ea6",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v02\",\"bits\":\"101100\",\"reasons\":[\"Connects search quality to trusting results and finding all relevant pages.\",\"No confusable near-case with an explicit deciding feature.\",\"Correct fractions distinguish returned results from all relevant pages.\",\"Three relevant results increase precision and decrease recall, corpus fixed.\",\"No surface-different situation applies the same relationship.\",\"Returning everything guarantees recall, but need not reduce precision.\"],\"evidence\":[\"'can I trust each result?'\",\"\", \"Precision = 6/10\", \"return only 3 sure-fire results\", \"\", \"recall is perfect while precision sinks\"]}]}",
+  "usage": {
+    "input_tokens": 20160,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 320,
+    "reasoning_output_tokens": 187
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 33.223
+}

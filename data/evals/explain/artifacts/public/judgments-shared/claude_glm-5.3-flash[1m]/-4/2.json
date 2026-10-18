@@ -1,0 +1,336 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-4",
+  "rep": 2,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "用固定数据比较假设，说明似然的用途。",
+        "区分似然与后验，指出条件方向相反。",
+        "没有算出简单例子的数值，也未说明归一化。",
+        "未从明确的原先验改变一个条件。",
+        "没有表面不同的新情境。",
+        "公式正确，未把似然当作后验。"
+      ],
+      "evidence": [
+        "在不同假设之间比较",
+        "但条件方向相反",
+        "",
+        "",
+        "",
+        "后验 ∝ 似然 × 先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100000",
+      "reasons": [
+        "用相同平均分、不同分散程度说明用途。",
+        "没有区分总体方差与样本方差。",
+        "缺少总体与样本区别，且后续计算错误。",
+        "改变分数后的方差应约98.67，不是104。",
+        "没有应用到表面不同的新情境。",
+        "改变分数后的方差存在实质算术错误。"
+      ],
+      "evidence": [
+        "but not how spread out they are",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111000",
+      "reasons": [
+        "连接啸叫问题与放大条件、好坏判断。",
+        "用负反馈作近例，以回送方向区分。",
+        "说明同向回送、增益超过损耗及饱和。",
+        "反向反馈不保证稳定，改变结果表述过强。",
+        "其他应用仅列举，未解释共享环路关系。",
+        "感染过半不代表无人可感染。"
+      ],
+      "evidence": [
+        "放大的条件是每轮回送的增长超过损耗",
+        "若把回送信号改成反向（负反馈）",
+        "回路增益大于1",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111001",
+      "reasons": [
+        "帮助决定下午选择，识别放弃的价值。",
+        "区分最佳替代与所有替代之和。",
+        "正确说明最佳放弃选项，包含非金钱价值。",
+        "换成午睡且未固定最佳替代，降幅不确定。",
+        "没有表面不同的新情境及共享关系。",
+        "定义和条件性金额例子正确。"
+      ],
+      "evidence": [
+        "If you choose the gym",
+        "only the best alternative counts",
+        "if passing that exam matters more to you than $80",
+        "",
+        "",
+        "the single best option you give up"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "110100",
+      "reasons": [
+        "连接阳性结果与实际患病概率判断。",
+        "区分检出率与阳性者中的患病比例。",
+        "数值正确，但分母解释错误。",
+        "固定检测性能，提高患病率会提高后验。",
+        "没有表面不同的新情境。",
+        "混淆准确率与敏感度，且分母解释错误。"
+      ],
+      "evidence": [
+        "检测结果阳性，你患病的概率是多少",
+        "有病的人里多少被检出",
+        "",
+        "同一台仪器，先验不同，结论完全不同",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101001",
+      "reasons": [
+        "连接过时价格与何时刷新缓存的决定。",
+        "两种策略不是概念的 confusable 近例。",
+        "说明源数据改变、旧副本残留及失效策略。",
+        "内容类别建议未改变原案例的明确条件。",
+        "没有表面不同的新情境及共享关系。",
+        "正确承认TTL期间旧值和遗漏副本风险。"
+      ],
+      "evidence": [
+        "so users don't see outdated data",
+        "",
+        "the cache still says $45",
+        "",
+        "",
+        "customers may briefly see the old price"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110110",
+      "reasons": [
+        "Connects observed association to deciding whether ice cream causes drowning.",
+        "Contrasts correlation with smoking causation and identifies intervention evidence.",
+        "Treats an unchanged experimental rate as definitive refutation without assumptions.",
+        "Changes only ice cream intake and predicts unchanged drowning under confounding.",
+        "Applies causal evidence requirements to smoking and lung cancer.",
+        "Presents seasonal toy data as observed and categorically denies causation."
+      ],
+      "evidence": [
+        "吃冰淇淋会导致溺水吗？",
+        "相关只说明「一起变化」，因果要求「改变A确实会改变B」",
+        "若溺水率纹丝不动，「冰淇淋致溺水」就不成立",
+        "只限制冰淇淋摄入，若溺水率纹丝不动",
+        "吸烟与肺癌，在排除了各种混杂、并有机制与干预证据后，因果结论才站得住",
+        "某市数据发现：冰淇淋销量高的月份，溺水事故也多"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "110100",
+      "reasons": [
+        "连接起始金额与最终金额的比较决定。",
+        "区分复利与单利，以收益继续产生收益区分。",
+        "提前十年的额外金额计算错误。",
+        "固定利率和时间，起始金额翻倍使终值翻倍。",
+        "没有表面不同的新情境。",
+        "提前十年仅多1900美元的说法错误。"
+      ],
+      "evidence": [
+        "Starting amount matters because it is the base",
+        "the gains themselves grow",
+        "",
+        "twice the start, twice the end",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "101010",
+      "reasons": [
+        "将房价预测问题连接到判断模型泛化表现。",
+        "有典型案例，但缺少易混淆近例及区分特征。",
+        "正确解释记忆偶然细节如何降低训练误差。",
+        "增加数据并不必然迫使模型学习稳定规律。",
+        "从备考迁移到房价预测，指出共同的偶然细节。",
+        "更多数据的结论过强，且未说明类比边界。"
+      ],
+      "evidence": [
+        "判断信号：训练误差很低、新数据误差高",
+        "",
+        "死记细节比找规律更能压低训练误差",
+        "",
+        "这在本批数据里碰巧成立，一般并不成立。",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "110010",
+      "reasons": [
+        "Connects search errors to choosing precision or recall priorities.",
+        "Contrasts returned-result relevance with coverage, distinguished by denominators.",
+        "Correct calculations, but incorrectly guarantees the precision–recall tradeoff.",
+        "Returning fewer results does not necessarily raise precision or lower recall.",
+        "Transfers error-cost priorities to spam filtering and cancer screening.",
+        "Guaranteed tradeoff and terrible precision claims contradict the oracle."
+      ],
+      "evidence": [
+        "Which one matters depends on the cost of each error",
+        "of what you returned, how much was right",
+        "Returning fewer, safer results raises precision",
+        "raises precision but drops recall",
+        "cancer screening needs high recall",
+        "returning everything gives 100% recall with terrible precision"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "帮助判断变化属于种群比例还是个体努力。",
+        "对比主动改变，以遗传和繁殖筛选区分。",
+        "正确串联遗传差异、捕食和后代比例变化。",
+        "保持筛选机制，改变树干颜色使优势翻转。",
+        "没有表面不同的新情境。",
+        "说明环境依赖性，没有目的性进化叙事。"
+      ],
+      "evidence": [
+        "变化的不是个体，而是种群中各类型的比例",
+        "这正是它区别于「用进废退」式努力叙事的关键",
+        "不同差异留下后代的数量不同",
+        "污染治理后树干恢复白色，深色反而显眼",
+        "",
+        "方向由环境决定"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111010",
+      "reasons": [
+        "Connects ambiguous payment timeouts to deciding how to retry safely.",
+        "Contrasts setting status with incrementing balance; repeated effects decide.",
+        "Correctly explains timeout ambiguity, duplicate charges, and key-based suppression.",
+        "Gives a generic condition, without changing a concrete case.",
+        "Transfers duplicate suppression to message consumers using message IDs.",
+        "Categorically claims POST is non-idempotent; implementations can be idempotent."
+      ],
+      "evidence": [
+        "The client retries",
+        "`set status = paid` is idempotent; `add 10 to balance`",
+        "a repeat returns the stored result instead of executing again",
+        "",
+        "message consumers dedupe on message IDs for the same reason",
+        "POST is not"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111111",
+      "reasons": [
+        "连接概率分布与预测难度、猜测优势判断。",
+        "区分平均不确定性与单次猜测对错。",
+        "公式、比特单位和硬币计算正确。",
+        "保持硬币结果空间，改变偏向降低熵。",
+        "迁移到等可能多结果，指出结果数与熵关系。",
+        "明确熵属于概率分布，不等同单次对错。"
+      ],
+      "evidence": [
+        "一组概率平均有多难预测",
+        "某次猜测的对错，两者别混",
+        "= 1 比特",
+        "换成偏向的硬币（正面0.9）：约0.47比特",
+        "可选的等可能结果越多，不确定性越大",
+        "对每种结果的概率 p，算 −p·log₂p 再求和"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "连接互相等待与选择全局锁顺序的修复。",
+        "对比正常等待，以是否形成循环区分。",
+        "正确解释独占、持有等待和循环无法推进。",
+        "保持两线程两锁，改变获取顺序消除循环。",
+        "没有表面不同的新资源分配情境。",
+        "机制和顺序约束正确，并说明全局遵守要求。"
+      ],
+      "evidence": [
+        "impose a global order",
+        "no cycle forms, and B resumes normally",
+        "each is waiting for an event only the other can cause",
+        "lock 1 before lock 2",
+        "",
+        "follow the order everywhere in the codebase"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "101000",
+      "reasons": [
+        "连接路灯筹资问题与搭便车、供给机制判断。",
+        "收费电视仍非竞争，不是私人物品近例。",
+        "正确解释无法排除收益如何削弱付费激励。",
+        "增加排他性不会使非竞争电视变为私人物品。",
+        "其他公共物品仅列举，电视迁移结论错误。",
+        "混淆俱乐部物品与私人物品，并绝对化供给失败。"
+      ],
+      "evidence": [
+        "国防靠税收、路灯靠物业分摊",
+        "",
+        "不付钱也照样受益",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "110100",
+      "reasons": [
+        "连接难测人数与用流量、时间推算的决定。",
+        "区分系统时间与等待时间，要求边界匹配。",
+        "每次到达贡献一分钟的解释错误，且混用等待时间。",
+        "改变到达率超过容量，保持容量使稳态失效。",
+        "没有表面不同的新情境及共享关系。",
+        "人数推算建议混用等待时间，存在实质边界错误。"
+      ],
+      "evidence": [
+        "measure any two quantities and you get the third",
+        "everyone counted in L must also be counted in W",
+        "",
+        "If arrivals permanently exceed capacity",
+        "",
+        ""
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-4/2.call.json",
+  "prompt_sha256": "08f8b96cdc624f1fdbe98c5538259922bc7c3fe751573d5d8eb87d1a701153ef",
+  "isolated_repair_calls": [
+    "2.call.repair-d07-0.call.json",
+    "2.call.repair-v01-0.call.json",
+    "2.call.repair-v02-0.call.json",
+    "2.call.repair-v04-0.call.json"
+  ]
+}

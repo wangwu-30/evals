@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "e32c9d6b9578dd3e9222615323add2989e3dc906fb11c1cea04b31140d14dc37",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d08\",\"bits\":\"111101\",\"reasons\":[\"Connects starting capital to deciding future amounts.\",\"Contrasts compound growth with simple interest using growing gains.\",\"Correct calculations show annual rate, elapsed years, and reinvestment.\",\"Doubling starting capital doubles outcomes with rate and time fixed.\",\"Debt application omits the shared interest-on-interest condition.\",\"Calculations are correct; explicitly distinguishes model from promised returns.\"],\"evidence\":[\"Why the starting amount matters:\",\"simple interest would give only $1,300\",\"year 2 adds $110, not $100 → $1,210\",\"exactly double at every point\",\"\",\"a model, not a promise\"]}]}",
+  "usage": {
+    "input_tokens": 20285,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 295,
+    "reasoning_output_tokens": 149
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 32.807
+}

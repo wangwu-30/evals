@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "024c2ef4bfe6668c845a2beca0303a55c2d3d3a06011fcd38d78bf8d63b11c13",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"observed-00\",\"bits\":\"000001\",\"reasons\":[\"Describes dispersion but connects no concrete problem to a decision.\",\"No confusable near-case or deciding feature is given.\",\"Correct calculation, but squared units and population/sample distinction are missing.\",\"No explicit condition change and resulting comparison.\",\"No surface-different situation with a shared deciding relationship.\",\"Calculation and squaring explanation are correct; no material factual errors.\"],\"evidence\":[\"\",\"\",\"\",\"\",\"\",\"平方能避免正负差互相抵消，并让较大的偏离受到更大权重。\"]}]}",
+  "usage": {
+    "input_tokens": 20142,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 183,
+    "reasoning_output_tokens": 57
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 32.548
+}

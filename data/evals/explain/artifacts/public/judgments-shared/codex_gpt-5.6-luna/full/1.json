@@ -1,0 +1,331 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "full",
+  "rep": 1,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110001",
+      "reasons": [
+        "Connects observed data to comparing hypotheses.",
+        "Distinguishes likelihood from posterior by conditioning and priors.",
+        "No numerical likelihood or posterior calculation.",
+        "No explicit change to the original coin case.",
+        "No surface-different application.",
+        "Correctly separates likelihood, prior, and posterior."
+      ],
+      "evidence": [
+        "它把数据当作已知，比较不同假设",
+        "不是“假设为真”的概率",
+        "",
+        "",
+        "",
+        "后验∝似然×先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "100001",
+      "reasons": [
+        "Connects population data to measuring dispersion.",
+        "No confusable sample-variance case.",
+        "Calculation correct, but squared units and sample distinction missing.",
+        "No explicit controlled change to the example.",
+        "No surface-different application.",
+        "Formula and numerical calculation are correct."
+      ],
+      "evidence": [
+        "总体方差衡量：整个总体中的数据平均离平均值有多远",
+        "",
+        "",
+        "",
+        "",
+        "方差=(4+0+4)/3=8/3"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111001",
+      "reasons": [
+        "Explains amplification and separates direction from desirability.",
+        "Microphone example contrasts positive feedback with beneficial outcomes.",
+        "Correctly traces reinforcing sound loop and saturation.",
+        "Generic limits do not modify the original microphone case.",
+        "Other applications lack an explained shared feedback loop.",
+        "Correctly bounds amplification by distortion and system limits."
+      ],
+      "evidence": [
+        "它描述的是方向上的放大，不代表“好”",
+        "债务利息、网络谣言也可能被正反馈放大",
+        "音箱再把更大的声音传回麦克风，于是不断增强",
+        "",
+        "",
+        "直到失真或系统限制它"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "Connects afternoon choice to comparing forgone value.",
+        "Distinguishes best alternative from summing all forgone activities.",
+        "Correctly derives cost from the best forgone alternative.",
+        "Higher earnings increase cost with studying choice held fixed.",
+        "No surface-different application.",
+        "Definition and examples correctly describe opportunity cost."
+      ],
+      "evidence": [
+        "它帮助比较真实取舍",
+        "而不是把所有没做的事都加起来",
+        "这次学习的机会成本就是放弃的兼职收入",
+        "若兼职收入提高，学习的机会成本上升",
+        "",
+        "放弃的最佳替代选择的价值"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "Connects positive tests to determining actual disease probability.",
+        "Distinguishes test positivity from disease probability using false positives.",
+        "Correct counts, normalization, conditional formula, and numerical posterior.",
+        "No explicit controlled change to the hypothetical population.",
+        "No surface-different application.",
+        "Explicit hypothetical assumptions and arithmetic are correct."
+      ],
+      "evidence": [
+        "阳性者真正患病的概率是99/594≈16.7%",
+        "关键是阳性率不等于患病率",
+        "阳性总数594人，所以阳性者真正患病的概率是99/594≈16.7%",
+        "",
+        "",
+        "设某病患病率为1%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "101001",
+      "reasons": [
+        "Connects stale usernames to choosing freshness tolerance.",
+        "No confusable near-case with a deciding feature.",
+        "Explains origin changes, stale copies, deletion, expiration, and versioning.",
+        "Tradeoffs do not explicitly change the original username case.",
+        "No surface-different application.",
+        "Mechanisms are correct without claiming perfect consistency."
+      ],
+      "evidence": [
+        "关键是确定数据何时可能变化，以及旧值最多能容忍多久",
+        "",
+        "网页更新了用户名，但浏览器或服务器仍返回旧页面",
+        "",
+        "",
+        "更新源数据时删除对应缓存，或给缓存设置过期时间"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111000",
+      "reasons": [
+        "Connects co-varying quantities to judging causal conclusions.",
+        "Distinguishes association from causation through a common cause.",
+        "Correctly explains the common-cause mechanism and observational insufficiency.",
+        "No explicit change to the original case.",
+        "No surface-different application.",
+        "Asserts actual common cause without marking example hypothetical."
+      ],
+      "evidence": [
+        "区分时要问：是否存在合理的作用机制？",
+        "说明它们相关；但冰淇淋没有导致溺水",
+        "天气热，人们更买冰淇淋，也更去游泳",
+        "",
+        "",
+        "真正的共同原因是气温升高"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects starting capital to absolute growth outcomes.",
+        "Distinguishes compounding from adding unchanged principal-based increments.",
+        "Correct formula, parameter meanings, units, and numerical calculation.",
+        "Changes starting amount while holding proportional growth fixed.",
+        "No surface-different application.",
+        "Correct arithmetic and no guaranteed-return claim."
+      ],
+      "evidence": [
+        "起始金额越大，同样的比例增长带来的绝对增加越多",
+        "121元，而不是120元",
+        "100元按10%增长两期：100×1.1²=121元",
+        "起始金额越大，同样的比例增长带来的绝对增加越多",
+        "",
+        "第二期的10%也作用于第一期新增的10元"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "Connects misleading training performance to validation-based diagnosis.",
+        "Contrasts overfitting with underfitting using both dataset performances.",
+        "Explains learning noise and resulting generalization gap.",
+        "Remedies do not explicitly change the original case.",
+        "Student analogy lacks an explicit shared deciding relationship.",
+        "Student analogy gives mapping but no failure boundary."
+      ],
+      "evidence": [
+        "判断时比较训练集与验证集",
+        "模型太简单则会欠拟合，训练和验证都差",
+        "把训练数据中的规律和偶然噪声都记住了",
+        "",
+        "",
+        "比如学生背熟练习题答案，却不会做变式题"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111101",
+      "reasons": [
+        "Connects search results to assessing accuracy and coverage.",
+        "Distinguishes precision and recall by their different denominators.",
+        "Correct numerical ratios and interpretations.",
+        "Returning three results lowers coverage with relevance universe fixed.",
+        "No surface-different application.",
+        "Conditional precision claim and arithmetic are correct."
+      ],
+      "evidence": [
+        "表示“返回的结果有多准”",
+        "表示“相关结果找回了多少”",
+        "Recall（召回率）=6/8=75%",
+        "若系统只返回最确定的3条，精确率可能升高，但召回率下降",
+        "",
+        "Precision（精确率）=6/10=60%"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111101",
+      "reasons": [
+        "Connects predation to predicting population trait proportions.",
+        "Distinguishes inherited population change from temporary individual adaptation.",
+        "Correctly traces differential reproduction to inherited frequency changes.",
+        "Removing heritability blocks genetic change despite individual adaptation.",
+        "No surface-different application.",
+        "Mechanism and environmental dependence are correctly bounded."
+      ],
+      "evidence": [
+        "相关遗传特征在下一代比例上升",
+        "若特征不能遗传，个体虽能暂时适应",
+        "褐色甲虫平均留下更多后代",
+        "若特征不能遗传，个体虽能暂时适应，也不会因此让种群遗传组成改变",
+        "",
+        "环境改变，优势也可能改变"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111001",
+      "reasons": [
+        "Connects timeout retries to preventing repeated state changes.",
+        "Contrasts setting state with incrementing money.",
+        "Correctly explains repeated effects and deduplication approaches.",
+        "No explicit controlled change to an original example.",
+        "Examples contrast operations without demonstrating surface-different transfer.",
+        "Correctly distinguishes final effects from execution count and success."
+      ],
+      "evidence": [
+        "请求可能因超时被重试",
+        "但“账户增加100元”重复调用会多加钱",
+        "同一个操作执行一次或重复执行多次，最终效果相同",
+        "",
+        "",
+        "幂等不等于只执行一次，也不保证操作永远成功"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110101",
+      "reasons": [
+        "Connects probability balance to prediction uncertainty.",
+        "Contrasts fair and biased coins using predictability.",
+        "No numerical entropy calculation, logarithm base, or entropy units.",
+        "Changes coin probabilities and correctly predicts lower entropy.",
+        "No surface-different application.",
+        "Qualitative claims and value distinction are correct."
+      ],
+      "evidence": [
+        "概率越平均，事先越难猜",
+        "抛公平硬币比抛几乎总是正面的硬币更不确定",
+        "",
+        "若正面99%、反面1%，大多时候可猜正面，熵较低",
+        "",
+        "这里讨论的是不确定程度，不是好坏或信息价值"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects blocked processes to selecting a prevention rule.",
+        "Contrasts circular allocation with consistent resource ordering.",
+        "Explains exclusive held resources and circular waiting correctly.",
+        "Changes acquisition order while preserving processes and resources.",
+        "No surface-different application.",
+        "Correct conditions and appropriately scoped prevention claim."
+      ],
+      "evidence": [
+        "先申请打印机再申请扫描仪，就打破了循环等待",
+        "若规定所有进程先申请打印机再申请扫描仪",
+        "A不释放打印机，B不释放扫描仪，于是永久卡住",
+        "若规定所有进程先申请打印机再申请扫描仪",
+        "",
+        "死锁便不会由这种顺序产生"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111001",
+      "reasons": [
+        "Connects shared benefits to funding and undersupply decisions.",
+        "Contrasts public goods with costless goods using remaining costs.",
+        "Correctly derives free-riding incentives and possible undersupply.",
+        "No explicit controlled change to a concrete original case.",
+        "Named examples lack an applied shared relationship.",
+        "Correct characteristics and nonabsolute undersupply claim."
+      ],
+      "evidence": [
+        "常需税收或集体规则来分担",
+        "公共物品不等于“免费没有成本”",
+        "个人可能选择不付费，等别人承担成本",
+        "",
+        "",
+        "物品就可能供给不足"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "100100",
+      "reasons": [
+        "Connects arrivals and time in store to average occupancy.",
+        "No explicit near-case distinguishing queue and system boundaries.",
+        "Correct calculation, but sensitivity conflates waiting with system time.",
+        "Fixed arrival rate supports doubled occupancy for matching waiting boundary.",
+        "No surface-different application.",
+        "Conflates waiting time with previously defined total stay time."
+      ],
+      "evidence": [
+        "那么店内平均人数是10×0.5=5人",
+        "",
+        "",
+        "若到达率不变而等待时间翻倍，系统内平均人数也会翻倍",
+        "",
+        "若到达率不变而等待时间翻倍，系统内平均人数也会翻倍"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/full/1.call.json",
+  "prompt_sha256": "04f66d0bb11a06a46276e075c62e8c79cae3194b723ae32611bc27673bca59bf",
+  "isolated_repair_calls": []
+}

@@ -1,0 +1,333 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-5",
+  "rep": 0,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110101",
+      "reasons": [
+        "Connects observed tosses to comparing competing hypotheses.",
+        "Distinguishes likelihood from posterior by conditioning direction.",
+        "Posterior derivation omits required normalization.",
+        "Holds data fixed while changing priors and posterior.",
+        "No application to a surface-different situation.",
+        "Numerical likelihoods and stated probability distinctions are correct."
+      ],
+      "evidence": [
+        "说明数据更支持这个假设",
+        "关键差别：似然不是「假设为真的概率」",
+        "",
+        "同一批数据，先验不同，后验就不同",
+        "",
+        "后者算出约39%，远高于1%"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "010101",
+      "reasons": [
+        "Describes spread without connecting it to a concrete decision.",
+        "Contrasts squared deviations with cancellation-prone signed deviations.",
+        "Omits population versus unbiased sample variance distinction.",
+        "Doubles deviations while retaining the dataset structure.",
+        "No surface-different application identifies the shared relationship.",
+        "Arithmetic, squared units, and squaring's optionality are correct."
+      ],
+      "evidence": [
+        "",
+        "You cannot average the deviations",
+        "",
+        "doubling every value's distance from the mean",
+        "",
+        "Squaring is a choice, not a law"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "Connects feedback analysis to judging amplification and its limits.",
+        "Distinguishes reinforcing feedback from opposing feedback by direction.",
+        "Explains repeated reinforcement and finite saturation limits.",
+        "No explicit condition change within the original example.",
+        "Transfers reinforcing loops to learning and bank runs.",
+        "Correctly separates feedback direction, desirability, and finite limits."
+      ],
+      "evidence": [
+        "再看能量从哪来、上限在哪里",
+        "反向抑制变化的叫负反馈",
+        "再放大、再播出，一圈圈绕下去",
+        "",
+        "挤兑造成的损失又坐实谣言",
+        "音箱音量受电源和喇叭极限限制"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111001",
+      "reasons": [
+        "Uses afternoon alternatives to expose decision-relevant forgone value.",
+        "Distinguishes best alternative from summing all alternatives.",
+        "Explains why only the best feasible replacement counts.",
+        "No explicit change to an original case condition.",
+        "Other comparisons remain within the same afternoon decision.",
+        "Correctly identifies opportunity cost without material factual errors."
+      ],
+      "evidence": [
+        "决策的用处在于让隐性代价显形",
+        "机会成本不是200加80",
+        "因为如果补觉取消，你会转去加班",
+        "",
+        "",
+        "只有被放弃选项里最好的那一条算数"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111111",
+      "reasons": [
+        "Connects positive tests to deciding disease probability.",
+        "Distinguishes sensitivity from disease probability after a positive.",
+        "Correct counts and normalization yield approximately seventeen percent.",
+        "Changes prevalence while explicitly fixing other testing conditions.",
+        "Transfers prior-dependent inference to spam classification.",
+        "Examples are hypothetical and calculations are materially correct."
+      ],
+      "evidence": [
+        "体检阳性就一定得病了吗？",
+        "方向相反",
+        "于是594份阳性里真病人只占99，约17%",
+        "把患病率改成10%，其余不变",
+        "也要乘上垃圾邮件本身的基础比例",
+        "设想一万人体检"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111000",
+      "reasons": [
+        "Connects stale prices to deciding when cached copies require refresh.",
+        "Distinguishes timed expiry from deletion triggered by writes.",
+        "Explains separate copies, origin changes, and refresh policies.",
+        "No explicit modification of the original case condition.",
+        "No application beyond cached product prices.",
+        "TTL freshness guarantee omits distributed races and consistency limitations."
+      ],
+      "evidence": [
+        "when a cached copy stops being trustworthy",
+        "the write path actively deletes the cache entry",
+        "copy and original are separate storages",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111010",
+      "reasons": [
+        "用关店能否减少溺水连接因果判断与决策。",
+        "区分共同原因的因果作用与销量、溺水的相关。",
+        "解释天气通过两条路径产生相关及随机化作用。",
+        "关店例子未明确固定条件，结果也缺乏依据。",
+        "医院例子迁移了相关不足以证明因果的关系。",
+        "未标明假设例子，且断言关店无效、无差异即无因果。"
+      ],
+      "evidence": [
+        "把冰淇淋店全关掉，溺水照旧。",
+        "天热让更多人买冰淇淋，也让更多人下水",
+        "天气这类混杂因素被随机摊平了",
+        "把冰淇淋店全关掉，溺水照旧。",
+        "去医院的病人死亡率高，不说明医院害人",
+        "若溺水率没差别，因果就不成立"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "111101",
+      "reasons": [
+        "Connects initial capital and horizon to evaluating growth outcomes.",
+        "Distinguishes growth on current totals from original principal.",
+        "Correct yearly calculations explain principal, rate, and time.",
+        "Changes starting principal while fixing rate and duration.",
+        "No surface-different application of the compounding relationship.",
+        "Calculations are correct and fixed-rate examples are conditional."
+      ],
+      "evidence": [
+        "check the horizon before weighing any rate",
+        "not the original amount",
+        "$1,000 at 10% a year becomes $1,100, then $1,210",
+        "$100 at the same rate becomes $259 in ten years",
+        "",
+        "because a fixed rate multiplies whatever you have"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "101010",
+      "reasons": [
+        "Connects training success to judging predictions on unseen data.",
+        "No concrete successful-generalization near-case is supplied.",
+        "Explains how memorized measurement noise harms new predictions.",
+        "Increasing data does not guarantee learning only the true trend.",
+        "Transfers memorization of irrelevant details from students to models.",
+        "Guarantees trend recovery and leaves analogy limitations unexplained."
+      ],
+      "evidence": [
+        "判断不看过拟合的模型在旧数据上的成绩",
+        "",
+        "记住它们反而干扰对新数据的预测",
+        "",
+        "包括那几个测量误差造成的偏离点",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111110",
+      "reasons": [
+        "Connects search errors to choosing precision or recall priorities.",
+        "Distinguishes returned-result accuracy from coverage of relevant documents.",
+        "Correct calculations use both denominators and explain their meanings.",
+        "Changes returned results while retaining twenty relevant corpus documents.",
+        "Transfers missed-result costs to legal discovery's recall priority.",
+        "Claims tightening necessarily reverses precision and recall changes."
+      ],
+      "evidence": [
+        "Which to prioritize depends on the cost of each mistake",
+        "of everything relevant out there, how much was found?",
+        "6/10 = 60%",
+        "maybe 18 of the 20 get caught",
+        "legal discovery fears missing documents, so it favors recall",
+        ""
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111011",
+      "reasons": [
+        "Connects population change to evaluating purposeful-adaptation explanations.",
+        "Contrasts inherited variation with an individual's acquired stretching.",
+        "Explains heritable variation and differential reproduction across generations.",
+        "Environment changes are generic, without a specific revised case.",
+        "Transfers prior variation and selection to antibiotic resistance.",
+        "Illustrative mechanisms match the oracle without material factual errors."
+      ],
+      "evidence": [
+        "检验一个说法是否搞错，就问一句",
+        "而不是某只鹿的身体被拉长",
+        "变异存在、变异可遗传、不同变异留下后代的数量不同",
+        "",
+        "并不是细菌「练出」了抗药",
+        "注意变的是下一代种群里的比例"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111011",
+      "reasons": [
+        "Connects lost payment responses to designing safe retries.",
+        "Contrasts repeated assignment with repeated increment by final effect.",
+        "Explains duplicate execution and request-key-based suppression.",
+        "No explicit changed condition in the payment example.",
+        "Applies repeated-effect equivalence to shipping status and balance updates.",
+        "Basic state-based definition and illustrative mechanisms are correct."
+      ],
+      "evidence": [
+        "without protection the customer is charged twice",
+        "balance += 10 is not, since each run adds",
+        "a repeat with the same ID returns the stored result",
+        "",
+        "status = shipped is idempotent",
+        "idempotency concerns the final state"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "110100",
+      "reasons": [
+        "Connects coin probabilities to confidence in predicting outcomes.",
+        "Contrasts equally likely and strongly biased random outcomes.",
+        "Omits explicit distribution-versus-sequence distinction required by the oracle.",
+        "Changes die probabilities while retaining the same die outcomes.",
+        "Dice example repeats distribution comparison without identifying transfer relation.",
+        "Distance from uniform does not generally order entropy or predictability."
+      ],
+      "evidence": [
+        "闭眼猜「正面」就有99%把握",
+        "正反各半时，你无法偏向任何一边",
+        "",
+        "同一颗骰子被做了手脚后，各面概率不再相等",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "Connects circular row-lock waits to choosing lock ordering.",
+        "Contrasts deadlock with ordinary waiting under ordered acquisition.",
+        "Explains exclusive holding, circular dependency, and cycle prevention.",
+        "Changes A's resource requirement while retaining the other transaction.",
+        "No surface-different application of the resource-wait relationship.",
+        "Conditions and ordering remedy are correctly bounded to deadlock."
+      ],
+      "evidence": [
+        "the standard fix is lock ordering",
+        "the circle never forms",
+        "A cannot finish without row 2",
+        "Now change the case so A needs only row 1",
+        "",
+        "holders keep what they have while waiting"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111001",
+      "reasons": [
+        "Connects shared lighting incentives to collective funding decisions.",
+        "Contrasts public lighting with excludable, rival bread.",
+        "Explains nonpayment incentives and beneficial provision failing.",
+        "No explicit condition change in the lighting example.",
+        "Lists other public goods without applying their shared conditions.",
+        "Correct definitions and conditional free-riding example avoid universal nonprovision."
+      ],
+      "evidence": [
+        "这就是为什么这类东西常由税收出钱、由集体决定",
+        "不付钱就不给你，一人吃了别人吃不到",
+        "既然不掏钱也能用，每个人都盼着别人出钱",
+        "",
+        "",
+        "市场供给往往不足"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111010",
+      "reasons": [
+        "Connects occupancy and throughput to estimating unmeasured latency.",
+        "Distinguishes system-wide identity from special queue assumptions.",
+        "Correct numerical examples match rates, system times, and units.",
+        "No explicit condition change in a numerical case.",
+        "Transfers café occupancy relation to requests and latency.",
+        "Incorrectly suggests slower arrivals yield lower latency under the identity."
+      ],
+      "evidence": [
+        "compute whichever variable is hardest to measure directly",
+        "arrivals can be random, service irregular",
+        "10 × 5 = 50 customers inside",
+        "",
+        "averages 0.1 s latency (100 / 1000)",
+        ""
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-5/0.call.json",
+  "prompt_sha256": "ff45afefe2c607c48c5e8ed47f596c9cd3504782fe13ed776cf02cd210b93b39",
+  "isolated_repair_calls": [
+    "0.call.repair-d07-0.call.json"
+  ]
+}

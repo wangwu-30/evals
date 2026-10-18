@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "12d9bb4e5c0ecdfe71fc1d74bda1e76b027df1e85fd34561bfe1dcac15300f67",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v01\",\"bits\":\"111110\",\"reasons\":[\"用练习题失效说明问题，并用验证数据判断是否学会。\",\"对比过拟合与欠拟合，区别是是否学到真实规律。\",\"正确解释记住噪音导致训练好、新数据差。\",\"保持数据不变，简化模型迫使学习趋势，过度则欠拟合。\",\"将记住特例导致失效的关系迁移到理财建议。\",\"未说明学生类比的失效边界，更多数据抵消噪音也非必然。\"],\"evidence\":[\"随时检查模型是真学会还是在背\",\"但删过头连真规律也学不到，叫欠拟合\",\"它会把数据里的细节和噪音也当成规律记下来\",\"把模型改简单，它被迫只学大趋势\",\"理财建议若按过去每波行情的特例去记，行情一变就失灵\",\"给它更多数据，噪音互相抵消，死记不再划算\"]}]}",
+  "usage": {
+    "input_tokens": 20247,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 379,
+    "reasoning_output_tokens": 135
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 31.199
+}

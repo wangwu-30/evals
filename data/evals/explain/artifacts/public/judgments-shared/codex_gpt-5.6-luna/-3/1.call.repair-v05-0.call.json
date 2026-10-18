@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "3817a83c0aeef2dad3de9a9bdb9fcb354e9d77131a7153f090bd05f7b58e8484",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v05\",\"bits\":\"110101\",\"reasons\":[\"用硬币预测问题说明熵帮助判断预测难度。\",\"对比均匀与偏斜概率，以优势结果为区分特征。\",\"缺少数值熵计算、单位及分布与序列的区别。\",\"保持硬币情境，改变正面概率并说明熵降低。\",\"四个未具名结果未构成表面不同的新情境。\",\"事实正确，无虚构因果或实质性错误。\"],\"evidence\":[\"下一次难猜，熵较高\",\"没有哪个结果特别占优势\",\"\",\"若正面概率99%，结果几乎确定，熵较低\",\"\",\"这里的“不确定”是预测难度，不是结果好坏\"]}]}",
+  "usage": {
+    "input_tokens": 20177,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 309,
+    "reasoning_output_tokens": 129
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 34.782
+}

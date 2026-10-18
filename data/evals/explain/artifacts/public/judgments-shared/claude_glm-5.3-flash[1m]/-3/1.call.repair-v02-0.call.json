@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "25c4bdd21bfca3680d2f8628f81a9a609864d723d4e4c6ed8a8d26e7d1191833",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"v02\",\"bits\":\"111010\",\"reasons\":[\"Connects search reliability and missed results to metric choice.\",\"Contrasts returned-result correctness with coverage, distinguished by denominators.\",\"Correct calculations explain both denominators and their meanings.\",\"Query changes do not guarantee the claimed performance changes.\",\"Screening transfers recall's missed-relevant-item relationship to missed cancer cases.\",\"Asserts unjustified query effects and an inevitable precision-recall tradeoff.\"],\"evidence\":[\"it answers \\\"can I trust this list?\\\"\",\"of everything relevant out there, how much was found\",\"Precision = 12/20 = 60%\",\"searching only \\\"cat\\\" raises precision\",\"better a follow-up test than a missed case\",\"The two push against each other\"]}]}",
+  "usage": {
+    "input_tokens": 20214,
+    "cached_input_tokens": 18560,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 366,
+    "reasoning_output_tokens": 203
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 37.322
+}

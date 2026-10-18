@@ -1,0 +1,319 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "language": "zh",
+    "kind": "formula",
+    "keywords": [
+      "似然",
+      "固定数据"
+    ],
+    "prompt": "给只懂高中概率的人讲解似然，以及它和后验概率的关系。",
+    "oracle": "固定数据比较参数；L(theta)=P(data|theta)不是P(theta|data)。假设H1硬币p=.5、H2 p=.8，指定顺序HH的似然.25和.64；后验要先验和归一化。",
+    "reference": "似然用已经看到的数据比较不同假设对这批数据的解释能力。 假设两枚硬币正面率分别为0.5和0.8，已观察指定顺序HH；比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。 独立抛掷时两次概率相乘，似然为0.25和0.64；这是数据在各假设下的概率，不是硬币的后验。后验要把各似然乘以先验，再除以这些权重之和。 保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。 在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。",
+    "reference_parts": [
+      "似然用已经看到的数据比较不同假设对这批数据的解释能力。",
+      "假设两枚硬币正面率分别为0.5和0.8，已观察指定顺序HH；比较这份数据的概率是似然，问哪枚硬币更可能还需要先验。",
+      "独立抛掷时两次概率相乘，似然为0.25和0.64；这是数据在各假设下的概率，不是硬币的后验。后验要把各似然乘以先验，再除以这些权重之和。",
+      "保持HH不变，若第二枚的正面率从0.8改成0.2，它的似然变为0.04，支持次序反转。",
+      "在缺陷检测中，也可固定同一批测试结果比较两种故障假设，但决定故障后验仍要故障先验。"
+    ]
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "language": "en",
+    "kind": "formula",
+    "keywords": [
+      "variance"
+    ],
+    "prompt": "Explain population variance to someone who knows averages but no statistics.",
+    "oracle": "Population variance of [1,3] is 1, mean2, squared units; sample unbiased variance2 for n=2. Squaring is not uniquely forced by avoiding cancellation.",
+    "reference": "Population variance measures spread that an average alone hides. Assume the complete population is [1,3]; it has mean 2, just like [2,2], but only the first pair is spread out. Its deviations are -1,+1; squared deviations average to (1+1)/2=1 in squared units. Dividing by n-1 instead estimates population variance from a sample; squaring emphasizes large deviations, rather than being the only possible spread measure. Keep the mean and population size fixed and change the distance from the mean: [0,4] gives (4+4)/2=4. Two machines may have the same average delivery time; comparing squared deviations of their complete delivery records reveals which is less consistent.",
+    "reference_parts": [
+      "Population variance measures spread that an average alone hides.",
+      "Assume the complete population is [1,3]; it has mean 2, just like [2,2], but only the first pair is spread out.",
+      "Its deviations are -1,+1; squared deviations average to (1+1)/2=1 in squared units. Dividing by n-1 instead estimates population variance from a sample; squaring emphasizes large deviations, rather than being the only possible spread measure.",
+      "Keep the mean and population size fixed and change the distance from the mean: [0,4] gives (4+4)/2=4.",
+      "Two machines may have the same average delivery time; comparing squared deviations of their complete delivery records reveals which is less consistent."
+    ]
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "language": "zh",
+    "kind": "mechanism",
+    "keywords": [
+      "正反馈",
+      "同向",
+      "放大"
+    ],
+    "prompt": "讲解正反馈为什么会放大变化，以及为何不等于好事。",
+    "oracle": "反馈正负指方向不是好坏；环路有放大条件和饱和限制，增强不保证无限增长。",
+    "reference": "正反馈会把初始变化沿回路送回来继续增强，方向的“正”不代表好坏。 教学假设：麦克风拾取扬声器声音后再次放大；温度升高后空调加强降温则是反向作用。 声音经麦克风、放大器、扬声器再回到麦克风，若每圈回来的增量更大就增长；设备饱和会限制增长。 保持位置和音量输入不变，只降低环路增益到衰减区，啸叫会减弱而非持续放大。 传言引来关注、关注又扩大传言传播，也有同向回路；只有反馈足够强且未触及限制时才明显放大。",
+    "reference_parts": [
+      "正反馈会把初始变化沿回路送回来继续增强，方向的“正”不代表好坏。",
+      "教学假设：麦克风拾取扬声器声音后再次放大；温度升高后空调加强降温则是反向作用。",
+      "声音经麦克风、放大器、扬声器再回到麦克风，若每圈回来的增量更大就增长；设备饱和会限制增长。",
+      "保持位置和音量输入不变，只降低环路增益到衰减区，啸叫会减弱而非持续放大。",
+      "传言引来关注、关注又扩大传言传播，也有同向回路；只有反馈足够强且未触及限制时才明显放大。"
+    ]
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "language": "en",
+    "kind": "concept",
+    "keywords": [
+      "opportunity cost"
+    ],
+    "prompt": "Explain opportunity cost for a beginner deciding how to use a free afternoon.",
+    "oracle": "Value of best forgone alternative, not sum of all alternatives or only money already spent; sunk costs excluded.",
+    "reference": "Opportunity cost is the value of the best alternative you give up when choosing. Assume you can earn $40 tutoring or enjoy a walk valued at $25 that afternoon; choosing the walk forgoes $40, not $65. A non-refundable fee paid yesterday is a sunk cost. The same time cannot serve both options, so the feasible next-best choice sets the cost, even when the chosen activity costs no cash. Hold the afternoon and walk value fixed; if available tutoring pays only $10, the walk now has a lower opportunity cost. A factory choosing between two products on one machine also sacrifices its best feasible alternative output; an idle machine with no alternative has no such forgone benefit.",
+    "reference_parts": [
+      "Opportunity cost is the value of the best alternative you give up when choosing.",
+      "Assume you can earn $40 tutoring or enjoy a walk valued at $25 that afternoon; choosing the walk forgoes $40, not $65. A non-refundable fee paid yesterday is a sunk cost.",
+      "The same time cannot serve both options, so the feasible next-best choice sets the cost, even when the chosen activity costs no cash.",
+      "Hold the afternoon and walk value fixed; if available tutoring pays only $10, the walk now has a lower opportunity cost.",
+      "A factory choosing between two products on one machine also sacrifices its best feasible alternative output; an idle machine with no alternative has no such forgone benefit."
+    ]
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "language": "zh",
+    "kind": "formula",
+    "keywords": [
+      "贝叶斯",
+      "阳性",
+      "患病"
+    ],
+    "prompt": "给高中生讲解贝叶斯公式如何从阳性检测推到患病概率。",
+    "oracle": "Teaching example prior1%, sensitivity90%, specificity90%; among1000 9 truepositive99 falsepositive, posterior9/108=8.33%. Not medical advice.",
+    "reference": "贝叶斯公式把阳性检测和原先患病比例合起来，回答阳性者中有多少真正患病。 假设1000人中10人患病，灵敏度和特异度都为90%；“病人测阳性的概率”与“阳性者患病的概率”方向不同。 10位病人中9人阳性，990位非病人中99人阳性，阳性者患病概率为9/(9+99)≈8.3%。分母合并所有阳性，分子只留患病阳性。 保持两项检测性能不变，只把患病比例改为50%，同样1000人有450个真阳性和50个假阳性，后验变为90%。 垃圾邮件过滤也把某个词在垃圾与正常邮件中的出现率和垃圾邮件先验合并；仅见到这个词还不能直接认定垃圾邮件。",
+    "reference_parts": [
+      "贝叶斯公式把阳性检测和原先患病比例合起来，回答阳性者中有多少真正患病。",
+      "假设1000人中10人患病，灵敏度和特异度都为90%；“病人测阳性的概率”与“阳性者患病的概率”方向不同。",
+      "10位病人中9人阳性，990位非病人中99人阳性，阳性者患病概率为9/(9+99)≈8.3%。分母合并所有阳性，分子只留患病阳性。",
+      "保持两项检测性能不变，只把患病比例改为50%，同样1000人有450个真阳性和50个假阳性，后验变为90%。",
+      "垃圾邮件过滤也把某个词在垃圾与正常邮件中的出现率和垃圾邮件先验合并；仅见到这个词还不能直接认定垃圾邮件。"
+    ]
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "language": "en",
+    "kind": "mechanism",
+    "keywords": [
+      "cache"
+    ],
+    "prompt": "Explain cache invalidation in a web application to a beginner.",
+    "oracle": "Stale cached copies after origin mutation; TTL vs explicit invalidation; distributed races and eventual freshness, do not claim perfect TTL consistency.",
+    "reference": "Cache invalidation prevents an old saved result from outliving the change that made it wrong. Imagine a shop caching a product price: an unchanged price is a valid cache hit, but a hit after the database price changes can return stale data. The cache bypasses a database read; deleting or replacing its entry after a price update forces the next read to obtain the new price. A TTL only bounds staleness and does not synchronize all readers. Hold traffic and update timing fixed; shorten the TTL from ten minutes to one minute, reducing the stale window while increasing database reads. A DNS record also has cached copies and expiry: the same origin-change/copy-lifetime relation explains why an address change may take time to appear, though its protocol differs.",
+    "reference_parts": [
+      "Cache invalidation prevents an old saved result from outliving the change that made it wrong.",
+      "Imagine a shop caching a product price: an unchanged price is a valid cache hit, but a hit after the database price changes can return stale data.",
+      "The cache bypasses a database read; deleting or replacing its entry after a price update forces the next read to obtain the new price. A TTL only bounds staleness and does not synchronize all readers.",
+      "Hold traffic and update timing fixed; shorten the TTL from ten minutes to one minute, reducing the stale window while increasing database reads.",
+      "A DNS record also has cached copies and expiry: the same origin-change/copy-lifetime relation explains why an address change may take time to appear, though its protocol differs."
+    ]
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "language": "zh",
+    "kind": "concept",
+    "keywords": [
+      "相关",
+      "因果"
+    ],
+    "prompt": "用一个具体例子讲解相关与因果怎样区分。",
+    "oracle": "Common cause, observational association insufficient, causal interventions need assumptions; icecream/drowning seasonal toy not actualdata.",
+    "reference": "相关表示一起变化，因果还要求一个变化能在合适条件下改变另一个。 假设夏天冰淇淋销量和溺水事件同时增加；这能体现相关，但共同的炎热天气可同时增加销量和游泳人数。 “炎热→销量”和“炎热→下水人数→溺水”两条路径足以产生一起上升，不需要冰淇淋导致溺水。 保持天气和下水人数固定，只减少冰淇淋销售；上述模型不会因此减少溺水，若真实结果不同还需重新检查模型与干预条件。 学校中课外阅读和成绩一起提高，也需检查家庭支持等共同原因；仅凭成绩相关无法确定阅读的因果效果。",
+    "reference_parts": [
+      "相关表示一起变化，因果还要求一个变化能在合适条件下改变另一个。",
+      "假设夏天冰淇淋销量和溺水事件同时增加；这能体现相关，但共同的炎热天气可同时增加销量和游泳人数。",
+      "“炎热→销量”和“炎热→下水人数→溺水”两条路径足以产生一起上升，不需要冰淇淋导致溺水。",
+      "保持天气和下水人数固定，只减少冰淇淋销售；上述模型不会因此减少溺水，若真实结果不同还需重新检查模型与干预条件。",
+      "学校中课外阅读和成绩一起提高，也需检查家庭支持等共同原因；仅凭成绩相关无法确定阅读的因果效果。"
+    ]
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "language": "en",
+    "kind": "formula",
+    "keywords": [
+      "compound"
+    ],
+    "prompt": "Explain compound growth and why the starting amount matters.",
+    "oracle": "A=P(1+r)^t fixedrate discreteperiods, P100 r10% t2 =>121, not120; r20%=>144, no guaranteedfinancialreturns.",
+    "reference": "Compound growth applies each period’s growth to the amount already accumulated. Assume $100 grows at a fixed 10% per year for two years with no withdrawals; simple growth adds $10 each year, while compounding uses the changing balance. A=P(1+r)^t: P is the starting amount, r the per-period rate, and t the number of periods. $100 becomes $110, then $121 because the second gain is $11, not $10. This is a hypothetical calculation, not a promised return. Keep the starting amount and two periods fixed; changing the rate to 20% yields 100×1.2²=$144. A bacterial population under a constant growth factor also multiplies its current size each period; resource limits can break that assumption.",
+    "reference_parts": [
+      "Compound growth applies each period’s growth to the amount already accumulated.",
+      "Assume $100 grows at a fixed 10% per year for two years with no withdrawals; simple growth adds $10 each year, while compounding uses the changing balance.",
+      "A=P(1+r)^t: P is the starting amount, r the per-period rate, and t the number of periods. $100 becomes $110, then $121 because the second gain is $11, not $10. This is a hypothetical calculation, not a promised return.",
+      "Keep the starting amount and two periods fixed; changing the rate to 20% yields 100×1.2²=$144.",
+      "A bacterial population under a constant growth factor also multiplies its current size each period; resource limits can break that assumption."
+    ]
+  },
+  {
+    "id": "v01",
+    "split": "validation",
+    "language": "zh",
+    "kind": "concept",
+    "keywords": [
+      "过拟合",
+      "训练",
+      "新题"
+    ],
+    "prompt": "给没有机器学习背景的人讲解过拟合。",
+    "oracle": "Low trainingerror not guaranteegeneralization; memorize noise, heldout leakage invalidates evaluation; no claim modelcomplexityalwaysbad.",
+    "reference": "过拟合会把训练样本里的偶然细节也记住，因此旧题表现好，新题可能变差。 假设模型预测房价；记住每栋训练房子的成交价可做到旧房零误差，学到面积等稳定关系则更有机会用于新房，零误差本身不能判定过拟合。 样本噪声并不稳定；模型用它减少训练误差时，新房不再有相同细节，预测便偏离。 保持模型和评估方式固定，只增加来自同一分布的独立训练样本，偶然细节更难支撑规则，过拟合风险通常下降，但不保证归零。 学生背答案而不会解新题也体现旧样本记忆和新情境应用的差别；这个类比不代表机器像人一样理解，新房评估仍要独立留出数据。",
+    "reference_parts": [
+      "过拟合会把训练样本里的偶然细节也记住，因此旧题表现好，新题可能变差。",
+      "假设模型预测房价；记住每栋训练房子的成交价可做到旧房零误差，学到面积等稳定关系则更有机会用于新房，零误差本身不能判定过拟合。",
+      "样本噪声并不稳定；模型用它减少训练误差时，新房不再有相同细节，预测便偏离。",
+      "保持模型和评估方式固定，只增加来自同一分布的独立训练样本，偶然细节更难支撑规则，过拟合风险通常下降，但不保证归零。",
+      "学生背答案而不会解新题也体现旧样本记忆和新情境应用的差别；这个类比不代表机器像人一样理解，新房评估仍要独立留出数据。"
+    ]
+  },
+  {
+    "id": "v02",
+    "split": "validation",
+    "language": "en",
+    "kind": "formula",
+    "keywords": [
+      "precision"
+    ],
+    "prompt": "Explain precision and recall using a small search-result example.",
+    "oracle": "TP3 FP1 FN2 ->precision3/4 recall3/5; cannot freely assume threshold guaranteesperformance, bothdenominatorsdefinequestion.",
+    "reference": "Precision asks how many returned results are relevant; recall asks how many relevant results were found. Assume a collection has five relevant documents and a search returns four documents, three relevant. The returned set and the full relevant set are different denominators. Precision is TP/(TP+FP)=3/4; recall is TP/(TP+FN)=3/5. The first measures trust in the returned list, the second coverage of what exists. Keep the collection fixed and add one missed relevant document to the result set without adding irrelevant ones: precision becomes 4/5 and recall 4/5. Removing a relevant result instead loses coverage. A factory’s defect detector can use the same ratios for flagged items and all truly defective items; evaluating recall still requires knowing missed defects.",
+    "reference_parts": [
+      "Precision asks how many returned results are relevant; recall asks how many relevant results were found.",
+      "Assume a collection has five relevant documents and a search returns four documents, three relevant. The returned set and the full relevant set are different denominators.",
+      "Precision is TP/(TP+FP)=3/4; recall is TP/(TP+FN)=3/5. The first measures trust in the returned list, the second coverage of what exists.",
+      "Keep the collection fixed and add one missed relevant document to the result set without adding irrelevant ones: precision becomes 4/5 and recall 4/5. Removing a relevant result instead loses coverage.",
+      "A factory’s defect detector can use the same ratios for flagged items and all truly defective items; evaluating recall still requires knowing missed defects."
+    ]
+  },
+  {
+    "id": "v03",
+    "split": "validation",
+    "language": "zh",
+    "kind": "mechanism",
+    "keywords": [
+      "自然选择",
+      "遗传",
+      "后代"
+    ],
+    "prompt": "讲解自然选择如何改变一个种群，避免把它讲成动物主动努力。",
+    "oracle": "Heritablevariation differentialreproduction acrossgenerations, not purposeful individualchange, fitnessenvironment dependent.",
+    "reference": "自然选择使能遗传且有利于繁殖的差异在多代种群中逐渐增多。 假设甲虫有可遗传的深浅体色，深色背景上鸟更容易发现浅色甲虫；甲虫临时染黑虽相似，却不一定把改变传给后代。 原有差异影响存活和繁殖，深色个体留下更多后代，于是下一代深色比例可能提高；过程没有预定目标，也不是个体主动改变基因。 保持遗传差异和捕食者固定，只把背景改成浅色，隐蔽优势可能转向浅色，原先的判断也随之改变。 细菌群体已有耐药遗传差异时，药物环境会改变不同变体留下后代的机会；条件仍是可遗传差异和繁殖差别。",
+    "reference_parts": [
+      "自然选择使能遗传且有利于繁殖的差异在多代种群中逐渐增多。",
+      "假设甲虫有可遗传的深浅体色，深色背景上鸟更容易发现浅色甲虫；甲虫临时染黑虽相似，却不一定把改变传给后代。",
+      "原有差异影响存活和繁殖，深色个体留下更多后代，于是下一代深色比例可能提高；过程没有预定目标，也不是个体主动改变基因。",
+      "保持遗传差异和捕食者固定，只把背景改成浅色，隐蔽优势可能转向浅色，原先的判断也随之改变。",
+      "细菌群体已有耐药遗传差异时，药物环境会改变不同变体留下后代的机会；条件仍是可遗传差异和繁殖差别。"
+    ]
+  },
+  {
+    "id": "v04",
+    "split": "validation",
+    "language": "en",
+    "kind": "concept",
+    "keywords": [
+      "idempotency"
+    ],
+    "prompt": "Explain idempotency to a developer who is learning distributed systems.",
+    "oracle": "Repeatedoperation sameeffect not necessarilyresponse; repeatedPUTset vs increment; dedupkeyscope retention atomicity boundaries.",
+    "reference": "Idempotency means repeating an operation has the same intended effect as performing it once. Setting a record’s state to “closed” twice is idempotent; incrementing its counter twice is not, even if both calls return “OK”. A fixed assignment reaches the same state after repetition, while an increment uses the current state and adds again. For hypothetical retries, a stored request key can suppress duplicate increments if the check and update are atomic. Keep the retried request fixed but expire its stored key: a later retry may increment again, so deduplication only works within its retention and scope. A payment endpoint can store a transaction key to prevent duplicate charges; the same identity/atomic-record relation applies, but identical text alone does not identify the same payment.",
+    "reference_parts": [
+      "Idempotency means repeating an operation has the same intended effect as performing it once.",
+      "Setting a record’s state to “closed” twice is idempotent; incrementing its counter twice is not, even if both calls return “OK”.",
+      "A fixed assignment reaches the same state after repetition, while an increment uses the current state and adds again. For hypothetical retries, a stored request key can suppress duplicate increments if the check and update are atomic.",
+      "Keep the retried request fixed but expire its stored key: a later retry may increment again, so deduplication only works within its retention and scope.",
+      "A payment endpoint can store a transaction key to prevent duplicate charges; the same identity/atomic-record relation applies, but identical text alone does not identify the same payment."
+    ]
+  },
+  {
+    "id": "v05",
+    "split": "validation",
+    "language": "zh",
+    "kind": "formula",
+    "keywords": [
+      "熵",
+      "不确定"
+    ],
+    "prompt": "讲解信息熵，说明为什么均匀概率通常更不确定。",
+    "oracle": "H=-sum p log2p bits; faircoin1bit deterministic0; entropyofdistribution not individualsequence meaning/quality.",
+    "reference": "信息熵衡量一个概率分布下，结果尚未出现时平均有多不确定。 假设一枚公平硬币，正反各半；另一枚总是正面。两者都可能看到正面，但预测难度不同，熵描述分布而非某一次结果的意义。 H=-Σp log₂p：p是各结果概率，单位为比特。公平硬币算得-2×0.5×(-1)=1比特；确定结果为0，零概率项按极限取0。 保持两个可能结果固定，只把概率改成0.9和0.1，熵约0.469比特，因结果更易预测而降低。 明天只有“晴”“雨”两种教学假设时，也可用概率分布算预测不确定性；熵不衡量天气好坏或信息真假。",
+    "reference_parts": [
+      "信息熵衡量一个概率分布下，结果尚未出现时平均有多不确定。",
+      "假设一枚公平硬币，正反各半；另一枚总是正面。两者都可能看到正面，但预测难度不同，熵描述分布而非某一次结果的意义。",
+      "H=-Σp log₂p：p是各结果概率，单位为比特。公平硬币算得-2×0.5×(-1)=1比特；确定结果为0，零概率项按极限取0。",
+      "保持两个可能结果固定，只把概率改成0.9和0.1，熵约0.469比特，因结果更易预测而降低。",
+      "明天只有“晴”“雨”两种教学假设时，也可用概率分布算预测不确定性；熵不衡量天气好坏或信息真假。"
+    ]
+  },
+  {
+    "id": "v06",
+    "split": "validation",
+    "language": "en",
+    "kind": "mechanism",
+    "keywords": [
+      "deadlock"
+    ],
+    "prompt": "Explain deadlock with a small resource-allocation example.",
+    "oracle": "Circularwaiting with exclusive locks and holdandwait, consistentordering breakscycle not allcontention; removingone process not alwaysglobalfailure.",
+    "reference": "Deadlock occurs when waiting tasks prevent one another from making the progress needed to release resources. Assume task A holds exclusive lock X and waits for Y, while B holds Y and waits for X. One task waiting for a lock that another will soon release is ordinary contention, not this cycle. Neither can continue to its release step: A needs B’s resource and B needs A’s. The exclusive locks and hold-while-waiting rule sustain the cycle. Keep the two tasks and resources, but require both to acquire X before Y: B cannot hold Y while waiting for X, breaking this cycle while contention remains. Two trains occupying sections and each waiting for the other’s section can share the same exclusive-resource waiting cycle; actual railway rules determine whether that model applies.",
+    "reference_parts": [
+      "Deadlock occurs when waiting tasks prevent one another from making the progress needed to release resources.",
+      "Assume task A holds exclusive lock X and waits for Y, while B holds Y and waits for X. One task waiting for a lock that another will soon release is ordinary contention, not this cycle.",
+      "Neither can continue to its release step: A needs B’s resource and B needs A’s. The exclusive locks and hold-while-waiting rule sustain the cycle.",
+      "Keep the two tasks and resources, but require both to acquire X before Y: B cannot hold Y while waiting for X, breaking this cycle while contention remains.",
+      "Two trains occupying sections and each waiting for the other’s section can share the same exclusive-resource waiting cycle; actual railway rules determine whether that model applies."
+    ]
+  },
+  {
+    "id": "v07",
+    "split": "validation",
+    "language": "zh",
+    "kind": "concept",
+    "keywords": [
+      "公共物品",
+      "非排他",
+      "非竞争"
+    ],
+    "prompt": "给初学者讲解经济学里的公共物品和搭便车。",
+    "oracle": "Nonrival and nonexcludable not simplygovernmentprovided or free; congestible tolledroads differ; incentiveproblem not automaticzero provision.",
+    "reference": "公共物品的关键是使用通常不减少别人可用的份额，也难把未付费者排除。 在简化情境中，一盏街灯照亮整条街，多一个行人不明显减少照明，收费排除路人也难；免费发的一份面包会被吃掉，不能因此算公共物品。 每人都能受益却难单独收费，有人便可能等待别人出钱，导致私人筹资不足；这并不证明无人会自愿贡献。 保持照明服务不变，只让街区可通过门禁排除未付费者，就改变了排他性，成为更接近俱乐部物品的安排。 公开的防灾警报也可能满足共同使用和难排除两项条件；若系统只向付费设备发送，排他条件便不同。",
+    "reference_parts": [
+      "公共物品的关键是使用通常不减少别人可用的份额，也难把未付费者排除。",
+      "在简化情境中，一盏街灯照亮整条街，多一个行人不明显减少照明，收费排除路人也难；免费发的一份面包会被吃掉，不能因此算公共物品。",
+      "每人都能受益却难单独收费，有人便可能等待别人出钱，导致私人筹资不足；这并不证明无人会自愿贡献。",
+      "保持照明服务不变，只让街区可通过门禁排除未付费者，就改变了排他性，成为更接近俱乐部物品的安排。",
+      "公开的防灾警报也可能满足共同使用和难排除两项条件；若系统只向付费设备发送，排他条件便不同。"
+    ]
+  },
+  {
+    "id": "v08",
+    "split": "validation",
+    "language": "en",
+    "kind": "formula",
+    "keywords": [
+      "Little"
+    ],
+    "prompt": "Explain Little’s law for an introductory queueing class.",
+    "oracle": "L=lambda W stable longrun matchingboundaries units;2customers/min*3min=6; noPoissonneeded, waitingtimeversussystemtime match.",
+    "reference": "Little’s law connects the average number in a stable system to the arrival rate and average time spent there. Assume a stable café averages two customer arrivals per minute and three minutes from entry to exit. Customers in the café and customers only waiting in line are different system boundaries. L=λW gives 2 customers/minute × 3 minutes = 6 customers on average. Each arrival contributes its residence time, so the long-run accumulated customer-time divided by observation time yields the same average occupancy; no Poisson assumption is required. Hold arrival rate and the stable café boundary fixed; reduce average residence to two minutes and L becomes four customers. Stable network requests in flight obey the same rate-times-latency relation, provided latency and request count refer to the same boundary and arrivals do not exceed sustainable service.",
+    "reference_parts": [
+      "Little’s law connects the average number in a stable system to the arrival rate and average time spent there.",
+      "Assume a stable café averages two customer arrivals per minute and three minutes from entry to exit. Customers in the café and customers only waiting in line are different system boundaries.",
+      "L=λW gives 2 customers/minute × 3 minutes = 6 customers on average. Each arrival contributes its residence time, so the long-run accumulated customer-time divided by observation time yields the same average occupancy; no Poisson assumption is required.",
+      "Hold arrival rate and the stable café boundary fixed; reduce average residence to two minutes and L becomes four customers.",
+      "Stable network requests in flight obey the same rate-times-latency relation, provided latency and request count refer to the same boundary and arrivals do not exceed sustainable service."
+    ]
+  }
+]

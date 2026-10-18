@@ -1,0 +1,20 @@
+{
+  "requested_agent": "codex:gpt-6.1-sol",
+  "prompt_sha256": "25294835aeb5d7254d7a212f136475e3c52666e437067d0361dd2cf232cd26c9",
+  "rc": 0,
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "actual_model": null,
+  "output": "{\"judgments\":[{\"id\":\"d04\",\"bits\":\"111001\",\"reasons\":[\"Connects afternoon choices to comparing scarce time and benefits.\",\"Contrasts free movies with summing all forgone alternatives.\",\"Correctly identifies the best forgone alternative, including nonmonetary value.\",\"No explicit condition change with fixed factors and resulting effect.\",\"No surface-different situation applying the same deciding relationship.\",\"Accurate definition and examples; no material factual errors.\"],\"evidence\":[\"比较方案时，应看真实稀缺资源：时间、精力和能得到的收益\",\"它不等于所有放弃的事情，只算其中最有价值的那个替代选择\",\"门票虽免费，机会成本可能是本来能完成的兼职收入\",\"\",\"\",\"机会成本是你选择一个方案时放弃的最佳替代方案价值。\"]}]}",
+  "usage": {
+    "input_tokens": 20126,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 275,
+    "reasoning_output_tokens": 95
+  },
+  "tool_call_count": 0,
+  "error_count": 0,
+  "model_identity_basis": "requested model only; CLI does not attest backend identity",
+  "latency_s": 30.719
+}

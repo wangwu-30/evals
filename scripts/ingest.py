@@ -2,7 +2,7 @@
 """把一批运行结果追加进 data/（只追加，不改旧批次）。
 用法:
   python3 scripts/ingest.py --eval daily-skill --batch 2026-10-12-macmini-final \
-      --format prompt-eval --src ~/prompt-eval/results/single --date 2026-10-12 \
+      --format prompt-eval --src local-runs/results/single --date 2026-10-12 \
       --env "Mac mini" --notes "最终报告"
 格式:
   prompt-eval      目录 <model>/<cond>/<rep>.json（runner.py / runner_cli.py 产物）

@@ -1,0 +1,333 @@
+{
+  "model": "codex:gpt-5.6-luna",
+  "cond": "-2",
+  "rep": 1,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "110101",
+      "reasons": [
+        "用硬币数据判断假设符合程度。",
+        "区分似然与后验，关键是条件方向。",
+        "缺少数值计算与后验归一化。",
+        "固定数据，改变先验会改变后验。",
+        "没有迁移到不同情境。",
+        "概念关系正确，未作错误概率等同。"
+      ],
+      "evidence": [
+        "眼前这批数据有多符合它",
+        "不是“假设为真的概率”",
+        "",
+        "数据相同，先验不同，后验也可能不同。",
+        "",
+        "后验∝似然×先验"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "001001",
+      "reasons": [
+        "没有把具体问题连接到决策。",
+        "未区分总体方差与样本方差。",
+        "计算、平方单位及总体分母正确。",
+        "没有改变原例的明确条件。",
+        "没有不同情境的迁移。",
+        "计算正确，未声称平方是唯一选择。"
+      ],
+      "evidence": [
+        "",
+        "",
+        "总体方差=(4+0+4)/3=8/3",
+        "",
+        "",
+        "把偏差平方，避免正负抵消并突出较大偏差"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111011",
+      "reasons": [
+        "音箱例子解释声音持续放大的判断。",
+        "区分反馈方向与价值好坏。",
+        "正确说明回路与大于一的增益。",
+        "限制条件只是泛论，未修改原例。",
+        "股价例子复用变化促进自身的关系。",
+        "明确增益条件及容量限制。"
+      ],
+      "evidence": [
+        "于是声音越来越大",
+        "“正”表示方向与原变化相同，不表示价值好坏",
+        "每轮都乘以大于1的放大因子",
+        "",
+        "股价上涨引发追涨、价格继续上涨，也是正反馈",
+        "当资源、需求或系统容量达到限制后，放大可能停止"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "110001",
+      "reasons": [
+        "用下午选班说明要衡量放弃什么。",
+        "区分所选收益、所有备选与最佳放弃项。",
+        "未说明为何只计最佳可行替代项。",
+        "只泛称替代项改变，没有具体条件变化。",
+        "休息仍是同一下午选择情境。",
+        "正确界定最佳放弃项，未混入沉没成本。"
+      ],
+      "evidence": [
+        "choose to work a paid shift for $60",
+        "it is the most valuable alternative",
+        "",
+        "",
+        "",
+        "the value of the best alternative you give up"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111001",
+      "reasons": [
+        "将阳性检测连接到患病概率判断。",
+        "区分真阳性与假阳性来源。",
+        "正确用两类阳性归一化，计算准确。",
+        "没有改变原例条件并比较结果。",
+        "没有迁移到不同表面情境。",
+        "设定明确为假设，概率计算无误。"
+      ],
+      "evidence": [
+        "阳性后患病概率约为99/594≈16.7%",
+        "阳性结果不仅来自患病者，也来自大量未患病者",
+        "因此阳性者约594人，真正患病的约99人",
+        "",
+        "",
+        "设患病率为1%，检测灵敏度为99%，假阳性率为5%"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111001",
+      "reasons": [
+        "旧姓名问题连接到刷新或删除决策。",
+        "区分过期清理与写后主动清理。",
+        "源数据更新后缓存副本仍旧，机制正确。",
+        "没有修改原例条件并说明结果变化。",
+        "没有独立新情境中的应用。",
+        "承认更新顺序和半途失败的边界。"
+      ],
+      "evidence": [
+        "should be refreshed or removed",
+        "time-based expiration, explicitly deleting",
+        "cache may still show the old name until it expires",
+        "",
+        "",
+        "what happens if the operation fails halfway"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "111100",
+      "reasons": [
+        "具体销量例子连接到因果判断。",
+        "区分共同变化与导致变化。",
+        "共同原因及干预比较的逻辑正确。",
+        "只改变吃冰淇淋，固定其他条件进行比较。",
+        "没有不同情境的迁移。",
+        "将季节性示例当作观察事实，未标明假设。"
+      ],
+      "evidence": [
+        "判断因果不能只看同时变化",
+        "相关表示两个量一起变化，因果表示一个量的变化会导致另一个量变化",
+        "天气热，人们买更多冰淇淋，也更常去游泳",
+        "只改变是否吃冰淇淋，其他条件尽量相同",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "011101",
+      "reasons": [
+        "No concrete problem is connected to a decision.",
+        "Contrasts compound growth with simple growth using interest on increases.",
+        "Correct calculation, variable meanings, periods, and compound-versus-simple distinction.",
+        "Doubles starting amount while holding rate and time unchanged.",
+        "No surface-different situation applies the same relationship.",
+        "Accurate hypothetical example; no unsupported return guarantees."
+      ],
+      "evidence": [
+        "",
+        "the second year also earns on the first year’s increase",
+        "$100×1.1²=$121, not $120",
+        "when the rate and time are unchanged",
+        "",
+        "If $100 grows by 10% yearly"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "训练高分新数据差支持泛化判断。",
+        "区分训练表现与未见数据表现。",
+        "正确解释记住噪声导致泛化不足。",
+        "只列改进措施，未修改原例条件。",
+        "学生类比未构成独立迁移应用。",
+        "学生类比没有说明失效边界。"
+      ],
+      "evidence": [
+        "判断过拟合要比较训练集和未见过的验证集",
+        "模型在训练集上分数很高，但在新数据上表现差",
+        "连其中的噪声和偶然规律也当成真正规律",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111101",
+      "reasons": [
+        "搜索例子支持判断查准与查全。",
+        "明确两种指标的不同分母。",
+        "两项数值计算及比例含义正确。",
+        "同一集合只返回一项，说明指标变化。",
+        "没有不同情境的迁移。",
+        "使用可能性表述，未保证阈值效果。"
+      ],
+      "evidence": [
+        "The right balance depends on the search task",
+        "Of everything relevant, how much did we find?",
+        "precision=6/10=60%",
+        "Returning only one highly relevant result",
+        "",
+        "may raise recall while lowering precision"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111001",
+      "reasons": [
+        "甲虫例子支持判断种群特征变化。",
+        "区分遗传选择与个体主动改变。",
+        "遗传差异经繁殖差异累积，机制正确。",
+        "环境改变只是泛论，没有具体修改。",
+        "没有不同情境的迁移。",
+        "没有目的论，优势依赖环境。"
+      ],
+      "evidence": [
+        "棕色特征在种群中的比例上升",
+        "甲虫不是因为“想变棕”或主动努力才改变",
+        "于是它们平均留下更多后代",
+        "",
+        "",
+        "个体的变异先存在，环境再使某些变异更容易传下去"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111111",
+      "reasons": [
+        "超时重试问题连接到避免重复效果。",
+        "设置状态与累加金额构成清楚对照。",
+        "重复设置保留状态，累加会重复生效。",
+        "同一设置请求从一次增至三次，结果不变。",
+        "余额累加应用相同的重复效果判据。",
+        "正确区分最终效果与响应相同。"
+      ],
+      "evidence": [
+        "requests may be retried after timeouts",
+        "Adding $10 to a balance is not idempotent",
+        "retries could add $30",
+        "sending the request three times still leaves it active",
+        "retries could add $30",
+        "does not mean every retry returns an identical response"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "111111",
+      "reasons": [
+        "硬币例子连接到结果能否容易猜测。",
+        "区分公平硬币与几乎确定的硬币。",
+        "公式、数值、比特单位及概率含义正确。",
+        "保持硬币结果类型，改变概率降低熵。",
+        "四选项复用等概率增加不确定性的关系。",
+        "熵针对概率不确定性，未等同主观困难。"
+      ],
+      "evidence": [
+        "结果容易猜，熵就低",
+        "正反各1/2，熵为1比特；若硬币几乎总是正面",
+        "例如四个等可能选项的熵为2比特",
+        "若硬币几乎总是正面，结果容易猜，熵就低",
+        "四个等可能选项的熵为2比特",
+        "这里的“不确定”是概率意义，不是主观觉得困难"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "资源互等问题连接到预防死锁。",
+        "用等待环区分死锁与普通等待。",
+        "持有资源并循环等待的阻塞机制正确。",
+        "固定资源场景，统一顺序可破坏等待环。",
+        "没有不同情境的迁移。",
+        "列明必要条件，未把普通竞争当死锁。"
+      ],
+      "evidence": [
+        "Breaking any one condition can prevent it",
+        "different from ordinary waiting: the wait forms a cycle",
+        "Neither can continue or release what it holds",
+        "request resources in a fixed global order",
+        "",
+        "exclusive resources, holding while waiting"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111001",
+      "reasons": [
+        "路灯筹资问题连接到供给不足判断。",
+        "区分难排除使用者与免费生产。",
+        "共享收益与逃避成本导致供给不足。",
+        "没有改变原例明确条件。",
+        "国防仅被列举，没有迁移推导。",
+        "双重属性正确，仅作条件性供给判断。"
+      ],
+      "evidence": [
+        "因此现实中常由税收或共同规则筹资",
+        "公共物品并非“免费生产”",
+        "如果大家都这样想，公共物品就会供给不足",
+        "",
+        "",
+        "一个人使用不容易减少别人使用的机会"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "111001",
+      "reasons": [
+        "请求到达与停留时间支持估算系统数量。",
+        "区分含服务的系统与仅等待的边界。",
+        "公式、单位、计算及稳定条件正确。",
+        "没有改变原例条件并计算新结果。",
+        "没有不同情境的迁移。",
+        "明确稳定性及一致边界，无分布误限。"
+      ],
+      "evidence": [
+        "20 requests on average",
+        "such as including both waiting and service",
+        "L=10×2=20 requests on average",
+        "",
+        "",
+        "assumes the system is stable over the period measured"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/codex_gpt-5.6-luna/-2/1.call.json",
+  "prompt_sha256": "c500277a9e76baccac6a623a599206a96c5ac3691261589cf19ac9282b29ce47",
+  "isolated_repair_calls": [
+    "1.call.repair-d08-0.call.json"
+  ]
+}

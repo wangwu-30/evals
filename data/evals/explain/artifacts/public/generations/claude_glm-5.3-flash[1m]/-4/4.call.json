@@ -1,0 +1,52 @@
+{
+  "requested_agent": "claude:glm-5.3-flash[1m]",
+  "prompt_sha256": "36786f0dea160e6bb33ca7e5650437b8a15219226c2ae096a28c63a5188c0290",
+  "rc": 0,
+  "cost_usd_reported": 0.22891500000000004,
+  "cost_basis": "CLI self-report; route costBasis unknown; not invoice verified",
+  "actual_model": [
+    "glm-5.3-flash[1m]"
+  ],
+  "output": "{\"answers\":{\"v02\":\"Search for 'jaguar' returns 10 results: 4 are about the animal, 6 are cars or irrelevant; the corpus actually contains 12 relevant pages. Precision answers 'of what I retrieved, how much is useful': 4/10 = 40%. Recall answers 'of all useful material, how much did I retrieve': 4/12 ≈ 33%. They measure different failures — junk in the results versus missing good ones. Now loosen the filter to return 20 results including 6 relevant: precision drops to 30%, recall rises to 50%. That is the typical trade-off: a wider net catches more targets and more junk. Which one matters depends on cost: legal discovery prizes recall (missing evidence is costly); a search engine's first page prizes precision (users won't scroll). A system can score well on one and badly on the other, which is why the actual use case — or a combined score like F1 — must arbitrate.\",\"v07\":\"公共物品有两个特征：非排他（无法把不付费的人排除在外）和非竞争（多一人享用不减少别人的份额），路灯、防洪堤是典型。麻烦随之而来：不管出没出钱，灯都照着你，于是每个理性人都想「让别人付钱，我白享」——这就是搭便车。单独看每个人都合理，合起来却是没人付钱、路灯建不出来，即市场供给不足。对照面包这类私人物品：既能排除别人又有竞争性，不付钱就吃不到，问题不存在。改变一个条件：若能低成本收费（小区路灯只对缴费住户亮），就变成俱乐部物品，搭便车被排除，供给恢复。这解释了为什么国防、基础研究常由税收公共提供，而收费频道可以私营。判断某物品要不要担心搭便车，就看这两条：能否排他、是否竞争。\",\"v05\":\"信息熵度量「平均而言一次结果有多难猜」。对分布 p₁,…,pₙ，熵 H=−Σpᵢ log₂pᵢ：每种结果出现时的意外程度是 log₂(1/pᵢ)，熵就是按概率加权的平均意外。概率越小越意外，但它很少出现，两项相乘再求和。为什么均匀分布最不确定：均匀硬币 p=0.5，熵为 1 比特；若正面概率 0.99，熵约 0.08 比特——你几乎已知结果，不确定性确实变小了。均匀分布是唯一「任何结果都不占上风」的分布，猜哪个都可能错，所以最难猜；数学上可证固定 n 时它取最大值。改变条件：把 0.99 改成 0.9，熵回升到约 0.47——偏离均匀越远，你掌握的确定性越多。注意熵回答「结果有多难猜」，不回答「哪个结果会出现」。\",\"d07\":\"相关是「两个量一起变」，因果是「改变其中一个，另一个随之改变」。两者常被混同，因为混杂因素会制造虚假相关。例子：冰淇淋销量与溺水人数同涨同跌，但吃冰淇淋不会让人溺水，真正原因天气热——它既让人多买冰淇淋，也让人多下水。判定办法是控制变量：只看同样炎热的日子，若两者的关系消失，说明原相关只是热的影子；若依然存在，因果嫌疑才上升，最干净的是随机实验。改变一个关键条件、看结论是否保留，正是区分二者的核心手段。反过来，因果也不必有相关：若某药只用在病最重的人身上，汇总数据可能看不出疗效（辛普森悖论）。所以判断顺序是：先问有没有混杂，再问能否干预——只有「改变 A 能改变 B」才配叫因果。\",\"d04\":\"You have a free Saturday afternoon and three options: babysit for $50, finish an application essay, or nap. Whatever you pick, you lose the others — opportunity cost is the value of the single best option you gave up, not all of them added together. Choose the essay, and your opportunity cost is $50: babysitting was the best thing you passed up; the nap wasn't next-best, so it doesn't stack. This reframes 'free' time as never free — even lounging costs you the $50 or the finished essay you could have had. Now change one condition: the family cancels the babysitting. The cost of writing the essay drops to the nap's value — same activity, different cost, because cost lives in the alternatives, not in the activity itself. That is why good decisions compare options at the margin: pick the one worth more than what you sacrifice.\",\"v04\":\"A retry after a network timeout can reach the server even though your first request already succeeded, so distributed systems must assume operations may arrive twice. An operation is idempotent when applying it once or any number of times leaves the same final state. Compare: 'set order status to paid' is idempotent — running it twice still means paid; 'add $10 to the balance' is not — two runs give $20. The standard fix makes non-idempotent operations safe: attach a client-generated request ID, and the server records it and skips duplicates. The same idea appears at other layers: HTTP PUT is defined as idempotent (store this resource), POST is not (create another each time). For any payment step or queue consumer, ask one test question: if this message is delivered twice, does the outcome change? If yes, add deduplication before going live.\",\"d06\":\"网页读数据库慢，于是把结果抄一份放进更快的内存，这份「抄本」就是缓存。代价随之而来：数据库里的数据变了，抄本不会自己变。缓存失效就是回答「什么时候扔掉旧抄本、重新去拿」。例子：商品页缓存了价格 9.9 元，运营把价格改成 12 元，若缓存还有 5 分钟才过期，顾客会看到 9.9 元——这就是数据不一致。两种常见做法：一是到期失效（TTL），5 分钟后自动作废，简单但窗口内是旧价；二是写时失效，每次改数据库就删掉对应缓存，更新更及时，但代码更复杂，还可能出现删失败的竞态。改变条件：把易变的价格换成不常动的商品描述，TTL 就够用了。所以没有最好的失效策略，只有「数据多新才够用」和「愿意付多少复杂度」之间的取舍。\",\"v08\":\"Little's law connects three averages in any queue: L = λW. L is the average number of items in the system, λ the arrival rate (items per minute), W the average time each item spends in the system — and 'in the system' must mean the same thing in both L and W, or the numbers won't match. Example: a coffee shop receives 10 customers per minute (λ) and each spends 4 minutes ordering and waiting (W), so on average 40 people are inside (L). It also runs in reverse: count 40 people inside with a known arrival rate and you can infer the wait. The law's power is what it does not require — no assumptions about arrival patterns or service distributions; it follows from conservation in steady state. Change one input: halve the wait to 2 minutes and occupancy falls to 20, which is why reducing W shrinks queues without touching demand.\",\"v06\":\"Two threads, two locks. Thread A acquires Lock 1, then asks for Lock 2; meanwhile B holds Lock 2 and asks for Lock 1. Each waits forever for the other — that is deadlock. It requires four conditions at once: resources cannot be shared, threads hold one resource while waiting for another, resources cannot be forcibly taken back, and the waits form a circle. Break any one and it disappears. The cheapest fix: impose a global lock order (always acquire Lock 1 before Lock 2), so the circle cannot close. Change one condition: if the system could preempt — forcibly release Lock 2 from A — B would proceed and no deadlock occurs; real mutexes cannot be preempted, which is why this condition persists. The same structure appears when two database transactions each hold a row lock and request the other's. The symptom is distinctive: everything stops while the CPU sits idle.\",\"d02\":\"平均数告诉你「一般水平」，却抹掉了波动：{60,60,60,60} 和 {0,120,0,120} 平均都是 60，稳定性却天差地别。方差度量这种偏离：每个数减去平均数得偏差，把偏差平方后取平均。例：2、4、6，平均 4，偏差 −2、0、2，平方为 4、0、4，方差 = (4+0+4)/3 ≈ 2.67。为什么平方而不是把偏差直接平均？偏差有正有负，直接相加恰好抵消为零，什么也量不出；平方去掉符号，同时放大大偏差的权重——离群点比小波动「贵」得多。除以数据个数 N（这里是 3）得到的是总体方差，即把这组数当作全体；若它们只是样本、要推断更大的总体，则除以 N−1。改变条件：把 6 换成 60，平均变 22，方差从 2.67 猛增到约 723——方差对离群值极敏感，读它时要连同量纲和极端值一起看。\",\"v03\":\"自然选择不需要任何动物「努力变强」，它只做一件事：保留碰巧更适应的变异。过程分三步。第一，种群内本来就存在随机差异——长颈鹿祖先中，有的天生脖子略长，这是突变和遗传的随机产物，不是谁想要来的。第二，环境充当过滤器：脖子略长的个体够得着更多树叶，吃得饱、活得多、留下的后代多；脖子短的少留后代。第三，后代继承亲代性状，几代之后「长脖」基因在种群中的比例上升，种群整体变了。注意被选择的不是个体努力的结果，而是出生时就存在的差异；个体一生不会因此变长脖子。改变条件：若食物变成低矮灌木，脖长的优势消失，方向随之改变——没有预设目标，只有当下环境的筛选。这正是它与「用进废退」的区别：变异先随机发生，环境只做淘汰。\",\"d03\":\"正反馈是「结果反过来加大输入」的回路：变化发生后，系统不把它压回去，而是推得更大。麦克风对着音箱：声音被放大放出，又被麦克风拾起再放大，几秒内变成刺耳啸叫——输出喂养输入，每绕一圈信号更强。复利、爆款传播、银行挤兑同构：利息生利息，买的人多吸引更多人买，取款引发恐慌、恐慌引发更多取款。为什么「正」不等于「好」：这里「正」指方向——反馈信号与原变化同向，使偏差放大，好事坏事都能放大；评价好坏要看放大的是什么，挤兑放大的是崩溃。也没有无限放大：啸叫被喇叭功率封顶，挤兑终止于银行无钱可付，回路总会撞上饱和条件。对照负反馈：空调温度低了加热、高了停，输出反向抑制输入，系统稳在目标附近。判断一个回路，就问「反馈回来的是加强还是抵消」。\",\"d08\":\"Compound growth multiplies rather than adds: each period the amount becomes (1+r) times what it was, so value = P(1+r)^t. The 'compound' part is that growth applies to the accumulated total, including past gains — interest earns interest. Numbers: $1,000 at 10% a year for 20 years becomes 1000 × 1.1²⁰ ≈ $6,727; $100 at the same rate becomes only $673. The ratio between them never shrinks, because the same multiplier 1.1²⁰ applies to both — a 10× larger start stays 10× larger. That is why the starting amount matters: rate and time decide how fast you multiply, but the principal is the base being multiplied, and all the exponential growth inherits it. Change one condition: at 7% instead of 10%, the $1,000 grows to only about $3,870 — small rate differences compound into large gaps, the same mechanism acting on the multiplier itself.\",\"d01\":\"似然回答「如果假设为真，看到手上这批数据的概率有多大」，条件方向是 P(数据|假设)。例：连抛三次硬币都是正面。若正面概率为 0.7，似然 = 0.7³ = 0.343；若均匀（0.5），似然 = 0.5³ = 0.125。固定同一批数据比较假设：「正面 0.7」解释这批数据更好，似然更高。但似然不是「该假设为真的概率」。P(数据|假设) 与 P(假设|数据) 方向相反：前者问「假设为真时数据多可能出现」，后者问「看到数据后假设多可能为真」，后者才叫后验概率。从似然到后验必须补上先验——看到数据前你对各假设的信念——再用贝叶斯公式组合。若你本来就几乎不信硬币有偏，三次正面之后仍可以不太信：数据相同，先验不同，后验就不同。一句话：似然是数据给各假设打的分，后验才是结合先验后的总分。\",\"v01\":\"过拟合是「把训练材料背下来，而不是学会规律」。学生把去年考卷连题目带答案原样记住，做旧卷满分，换一道新题就不会——他记住的是题目里的细节（包括噪音），而不是能推广的解法。模型同理：过于复杂的模型把训练数据里的偶然波动、甚至标注错误都拟合进去，于是训练集上表现极好，换成没见过的新数据就明显变差。判断依据就是这个落差：训练误差很低、新数据误差高，基本可判过拟合；两边都差则是根本没学会（欠拟合），两种病药方不同。改变条件：把模型简化（高次曲线改回直线），或给更多数据，背不住就只能学规律，落差随之缩小。核心道理：处处贴合 training 材料的「完美」，恰恰牺牲了在新情境下的可靠，够用而不过度精确的规律更容易推广。\"}",
+  "usage": {
+    "input_tokens": 2633,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 8630,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "glm-5.3-flash[1m]": {
+      "inputTokens": 2633,
+      "outputTokens": 8630,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.22891500000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "glm-5.3-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "cli_subtype": "success",
+  "cli_error": false,
+  "latency_s": 192.155
+}

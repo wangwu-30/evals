@@ -1,0 +1,331 @@
+{
+  "model": "claude:glm-5.3-flash[1m]",
+  "cond": "-1",
+  "rep": 4,
+  "judge_requested": "codex:gpt-6.1-sol",
+  "judgments": [
+    {
+      "id": "d01",
+      "bits": "111101",
+      "reasons": [
+        "连接硬币证据与假设比较和信念更新。",
+        "区分数据似然与假设后验，指出条件方向。",
+        "似然及归一化后验计算正确，先验作用明确。",
+        "保持观测不变，改变先验说明后验变化。",
+        "没有应用到表面不同的新情境。",
+        "硬币示例和概率区分正确。"
+      ],
+      "evidence": [
+        "用来比较不同假设对同一批数据的解释力",
+        "注意它不是「硬币均匀的概率」",
+        "0.5×0.125 ÷ (0.5×0.125 + 0.5×1)",
+        "若先验里 B 几乎不可能，后验仍站在 A 一边",
+        "",
+        "设抛前你对 A、B 各信一半"
+      ]
+    },
+    {
+      "id": "d02",
+      "bits": "111101",
+      "reasons": [
+        "说明相同均值不足以判断数据分散程度。",
+        "区分总体方差与样本估计，给出分母差异。",
+        "平方偏差计算、单位及总体样本区别正确。",
+        "保持均值不变，扩大偏差并计算方差变化。",
+        "价格例子仅解释单位，没有迁移完整关系。",
+        "明确平方是一种选择，计算及单位正确。"
+      ],
+      "evidence": [
+        "Two datasets can share an average yet differ wildly",
+        "estimating from a sample divides by n−1",
+        "squares 1, 0, 1; variance = 2/3",
+        "Same mean, twenty-five times the spread.",
+        "",
+        "That's a choice with a cost"
+      ]
+    },
+    {
+      "id": "d03",
+      "bits": "111110",
+      "reasons": [
+        "连接啸叫问题与切断或利用反馈环路。",
+        "对照恒温器负反馈，区分反馈方向与好坏。",
+        "正确解释增益大于一时的循环放大。",
+        "原音响回路拔掉电源，放大被打断。",
+        "复利迁移明确本金与利息相互增强。",
+        "把正反馈普遍描述为远离原点，缺少增益条件。"
+      ],
+      "evidence": [
+        "才知道该在哪个环节切断或利用它",
+        "负反馈是输出反过来压制输入",
+        "每绕一圈，信号乘上一个大于 1 的倍数",
+        "啸叫最终被音响功率极限或拔插头打断",
+        "利息并入本金再生息，同样的放大结构",
+        "正反馈则离原点越来越远"
+      ]
+    },
+    {
+      "id": "d04",
+      "bits": "111101",
+      "reasons": [
+        "用下午选择说明最佳放弃选项的价值。",
+        "区分最佳替代选项、全部替代选项及沉没成本。",
+        "解释只能选一个，因此不累加放弃价值。",
+        "保持午睡选择，改变考试日期提高机会成本。",
+        "没有表面不同的新情境及关系应用。",
+        "示例排序可自洽，沉没成本排除正确。"
+      ],
+      "evidence": [
+        "Your free afternoon has three uses",
+        "not all options, just the top one",
+        "because you could only have done one",
+        "if the exam is tomorrow, studying becomes more valuable",
+        "",
+        "that would be a sunk cost, not an opportunity cost"
+      ]
+    },
+    {
+      "id": "d05",
+      "bits": "111100",
+      "reasons": [
+        "连接阳性检测与实际患病概率判断。",
+        "区分灵敏度和阳性后的患病概率。",
+        "人数、条件概率公式及后验计算正确。",
+        "保持检测性能，改变患病率并正确计算。",
+        "复检仍属原情境，没有表面不同的迁移。",
+        "复检直接更新未说明条件独立或相关误报限制。"
+      ],
+      "evidence": [
+        "检测呈阳性，真患病的概率是多少？",
+        "分母是「所有呈阳性的人」的份额",
+        "阳性共 594 人，真病人占 99/594 ≈ 17%",
+        "同样的检测算出 0.099/(0.099+0.045) ≈ 69%",
+        "",
+        "拿 17% 当新的底数再算一次，概率就大幅上升"
+      ]
+    },
+    {
+      "id": "d06",
+      "bits": "111110",
+      "reasons": [
+        "连接旧价格问题与失效策略选择。",
+        "区分缓存保存副本与失效删除或刷新副本。",
+        "说明源数据修改导致副本陈旧及两种处理机制。",
+        "同一价格更新改用写时删除，改变刷新时间。",
+        "浏览量迁移明确以容忍陈旧程度选择策略。",
+        "写时失效被称准确，忽略并发回填旧值。"
+      ],
+      "evidence": [
+        "tolerated staleness picks the mechanism",
+        "Cache invalidation is removing or refreshing stale copies.",
+        "a copy goes stale when the original changes",
+        "when the price updates, delete the cached key 'price:7'",
+        "view counts can live with a TTL.",
+        "Accurate, but every write path must do it"
+      ]
+    },
+    {
+      "id": "d07",
+      "bits": "110110",
+      "reasons": [
+        "连接共同涨跌现象与判断是否存在因果作用。",
+        "区分共同原因关联与直接因果箭头。",
+        "把随机化说成确保均等和唯一处理原因，过强。",
+        "保持游泳行为，限制冰淇淋销量说明结果不变。",
+        "鞋码与阅读迁移明确年龄这个共同原因。",
+        "把季节例子当事实，且夸大随机试验结论。"
+      ],
+      "evidence": [
+        "区分的办法是干预",
+        "它们相关，却没有因果箭头相连",
+        "剩下的差异只能来自处理本身",
+        "没人少游泳，溺水也不变",
+        "儿童鞋码与阅读能力高度相关，第三变量是年龄",
+        "真正的原因是第三变量：天气热"
+      ]
+    },
+    {
+      "id": "d08",
+      "bits": "101100",
+      "reasons": [
+        "连接初始本金差异与长期绝对收益差距。",
+        "没有明确给出易混淆的非复利近例。",
+        "公式、年利率、时间及数值正确，说明收益再投入。",
+        "保持增长率和期限，改变本金得到同比例结果。",
+        "没有表面不同的新情境应用。",
+        "无条件声称增加本金优于追求利率，缺乏依据。"
+      ],
+      "evidence": [
+        "the bigger base earns more dollars per year",
+        "",
+        "$1,000 at 7% a year reaches about $1,967 in 10 years",
+        "The ratio stays 10×, but the absolute gap widens",
+        "",
+        "growing the base early beats chasing the rate"
+      ]
+    },
+    {
+      "id": "v01",
+      "bits": "111000",
+      "reasons": [
+        "连接训练表现误导与独立评估和应对措施。",
+        "对照学规律和背答案，指出新题表现差异。",
+        "正确解释噪声记忆导致训练与泛化表现分离。",
+        "没有明确改变原案例条件并说明结果。",
+        "学生类比映射原概念，没有进一步的新情境迁移。",
+        "学生类比没有解释失效边界。"
+      ],
+      "evidence": [
+        "留一部分数据不参与训练，专门检验真实水平",
+        "一个学生总结出「年代、因果、影响」的答题框架",
+        "这批数据特有的噪声",
+        "",
+        "",
+        "后者就是过拟合的模型"
+      ]
+    },
+    {
+      "id": "v02",
+      "bits": "111110",
+      "reasons": [
+        "连接搜索质量和遗漏问题与指标选择。",
+        "区分返回结果质量与全部相关结果覆盖。",
+        "精确率和召回率计算及分母含义正确。",
+        "保持相关论文总数，改变返回结果并重新计算。",
+        "医疗筛查迁移以漏检代价说明召回的重要性。",
+        "渔网类比未交代边界，且概括必然权衡过强。"
+      ],
+      "evidence": [
+        "One number alone can hide a broken system.",
+        "Precision describes the list you see",
+        "Recall = 6/20 = 30%",
+        "returns 40 results, 12 relevant",
+        "prefer recall when a miss is costly (cancer screening",
+        "widening the net catches more fish and more trash"
+      ]
+    },
+    {
+      "id": "v03",
+      "bits": "111110",
+      "reasons": [
+        "连接种群变化与区分选择和个体主动改变。",
+        "对照努力伸脖子与已有可遗传差异。",
+        "串联性状差异、生存繁殖差异和后代比例变化。",
+        "已有长短差异保持，干旱改变资源可达性。",
+        "细菌例子迁移已有变异和差异繁殖关系。",
+        "把变异方向绝对随机及杀光敏感菌说得过强。"
+      ],
+      "evidence": [
+        "变的是群体的基因频率，不是某只鹿的脖子",
+        "不是每只鹿努力伸脖子、把脖子练长再传给后代",
+        "活得久、留下更多后代",
+        "干旱来临时低处叶子吃光，脖子长的够到高处",
+        "用药前细菌群里碰巧已有少数抗药变异",
+        "抗生素把不抗药的杀光"
+      ]
+    },
+    {
+      "id": "v04",
+      "bits": "111001",
+      "reasons": [
+        "连接超时重试问题与避免重复收费。",
+        "对照设置状态和余额递增，指出重复效果差异。",
+        "正确解释不确定执行结果、重试及键去重机制。",
+        "没有改变原案例条件并说明结果变化。",
+        "支付案例用于展开机制，没有另行迁移关系。",
+        "正确区分状态效果和响应，未作绝对一致性保证。"
+      ],
+      "evidence": [
+        "If processing isn't idempotent, the customer is charged twice",
+        "`balance += 100` is not — five calls add 500",
+        "returns the stored response instead of executing again",
+        "",
+        "",
+        "idempotency is about state, not response bodies"
+      ]
+    },
+    {
+      "id": "v05",
+      "bits": "101100",
+      "reasons": [
+        "连接结果预测问题与揭晓前不确定性的衡量。",
+        "没有区分熵与易混淆的序列意义或质量。",
+        "概率加权信息量及比特计算正确。",
+        "保持均匀性，增加结果数并计算熵变化。",
+        "骰子延续同类随机试验，没有表面不同的迁移。",
+        "把十次猜中九次当确定结果，混淆期望与实现。"
+      ],
+      "evidence": [
+        "信息熵衡量结果揭晓之前你有多拿不准",
+        "",
+        "概率乘 log(1/p) 再求和",
+        "均匀六面骰的熵约 2.58 比特，高于均匀硬币",
+        "",
+        "你连猜十次能对九次"
+      ]
+    },
+    {
+      "id": "v06",
+      "bits": "111101",
+      "reasons": [
+        "连接互相等待问题与锁排序预防决策。",
+        "对照循环等待和排序后普通等待，指出环是否存在。",
+        "正确说明独占、持有等待、不抢占和循环依赖。",
+        "保持两线程两资源，改变锁顺序消除循环。",
+        "没有表面不同的新情境应用。",
+        "条件和排序推理正确，恢复明确要求释放资源。"
+      ],
+      "evidence": [
+        "require every thread to acquire them in increasing order",
+        "Thread 2 waits for A, Thread 1 finishes",
+        "Each holds one while waiting for the other",
+        "both threads then lock A before B",
+        "",
+        "give up, release everything, retry"
+      ]
+    },
+    {
+      "id": "v07",
+      "bits": "111110",
+      "reasons": [
+        "连接路灯筹资问题与供给不足和分摊机制。",
+        "对照路灯和包子，指出竞争性与排他性。",
+        "说明不可排他导致不付费也受益的激励。",
+        "保持共享服务，增加排他能力改变收费可能性。",
+        "天气预报和开源软件迁移难排除付费者的条件。",
+        "把企业必然不提供和市场必然接手说得过强。"
+      ],
+      "evidence": [
+        "强制分摊把搭便车者也算进缴费名单",
+        "包子是私人物品，不付钱拿不到",
+        "我一分不交，灯照样亮，我照样受益",
+        "一旦排他变得便宜（如加密频道收费）",
+        "天气预报、开源软件同样难排除不付费者",
+        "自然不肯建"
+      ]
+    },
+    {
+      "id": "v08",
+      "bits": "101010",
+      "reasons": [
+        "连接队列测量问题与由两量推算第三量。",
+        "没有明确对照等待时间与系统停留时间。",
+        "数值、时间边界、单位和稳定长期条件正确。",
+        "稳定性警告没有改变原咖啡店的明确条件。",
+        "服务器迁移相同并发量、吞吐量、停留时间关系。",
+        "浴缸类比给出映射，但未说明失效边界。"
+      ],
+      "evidence": [
+        "measure any two quantities and derive the third",
+        "",
+        "from joining the line to leaving (W = 4 min)",
+        "",
+        "1,000 requests/s (λ) must average W = 0.2 s",
+        "water volume = inflow rate × time to drain"
+      ]
+    }
+  ],
+  "call_file": "judgments-shared/claude_glm-5.3-flash[1m]/-1/4.call.json",
+  "prompt_sha256": "e6d85b48d9283f5234a871197fd94d454babfe407721a487c3859eb1efb9df56",
+  "isolated_repair_calls": []
+}

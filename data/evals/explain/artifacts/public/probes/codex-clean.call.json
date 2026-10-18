@@ -1,0 +1,17 @@
+{
+  "requested_agent": "codex:gpt-5.6-luna",
+  "actual_model": null,
+  "usage": {
+    "input_tokens": 16747,
+    "cached_input_tokens": 9984,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9,
+    "reasoning_output_tokens": 0
+  },
+  "output": "{\"ok\":true}",
+  "cost_usd_reported": null,
+  "cost_basis": "not-reported",
+  "rc": 0,
+  "latency_s": 17.4,
+  "purpose": "route/transport probe; excluded from matrix"
+}
